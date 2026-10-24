@@ -12,9 +12,8 @@ md('''
 
 **Purpose:** reuse the existing uncoded noisy recordings of MANUNITED, ADRIAN and
 OMAR, and the noisy repeat3 MANUNITED recording. Capture only the missing cells.
-This is a compact comparison across three message cases, not a guarantee of 90%+
-or three repetitions of an identical experiment. Historical conditions are not
-proved identical. The later receiver extension will reuse these videos.
+This notebook is only for recording. Transmission logs are saved automatically;
+I will handle the video organisation and analysis afterwards.
 
 | Phone recording | Messages transmitted in sequence | Flashing time |
 |---|---|---:|
@@ -46,10 +45,8 @@ remain explicitly unreported rather than invented.
 ''')
 code('''
 from pathlib import Path
-import json
-from IPython.display import display, HTML
 from optical_link.device import ports
-from optical_link.capture import load_capture_plan, capture_status, LABELS
+from optical_link.capture import load_capture_plan
 from optical_link.capture_ui import CaptureDashboard
 
 ROOT = Path.cwd().resolve()
@@ -99,62 +96,19 @@ code('''
 dashboard = CaptureDashboard(ROOT, plan, PORT, SETUP).show()
 ''')
 md('''
-## 3 · AirDrop and attach the three original videos
+## 3 · Finished
 
-You may do this after all three recordings. Rename the files in Downloads:
+After all three batches, AirDrop the original videos to your Mac with their
+existing iPhone filenames. Tell me in chat when they have arrived.
 
-- `B01_MANUNITED_NOISY.MOV`
-- `B02_ADRIAN_NOISY.MOV`
-- `B03_OMAR_NOISY.MOV`
+**You do not need to rename files, enter video paths, choose folders, attach
+recordings, or run decoding here.** I will organise the originals, check their
+optical packet IDs against the automatically saved logs, and prepare the analysis
+separately. Keep any partial recordings or retakes too.
 
-In the attachment controls above, select the matching batch attempt, check the
-path, describe actual disturbance and deviations, and click **Save original video
-+ notes**. If the filename or extension differs, enter the real path instead.
-For a retake, keep a distinct filename and select its distinct attempt folder.
-
-The program copies the original, checks its hash, and records basic video
-metadata. It flags unexpectedly short clips. It does not yet claim that the
-optical IDs match, all headers decode, or the message was recovered: those checks
-belong to the analysis stage. Do not discard a video because its eventual CRC fails.
-
-These are continuous multi-packet videos. Later analysis must locate each packet
-and verify its unique optical ID against the saved per-packet logs. Do not pass
-a whole batch through the old one-packet evaluation cell and count it as all
-three/four transmissions. Host acknowledgment times and eight-second gaps are
-retained to assist segmentation; the receiver must decode message bits independently.
-''')
-code('''
-rows = capture_status(ROOT, plan)
-for row in rows:
-    print(f"{row['batch']} | {row['message']} | {row['latest_status']} | video saved: {row['video_saved']}")
-    if row['attempt_dir']:
-        print('  ', row['attempt_dir'])
-if all(r['latest_status'] == 'controller_completed' and r['video_saved'] for r in rows):
-    print('All planned batches are sent and attached. Optical association, completeness and decoding still need verification.')
-else:
-    print('Complete the remaining captures/attachments shown above. Partial and earlier attempts remain saved.')
-''')
-md('''
-## 4 · What comes after recording
-
-Use the previous eight videos to develop the receiver. Keep these new recordings
-for evaluation once settings are frozen; checking capture completeness is fine,
-but tuning to their decoded message outcomes would make them development data.
-
-Compare the original mean-ROI receiver, reference-region lighting compensation,
-spatially robust patch aggregation, and their combination on identical recordings.
-Measure errors before/after correction, CRC and exact-match results, packet
-failures, airtime and useful delivered-bit rate. Retain failed headers and all
-retakes. Three message cases provide descriptive evidence, not precise reliability
-estimates or proof that all conditions are matched.
-
-**Reed–Solomon implementation:** the project bundles the unmodified, attributed
-`reedsolo` 1.7.0 library (see `optical_link/_vendor/README.txt`). The integration
-uses byte symbols in GF(256), four parity bytes, and the existing payload CRC.
-Four parity bytes correct up to two erroneous byte symbols per codeword;
-beyond that capacity, failure or miscorrection is possible, so CRC still matters.
-Understand and explain the library use in your presentation rather than claiming
-to have written its algebraic decoder.
+This notebook only controls transmission for your phone recordings. Its progress
+table confirms which batches were transmitted; it does not claim that phone
+footage has been received or verified.
 ''')
 nb=nbf.v4.new_notebook(cells=cells)
 nb.metadata={'kernelspec':{'display_name':'Python 3','language':'python','name':'python3'},'language_info':{'name':'python'}}

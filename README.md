@@ -46,7 +46,7 @@ Open **[Final_Recordings.ipynb](Final_Recordings.ipynb)**, or double-click `Open
 
 This fills 11 missing method/message cases while reusing the original three noisy uncoded messages and the locally recorded noisy repeat3 MANUNITED message. These are three message cases, not identical-condition repeats or a statistically powered reliability study. Historical capture conditions are not proved identical.
 
-Keep lighting steady for each header, introduce comparable physical disturbance anywhere during each body, and return to steady lighting between messages. Exact sweep timing is flexible. Every batch/retake gets fresh packet IDs and retained logs. After AirDrop, use the notebook controls to preserve and hash each original video and record actual observations. Logs and videos stay in ignored `experiments/final_capture_v1/`.
+Keep lighting steady for each header, introduce comparable physical disturbance anywhere during each body, and return to steady lighting between messages. Exact sweep timing is flexible. Every batch/retake gets fresh packet IDs and retained logs. The notebook is recording-only. AirDrop the original videos with their existing iPhone names; file organisation, optical-ID association and analysis are handled separately. Logs and videos stay in ignored `experiments/final_capture_v1/`.
 
 The capture notebook intentionally does not score the new videos. Later analysis must segment the multi-packet recordings and independently decode/verify each optical ID. Saved host START times and gaps assist segmentation. Raw-video attachment alone is not proof of a matching optical packet or successful decode. Develop the receiver on the earlier videos and evaluate frozen settings on the new recordings.
 
