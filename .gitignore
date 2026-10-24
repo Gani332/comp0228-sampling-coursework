@@ -1,4 +1,3 @@
-# Local Python and notebook state
 __pycache__/
 *.py[cod]
 .ipynb_checkpoints/
@@ -7,24 +6,19 @@ __pycache__/
 .env
 .env.*
 !.env.example
-# Firmware build products and local Arduino configuration
-/build/
-/cache/
-/firmware/prebuilt/
-/.arduino-downloads/
-/arduino-cli.local.yaml
-# Keep recordings, all per-attempt results and original flash backups local
-/recordings/*
-!/recordings/.gitkeep
-/results/*
-!/results/.gitkeep
-/backup/*
-!/backup/.gitkeep
-/evidence/*
-!/evidence/.gitkeep
+/.archive/
+/archive/
+/code/build/
+/code/cache/
+/code/firmware/prebuilt/
+/code/.arduino-downloads/
+/code/arduino-cli.local.yaml
 
-# Explicitly published six-video pilot dataset
-!/recordings/pilot_2026-10-24/
-
-# Local controlled-experiment videos, attempt records and evaluations
-/experiments/
+# Only the previously published pilot dataset is tracked.
+/data/*
+!/data/recordings/
+!/data/analysis/
+/data/recordings/*
+!/data/recordings/pilot_2026-10-24/
+/data/analysis/*
+!/data/analysis/pilot_2026-10-24/

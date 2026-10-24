@@ -30,13 +30,13 @@ The transmitter record for each trial is the latest earlier log with the expecte
 Reproduce the metrics from saved traces:
 
 ```sh
-python tools/evaluate_pilot.py
+python code/tools/evaluate_pilot.py
 ```
 
 To also verify the original video hashes and re-extract each trace from the movies:
 
 ```sh
-python tools/evaluate_pilot.py --from-video
+python code/tools/evaluate_pilot.py --from-video
 ```
 
 The original movies retain their audio and container data; the optical decoder uses only the first video stream.

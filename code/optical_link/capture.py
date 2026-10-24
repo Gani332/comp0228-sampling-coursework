@@ -134,7 +134,7 @@ class BodyCue:
             self.last_display = elapsed
 
 
-def run_batch(root, plan, batch_id, port, setup, display=None, retake=False):
+def run_batch(root, plan, batch_id, port, setup, display=None, retake=False, cue_factory=BodyCue):
     # Two notebook kernels must not allocate IDs or use the controller together.
     import fcntl
     lock_path = Path(root)/DATA_DIR/'capture.lock'
@@ -144,10 +144,10 @@ def run_batch(root, plan, batch_id, port, setup, display=None, retake=False):
             fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
         except BlockingIOError as exc:
             raise RuntimeError('Another capture is running in this project. Wait or interrupt that notebook.') from exc
-        return _run_batch(root, plan, batch_id, port, setup, display, retake)
+        return _run_batch(root, plan, batch_id, port, setup, display, retake, cue_factory)
 
 
-def _run_batch(root, plan, batch_id, port, setup, display=None, retake=False):
+def _run_batch(root, plan, batch_id, port, setup, display=None, retake=False, cue_factory=BodyCue):
     """Send one explicit operator-selected batch; preserve every partial attempt."""
     batch = next((b for b in plan['batches'] if b['batch_id'] == batch_id), None)
     if batch is None: raise ValueError('Unknown batch ID.')
@@ -167,7 +167,9 @@ def _run_batch(root, plan, batch_id, port, setup, display=None, retake=False):
                 def packet_display(state, trial=trial, i=i):
                     show(dict(state, packet=f"{i+1}/{len(record['packets'])}: {LABELS[trial['codec']]}",
                               sequence=trial['sequence']))
-                cue = BodyCue(p, trial['bit_ms'], packet_display)
+                cue = cue_factory(p, trial['bit_ms'], packet_display)
+                if hasattr(cue, 'schedule'):
+                    trial['planned_sweep_schedule'] = cue.schedule
                 trial['status'] = 'sending'
                 trial['tx_log'] = f"{trial['trial_id']}/tx.json"
                 _save(destination/'batch.json', record)

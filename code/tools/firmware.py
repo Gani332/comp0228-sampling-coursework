@@ -13,20 +13,22 @@ from pathlib import Path
 from serial.tools import list_ports
 
 ROOT = Path(__file__).resolve().parents[1]
+EVIDENCE = ROOT.parent/'.archive/evidence'
+BACKUP = ROOT.parent/'.archive/backup'
 FQBN = 'esp32:esp32:esp32s3:CDCOnBoot=cdc,USBMode=hwcdc'
 CLI = '/Applications/Arduino IDE.app/Contents/Resources/app/lib/backend/resources/arduino-cli'
 ESPTOOL = Path.home()/'Library/Arduino15/packages/esp32/tools/esptool_py/5.0.dev1/esptool'
 
 
 def run_logged(command, name, timeout=600):
-    (ROOT/'evidence').mkdir(exist_ok=True)
+    EVIDENCE.mkdir(parents=True, exist_ok=True)
     result = subprocess.run(command, capture_output=True, text=True, timeout=timeout)
     log = '\n'.join(line for line in (result.stdout+'\n'+result.stderr).splitlines()
                     if not line.startswith('MAC:'))
-    (ROOT/'evidence'/name).write_text(log+'\n')
+    (EVIDENCE/name).write_text(log+'\n')
     print(log[-3500:])
     if result.returncode:
-        raise RuntimeError(f'Operation failed; see evidence/{name}.')
+        raise RuntimeError(f'Operation failed; see {EVIDENCE/name}.')
 
 
 def device(port):
@@ -47,8 +49,8 @@ def hardware(args):
     esptool = Path(args.esptool).expanduser()
     executable = [sys.executable, str(esptool)] if esptool.suffix == '.py' else [str(esptool)]
     command = executable + ['--chip', 'esp32s3', '--port', p.device, '--baud', '921600']
-    backup_dir = ROOT/'backup'
-    backup_dir.mkdir(exist_ok=True)
+    backup_dir = BACKUP
+    backup_dir.mkdir(parents=True, exist_ok=True)
     manifest_file = backup_dir/'manifest.json'
     fingerprint = hashlib.sha256((p.serial_number or '').encode()).hexdigest()
     if args.action == 'backup':
@@ -83,7 +85,7 @@ def hardware(args):
     if not 0 < app.stat().st_size <= 0x140000:
         raise ValueError('Application does not fit the existing app partition.')
     run_logged(command+['write_flash', '0x10000', str(app)], 'upload.log')
-    print('Application installed. Full original flash remains in backup/.')
+    print('Application installed. Full original flash remains in', BACKUP)
 
 
 def main():

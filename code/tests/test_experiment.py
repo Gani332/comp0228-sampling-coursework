@@ -20,9 +20,7 @@ def tx_record(packet):
 
 class ExperimentTests(unittest.TestCase):
     def test_rerunning_transmit_cell_does_not_send_twice(self):
-        notebook=json.loads((Path(__file__).resolve().parents[1]/'Repetition_Comparison.ipynb').read_text())
-        source=next(''.join(c['source']) for c in notebook['cells']
-                    if c['cell_type']=='code' and 'attempt_dir = None' in ''.join(c['source']))
+        source=(Path(__file__).resolve().parent/'fixtures/repetition_transmit_cell.py').read_text()
         sends=[]
         class Handle:
             def update(self,*args):pass

@@ -11,6 +11,7 @@ from pathlib import Path
 import numpy as np
 
 ROOT=Path(__file__).resolve().parents[1]
+DATA=ROOT.parent/'data'
 if str(ROOT) not in sys.path:
     sys.path.insert(0,str(ROOT))
 from optical_link.protocol import GUARD_BITS, PREAMBLE, HEADER_BITS, to_bits
@@ -27,15 +28,15 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--from-video',action='store_true')
     args=parser.parse_args()
-    dataset=ROOT/'recordings/pilot_2026-10-24/manifest.json'
+    dataset=DATA/'recordings/pilot_2026-10-24/manifest.json'
     manifest=json.loads(dataset.read_text())
-    reference={r['trial_id']:r for r in json.loads((ROOT/'analysis/pilot_2026-10-24/summary.json').read_text())}
+    reference={r['trial_id']:r for r in json.loads((DATA/'analysis/pilot_2026-10-24/summary.json').read_text())}
     for trial in manifest['trials']:
-        trace=ROOT/trial['trace']
+        trace=DATA/trial['trace']
         if sha(trace)!=trial['trace_sha256']:
             raise ValueError(f"Trace hash differs: {trial['trial_id']}")
         if args.from_video:
-            movie=ROOT/trial['video']
+            movie=DATA/trial['video']
             if sha(movie)!=trial['video_sha256']:
                 raise ValueError(f"Movie hash differs: {trial['trial_id']}")
             t,y,_=extract_trace(movie,tuple(trial['roi_xywh']))
@@ -49,7 +50,7 @@ def main():
         # Decoding gets no known message or transmitter log.
         received=decode_trace(t,y,bit_ms=trial['bit_ms'])
         # Evaluation begins only after independent decoding.
-        tx=json.loads((ROOT/trial['transmitter_log']).read_text())
+        tx=json.loads((DATA/trial['transmitter_log']).read_text())
         if (received['codec'],received['sequence']) != (tx['codec'],tx['sequence']):
             raise ValueError('Decoded packet identity does not match the selected log.')
         sent=np.array([int(b) for b in tx['transmitted_bits']],dtype=np.uint8)
