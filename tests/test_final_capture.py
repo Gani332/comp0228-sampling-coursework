@@ -48,6 +48,36 @@ class RSTests(unittest.TestCase):
 
 
 class CaptureTests(unittest.TestCase):
+    def test_plain_cell_cancel_never_starts_hardware(self):
+        from optical_link.capture_cell import record_batch_cell
+        with tempfile.TemporaryDirectory() as td, patch('builtins.input',return_value='cancel'), patch('optical_link.capture_cell.run_batch') as send:
+            (Path(td)/'optical_link').mkdir()
+            self.assertIsNone(record_batch_cell('B01',root=td,port='fake'))
+            send.assert_not_called()
+            self.assertEqual(batch_attempts(td),[])
+
+    def test_plain_cell_completed_batch_does_not_prompt_or_send(self):
+        from optical_link.capture_cell import record_batch_cell
+        with tempfile.TemporaryDirectory() as td, patch('builtins.input') as prompt, patch('optical_link.capture_cell.run_batch') as send:
+            (Path(td)/'optical_link').mkdir()
+            plan=load_capture_plan(td);folder,r=new_batch_attempt(td,plan['batches'][0],{})
+            r['status']='controller_completed';(folder/'batch.json').write_text(json.dumps(r))
+            self.assertEqual(record_batch_cell('B01',root=td,port='fake'),folder.resolve())
+            prompt.assert_not_called();send.assert_not_called()
+
+    def test_plain_cell_enter_runs_selected_batch_and_shows_sweep_cue(self):
+        from optical_link.capture_cell import record_batch_cell
+        def fake_send(root,plan,batch_id,port,setup,display,retake):
+            self.assertEqual(batch_id,'B02')
+            display({'phase':'body','message':'body','remaining_seconds':20})
+            display({'phase':'complete','message':'BATCH FINISHED'})
+            return root/'saved'
+        with tempfile.TemporaryDirectory() as td, patch('builtins.input',return_value=''), patch('optical_link.capture_cell.run_batch',side_effect=fake_send) as send, patch('optical_link.capture_cell.display') as shown:
+            (Path(td)/'optical_link').mkdir()
+            record_batch_cell('B02',root=td,port='fake')
+            send.assert_called_once()
+            self.assertTrue(any('DO A LIGHT SWEEP NOW' in c.args[0].data for c in shown.return_value.update.call_args_list))
+
     def test_plan_fills_exactly_missing_cases(self):
         plan=capture_plan();new={(p['message'],p['codec']) for b in plan['batches'] for p in b['packets']}
         existing={('MANUNITED','none'),('ADRIAN','none'),('OMAR','none'),('MANUNITED','repeat3')}

@@ -36,7 +36,7 @@ Install **FFmpeg/FFprobe** separately and make `ffprobe` available on your PATH.
 
 ## Remaining physical recordings
 
-Open **[Final_Recordings.ipynb](Final_Recordings.ipynb)**, or double-click `Open Final Recordings.command` on the original Mac. Run All loads controls without opening serial. Start your iPhone, tick the recording checkbox, and click Start. Keep filming through all methods in that batch and the eight-second pauses.
+Open **[Final_Recordings.ipynb](Final_Recordings.ipynb)**, or double-click `Open Final Recordings.command` on the original Mac. The notebook has three plain recording cells: MANUNITED, ADRIAN and OMAR. Run a cell, start your iPhone, then press Enter at its text prompt. Each cell waits for this confirmation before opening serial; typing cancel skips it. Follow the approximate sweep cue, and keep filming through all methods and the eight-second pauses. No widget panel or setup cell is required.
 
 | Batch | Message | Methods | Channel time |
 |---|---|---|---:|
@@ -74,7 +74,7 @@ These helpers are configured for the original Mac/ESP32 setup; inspect `--help`,
 |---|---|
 | `Final_Recordings.ipynb` | Current three-video capture workflow |
 | `optical_link/capture.py` | Batch plan, flexible body cues and retained logs |
-| `optical_link/capture_ui.py` | Explicit-click notebook controls |
+| `optical_link/capture_cell.py` | Plain recording cells with a start prompt and HTML cues |
 | `Optical_Link_Guided.ipynb` | Original guided experiment and explanation |
 | `firmware/optical_tx/` | Timed LCD transmitter |
 | `optical_link/protocol.py` | Framing, CRC and error-correcting codes |
