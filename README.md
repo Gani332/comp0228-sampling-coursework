@@ -20,7 +20,7 @@ Open **[Optical_Link_Guided.ipynb](Optical_Link_Guided.ipynb)** and work through
 4. Select the flashing patch in the video and recover the bits.
 5. Compare the independently received bits with the saved transmission log.
 
-Hardware actions default to disabled. The initial software demonstration uses synthetic data and is labelled accordingly. Your original phone video stays on your computer in `recordings/`; results are saved locally in `results/`.
+Hardware actions default to disabled. The initial software demonstration uses synthetic data and is labelled accordingly. The six explicitly shared pilot recordings are included in `recordings/pilot_2026-10-24/`. New recordings and per-attempt outputs remain local unless deliberately added to Git.
 
 ### Python setup
 
@@ -72,9 +72,23 @@ python -m unittest discover -s tests -v
 
 Nine tests cover the CRC check vector, Hamming single-bit correction, repetition decoding, corrupted headers/bodies, timing jitter, missing samples, and a generated video through the receiver pipeline.
 
-During setup on 24 October 2026, the firmware upload was hash-verified, the controller completed the blink and `HI` timing tests, and the screen's flashing was visually confirmed. Generated-video tests do not establish real optical-channel performance. Physical recordings, controlled comparisons, the third researched coding family, and the remaining coursework analysis are separate work.
+During setup on 24 October 2026, the firmware upload was hash-verified, the controller completed the blink and `HI` timing tests, and the screen's flashing was visually confirmed. Generated-video tests do not establish real optical-channel performance. Six selected uncoded physical recordings are now published with reproducible metrics below. Controlled coding comparisons, the third researched coding family and the remaining coursework analysis are still to be completed.
 
-This repository is a clean public snapshot. The original working notebook, personal recordings, per-attempt measurements, device backups, institutional handouts and lab sheets are not published. Later local edits to the separate working project are not synchronized automatically.
+This repository is a public snapshot plus an explicitly shared six-video pilot dataset. The selected videos and their portable measurement records are included. The original working notebook, other recordings, device backups, institutional handouts and lab sheets remain outside the public snapshot. Later local edits to the separate working project are not synchronized automatically.
+
+## Physical pilot recordings
+
+[Open the six-recording dataset and results](recordings/pilot_2026-10-24/README.md).
+
+The selected set contains three clean recordings (`HELLO`, `RIYAADH`, `MANUNITED`) and three moving-light recordings (`MANUNITED`, `ADRIAN`, `OMAR`). Original movies are preserved byte-for-byte. The manifest records video hashes, ROIs, trace hashes and source log associations; portable traces and metrics are in `analysis/pilot_2026-10-24/`.
+
+```sh
+python tools/evaluate_pilot.py
+# Optional: verify the movie hashes and re-extract brightness from the video files
+python tools/evaluate_pilot.py --from-video
+```
+
+All three selected clean messages match exactly and pass CRC. The three selected noisy messages have 4/72, 2/48 and 1/32 payload-bit errors respectively and fail CRC. These selected examples use different messages and conditions and exclude earlier failed retakes; they are pilot evidence, not a controlled performance estimate. The next experiments should use matched messages across coding methods, consistent interference, unique sequence IDs and a record of every attempt.
 
 ## Attribution
 

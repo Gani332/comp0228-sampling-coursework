@@ -1,0 +1,7 @@
+trial_id,condition,message,received_text,codec,body_channel_bit_errors,body_channel_bits,body_channel_ber,payload_bit_errors,payload_bits,payload_ber,crc_ok,packet_failed,exact_payload_match,channel_seconds_including_overhead,crc_valid_payload_goodput_bps
+clean_hello,clean,HELLO,HELLO,none,0,56,0.0,0,40,0.0,True,False,True,30.4,1.3157894736842106
+clean_riyaadh,clean,RIYAADH,RIYAADH,none,0,72,0.0,0,56,0.0,True,False,True,33.6,1.6666666666666665
+clean_manunited,clean,MANUNITED,MANUNITED,none,0,88,0.0,0,72,0.0,True,False,True,36.8,1.956521739130435
+noisy_manunited,noisy,MANUNITED,M�^]N�TED,none,4,88,0.045454545454545456,4,72,0.05555555555555555,False,True,False,36.8,0.0
+noisy_adrian,noisy,ADRIAN,ADR�A^,none,2,64,0.03125,2,48,0.041666666666666664,False,True,False,32.0,0.0
+noisy_omar,noisy,OMAR,OMAZ,none,1,48,0.020833333333333332,1,32,0.03125,False,True,False,28.8,0.0

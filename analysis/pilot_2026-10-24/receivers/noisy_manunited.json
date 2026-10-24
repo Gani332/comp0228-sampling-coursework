@@ -1,0 +1,20 @@
+{
+  "crc_ok": false,
+  "codec": "none",
+  "sequence": 1,
+  "start_seconds": 3.96606967889099,
+  "period_seconds": 0.19981245653912078,
+  "threshold": 168.35628125,
+  "dark_level": 119.15645,
+  "bright_level": 217.55611249999998,
+  "preamble_bit_errors": 0,
+  "edge_residual_rms_seconds": 0.010568090561148687,
+  "low_confidence_body_bits": 0,
+  "text": "M�^]N�TED",
+  "payload_hex": "4dc15e5d4ec9544544",
+  "data_kind": "physical_video",
+  "video_sha256": "cf5a74930ff1dbfa36e37f5f6d8db1219f97ea8e353d2ae39a922a4858660175",
+  "status": "crc_fail",
+  "trace_file": "analysis/pilot_2026-10-24/traces/noisy_manunited.csv",
+  "source_record": "20261024T165039_962739Z_rx.json"
+}

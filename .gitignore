@@ -22,3 +22,6 @@ __pycache__/
 !/backup/.gitkeep
 /evidence/*
 !/evidence/.gitkeep
+
+# Explicitly published six-video pilot dataset
+!/recordings/pilot_2026-10-24/

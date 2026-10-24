@@ -1,0 +1,24 @@
+{
+  "bit_ms": 200,
+  "payload_hex": "4d414e554e49544544",
+  "codec": "none",
+  "sequence": 1,
+  "transmitted_bits": "0000000010101010101010101101001110010001000000010000000000001001000000010101100011001101010011010100000101001110010101010100111001001001010101000100010101000100001011111010100100000000",
+  "scheduled_channel_seconds": 36.8,
+  "status": "controller_completed",
+  "serial_responses": [
+    "START bits=184 bit_ms=200",
+    "DONE bits=184 elapsed_us=36800611 max_late_us=609 max_draw_us=31326"
+  ],
+  "conditions": {
+    "distance_cm": null,
+    "phone_model": "",
+    "camera_mode": "",
+    "lighting": "",
+    "interference": "none",
+    "notes": ""
+  },
+  "source_record": "20261024T161538_073769Z_tx.json",
+  "dataset_condition": "clean",
+  "condition_note": "Dataset label is retrospective user-provided classification; original conditions retained above."
+}
