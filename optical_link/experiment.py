@@ -166,7 +166,7 @@ def run_trial(root, plan, trial_id, port, setup, display=None):
         trial['status'] = 'controller_completed'
     except BaseException as e:
         trial['status'] = 'transmission_aborted'
-        trial['transmission_error'] = str(e)
+        trial['transmission_error'] = type(e).__name__ + ': ' + str(e)
         raise
     finally:
         trial['cue_events'] = cue.events

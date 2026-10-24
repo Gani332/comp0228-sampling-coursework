@@ -122,6 +122,10 @@ cell alone will not send again. Rerunning the arming cell with True (or Run All
 while it contains True) enables another attempt. On a noisy trial, wait for **START LIGHT SWEEP NOW**, then stop when
 instructed. Keep recording for two seconds after FINISHED.
 
+Connecting should last only a few seconds. The host uploads long commands in small
+chunks and reports an error if START is not acknowledged within three seconds of
+upload. Restart the kernel after updating the project helpers.
+
 The program saves a separate folder for every attempt, including aborted ones.
 A fresh optical sequence number on each retake helps detect a mismatched video.
 The eight-bit sequence ID is limited; this notebook refuses to reuse exhausted IDs.
@@ -141,7 +145,7 @@ if RUN_TRANSMISSION:
     try:
         attempt_dir = run_trial(ROOT, plan, TRIAL_ID, PORT, SETUP, display=show_cue)
         print('Saved transmission and cue record:', attempt_dir)
-    except Exception as e:
+    except (Exception, KeyboardInterrupt) as e:
         cue_display.update(HTML('<div style="padding:18px;background:#ffe2e2">Transmission did not complete. The attempt is retained; inspect the error below.</div>'))
         print(type(e).__name__+':', e)
         previous = attempts(ROOT, TRIAL_ID)

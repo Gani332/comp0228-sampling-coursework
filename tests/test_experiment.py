@@ -61,8 +61,8 @@ class ExperimentTests(unittest.TestCase):
     def test_serial_progress_is_anchored_to_start_ack(self):
         clock=[0.0]
         class SerialStub:
-            def __init__(self):self.events=iter([(25,''),(0,'START bits=1 bit_ms=200'),(.5,''),(1.5,'DONE bits=1')])
-            def write(self,data):pass
+            def __init__(self):self.events=iter([(2,''),(0,'START bits=1 bit_ms=200'),(.5,''),(1.5,'DONE bits=1')])
+            def write(self,data):return len(data)
             def flush(self):pass
             def readline(self):
                 dt,line=next(self.events);clock[0]+=dt;return (line+'\n').encode()

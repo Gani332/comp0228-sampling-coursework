@@ -44,30 +44,62 @@ class Transmitter:
             raise
 
     def __exit__(self, *exc):
-        if exc[0] is not None:
-            self.serial.write(b'STOP\n')
-            self.serial.flush()
-        self.serial.close()
+        try:
+            if exc[0] is not None:
+                # Finish any truncated input before requesting STOP. Never mask
+                # the original error if the USB cable was disconnected.
+                try:
+                    self.serial.write(b'\nSTOP\n')
+                except Exception:
+                    pass
+        finally:
+            self.serial.close()
 
-    def run(self, command, seconds=3, completed='OK', on_progress=None):
-        self.serial.write((command+'\n').encode('ascii'))
-        self.serial.flush()
+    def _write_command(self, command):
+        if '\n' in command or '\r' in command:
+            raise ValueError('Send one command at a time.')
+        data = (command+'\n').encode('ascii')
+        # ESP32 native USB defaults to a 256-byte RX queue. A whole coded
+        # packet can overflow it before loop() drains it, losing the newline.
+        for offset in range(0, len(data), 64):
+            chunk = data[offset:offset+64]
+            if self.serial.write(chunk) != len(chunk):
+                raise IOError('Incomplete serial command upload.')
+            if offset+64 < len(data):
+                time.sleep(0.01)
+
+    def run(self, command, seconds=3, completed='OK', on_progress=None,
+            expected_start=None):
+        self.last_responses = []
+        self._write_command(command)
         deadline = time.monotonic() + seconds
-        lines = []
+        start_deadline = time.monotonic() + 3
+        needs_start = completed == 'DONE'
+        lines = self.last_responses
         acknowledged_at = None
         while time.monotonic() < deadline:
+            if needs_start and acknowledged_at is None and time.monotonic() >= start_deadline:
+                raise TimeoutError('No START acknowledgment within 3 seconds of command upload. '
+                                   'Transmission was not confirmed; check the USB connection.')
             line = self.serial.readline().decode(errors='replace').strip()
-            if line.startswith(('ERR', 'STOPPED')):
+            if line:
                 lines.append(line)
+            if line.startswith(('ERR', 'STOPPED')):
                 raise RuntimeError('\n'.join(lines))
             if line.startswith('START ') and acknowledged_at is None:
+                if expected_start is not None:
+                    fields = dict(part.split('=', 1) for part in line.split()[1:] if '=' in part)
+                    if any(fields.get(key) != str(value) for key, value in expected_start.items()):
+                        raise RuntimeError('START acknowledgment does not match the requested packet: '+line)
                 acknowledged_at = time.monotonic()
+                deadline = acknowledged_at + seconds
             if acknowledged_at is not None and on_progress is not None:
                 on_progress(time.monotonic()-acknowledged_at, line)
             if not line:
                 continue
-            lines.append(line)
             if line.startswith(completed):
+                if needs_start and acknowledged_at is None:
+                    raise RuntimeError('Received DONE without a START acknowledgment.')
                 return lines
         raise TimeoutError('No completion received: ' + '\n'.join(lines))
 
@@ -96,11 +128,13 @@ class Transmitter:
         try:
             log['serial_responses'] = self.run(f'SEND {bit_ms} {bits}',
                                             seconds=len(bits)*bit_ms/1000+5,
-                                            completed='DONE', on_progress=on_progress)
+                                            completed='DONE', on_progress=on_progress,
+                                            expected_start={'bits':len(bits), 'bit_ms':bit_ms})
             log['status'] = 'controller_completed'
         except BaseException as e:
             log['status'] = 'failed_or_interrupted'
-            log['error'] = str(e)
+            log['error'] = type(e).__name__ + ': ' + str(e)
+            log['serial_responses'] = getattr(self, 'last_responses', []).copy()
             raise
         finally:
             log['host_elapsed_seconds'] = time.monotonic()-started
