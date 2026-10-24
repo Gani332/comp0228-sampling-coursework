@@ -34,6 +34,21 @@ python3 -m venv .venv
 
 Install **FFmpeg/FFprobe** separately and make `ffprobe` available on your PATH. On macOS, the included `Open Optical Link.command` launcher uses this project's `.venv`, or the existing Week 2 Lab 2 environment when present.
 
+## Controlled repetition comparison
+
+Open **[Repetition_Comparison.ipynb](Repetition_Comparison.ipynb)** for the next experiment, or use `Open Repetition Comparison.command` on the original Mac.
+
+- Fixed message `MANUNITED`, 200 ms bit slots.
+- 12 planned trials: uncoded/repeat3 × clean/noisy × three repeats.
+- T01 is a 72-second clean repeat3 transmission; T02 is repeat3 with a light disturbance.
+- A large visual cue schedules one two-second light sweep, anchored to the controller START acknowledgment with a two-second margin after the header. The cue records host instructions, not measured physical light timing.
+- Each recording is linked to its own transmission log. Retakes retain earlier records and get new sequence IDs. A wrong packet ID/code is reported as a pairing error, and the same video cannot be assigned to two attempts.
+- Failed synchronization/header attempts count in packet failure rate; their unknown payload BER is not entered as zero. Aborted transmissions and unevaluated attempts are reported separately.
+
+All new experiment data stays in the ignored `experiments/repetition_comparison/` folder. Hardware actions default to disabled and the send switch resets after use. The original pilot notebook and six-recording dataset remain available.
+
+This is a **single-interference-event-per-packet pilot**, not a continuous-noise experiment. More messages, repeated conditions and uncertainty analysis are needed before making general performance claims. The visual cue and bookkeeping passed software checks and a notebook dry run; the first physical repeat3 trial must still be collected.
+
 ## Hardware
 
 The tested setup is an **ESP32-S3** driving a **LAFVIN 4-inch ST7796S SPI display**, with a phone camera as the receiver. The firmware retains the pin assignments from the existing working display project. The notebook explains the connections and the optical packet format.
@@ -70,7 +85,7 @@ These helpers are configured for the original Mac/ESP32 setup; inspect `--help`,
 python -m unittest discover -s tests -v
 ```
 
-Nine tests cover the CRC check vector, Hamming single-bit correction, repetition decoding, corrupted headers/bodies, timing jitter, missing samples, and a generated video through the receiver pipeline.
+Eighteen tests cover the original protocol/video checks plus the controlled comparison: START-anchored cues, header margins, repetition repair, recording association, retained retakes/aborts and failed-packet accounting.
 
 During setup on 24 October 2026, the firmware upload was hash-verified, the controller completed the blink and `HI` timing tests, and the screen's flashing was visually confirmed. Generated-video tests do not establish real optical-channel performance. Six selected uncoded physical recordings are now published with reproducible metrics below. Controlled coding comparisons, the third researched coding family and the remaining coursework analysis are still to be completed.
 

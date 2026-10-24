@@ -49,18 +49,24 @@ class Transmitter:
             self.serial.flush()
         self.serial.close()
 
-    def run(self, command, seconds=3, completed='OK'):
+    def run(self, command, seconds=3, completed='OK', on_progress=None):
         self.serial.write((command+'\n').encode('ascii'))
         self.serial.flush()
         deadline = time.monotonic() + seconds
         lines = []
+        acknowledged_at = None
         while time.monotonic() < deadline:
             line = self.serial.readline().decode(errors='replace').strip()
+            if line.startswith(('ERR', 'STOPPED')):
+                lines.append(line)
+                raise RuntimeError('\n'.join(lines))
+            if line.startswith('START ') and acknowledged_at is None:
+                acknowledged_at = time.monotonic()
+            if acknowledged_at is not None and on_progress is not None:
+                on_progress(time.monotonic()-acknowledged_at, line)
             if not line:
                 continue
             lines.append(line)
-            if line.startswith(('ERR', 'STOPPED')):
-                raise RuntimeError('\n'.join(lines))
             if line.startswith(completed):
                 return lines
         raise TimeoutError('No completion received: ' + '\n'.join(lines))
@@ -71,7 +77,7 @@ class Transmitter:
     def light(self, white):
         return self.run('WHITE' if white else 'BLACK')
 
-    def transmit(self, packet, bit_ms=200, log_path=None):
+    def transmit(self, packet, bit_ms=200, log_path=None, on_progress=None):
         if not isinstance(bit_ms, int) or not 200 <= bit_ms <= 1000:
             raise ValueError('Use an integer bit duration from 200 to 1000 ms.')
         bits = ''.join(map(str, bits_array(packet.bits)))
@@ -90,7 +96,7 @@ class Transmitter:
         try:
             log['serial_responses'] = self.run(f'SEND {bit_ms} {bits}',
                                             seconds=len(bits)*bit_ms/1000+5,
-                                            completed='DONE')
+                                            completed='DONE', on_progress=on_progress)
             log['status'] = 'controller_completed'
         except BaseException as e:
             log['status'] = 'failed_or_interrupted'
