@@ -10,8 +10,15 @@ import numpy as np
 PREAMBLE = np.array([1, 0]*8 + [int(b) for b in f'{0xD391:016b}'], dtype=np.uint8)
 GUARD_BITS = 8
 HEADER_BITS = 48  # version, codec, payload byte count, sequence, CRC16(header)
-CODECS = {'none': 0, 'repeat3': 1, 'repeat5': 2, 'hamming74': 3}
+CODECS = {'none': 0, 'repeat3': 1, 'repeat5': 2, 'hamming74': 3, 'rs4': 4}
 MAX_PAYLOAD = 64
+
+
+def _rs_codec():
+    # Pinned upstream implementation; see _vendor/README.txt and LICENSE.
+    # Byte-symbol GF(256), four parity bytes, shortened to this packet length.
+    from ._vendor.reedsolo import RSCodec
+    return RSCodec(4, nsize=255, fcr=0, prim=0x11d, generator=2, c_exp=8)
 
 
 def bits_array(bits):
@@ -42,6 +49,8 @@ def encode_body(bits, codec):
         return a.copy()
     if codec in ('repeat3', 'repeat5'):
         return np.repeat(a, int(codec[-1]))
+    if codec == 'rs4':
+        return to_bits(_rs_codec().encode(to_bytes(a)))
     if codec != 'hamming74' or len(a) % 4:
         raise ValueError('Unknown codec or incomplete Hamming data word.')
     # Same even-parity layout as Week 2/Lab 2/lab2_reference.py.
@@ -63,6 +72,16 @@ def decode_body(bits, codec):
         if len(a) % r:
             raise ValueError('Incomplete repetition block.')
         return (a.reshape(-1, r).sum(axis=1) > r//2).astype(np.uint8)
+    if codec == 'rs4':
+        from ._vendor.reedsolo import ReedSolomonError
+        data = to_bytes(a)
+        if len(data) <= 4:
+            raise ValueError('Incomplete Reed-Solomon codeword.')
+        try:
+            corrected, _, _ = _rs_codec().decode(data)
+        except ReedSolomonError as exc:
+            raise ValueError('Reed-Solomon could not correct this codeword.') from exc
+        return to_bits(corrected)
     if codec != 'hamming74' or len(a) % 7:
         raise ValueError('Unknown codec or incomplete Hamming codeword.')
     c = a.reshape(-1, 7).copy()
@@ -77,7 +96,11 @@ def decode_body(bits, codec):
 
 def body_length(payload_bytes, codec):
     raw = (payload_bytes + 2)*8  # Data plus payload CRC16.
-    return raw if codec == 'none' else raw*int(codec[-1]) if codec.startswith('repeat') else raw//4*7
+    if codec == 'none': return raw
+    if codec in ('repeat3', 'repeat5'): return raw*int(codec[-1])
+    if codec == 'hamming74': return raw//4*7
+    if codec == 'rs4': return raw+32
+    raise ValueError('Unknown codec.')
 
 
 def parse_header(bits):

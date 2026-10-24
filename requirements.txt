@@ -5,3 +5,4 @@ pyserial>=3.5,<4
 nbformat>=5.9,<6
 ipykernel>=6,<8
 jupyterlab>=4,<5
+ipywidgets>=8,<9

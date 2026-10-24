@@ -2,7 +2,7 @@
 
 Optical communication coursework for **Sampling, Compression and Data Analysis** at UCL.
 
-The current prototype sends a message through a flashing LCD patch, records it with a phone camera, and reconstructs the message from the video. It supports an uncoded baseline, repetition coding (3 and 5 repetitions), and Hamming(7,4).
+The current prototype sends a message through a flashing LCD patch, records it with a phone camera, and reconstructs the message from the video. It supports an uncoded baseline, repetition coding (3 and 5 repetitions), Hamming(7,4), and byte-symbol Reed–Solomon with four parity bytes.
 
 ```text
 Message → packet + optional error correction → ESP32/LCD flashes
@@ -34,20 +34,23 @@ python3 -m venv .venv
 
 Install **FFmpeg/FFprobe** separately and make `ffprobe` available on your PATH. On macOS, the included `Open Optical Link.command` launcher uses this project's `.venv`, or the existing Week 2 Lab 2 environment when present.
 
-## Controlled repetition comparison
+## Remaining physical recordings
 
-Open **[Repetition_Comparison.ipynb](Repetition_Comparison.ipynb)** for the next experiment, or use `Open Repetition Comparison.command` on the original Mac.
+Open **[Final_Recordings.ipynb](Final_Recordings.ipynb)**, or double-click `Open Final Recordings.command` on the original Mac. Run All loads controls without opening serial. Start your iPhone, tick the recording checkbox, and click Start. Keep filming through all methods in that batch and the eight-second pauses.
 
-- Fixed message `MANUNITED`, 200 ms bit slots.
-- 12 planned trials: uncoded/repeat3 × clean/noisy × three repeats.
-- T01 is a 72-second clean repeat3 transmission; T02 is repeat3 with a light disturbance.
-- A large visual cue schedules one two-second light sweep, anchored to the controller START acknowledgment with a two-second margin after the header. The cue records host instructions, not measured physical light timing.
-- Each recording is linked to its own transmission log. Retakes retain earlier records and get new sequence IDs. A wrong packet ID/code is reported as a pairing error, and the same video cannot be assigned to two attempts.
-- Failed synchronization/header attempts count in packet failure rate; their unknown payload BER is not entered as zero. Aborted transmissions and unevaluated attempts are reported separately.
+| Batch | Message | Methods | Channel time |
+|---|---|---|---:|
+| B01 | MANUNITED | repeat5, hamming74, rs4 | 200.4 s |
+| B02 | ADRIAN | rs4, repeat3, hamming74, repeat5 | 220.8 s |
+| B03 | OMAR | hamming74, repeat5, rs4, repeat3 | 186.4 s |
 
-All new experiment data stays in the ignored `experiments/repetition_comparison/` folder. Hardware actions default to disabled. A separate arming cell enables the transmit cell, which consumes that switch; rerunning the transmit cell alone does not send twice. The original pilot notebook and six-recording dataset remain available.
+This fills 11 missing method/message cases while reusing the original three noisy uncoded messages and the locally recorded noisy repeat3 MANUNITED message. These are three message cases, not identical-condition repeats or a statistically powered reliability study. Historical capture conditions are not proved identical.
 
-This is a **single-interference-event-per-packet pilot**, not a continuous-noise experiment. More messages, repeated conditions and uncertainty analysis are needed before making general performance claims. The visual cue and bookkeeping passed software checks and a notebook dry run; the first physical repeat3 trial must still be collected.
+Keep lighting steady for each header, introduce comparable physical disturbance anywhere during each body, and return to steady lighting between messages. Exact sweep timing is flexible. Every batch/retake gets fresh packet IDs and retained logs. After AirDrop, use the notebook controls to preserve and hash each original video and record actual observations. Logs and videos stay in ignored `experiments/final_capture_v1/`.
+
+The capture notebook intentionally does not score the new videos. Later analysis must segment the multi-packet recordings and independently decode/verify each optical ID. Saved host START times and gaps assist segmentation. Raw-video attachment alone is not proof of a matching optical packet or successful decode. Develop the receiver on the earlier videos and evaluate frozen settings on the new recordings.
+
+**[Repetition_Comparison.ipynb](Repetition_Comparison.ipynb)** retains the earlier T01/T02 workflow and its historical 12-trial plan. It is not the current recording schedule. Existing results and notebooks are preserved; no new clean-only baseline is requested by the capture notebook.
 
 ## Hardware
 
@@ -69,7 +72,10 @@ These helpers are configured for the original Mac/ESP32 setup; inspect `--help`,
 
 | Path | Purpose |
 |---|---|
-| `Optical_Link_Guided.ipynb` | Guided experiment and explanation |
+| `Final_Recordings.ipynb` | Current three-video capture workflow |
+| `optical_link/capture.py` | Batch plan, flexible body cues and retained logs |
+| `optical_link/capture_ui.py` | Explicit-click notebook controls |
+| `Optical_Link_Guided.ipynb` | Original guided experiment and explanation |
 | `firmware/optical_tx/` | Timed LCD transmitter |
 | `optical_link/protocol.py` | Framing, CRC and error-correcting codes |
 | `optical_link/device.py` | Serial control and transmission logging |
@@ -85,9 +91,9 @@ These helpers are configured for the original Mac/ESP32 setup; inspect `--help`,
 python -m unittest discover -s tests -v
 ```
 
-Nineteen tests cover the original protocol/video checks plus the controlled comparison: START-anchored cues, header margins, repetition repair, recording association, retained retakes/aborts and failed-packet accounting.
+Tests cover protocol/video decoding, paced USB uploads, missing START responses, retained failures, Reed–Solomon two-byte correction and beyond-capacity outcomes, all 11 planned transmissions, unique IDs, batch interruption, video preservation, and controls that require an explicit operator start. The capture notebook also passed Run All with serial opening blocked. These are software checks, not new physical results.
 
-During setup on 24 October 2026, the firmware upload was hash-verified, the controller completed the blink and `HI` timing tests, and the screen's flashing was visually confirmed. Generated-video tests do not establish real optical-channel performance. Six selected uncoded physical recordings are now published with reproducible metrics below. Controlled coding comparisons, the third researched coding family and the remaining coursework analysis are still to be completed.
+During setup on 24 October 2026, the firmware upload was hash-verified, the controller completed the blink and `HI` timing tests, and the screen's flashing was visually confirmed. Generated-video tests do not establish real optical-channel performance. Six selected uncoded physical recordings are now published with reproducible metrics below. The researched Reed–Solomon integration is implemented and software-tested; the remaining physical captures and analysis are not yet complete.
 
 This repository is a public snapshot plus an explicitly shared six-video pilot dataset. The selected videos and their portable measurement records are included. The original working notebook, other recordings, device backups, institutional handouts and lab sheets remain outside the public snapshot. Later local edits to the separate working project are not synchronized automatically.
 
@@ -108,3 +114,5 @@ All three selected clean messages match exactly and pass CRC. The three selected
 ## Attribution
 
 The display configuration was adapted from the author's existing robot-face firmware. Repetition and Hamming conventions follow the Week 2 Lab 2 reference implementation; institutional teaching files are not included. The notebook and supporting implementation were developed with AI assistance and require author review and understanding. Third-party LovyanGFX code retains its upstream MIT licence and notices.
+
+The researched RS method uses the unmodified `reedsolo` 1.7.0 pure-Python implementation, bundled with its license and provenance in `optical_link/_vendor/`. The project integration uses GF(256), primitive polynomial 0x11d, generator 2, first root 0, and four parity bytes; the existing CRC remains independent error detection. Upstream algebraic-code authorship is attributed rather than claimed as coursework implementation. See https://github.com/tomerfiliba-org/reedsolomon and https://pypi.org/project/reedsolo/1.7.0/.
