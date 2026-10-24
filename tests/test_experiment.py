@@ -19,6 +19,22 @@ def tx_record(packet):
 
 
 class ExperimentTests(unittest.TestCase):
+    def test_rerunning_transmit_cell_does_not_send_twice(self):
+        notebook=json.loads((Path(__file__).resolve().parents[1]/'Repetition_Comparison.ipynb').read_text())
+        source=next(''.join(c['source']) for c in notebook['cells']
+                    if c['cell_type']=='code' and 'attempt_dir = None' in ''.join(c['source']))
+        sends=[]
+        class Handle:
+            def update(self,*args):pass
+        namespace={'RUN_TRANSMISSION':True,'ROOT':Path('/unused'),'plan':{},'TRIAL_ID':'T01',
+                   'PORT':'fake','SETUP':{},'HTML':lambda x:x,'display':lambda *a,**k:Handle(),
+                   'run_trial':lambda *a,**k:sends.append(1) or Path('/unused/attempt'),
+                   'attempts':lambda *a:[]}
+        exec(source,namespace)
+        self.assertFalse(namespace['RUN_TRANSMISSION'])
+        exec(source,namespace)
+        self.assertEqual(len(sends),1)
+
     def test_plan_balanced_and_distinct_ids(self):
         plan=make_plan();trials=plan['trials']
         self.assertEqual(len(trials),12)

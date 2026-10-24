@@ -115,8 +115,11 @@ md('''
 ## 3 · Start the phone, then transmit
 
 **For T01, record the full 72-second clean transmission.** Start the phone first,
-then enable and run the next cell. The large cue updates while the controller
-transmits. On a noisy trial, wait for **START LIGHT SWEEP NOW**, then stop when
+then set RUN_TRANSMISSION=True in the short arming cell below and run it,
+then run the transmission cell beneath it. The large cue updates while the
+controller transmits. The transmission cell consumes the switch: rerunning that
+cell alone will not send again. Rerunning the arming cell with True (or Run All
+while it contains True) enables another attempt. On a noisy trial, wait for **START LIGHT SWEEP NOW**, then stop when
 instructed. Keep recording for two seconds after FINISHED.
 
 The program saves a separate folder for every attempt, including aborted ones.
@@ -124,7 +127,9 @@ A fresh optical sequence number on each retake helps detect a mismatched video.
 The eight-bit sequence ID is limited; this notebook refuses to reuse exhausted IDs.
 ''')
 code(r'''
-RUN_TRANSMISSION = False
+RUN_TRANSMISSION = False  # Set True and run this short cell only when ready to send.
+''')
+code(r'''
 attempt_dir = None
 if RUN_TRANSMISSION:
     RUN_TRANSMISSION = False  # One-shot: consciously re-enable for another send.

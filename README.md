@@ -45,7 +45,7 @@ Open **[Repetition_Comparison.ipynb](Repetition_Comparison.ipynb)** for the next
 - Each recording is linked to its own transmission log. Retakes retain earlier records and get new sequence IDs. A wrong packet ID/code is reported as a pairing error, and the same video cannot be assigned to two attempts.
 - Failed synchronization/header attempts count in packet failure rate; their unknown payload BER is not entered as zero. Aborted transmissions and unevaluated attempts are reported separately.
 
-All new experiment data stays in the ignored `experiments/repetition_comparison/` folder. Hardware actions default to disabled and the send switch resets after use. The original pilot notebook and six-recording dataset remain available.
+All new experiment data stays in the ignored `experiments/repetition_comparison/` folder. Hardware actions default to disabled. A separate arming cell enables the transmit cell, which consumes that switch; rerunning the transmit cell alone does not send twice. The original pilot notebook and six-recording dataset remain available.
 
 This is a **single-interference-event-per-packet pilot**, not a continuous-noise experiment. More messages, repeated conditions and uncertainty analysis are needed before making general performance claims. The visual cue and bookkeeping passed software checks and a notebook dry run; the first physical repeat3 trial must still be collected.
 
@@ -85,7 +85,7 @@ These helpers are configured for the original Mac/ESP32 setup; inspect `--help`,
 python -m unittest discover -s tests -v
 ```
 
-Eighteen tests cover the original protocol/video checks plus the controlled comparison: START-anchored cues, header margins, repetition repair, recording association, retained retakes/aborts and failed-packet accounting.
+Nineteen tests cover the original protocol/video checks plus the controlled comparison: START-anchored cues, header margins, repetition repair, recording association, retained retakes/aborts and failed-packet accounting.
 
 During setup on 24 October 2026, the firmware upload was hash-verified, the controller completed the blink and `HI` timing tests, and the screen's flashing was visually confirmed. Generated-video tests do not establish real optical-channel performance. Six selected uncoded physical recordings are now published with reproducible metrics below. Controlled coding comparisons, the third researched coding family and the remaining coursework analysis are still to be completed.
 
