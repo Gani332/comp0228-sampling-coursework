@@ -1,0 +1,198 @@
+{
+  "batch_id": "B02",
+  "message": "ADRIAN",
+  "packets": [
+    {
+      "trial_id": "R04",
+      "message": "ADRIAN",
+      "codec": "rs4",
+      "bit_ms": 200,
+      "channel_seconds": 38.400000000000006,
+      "sequence": 70,
+      "status": "controller_completed",
+      "tx_log": "R04/tx.json",
+      "start_ack_unix": 1792871677.4470296,
+      "cue_events": [
+        {
+          "phase": "header",
+          "seconds_after_start_ack": 0.0
+        },
+        {
+          "phase": "body",
+          "seconds_after_start_ack": 18.361
+        },
+        {
+          "phase": "ending",
+          "seconds_after_start_ack": 37.1045
+        },
+        {
+          "phase": "packet_done",
+          "seconds_after_start_ack": 38.6169
+        }
+      ],
+      "host_finished_unix": 1792871716.0684311,
+      "video_window_seconds": [
+        3.361895832872447,
+        41.75054244090314
+      ],
+      "optical_header_verified": true
+    },
+    {
+      "trial_id": "R05",
+      "message": "ADRIAN",
+      "codec": "repeat3",
+      "bit_ms": 200,
+      "channel_seconds": 57.6,
+      "sequence": 71,
+      "status": "controller_completed",
+      "tx_log": "R05/tx.json",
+      "start_ack_unix": 1792871724.1872458,
+      "cue_events": [
+        {
+          "phase": "header",
+          "seconds_after_start_ack": 0.0
+        },
+        {
+          "phase": "body",
+          "seconds_after_start_ack": 18.3839
+        },
+        {
+          "phase": "ending",
+          "seconds_after_start_ack": 56.2347
+        },
+        {
+          "phase": "packet_done",
+          "seconds_after_start_ack": 57.8167
+        }
+      ],
+      "host_finished_unix": 1792871782.0063722,
+      "video_window_seconds": [
+        50.10217017973073,
+        107.73006080329546
+      ],
+      "optical_header_verified": true
+    },
+    {
+      "trial_id": "R06",
+      "message": "ADRIAN",
+      "codec": "hamming74",
+      "bit_ms": 200,
+      "channel_seconds": 41.6,
+      "sequence": 72,
+      "status": "controller_completed",
+      "tx_log": "R06/tx.json",
+      "start_ack_unix": 1792871790.1081607,
+      "cue_events": [
+        {
+          "phase": "header",
+          "seconds_after_start_ack": 0.0
+        },
+        {
+          "phase": "body",
+          "seconds_after_start_ack": 18.3256
+        },
+        {
+          "phase": "ending",
+          "seconds_after_start_ack": 40.2307
+        },
+        {
+          "phase": "packet_done",
+          "seconds_after_start_ack": 41.8173
+        }
+      ],
+      "host_finished_unix": 1792871831.928159,
+      "video_window_seconds": [
+        116.02457276192959,
+        157.62758902291503
+      ],
+      "optical_header_verified": true
+    },
+    {
+      "trial_id": "R07",
+      "message": "ADRIAN",
+      "codec": "repeat5",
+      "bit_ms": 200,
+      "channel_seconds": 83.2,
+      "sequence": 73,
+      "status": "controller_completed",
+      "tx_log": "R07/tx.json",
+      "start_ack_unix": 1792871840.0695877,
+      "cue_events": [
+        {
+          "phase": "header",
+          "seconds_after_start_ack": 0.0
+        },
+        {
+          "phase": "body",
+          "seconds_after_start_ack": 18.3463
+        },
+        {
+          "phase": "ending",
+          "seconds_after_start_ack": 81.8808
+        },
+        {
+          "phase": "packet_done",
+          "seconds_after_start_ack": 83.417
+        }
+      ],
+      "host_finished_unix": 1792871923.490001,
+      "video_window_seconds": [
+        165.99100759291673,
+        249.1423056473635
+      ],
+      "optical_header_verified": true
+    }
+  ],
+  "video_name": "B02_ADRIAN_NOISY.MOV",
+  "channel_seconds": 220.8,
+  "approx_capture_seconds": 253,
+  "setup": {
+    "phone_model": "iPhone — exact model unreported",
+    "distance_cm": null,
+    "camera_mode_fps_and_exposure_lock": "",
+    "room_lighting": "",
+    "lamp_setting_and_movement": "",
+    "notes": ""
+  },
+  "attempt_id": "B02_20261024T195436_512439Z_1b7971",
+  "status": "controller_completed",
+  "retake": false,
+  "events": [],
+  "condition": "noisy",
+  "actual_observations": "User reported all three batch videos recorded. Actual interference details remain to be assessed from the videos.",
+  "association_status": "all optical packet headers CRC-valid and IDs/codecs/lengths matched",
+  "created_unix": 1792871676.5125911,
+  "identity": "OPTICAL:1 board=ESP32-S3 display=ST7796S busy=0 max_bits=4096 min_bit_ms=200",
+  "host_finished_unix": 1792871923.493664,
+  "video": "recording.mov",
+  "video_sha256": "9bc65461760310a132fd114638ebd693e984ab49e238c81352c378c41db805be",
+  "source_video_name": "B02_ADRIAN_3MIN.MOV",
+  "video_metadata": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "avg_frame_rate": "283425/9448"
+      }
+    ],
+    "format": {
+      "duration": "251.945000"
+    }
+  },
+  "capture_duration_warning": false,
+  "observation_history": [
+    {
+      "saved_unix": 1792872476.0700212,
+      "text": "User reported all three batch videos recorded. Actual interference details remain to be assessed from the videos."
+    },
+    {
+      "saved_unix": 1792872547.348106,
+      "text": "User reported all three batch videos recorded. Actual interference details remain to be assessed from the videos."
+    }
+  ],
+  "capture_review_status": "all scheduled packet time ranges present; payload evaluation pending",
+  "header_verification": "header_verification.json",
+  "payload_evaluation_status": "not_run"
+}

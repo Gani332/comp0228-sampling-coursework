@@ -1,0 +1,12 @@
+trial_id,batch,message,codec,sequence,source_name,status,received_text,body_channel_bit_errors,body_channel_bits,payload_bit_errors,payload_bits,systematic_payload_errors_before_correction,crc_ok,exact_payload_match,channel_seconds_including_overhead,correct_payload_goodput_bps,recording_covers_packet,header_verified,zero_to_one_errors,one_to_zero_errors,damaged_rs_bytes
+G01_1,G01,MANUNITED,repeat5,78,B01_NEW.MOV,crc_fail,M�NUNITED,7,440,1,72,,False,False,107.2,0.0,True,True,7,0,
+G01_2,G01,MANUNITED,hamming74,79,B01_NEW.MOV,crc_fail,MAOUNITED,4,154,1,72,1,False,False,50.0,0.0,True,True,4,0,
+G01_3,G01,MANUNITED,rs4,80,B01_NEW.MOV,crc_pass,MANUNITED,4,120,0,72,4,True,True,43.2,1.6666666666666665,True,True,4,0,2
+G02_1,G02,ADRIAN,rs4,81,B02_NEW.MOV,crc_pass,ADRIAN,6,96,0,48,6,True,True,38.4,1.25,True,True,6,0,2
+G02_2,G02,ADRIAN,repeat3,82,B02_NEW.MOV,crc_fail,AtRIAN,7,192,2,48,,False,False,57.6,0.0,True,True,7,0,
+G02_3,G02,ADRIAN,hamming74,83,B02_NEW.MOV,crc_fail,AD_IAN,4,112,3,48,3,False,False,41.6,0.0,True,True,4,0,
+G02_4,G02,ADRIAN,repeat5,84,B02_NEW.MOV,crc_fail,C�RIAN,12,320,2,48,,False,False,83.2,0.0,True,True,12,0,
+G03_1,G03,OMAR,hamming74,85,B03_NEW.MOV,crc_fail,OM�R,5,84,6,32,5,False,False,36.0,0.0,True,True,5,0,
+G03_2,G03,OMAR,repeat5,86,B03_NEW.MOV,crc_fail,O�AR,4,240,1,32,,False,False,67.2,0.0,True,True,4,0,
+G03_3,G03,OMAR,rs4,87,B03_NEW.MOV,crc_pass,OMAR,6,80,0,32,5,True,True,35.2,0.9090909090909091,True,True,6,0,2
+G03_4,G03,OMAR,repeat3,88,B03_NEW.MOV,crc_fail,O�AR,3,144,1,32,,False,False,48.0,0.0,True,True,3,0,

@@ -1,0 +1,23 @@
+{
+  "selection": "Selected from six-second previews before decoding headers or payload outcomes; fixed across each entire video.",
+  "regions": {
+    "G01": [
+      1080,
+      280,
+      160,
+      120
+    ],
+    "G02": [
+      900,
+      260,
+      160,
+      120
+    ],
+    "G03": [
+      900,
+      260,
+      160,
+      120
+    ]
+  }
+}

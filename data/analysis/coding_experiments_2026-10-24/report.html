@@ -1,0 +1,260 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Coding and interleaving experiments</title><style>body{max-width:1150px;margin:40px auto;padding:0 24px;font:16px/1.6 system-ui;color:#1e3044}h1,h2,h3{line-height:1.25}table{border-collapse:collapse;width:100%;font-size:13px}td,th{padding:8px;text-align:left;border-bottom:1px solid #ddd}th{background:#eef3f7}img{max-width:100%}.lead{background:#edf5f0;padding:20px;border-left:5px solid #32745d}code{font-size:13px}</style></head><body>
+<h1>Coding experiments: error structure, redundancy and interleaving</h1>
+<p>COMP0228 · local analysis · synthetic results explicitly separated from physical evidence</p>
+<div class="lead"><strong>240 conditions × 2,000 trials = 480,000 synthetic decodes.</strong> Five existing codecs; original and interleaved order; independent flips, correlated flips and positive glare. The study evaluates success, useful rate, uncertainty and failure mechanisms. It does not claim a universally best code.</div>
+<h2>1. What the physical recordings tell us</h2><p>The original receiver made 180 coded-body errors across 30 retained packets: all were zero-to-one changes. The combined physical receiver left 3 channel errors, which the existing codes repaired. Positive illumination is consistent with this direction of error, but exposure adaptation, local reflection and occlusion were not separately isolated.</p><img src="physical_noise.png" alt="Physical error direction and consecutive error runs"><p>Consecutive wrong decisions are not the full disturbance duration. A transmitted one can remain correct throughout a bright interference event. The model below is an explanatory stress test, not a statistical fit to these few physical cases.</p>
+<h2>2. Controlled experiment</h2><p>Each trial uses a uniformly random nine-byte message and its actual protocol checksum. The same payload and sequence ID are reused across codecs and transmission orders. All codes use 200 ms per transmitted bit. Longer codewords experience more channel slots. Noise corrupts the body only; ideal synchronization and header reception are assumed. The 96 overhead slots still count toward total airtime.</p><p>For independent flips, each bit changes with probability p. For correlated flips, a stationary two-state process flips every bit in its bad state. With bad-state fraction ρ and mean run L, P(B→G)=1/L and P(G→B)=ρ/[(1−ρ)L]. Positive glare uses that process but forces a one rather than flipping every bit. Its occupancy is not its resulting BER. The symmetric models share nominal BER; glare is reported separately with measured BER.</p><img src="noise_models.png" alt="Synthetic independent, correlated and positive-glare noise">
+<p>Six severities (0, 1%, 2.5%, 5%, 10%, 20%) are tested with L=8. The burst models also vary L across 2, 4, 8 and 16 slots at 5% occupancy, reusing the L=8 result. Depth eight and the grid were fixed before outcomes were inspected. Seed 20261024 makes the trials reproducible.</p>
+<h2>3. Required-code comparison</h2><p>A packet succeeds only if its message is exact and CRC-valid. Failed packets contribute zero useful bits and their full airtime. A rejected decode has no payload BER and remains a packet failure. Shading is a 95% Wilson interval over independent simulated packet trials; useful-rate intervals are the same intervals scaled by the fixed offered payload rate. These intervals do not describe hardware reliability.</p><img src="coding_comparison.png" alt="Success and useful rate under three synthetic channel models">
+<h2>4. Extension: bit interleaving</h2><p>The encoded body is written row-wise into eight rows and read down columns. Empty matrix cells are omitted; no padding is transmitted. The receiver restores order before the existing decoder and CRC check. No expected message enters the decoder. The two orders see the same time-domain noise in each trial.</p><img src="interleaving_example.png" alt="Hamming burst damage with and without interleaving"><p>The illustrative eight-bit burst overwhelms one ordinary Hamming word; the permutation spreads it over distinct words. That mechanism does not apply equally to every code. Reed–Solomon corrects erroneous byte symbols, so scattering a short burst across many bytes can worsen decoding. This is a bit interleaver within one packet, not interleaving multiple RS codewords.</p><img src="interleaving_comparison.png" alt="Paired interleaving comparison at five percent occupancy">
+<h2>5. Detailed results at 5% occupancy, L=8</h2><p>Each row contains 2,000 independent synthetic trials. Common seeds pair methods; rows must not be pooled as independent physical evidence. For glare, the 5% parameter is bad-state occupancy rather than BER.</p><h3>Independent flips</h3><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Code</th>
+      <th>Transmission order</th>
+      <th>Recovery (95% CI)</th>
+      <th>Measured channel BER</th>
+      <th>Useful bit/s</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Hamming (7,4)</td>
+      <td>Original</td>
+      <td>37.8% (35.7%–39.9%)</td>
+      <td>4.94%</td>
+      <td>0.544</td>
+    </tr>
+    <tr>
+      <td>Hamming (7,4)</td>
+      <td>Interleaved</td>
+      <td>36.8% (34.7%–38.9%)</td>
+      <td>4.94%</td>
+      <td>0.530</td>
+    </tr>
+    <tr>
+      <td>Uncoded</td>
+      <td>Original</td>
+      <td>1.4% (0.9%–2.0%)</td>
+      <td>4.91%</td>
+      <td>0.026</td>
+    </tr>
+    <tr>
+      <td>Uncoded</td>
+      <td>Interleaved</td>
+      <td>1.4% (0.9%–2.0%)</td>
+      <td>4.91%</td>
+      <td>0.026</td>
+    </tr>
+    <tr>
+      <td>Repeat ×3</td>
+      <td>Original</td>
+      <td>53.2% (51.0%–55.4%)</td>
+      <td>5.00%</td>
+      <td>0.532</td>
+    </tr>
+    <tr>
+      <td>Repeat ×3</td>
+      <td>Interleaved</td>
+      <td>50.6% (48.4%–52.8%)</td>
+      <td>5.00%</td>
+      <td>0.506</td>
+    </tr>
+    <tr>
+      <td>Repeat ×5</td>
+      <td>Original</td>
+      <td>91.5% (90.2%–92.6%)</td>
+      <td>5.02%</td>
+      <td>0.615</td>
+    </tr>
+    <tr>
+      <td>Repeat ×5</td>
+      <td>Interleaved</td>
+      <td>89.7% (88.3%–91.0%)</td>
+      <td>5.02%</td>
+      <td>0.602</td>
+    </tr>
+    <tr>
+      <td>RS +4 bytes</td>
+      <td>Original</td>
+      <td>8.1% (6.9%–9.3%)</td>
+      <td>4.91%</td>
+      <td>0.134</td>
+    </tr>
+    <tr>
+      <td>RS +4 bytes</td>
+      <td>Interleaved</td>
+      <td>8.9% (7.8%–10.3%)</td>
+      <td>4.91%</td>
+      <td>0.149</td>
+    </tr>
+  </tbody>
+</table><h3>Correlated flips</h3><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Code</th>
+      <th>Transmission order</th>
+      <th>Recovery (95% CI)</th>
+      <th>Measured channel BER</th>
+      <th>Useful bit/s</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Hamming (7,4)</td>
+      <td>Original</td>
+      <td>40.2% (38.1%–42.4%)</td>
+      <td>4.96%</td>
+      <td>0.580</td>
+    </tr>
+    <tr>
+      <td>Hamming (7,4)</td>
+      <td>Interleaved</td>
+      <td>66.7% (64.6%–68.7%)</td>
+      <td>4.96%</td>
+      <td>0.960</td>
+    </tr>
+    <tr>
+      <td>Uncoded</td>
+      <td>Original</td>
+      <td>55.6% (53.4%–57.8%)</td>
+      <td>4.98%</td>
+      <td>1.088</td>
+    </tr>
+    <tr>
+      <td>Uncoded</td>
+      <td>Interleaved</td>
+      <td>55.6% (53.4%–57.8%)</td>
+      <td>4.98%</td>
+      <td>1.088</td>
+    </tr>
+    <tr>
+      <td>Repeat ×3</td>
+      <td>Original</td>
+      <td>22.3% (20.5%–24.2%)</td>
+      <td>4.94%</td>
+      <td>0.223</td>
+    </tr>
+    <tr>
+      <td>Repeat ×3</td>
+      <td>Interleaved</td>
+      <td>58.7% (56.5%–60.8%)</td>
+      <td>4.94%</td>
+      <td>0.587</td>
+    </tr>
+    <tr>
+      <td>Repeat ×5</td>
+      <td>Original</td>
+      <td>11.2% (9.9%–12.7%)</td>
+      <td>5.00%</td>
+      <td>0.076</td>
+    </tr>
+    <tr>
+      <td>Repeat ×5</td>
+      <td>Interleaved</td>
+      <td>72.9% (70.9%–74.8%)</td>
+      <td>5.00%</td>
+      <td>0.490</td>
+    </tr>
+    <tr>
+      <td>RS +4 bytes</td>
+      <td>Original</td>
+      <td>78.0% (76.2%–79.8%)</td>
+      <td>4.89%</td>
+      <td>1.301</td>
+    </tr>
+    <tr>
+      <td>RS +4 bytes</td>
+      <td>Interleaved</td>
+      <td>53.9% (51.7%–56.1%)</td>
+      <td>4.89%</td>
+      <td>0.898</td>
+    </tr>
+  </tbody>
+</table><h3>Positive glare bursts</h3><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Code</th>
+      <th>Transmission order</th>
+      <th>Recovery (95% CI)</th>
+      <th>Measured channel BER</th>
+      <th>Useful bit/s</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Hamming (7,4)</td>
+      <td>Original</td>
+      <td>50.0% (47.8%–52.1%)</td>
+      <td>2.52%</td>
+      <td>0.719</td>
+    </tr>
+    <tr>
+      <td>Hamming (7,4)</td>
+      <td>Interleaved</td>
+      <td>74.6% (72.6%–76.5%)</td>
+      <td>2.53%</td>
+      <td>1.074</td>
+    </tr>
+    <tr>
+      <td>Uncoded</td>
+      <td>Original</td>
+      <td>58.1% (56.0%–60.3%)</td>
+      <td>2.56%</td>
+      <td>1.138</td>
+    </tr>
+    <tr>
+      <td>Uncoded</td>
+      <td>Interleaved</td>
+      <td>58.5% (56.3%–60.6%)</td>
+      <td>2.55%</td>
+      <td>1.144</td>
+    </tr>
+    <tr>
+      <td>Repeat ×3</td>
+      <td>Original</td>
+      <td>30.9% (28.9%–32.9%)</td>
+      <td>2.60%</td>
+      <td>0.308</td>
+    </tr>
+    <tr>
+      <td>Repeat ×3</td>
+      <td>Interleaved</td>
+      <td>61.6% (59.4%–63.7%)</td>
+      <td>2.58%</td>
+      <td>0.616</td>
+    </tr>
+    <tr>
+      <td>Repeat ×5</td>
+      <td>Original</td>
+      <td>24.6% (22.8%–26.5%)</td>
+      <td>2.61%</td>
+      <td>0.165</td>
+    </tr>
+    <tr>
+      <td>Repeat ×5</td>
+      <td>Interleaved</td>
+      <td>74.7% (72.7%–76.6%)</td>
+      <td>2.57%</td>
+      <td>0.502</td>
+    </tr>
+    <tr>
+      <td>RS +4 bytes</td>
+      <td>Original</td>
+      <td>83.2% (81.5%–84.8%)</td>
+      <td>2.54%</td>
+      <td>1.387</td>
+    </tr>
+    <tr>
+      <td>RS +4 bytes</td>
+      <td>Interleaved</td>
+      <td>64.0% (61.9%–66.1%)</td>
+      <td>2.56%</td>
+      <td>1.067</td>
+    </tr>
+  </tbody>
+</table>
+<h2>6. Duration, rate and buffering</h2><img src="burst_duration.png" alt="Sensitivity to mean burst duration"><p>At fixed occupancy, longer mean bursts also occur less frequently. A code can fail on a rare severe burst while many packets avoid any disturbance; average packet success alone does not describe every affected packet. Inspect both the success curves and the error mechanisms.</p><p>This permutation adds zero transmitted bits. It buffers a whole coded body; the saved buffer-span metric is the duration of that body at 200 ms per bit. It is not extra airtime or a measured additional decoding delay. The current packet pipeline already waits for a full packet. A physical adaptive interleaver would need agreed settings/protocol signalling, firmware integration and physical validation.</p>
+<h2>7. Evidence-based conclusions</h2><p>At 5% correlated flips and L=8, Hamming recovery rises from 40.2% to 66.7% with interleaving. RS recovery falls from 78.0% to 53.9%, consistent with spreading damage across more byte symbols. Thus the same permutation has different effects on different coding units.</p><p>Under 5% independent flips, ordinary repetition ×5 recovers 91.5%, delivering 0.615 useful bit/s after redundancy and framing. Its strong success fraction has a transmission-time cost. Longer coded packets also spend longer exposed to the burst process; more redundancy is not automatically better in that setting.</p><p>The independent-flip simulation was additionally checked against binomial recovery probabilities for all five codecs, for both orders. The numerical checks support implementation correctness under the declared model, not physical-channel validity.</p>
+<h2>8. Retained failures and limitations</h2><p>The run retained 1 CRC-valid wrong-payload events as failures; correct delivery always requires an exact match as well as CRC. The live receiver would accept such a message: only the evaluator, which knows the transmitted payload, can identify the undetected error. All decoder rejections remain in the success and useful-rate denominators. Report residual payload BER only alongside its available-output count.</p><p>Scope: one payload length; arbitrary binary messages; declared synthetic processes; perfect acquisition/header; fixed clock; no analog camera model; no fit of burst parameters to real recordings. No new physical transmission or real-camera interleaving result is claimed. The physical receiver's 30/30 recovery is specific to the retained dataset; eight development packets influenced its settings and later videos had already been inspected.</p>
+<h2>9. Reproduce and use in the coursework</h2><p><code>Coding_Experiments.ipynb</code> provides the walkthrough. Run All verifies source/data hashes, rebuilds all summary statistics from trial records and replays 720 decodes. An optional cell reruns the entire simulation into a new folder. Existing evidence is preserved; nothing is published.</p><p><a href="summary.csv">All condition metrics</a> · <a href="paired_outcomes.json">Paired rescues and harms</a> · <a href="config.json">Declared configuration</a> · <a href="validation.json">Validation</a> · <a href="physical_noise.json">Physical evidence provenance</a> · <a href="iid_analytic_check.json">Analytical checks</a> · <a href="crc_collision_cases.json">CRC-valid wrong-message case</a></p><p>The group's final report should distinguish physical coding results, receiver ablation and synthetic interleaving evidence. Use the models to explain successes and failures and the trade-off with transmission rate. The final report, presentation/live demonstration and contribution forms remain separate deliverables.</p></body></html>

@@ -1,0 +1,52 @@
+{
+  "video_id": "noisy_adrian",
+  "video_sha256": "ff9602d9b1c5f0cfcdb83101889994ddccfe678420f20730cd90b93691bda2fc",
+  "frames": 1154,
+  "feature_sha256": "c39d10b0367119c213285ee128d94921fa73d53d76605fe05874a00da3e8cd0a",
+  "original_roi": [
+    1050,
+    300,
+    150,
+    150
+  ],
+  "study_roi": [
+    1000,
+    260,
+    340,
+    210
+  ],
+  "reference_rois": [
+    [
+      850,
+      300,
+      90,
+      130
+    ],
+    [
+      1430,
+      300,
+      80,
+      130
+    ],
+    [
+      1080,
+      150,
+      220,
+      40
+    ],
+    [
+      1080,
+      530,
+      220,
+      30
+    ]
+  ],
+  "grid": [
+    5,
+    5
+  ],
+  "anchor": "archived original-ROI brightness and real frame timestamps",
+  "extraction": "OpenCV BGR2GRAY, stored pixel orientation, fixed rectangles; one decode pass per video",
+  "max_original_trace_difference": 0.0,
+  "maximum_frame_gap_seconds": 0.03500000000000014
+}

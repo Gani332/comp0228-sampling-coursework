@@ -1,0 +1,412 @@
+{
+  "batch": "G03",
+  "attempt_dir": "experiments/final_capture_v1/batches/G03_20261024T204130_219077Z_29f775",
+  "source_name": "B03_NEW.MOV",
+  "video_sha256": "a2996cf42eda02a9f1ff6c3eaccd1aa4d6bfc64e33932071ee2955cc8c2c6c39",
+  "metadata": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "time_base": "1/600",
+        "nb_frames": "6512"
+      }
+    ],
+    "format": {
+      "duration": "217.078333",
+      "tags": {
+        "creation_time": "2026-10-24T20:41:28.000000Z"
+      }
+    }
+  },
+  "results": [
+    {
+      "codec": "hamming74",
+      "message": "OMAR",
+      "sequence": 85,
+      "status": "crc_fail",
+      "packet_failed": true,
+      "failure_stage": null,
+      "reason": null,
+      "body_channel_bit_errors": 5,
+      "body_channel_bits": 84,
+      "body_channel_ber": 0.05952380952380952,
+      "payload_bit_errors": 6,
+      "payload_bits": 32,
+      "payload_ber": 0.1875,
+      "received_text": "OM\ufffdR",
+      "crc_ok": false,
+      "exact_payload_match": false,
+      "channel_seconds_including_overhead": 36.0,
+      "offered_payload_rate_bps": 0.8888888888888888,
+      "correct_delivered_bits": 0,
+      "correct_payload_goodput_bps": 0.0,
+      "body_error_indices": [
+        30,
+        33,
+        34,
+        37,
+        40
+      ],
+      "consecutive_error_runs": [
+        {
+          "start": 30,
+          "length": 1
+        },
+        {
+          "start": 33,
+          "length": 2
+        },
+        {
+          "start": 37,
+          "length": 1
+        },
+        {
+          "start": 40,
+          "length": 1
+        }
+      ],
+      "max_consecutive_errors": 2,
+      "zero_to_one_errors": 5,
+      "one_to_zero_errors": 0,
+      "errors_per_code_block": [
+        0,
+        0,
+        0,
+        0,
+        3,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "damaged_code_blocks": 2,
+      "blocks_exceeding_guaranteed_correction": 2,
+      "systematic_payload_errors_before_correction": 5,
+      "min_samples_per_body_bit": 3,
+      "max_samples_per_body_bit": 3,
+      "trial_id": "G03_1",
+      "batch": "G03",
+      "header_verified": true,
+      "packet_window_video_seconds": [
+        2.7276939738292354,
+        38.75072560035538
+      ],
+      "recording_covers_packet": true,
+      "source_name": "B03_NEW.MOV",
+      "roi_xywh": [
+        900,
+        260,
+        160,
+        120
+      ],
+      "tx_log": "experiments/final_capture_v1/batches/G03_20261024T204130_219077Z_29f775/G03_1/tx.json",
+      "planned_sweep_video_seconds": 24.137685775756836
+    },
+    {
+      "codec": "repeat5",
+      "message": "OMAR",
+      "sequence": 86,
+      "status": "crc_fail",
+      "packet_failed": true,
+      "failure_stage": null,
+      "reason": null,
+      "body_channel_bit_errors": 4,
+      "body_channel_bits": 240,
+      "body_channel_ber": 0.016666666666666666,
+      "payload_bit_errors": 1,
+      "payload_bits": 32,
+      "payload_ber": 0.03125,
+      "received_text": "O\ufffdAR",
+      "crc_ok": false,
+      "exact_payload_match": false,
+      "channel_seconds_including_overhead": 67.2,
+      "offered_payload_rate_bps": 0.47619047619047616,
+      "correct_delivered_bits": 0,
+      "correct_payload_goodput_bps": 0.0,
+      "body_error_indices": [
+        40,
+        41,
+        42,
+        43
+      ],
+      "consecutive_error_runs": [
+        {
+          "start": 40,
+          "length": 4
+        }
+      ],
+      "max_consecutive_errors": 4,
+      "zero_to_one_errors": 4,
+      "one_to_zero_errors": 0,
+      "errors_per_code_block": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "damaged_code_blocks": 1,
+      "blocks_exceeding_guaranteed_correction": 1,
+      "min_samples_per_body_bit": 2,
+      "max_samples_per_body_bit": 3,
+      "trial_id": "G03_2",
+      "batch": "G03",
+      "header_verified": true,
+      "packet_window_video_seconds": [
+        47.08532282193539,
+        114.24736762947052
+      ],
+      "recording_covers_packet": true,
+      "source_name": "B03_NEW.MOV",
+      "roi_xywh": [
+        900,
+        260,
+        160,
+        120
+      ],
+      "tx_log": "experiments/final_capture_v1/batches/G03_20261024T204130_219077Z_29f775/G03_2/tx.json",
+      "planned_sweep_video_seconds": 68.48386454582214
+    },
+    {
+      "codec": "rs4",
+      "message": "OMAR",
+      "sequence": 87,
+      "status": "crc_pass",
+      "packet_failed": false,
+      "failure_stage": null,
+      "reason": null,
+      "body_channel_bit_errors": 6,
+      "body_channel_bits": 80,
+      "body_channel_ber": 0.075,
+      "payload_bit_errors": 0,
+      "payload_bits": 32,
+      "payload_ber": 0.0,
+      "received_text": "OMAR",
+      "crc_ok": true,
+      "exact_payload_match": true,
+      "channel_seconds_including_overhead": 35.2,
+      "offered_payload_rate_bps": 0.9090909090909091,
+      "correct_delivered_bits": 32,
+      "correct_payload_goodput_bps": 0.9090909090909091,
+      "body_error_indices": [
+        24,
+        26,
+        28,
+        29,
+        31,
+        32
+      ],
+      "consecutive_error_runs": [
+        {
+          "start": 24,
+          "length": 1
+        },
+        {
+          "start": 26,
+          "length": 1
+        },
+        {
+          "start": 28,
+          "length": 2
+        },
+        {
+          "start": 31,
+          "length": 2
+        }
+      ],
+      "max_consecutive_errors": 2,
+      "zero_to_one_errors": 6,
+      "one_to_zero_errors": 0,
+      "errors_per_code_block": [
+        0,
+        0,
+        0,
+        5,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "damaged_code_blocks": 2,
+      "damaged_rs_bytes": 2,
+      "systematic_payload_errors_before_correction": 5,
+      "min_samples_per_body_bit": 3,
+      "max_samples_per_body_bit": 3,
+      "trial_id": "G03_3",
+      "batch": "G03",
+      "header_verified": true,
+      "packet_window_video_seconds": [
+        122.5904084077954,
+        157.78554700644742
+      ],
+      "recording_covers_packet": true,
+      "source_name": "B03_NEW.MOV",
+      "roi_xywh": [
+        900,
+        260,
+        160,
+        120
+      ],
+      "tx_log": "experiments/final_capture_v1/batches/G03_20261024T204130_219077Z_29f775/G03_3/tx.json",
+      "planned_sweep_video_seconds": 143.99458074569702
+    },
+    {
+      "codec": "repeat3",
+      "message": "OMAR",
+      "sequence": 88,
+      "status": "crc_fail",
+      "packet_failed": true,
+      "failure_stage": null,
+      "reason": null,
+      "body_channel_bit_errors": 3,
+      "body_channel_bits": 144,
+      "body_channel_ber": 0.020833333333333332,
+      "payload_bit_errors": 1,
+      "payload_bits": 32,
+      "payload_ber": 0.03125,
+      "received_text": "O\ufffdAR",
+      "crc_ok": false,
+      "exact_payload_match": false,
+      "channel_seconds_including_overhead": 48.0,
+      "offered_payload_rate_bps": 0.6666666666666666,
+      "correct_delivered_bits": 0,
+      "correct_payload_goodput_bps": 0.0,
+      "body_error_indices": [
+        24,
+        25,
+        26
+      ],
+      "consecutive_error_runs": [
+        {
+          "start": 24,
+          "length": 3
+        }
+      ],
+      "max_consecutive_errors": 3,
+      "zero_to_one_errors": 3,
+      "one_to_zero_errors": 0,
+      "errors_per_code_block": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "damaged_code_blocks": 1,
+      "blocks_exceeding_guaranteed_correction": 1,
+      "min_samples_per_body_bit": 3,
+      "max_samples_per_body_bit": 3,
+      "trial_id": "G03_4",
+      "batch": "G03",
+      "header_verified": true,
+      "packet_window_video_seconds": [
+        166.1196534884389,
+        214.10592754797554
+      ],
+      "recording_covers_packet": true,
+      "source_name": "B03_NEW.MOV",
+      "roi_xywh": [
+        900,
+        260,
+        160,
+        120
+      ],
+      "tx_log": "experiments/final_capture_v1/batches/G03_20261024T204130_219077Z_29f775/G03_4/tx.json",
+      "planned_sweep_video_seconds": 187.52171349525452
+    }
+  ]
+}

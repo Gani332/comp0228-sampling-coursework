@@ -1,0 +1,242 @@
+{
+  "batch_id": "G02",
+  "message": "ADRIAN",
+  "packets": [
+    {
+      "trial_id": "G02_1",
+      "message": "ADRIAN",
+      "codec": "rs4",
+      "bit_ms": 200,
+      "channel_seconds": 38.400000000000006,
+      "sequence": 81,
+      "status": "controller_completed",
+      "planned_sweep_schedule": {
+        "basis": "Seconds after host receipt of START acknowledgment",
+        "start_seconds": 21.0,
+        "end_seconds": 22.0,
+        "sweeps_per_transmission": 1,
+        "note": "Displayed instruction only; actual disturbance must be assessed from video."
+      },
+      "tx_log": "G02_1/tx.json",
+      "start_ack_unix": 1792874116.6987627,
+      "cue_events": [
+        {
+          "phase": "steady",
+          "seconds_after_start_ack": 0.0
+        },
+        {
+          "phase": "countdown",
+          "seconds_after_start_ack": 16.0661
+        },
+        {
+          "phase": "sweep",
+          "seconds_after_start_ack": 21.0061
+        },
+        {
+          "phase": "hold",
+          "seconds_after_start_ack": 22.0538
+        },
+        {
+          "phase": "packet_done",
+          "seconds_after_start_ack": 38.6171
+        }
+      ],
+      "host_finished_unix": 1792874155.3188229,
+      "optical_header_verified": true,
+      "video_window_seconds": [
+        2.879876208846039,
+        41.288965512070696
+      ],
+      "baseline_check_outcome": "crc_pass"
+    },
+    {
+      "trial_id": "G02_2",
+      "message": "ADRIAN",
+      "codec": "repeat3",
+      "bit_ms": 200,
+      "channel_seconds": 57.6,
+      "sequence": 82,
+      "status": "controller_completed",
+      "planned_sweep_schedule": {
+        "basis": "Seconds after host receipt of START acknowledgment",
+        "start_seconds": 21.0,
+        "end_seconds": 22.0,
+        "sweeps_per_transmission": 1,
+        "note": "Displayed instruction only; actual disturbance must be assessed from video."
+      },
+      "tx_log": "G02_2/tx.json",
+      "start_ack_unix": 1792874163.4421828,
+      "cue_events": [
+        {
+          "phase": "steady",
+          "seconds_after_start_ack": 0.0
+        },
+        {
+          "phase": "countdown",
+          "seconds_after_start_ack": 16.0033
+        },
+        {
+          "phase": "sweep",
+          "seconds_after_start_ack": 21.0358
+        },
+        {
+          "phase": "hold",
+          "seconds_after_start_ack": 22.0771
+        },
+        {
+          "phase": "packet_done",
+          "seconds_after_start_ack": 57.817
+        }
+      ],
+      "host_finished_unix": 1792874221.262336,
+      "optical_header_verified": true,
+      "video_window_seconds": [
+        49.621375890657205,
+        107.22021399158845
+      ],
+      "baseline_check_outcome": "crc_fail"
+    },
+    {
+      "trial_id": "G02_3",
+      "message": "ADRIAN",
+      "codec": "hamming74",
+      "bit_ms": 200,
+      "channel_seconds": 41.6,
+      "sequence": 83,
+      "status": "controller_completed",
+      "planned_sweep_schedule": {
+        "basis": "Seconds after host receipt of START acknowledgment",
+        "start_seconds": 21.0,
+        "end_seconds": 22.0,
+        "sweeps_per_transmission": 1,
+        "note": "Displayed instruction only; actual disturbance must be assessed from video."
+      },
+      "tx_log": "G02_3/tx.json",
+      "start_ack_unix": 1792874229.3726387,
+      "cue_events": [
+        {
+          "phase": "steady",
+          "seconds_after_start_ack": 0.0
+        },
+        {
+          "phase": "countdown",
+          "seconds_after_start_ack": 16.0316
+        },
+        {
+          "phase": "sweep",
+          "seconds_after_start_ack": 21.0534
+        },
+        {
+          "phase": "hold",
+          "seconds_after_start_ack": 22.1033
+        },
+        {
+          "phase": "packet_done",
+          "seconds_after_start_ack": 41.8167
+        }
+      ],
+      "host_finished_unix": 1792874271.1918359,
+      "optical_header_verified": true,
+      "video_window_seconds": [
+        115.55370665701095,
+        157.1660468557171
+      ],
+      "baseline_check_outcome": "crc_fail"
+    },
+    {
+      "trial_id": "G02_4",
+      "message": "ADRIAN",
+      "codec": "repeat5",
+      "bit_ms": 200,
+      "channel_seconds": 83.2,
+      "sequence": 84,
+      "status": "controller_completed",
+      "planned_sweep_schedule": {
+        "basis": "Seconds after host receipt of START acknowledgment",
+        "start_seconds": 21.0,
+        "end_seconds": 22.0,
+        "sweeps_per_transmission": 1,
+        "note": "Displayed instruction only; actual disturbance must be assessed from video."
+      },
+      "tx_log": "G02_4/tx.json",
+      "start_ack_unix": 1792874279.3319263,
+      "cue_events": [
+        {
+          "phase": "steady",
+          "seconds_after_start_ack": 0.0
+        },
+        {
+          "phase": "countdown",
+          "seconds_after_start_ack": 16.0238
+        },
+        {
+          "phase": "sweep",
+          "seconds_after_start_ack": 21.0494
+        },
+        {
+          "phase": "hold",
+          "seconds_after_start_ack": 22.0844
+        },
+        {
+          "phase": "packet_done",
+          "seconds_after_start_ack": 83.4169
+        }
+      ],
+      "host_finished_unix": 1792874362.7528691,
+      "optical_header_verified": true,
+      "video_window_seconds": [
+        165.5130058310174,
+        248.67884979577877
+      ],
+      "baseline_check_outcome": "crc_fail"
+    }
+  ],
+  "video_name": "G02_ADRIAN_SINGLE_SWEEP.MOV",
+  "channel_seconds": 220.8,
+  "approx_capture_seconds": 253,
+  "protocol": "guided_retakes_v1",
+  "repeats_original_batch": "B02",
+  "planned_interference": "One approximately one-second light pass at 21 seconds after each START acknowledgment. Same light setting, path and direction. Keep source out of camera view of patch.",
+  "timing_note": "Host cue guidance, not measured physical onset/duration. Retain early, late and missed sweeps and annotate during video review.",
+  "setup": {
+    "phone_model": "iPhone — exact model unreported",
+    "actual_camera_settings": "Not yet verified",
+    "actual_light_strength_distance_path": "Not yet measured; inspect video and operator notes",
+    "operator_instruction": "Fixed camera and exposure if available; same light setting and one-direction pass; avoid occluding patch."
+  },
+  "attempt_id": "G02_20261024T203515_765883Z_6dda6d",
+  "status": "controller_completed",
+  "retake": false,
+  "events": [],
+  "condition": "noisy",
+  "actual_observations": "Patch visible in inspected preamble/sweep frames; side-light reflections produce real interference. Exact duration/intensity not calibrated. Sampled frames are not a continuous occlusion audit.",
+  "association_status": "All optical headers verified: sequence, codec, payload length; complete packet windows.",
+  "created_unix": 1792874115.766361,
+  "identity": "OPTICAL:1 board=ESP32-S3 display=ST7796S busy=0 max_bits=4096 min_bit_ms=200",
+  "host_finished_unix": 1792874362.756934,
+  "video": "recording.mov",
+  "video_sha256": "0349f0b9b25aad269190de48629f677956df443a907adac1ce5b78ad9985bae5",
+  "source_video_name": "B02_NEW.MOV",
+  "video_metadata": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "avg_frame_rate": "282075/9403"
+      }
+    ],
+    "format": {
+      "duration": "250.746667"
+    }
+  },
+  "capture_duration_warning": false,
+  "observation_history": [
+    {
+      "saved_unix": 1792875423.467156,
+      "text": "Patch visible in inspected preamble/sweep frames; side-light reflections produce real interference. Exact duration/intensity not calibrated. Sampled frames are not a continuous occlusion audit."
+    }
+  ],
+  "latest_guided_check": "analysis/guided_retakes_2026-10-24"
+}

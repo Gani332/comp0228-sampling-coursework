@@ -1,0 +1,7 @@
+{
+  "status": "decode_failed",
+  "reason": "Could not identify the public optical preamble.",
+  "data_kind": "physical_video",
+  "video_sha256": "c2e5dbcd6dab1a58273d1476f175b079a61df9e55afed414964e42266974d089",
+  "trace_file": "/Users/riyaa/Desktop/UCL_Year4/Sampling, Compression and Data Analysis/Coursework/optical_link/results/20261024T163809_157866Z_brightness.csv"
+}

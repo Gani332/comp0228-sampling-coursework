@@ -1,0 +1,19 @@
+{
+  "source_name": "B02_NEW.MOV",
+  "video_sha256": "0349f0b9b25aad269190de48629f677956df443a907adac1ce5b78ad9985bae5",
+  "roi_xywh": [
+    900,
+    260,
+    160,
+    120
+  ],
+  "frames": 7522,
+  "duration_seconds": 250.71333333333334,
+  "max_frame_gap_seconds": 0.0350000000000108,
+  "median_frame_interval_seconds": 0.03333333333333144,
+  "timestamp_source": "FFmpeg decoded frame PTS \u00d7 time base; FFmpeg decoded PTS; first 20 independently checked with FFprobe. OpenCV timestamps retained as diagnostics (initial sentinel excluded)",
+  "max_cv2_ffmpeg_timestamp_difference_seconds_excluding_edges": 2.842170943040401e-14,
+  "brightness_extractor": "OpenCV FFmpeg backend; cvtColor BGR2GRAY on fixed ROI then mean, identical to existing video.extract_trace",
+  "rotation": "stored pixels; autorotation disabled",
+  "trace_sha256": "4d819735228ee4a5e3724f0229f50182dde000d5e880dd8ab61ec507b73bcfe2"
+}

@@ -1,0 +1,25 @@
+{
+  "port": "/dev/cu.usbmodem101",
+  "identity": "OPTICAL:1 board=ESP32-S3 display=ST7796S busy=0 max_bits=4096 min_bit_ms=200",
+  "bit_ms": 200,
+  "payload_hex": "41445249414e",
+  "codec": "none",
+  "sequence": 1,
+  "transmitted_bits": "0000000010101010101010101101001110010001000000010000000000000110000000010100100011110011010000010100010001010010010010010100000101001110100011011001000000000000",
+  "scheduled_channel_seconds": 32.0,
+  "host_started_unix": 1792863411.1216152,
+  "status": "controller_completed",
+  "serial_responses": [
+    "START bits=160 bit_ms=200",
+    "DONE bits=160 elapsed_us=32000508 max_late_us=507 max_draw_us=31325"
+  ],
+  "host_elapsed_seconds": 32.24018537532538,
+  "conditions": {
+    "distance_cm": null,
+    "phone_model": "",
+    "camera_mode": "",
+    "lighting": "",
+    "interference": "none",
+    "notes": ""
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "version": 1,
+  "protocol": "guided_retakes_v1",
+  "batches": [
+    {
+      "batch_id": "G01",
+      "message": "MANUNITED",
+      "packets": [
+        {
+          "trial_id": "G01_1",
+          "message": "MANUNITED",
+          "codec": "repeat5",
+          "bit_ms": 200,
+          "channel_seconds": 107.2
+        },
+        {
+          "trial_id": "G01_2",
+          "message": "MANUNITED",
+          "codec": "hamming74",
+          "bit_ms": 200,
+          "channel_seconds": 50.0
+        },
+        {
+          "trial_id": "G01_3",
+          "message": "MANUNITED",
+          "codec": "rs4",
+          "bit_ms": 200,
+          "channel_seconds": 43.2
+        }
+      ],
+      "video_name": "G01_MANUNITED_SINGLE_SWEEP.MOV",
+      "channel_seconds": 200.4,
+      "approx_capture_seconds": 225,
+      "protocol": "guided_retakes_v1",
+      "repeats_original_batch": "B01",
+      "planned_interference": "One approximately one-second light pass at 21 seconds after each START acknowledgment. Same light setting, path and direction. Keep source out of camera view of patch.",
+      "timing_note": "Host cue guidance, not measured physical onset/duration. Retain early, late and missed sweeps and annotate during video review."
+    },
+    {
+      "batch_id": "G02",
+      "message": "ADRIAN",
+      "packets": [
+        {
+          "trial_id": "G02_1",
+          "message": "ADRIAN",
+          "codec": "rs4",
+          "bit_ms": 200,
+          "channel_seconds": 38.400000000000006
+        },
+        {
+          "trial_id": "G02_2",
+          "message": "ADRIAN",
+          "codec": "repeat3",
+          "bit_ms": 200,
+          "channel_seconds": 57.6
+        },
+        {
+          "trial_id": "G02_3",
+          "message": "ADRIAN",
+          "codec": "hamming74",
+          "bit_ms": 200,
+          "channel_seconds": 41.6
+        },
+        {
+          "trial_id": "G02_4",
+          "message": "ADRIAN",
+          "codec": "repeat5",
+          "bit_ms": 200,
+          "channel_seconds": 83.2
+        }
+      ],
+      "video_name": "G02_ADRIAN_SINGLE_SWEEP.MOV",
+      "channel_seconds": 220.8,
+      "approx_capture_seconds": 253,
+      "protocol": "guided_retakes_v1",
+      "repeats_original_batch": "B02",
+      "planned_interference": "One approximately one-second light pass at 21 seconds after each START acknowledgment. Same light setting, path and direction. Keep source out of camera view of patch.",
+      "timing_note": "Host cue guidance, not measured physical onset/duration. Retain early, late and missed sweeps and annotate during video review."
+    },
+    {
+      "batch_id": "G03",
+      "message": "OMAR",
+      "packets": [
+        {
+          "trial_id": "G03_1",
+          "message": "OMAR",
+          "codec": "hamming74",
+          "bit_ms": 200,
+          "channel_seconds": 36.0
+        },
+        {
+          "trial_id": "G03_2",
+          "message": "OMAR",
+          "codec": "repeat5",
+          "bit_ms": 200,
+          "channel_seconds": 67.2
+        },
+        {
+          "trial_id": "G03_3",
+          "message": "OMAR",
+          "codec": "rs4",
+          "bit_ms": 200,
+          "channel_seconds": 35.2
+        },
+        {
+          "trial_id": "G03_4",
+          "message": "OMAR",
+          "codec": "repeat3",
+          "bit_ms": 200,
+          "channel_seconds": 48.0
+        }
+      ],
+      "video_name": "G03_OMAR_SINGLE_SWEEP.MOV",
+      "channel_seconds": 186.4,
+      "approx_capture_seconds": 219,
+      "protocol": "guided_retakes_v1",
+      "repeats_original_batch": "B03",
+      "planned_interference": "One approximately one-second light pass at 21 seconds after each START acknowledgment. Same light setting, path and direction. Keep source out of camera view of patch.",
+      "timing_note": "Host cue guidance, not measured physical onset/duration. Retain early, late and missed sweeps and annotate during video review."
+    }
+  ],
+  "scope": "Same three batch contents as B01-B03, repeated with one cued side-light sweep per packet and instructions to avoid occlusion. Earlier evidence is retained, not replaced. Not a matched comparison to earlier uncoded recordings."
+}

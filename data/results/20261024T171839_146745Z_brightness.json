@@ -1,0 +1,24 @@
+{
+  "video": "/Users/riyaa/Downloads/ROBOTLINK_NOISE.MOV",
+  "video_sha256": "1c2b36d21ae8773c0c2fce52ca7717cb49a3a36ac9d805f527c7bbf029dc0b73",
+  "roi_xywh": [
+    820,
+    400,
+    200,
+    200
+  ],
+  "frames": 1217,
+  "duration_seconds": 40.541667,
+  "median_frame_interval_seconds": 0.03333300000000072,
+  "max_frame_gap_seconds": 0.03500000000000014,
+  "rotation": "stored pixels, autorotation disabled",
+  "data_kind": "physical_video",
+  "conditions": {
+    "distance_cm": null,
+    "phone_model": "",
+    "camera_mode": "",
+    "lighting": "",
+    "interference": "none",
+    "notes": ""
+  }
+}

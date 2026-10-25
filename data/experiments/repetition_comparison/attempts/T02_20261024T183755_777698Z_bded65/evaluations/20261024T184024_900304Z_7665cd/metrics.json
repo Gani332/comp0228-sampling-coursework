@@ -1,0 +1,28 @@
+{
+  "status": "crc_fail",
+  "packet_failed": true,
+  "received_text": "M�OUNITED",
+  "crc_ok": false,
+  "exact_payload_match": false,
+  "body_channel_bit_errors": 6,
+  "body_channel_bits_measured": 264,
+  "body_channel_ber": 0.022727272727272728,
+  "payload_bit_errors": 2,
+  "payload_bits_measured": 72,
+  "payload_ber": 0.027777777777777776,
+  "channel_seconds_including_overhead": 72.0,
+  "correct_delivered_bits": 0,
+  "crc_valid_delivered_bits": 0,
+  "correct_payload_goodput_bps": 0.0,
+  "attempt_id": "T02_20261024T183755_777698Z_bded65",
+  "trial_id": "T02",
+  "codec": "repeat3",
+  "condition": "noisy",
+  "roi_xywh": [
+    1200,
+    300,
+    150,
+    150
+  ],
+  "operator_observations": ""
+}

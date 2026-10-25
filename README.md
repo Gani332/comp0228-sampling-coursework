@@ -1,53 +1,96 @@
 # COMP0228 — Optical communication coursework
 
-Open **[Coursework.ipynb](Coursework.ipynb)**. It is the single active notebook; Run All performs no hardware transmission.
+Open **[Coursework.ipynb](Coursework.ipynb)** and run from top to bottom. The full analysis runs from the included measurements: **no video download or hardware connection is needed**.
 
 ```text
-Coursework.ipynb   Source walkthrough and runnable examples
-code/             Implementation, transmitter firmware, tests and tools
-data/             Six previously published pilot recordings and records
-README.md         Setup and scope
+Coursework.ipynb   One main notebook: system, physical results and simulations
+code/             Implementation, firmware, tests and tools
+data/             Logs, cached measurements, analysis results and video index
+report.tex        Working IEEE report draft with embedded figures/references
+README.md         Setup and reproduction instructions
 ```
 
-The implementation covers uncoded transmission, repetition ×3/×5, Hamming (7,4), Reed–Solomon with four parity bytes, illumination compensation, spatial receiver processing and bit interleaving. Controlled simulations compare independent flips, correlated flips and positive glare, including useful rate, decoder failures, uncertainty and analytical checks.
+## Start here
 
-**Publication scope:** notebook outputs, later recordings, saved analysis studies, private archives, device backups and compiled firmware are excluded. The six pilot movies and their measurements were already public and remain included. This repository does not publish the later physical or simulation results.
-
-## Setup and use
-
-Python 3.11+:
+Use a shallow clone to avoid downloading the old pilot-video Git history:
 
 ```sh
+git clone --depth 1 https://github.com/Gani332/comp0228-sampling-coursework.git
+cd comp0228-sampling-coursework
 python3 -m venv .venv
 .venv/bin/python -m pip install -r code/requirements.txt
 .venv/bin/python -m jupyterlab Coursework.ipynb
 ```
 
-Install FFmpeg/FFprobe separately for raw-video extraction and the generated-video pipeline test. Normal pilot evaluation uses cached traces.
+Python 3.11+ is required. FFmpeg/FFprobe is needed for raw-video extraction and the generated-video test; normal notebook execution uses the included caches. The notebook is committed without outputs to keep changes small. Running it regenerates tables and displays the included plots. It verifies the stored simulation and replays a deterministic subset; the full 480,000-decoding rerun is optional.
 
-The notebook runs protocol examples, checks the public pilot and demonstrates interleaving. Cells that require the omitted local study folders are skipped explicitly. Supplying those folders under `data/analysis/` enables their analysis; keep them untracked. The full synthetic experiment is an optional notebook action or a CLI command below.
+## Evidence and labels
+
+| Evidence | Location under `data/` | Scope |
+|---|---|---|
+| Pilot | `recordings/pilot_2026-10-24/`, `analysis/pilot_2026-10-24/` | Six packets/videos: three clean, three noisy |
+| Repetition trials T01/T02 | `experiments/repetition_comparison/` | Two selected packets/videos: one clean, one noisy |
+| Earlier batches B01–B03 | `experiments/final_capture_v1/batches/B*/` | 11 noisy packets in three videos |
+| Guided retakes G01–G03 | `experiments/final_capture_v1/batches/G*/` | 11 noisy packets in three videos |
+| Receiver comparison | `analysis/receiver_layers_2026-10-24/` | Five receiver variants on the same 30 physical packets |
+| Coding/interleaving study | `analysis/coding_experiments_2026-10-24/` | 480,000 synthetic decoding evaluations; not physical recordings |
+
+The [receiver manifest](data/analysis/receiver_layers_2026-10-24/manifest.json) selects the 14 videos and 30 packets used in the report, with exact paths, hashes, transmission logs, regions and time windows. Earlier attempt records are retained for provenance but are not silently added to the selected dataset. Historical logs can contain capture-machine paths; the active notebook uses relative paths and the manifest.
+
+**Two historical label exceptions:** the noisy ADRIAN and OMAR pilot logs retain `conditions.interference: "none"` from the original capture form. Their `dataset_condition: "noisy"` and `condition_note` record the correct interpretation. Folder, manifest and analysis labels agree that these are noisy. Pilot sequence numbers were reused, so matching transmitted bits do not independently prove a unique historical send/record pairing. See the [pilot documentation](data/recordings/pilot_2026-10-24/README.md).
+
+## Optional original recordings
+
+Original videos are distributed in the [data-v1.0.0 release](https://github.com/Gani332/comp0228-sampling-coursework/releases/tag/data-v1.0.0), **outside Git**. Four ZIPs group the pilot, repetition, earlier-batch and guided-retake footage. Each is below 1 GiB; together they are about 2.3 GiB. Their contents are the unmodified original files, including their original audio and container metadata. No video recompression changes the evidence.
+
+```sh
+# List optional downloads without fetching anything:
+.venv/bin/python code/tools/get_recordings.py --list
+
+# Download only the guided retakes, restoring their exact data/ paths:
+.venv/bin/python code/tools/get_recordings.py --group guided-retakes
+
+# Or restore all 14 original videos:
+.venv/bin/python code/tools/get_recordings.py
+
+# Check restored originals without downloading:
+.venv/bin/python code/tools/get_recordings.py --verify-only
+```
+
+The tool verifies both archive and individual-video SHA-256 hashes, skips matching files and refuses to overwrite a different existing recording. Downloads use temporary storage and the ZIP is removed after successful extraction. If you downloaded ZIPs through the browser, add `--from-dir /path/to/downloads` to restore them without another network transfer. Exact sizes and paths are in [recordings_manifest.json](data/recordings_manifest.json); the release includes `SHA256SUMS` for manual checks.
+
+The current Git tree has no videos and approximately 33 MiB of analysis data. Old pilot movies remain in earlier Git commits; history has not been rewritten. The shallow-clone command above avoids those old blobs. Backups, obsolete notebooks, local environments and notebook outputs are excluded.
 
 ## Verify and reproduce
 
 ```sh
+# Run all software tests, from the repository root:
 cd code
 ../.venv/bin/python -m unittest discover -s tests -v
+cd ..
+
+# Reproduce the six pilot outcomes from cached traces:
+.venv/bin/python code/tools/evaluate_pilot.py
+
+# Verify the saved controlled simulation without repeating the full experiment:
+.venv/bin/python code/tools/audit_coding_study.py --root code --study data/analysis/coding_experiments_2026-10-24
 ```
 
-From the repository root:
+Fresh studies use new output directories:
 
 ```sh
-.venv/bin/python code/tools/evaluate_pilot.py
+.venv/bin/python code/tools/run_receiver_study.py --root code --data-root data --study data/analysis/receiver_layers_2026-10-24 --output data/analysis/receiver_new_run
 .venv/bin/python code/tools/run_coding_experiments.py --root code --output data/analysis/coding_new_run
-.venv/bin/python code/tools/audit_coding_study.py --root code --study data/analysis/coding_new_run
 ```
 
-The synthetic study uses declared models and is not a fitted camera-channel model. Headers and synchronization are assumed correct; framing still counts toward airtime. Each new run needs a new output folder. Failed decodes remain failures; payload BER is conditional on a returned payload. A correct-delivery score requires an exact message as well as CRC validity.
+Receiver re-evaluation uses the tracked feature caches. To re-extract measurements from raw videos, first restore the appropriate recordings; see `code/tools/extract_receiver_features.py --help`. The saved inputs and algorithms are frozen: preserve the original study and use a new run when changing them.
 
-## Physical channel and attribution
+The [receiver report](data/analysis/receiver_layers_2026-10-24/report.html) and [coding/interleaving report](data/analysis/coding_experiments_2026-10-24/report.html) provide detailed outputs. Download/open HTML reports locally to view them. For Overleaf, copy `report.tex` into `main.tex` and select pdfLaTeX; no external figure or bibliography files are needed. The report is a draft with author placeholders.
 
-The transmitter is an ESP32-S3 driving a LAFVIN ST7796S display. Each bit lasts 200 ms at the baseline setting; the receiver uses phone-video timestamps and pixel brightness. Firmware source is under `code/firmware/optical_tx/`. Build helpers require the appropriate local Arduino installation; flashing requires the original device's private backup and identity checks, which are not distributed.
+## Interpretation and attribution
 
-Repetition and Hamming conventions follow the lab. The screen setup was adapted from the author's earlier robot-face firmware. LovyanGFX 1.2.32 and `reedsolo` 1.7.0 retain their licences and provenance. The Reed–Solomon algorithm is credited library code; this project integrates and evaluates it. AI assistance was used, and the group must understand and justify all submitted work.
+The implementation includes uncoded transmission, repetition ×3/×5, Hamming (7,4), Reed–Solomon with four parity bytes, reference compensation, spatial processing and bit interleaving. The transmitter uses an ESP32-S3 and LAFVIN ST7796S display; the receiver uses phone-video timestamps and brightness at a baseline of 200 ms/bit.
 
-The [pilot documentation](data/recordings/pilot_2026-10-24/README.md) explains selection, incomplete capture conditions and log association. These six examples are not an unbiased estimate of real-channel reliability. The coursework report, presentation/live demonstration and contribution forms are separate deliverables.
+The 30 physical packets are selected recordings from one setup. Eight informed receiver settings, and the later recordings were previously inspected. The 30/30 combined-receiver outcome is retrospective recovery of this dataset, not proof of universal reliability. Physical disturbances are not matched across codes. Simulations use declared noise models and ideal acquisition/header reception, while charging framing airtime. Failed packets remain failures; success requires an exact message and a valid CRC, and payload BER is conditional on a returned payload.
+
+Repetition/Hamming follow the labs. The display setup was adapted from the author's earlier robot-face firmware. LovyanGFX 1.2.32 and `reedsolo` 1.7.0 retain their licences and provenance; the Reed–Solomon algorithm is credited library code. AI assistance supported implementation and drafting. Every group member must understand and justify the submitted work. Private device-restoration material is excluded; flashing helpers require the original local backup and device checks. Presentation, live demonstration and contribution forms remain separate assessment deliverables.

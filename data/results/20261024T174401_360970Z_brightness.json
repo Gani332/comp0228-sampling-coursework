@@ -1,0 +1,24 @@
+{
+  "video": "/Users/riyaa/Downloads/OMAR_NOISE.MOV",
+  "video_sha256": "4f3b455e1c3f9d338b48b0b9c7c35f6e8433d8579c21dacb0d90326626adc03c",
+  "roi_xywh": [
+    1050,
+    300,
+    150,
+    150
+  ],
+  "frames": 993,
+  "duration_seconds": 33.068333,
+  "median_frame_interval_seconds": 0.03333300000000072,
+  "max_frame_gap_seconds": 0.03500000000000192,
+  "rotation": "stored pixels, autorotation disabled",
+  "data_kind": "physical_video",
+  "conditions": {
+    "distance_cm": null,
+    "phone_model": "",
+    "camera_mode": "",
+    "lighting": "",
+    "interference": "none",
+    "notes": ""
+  }
+}

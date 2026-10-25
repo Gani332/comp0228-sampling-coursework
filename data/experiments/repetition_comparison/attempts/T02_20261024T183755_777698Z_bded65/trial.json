@@ -1,0 +1,57 @@
+{
+  "trial_id": "T02",
+  "repeat": 1,
+  "codec": "repeat3",
+  "condition": "noisy",
+  "message": "MANUNITED",
+  "bit_ms": 200,
+  "sequence": 55,
+  "channel_seconds": 72.0,
+  "attempt_id": "T02_20261024T183755_777698Z_bded65",
+  "retake": true,
+  "created_utc": "2026-10-24T18:37:55.777781+00:00",
+  "status": "controller_completed",
+  "setup": {
+    "phone_model": "",
+    "distance_cm": null,
+    "camera_mode": "Record the actual resolution/fps and focus/exposure setting",
+    "room_lighting": "",
+    "lamp_setting_and_marked_sweep_positions": "",
+    "notes": ""
+  },
+  "planned_interference": "One gentle light sweep during the two-second visual cue window. Keep the same lamp setting, marked start/end positions, camera, display and room lighting.",
+  "operator_observations": "",
+  "cue_events": [
+    {
+      "phase": "wait",
+      "host_seconds_after_start_ack": 0.0,
+      "host_time_unix": 1792867076.7344158
+    },
+    {
+      "phase": "sweep",
+      "host_seconds_after_start_ack": 19.8741,
+      "host_time_unix": 1792867096.614437
+    },
+    {
+      "phase": "stop",
+      "host_seconds_after_start_ack": 21.8585,
+      "host_time_unix": 1792867098.6018481
+    },
+    {
+      "phase": "complete",
+      "host_seconds_after_start_ack": 72.2179,
+      "host_time_unix": 1792867148.981514
+    }
+  ],
+  "cue_schedule": {
+    "basis": "Host receipt of firmware START acknowledgment",
+    "start_seconds": 19.8,
+    "stop_seconds": 21.8,
+    "note": "Operator guidance only; actual light onset/duration must be checked in the video."
+  },
+  "cue_window_displayed": true,
+  "video": "recording.mov",
+  "video_sha256": "41fab1dc6bb5765062532bab36b7903bc216fbee78d6d25654b03994b229da98",
+  "source_video_name": "MANUNITED_REPEAT3_NOISY.MOV",
+  "latest_evaluation": "evaluations/20261024T184024_900304Z_7665cd"
+}

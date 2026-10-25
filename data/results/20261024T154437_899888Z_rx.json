@@ -1,0 +1,19 @@
+{
+  "crc_ok": true,
+  "codec": "none",
+  "sequence": 1,
+  "start_seconds": 5.120681774851342,
+  "period_seconds": 0.19991670439386064,
+  "threshold": 144.6153875,
+  "dark_level": 49.230774999999994,
+  "bright_level": 240.0,
+  "preamble_bit_errors": 0,
+  "edge_residual_rms_seconds": 0.009105938163893962,
+  "low_confidence_body_bits": 0,
+  "text": "HELLO",
+  "payload_hex": "48454c4c4f",
+  "data_kind": "physical_video",
+  "video_sha256": "c52b36728e3a00fc80edf81229342a88111eca83fc54c34d19721bac54a43c83",
+  "trace_file": "/Users/riyaa/Desktop/UCL_Year4/Sampling, Compression and Data Analysis/Coursework/optical_link/results/20261024T154423_084838Z_brightness.csv",
+  "status": "crc_pass"
+}

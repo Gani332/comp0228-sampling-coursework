@@ -1,0 +1,3534 @@
+[
+  {
+    "id": "clean_hello",
+    "cohort": "development",
+    "video": "recordings/pilot_2026-10-24/clean/HELLO_BIT.MOV",
+    "sha256": "c52b36728e3a00fc80edf81229342a88111eca83fc54c34d19721bac54a43c83",
+    "original_roi": [
+      950,
+      400,
+      200,
+      200
+    ],
+    "trace": "analysis/pilot_2026-10-24/traces/clean_hello.csv",
+    "trace_format": "csv",
+    "packets": [
+      {
+        "id": "clean_hello",
+        "tx": "analysis/pilot_2026-10-24/transmissions/clean_hello.json",
+        "window": null,
+        "expected": {
+          "trial_id": "clean_hello",
+          "condition": "clean",
+          "message": "HELLO",
+          "received_text": "HELLO",
+          "codec": "none",
+          "body_channel_bit_errors": 0,
+          "body_channel_bits": 56,
+          "body_channel_ber": 0.0,
+          "payload_bit_errors": 0,
+          "payload_bits": 40,
+          "payload_ber": 0.0,
+          "crc_ok": true,
+          "packet_failed": false,
+          "exact_payload_match": true,
+          "channel_seconds_including_overhead": 30.4,
+          "crc_valid_payload_goodput_bps": 1.3157894736842106,
+          "evidence_cohort": "earlier_development",
+          "batch": "pilot",
+          "status": "crc_pass",
+          "correct_payload_goodput_bps": 1.3157894736842106,
+          "correct_delivered_bits": 40,
+          "offered_payload_rate_bps": 1.3157894736842106,
+          "source_metrics": "analysis/pilot_2026-10-24/summary.json"
+        }
+      }
+    ],
+    "study_roi": [
+      660,
+      270,
+      660,
+      420
+    ],
+    "reference_rois": [
+      [
+        450,
+        400,
+        100,
+        160
+      ],
+      [
+        1430,
+        400,
+        100,
+        160
+      ],
+      [
+        800,
+        150,
+        300,
+        60
+      ],
+      [
+        800,
+        770,
+        300,
+        50
+      ]
+    ],
+    "geometry_selection": "Fixed interior patch and four non-flashing LCD reference rectangles selected geometrically from early frames, before computing new receiver results."
+  },
+  {
+    "id": "clean_riyaadh",
+    "cohort": "development",
+    "video": "recordings/pilot_2026-10-24/clean/RIYAADH_BIT.MOV",
+    "sha256": "e238d6063487498bcf17c4e4f0211307f448aa2664a7d47ebd651aabe689ce4a",
+    "original_roi": [
+      950,
+      400,
+      200,
+      200
+    ],
+    "trace": "analysis/pilot_2026-10-24/traces/clean_riyaadh.csv",
+    "trace_format": "csv",
+    "packets": [
+      {
+        "id": "clean_riyaadh",
+        "tx": "analysis/pilot_2026-10-24/transmissions/clean_riyaadh.json",
+        "window": null,
+        "expected": {
+          "trial_id": "clean_riyaadh",
+          "condition": "clean",
+          "message": "RIYAADH",
+          "received_text": "RIYAADH",
+          "codec": "none",
+          "body_channel_bit_errors": 0,
+          "body_channel_bits": 72,
+          "body_channel_ber": 0.0,
+          "payload_bit_errors": 0,
+          "payload_bits": 56,
+          "payload_ber": 0.0,
+          "crc_ok": true,
+          "packet_failed": false,
+          "exact_payload_match": true,
+          "channel_seconds_including_overhead": 33.6,
+          "crc_valid_payload_goodput_bps": 1.6666666666666665,
+          "evidence_cohort": "earlier_development",
+          "batch": "pilot",
+          "status": "crc_pass",
+          "correct_payload_goodput_bps": 1.6666666666666665,
+          "correct_delivered_bits": 56,
+          "offered_payload_rate_bps": 1.6666666666666665,
+          "source_metrics": "analysis/pilot_2026-10-24/summary.json"
+        }
+      }
+    ],
+    "study_roi": [
+      735,
+      270,
+      690,
+      450
+    ],
+    "reference_rois": [
+      [
+        550,
+        400,
+        100,
+        140
+      ],
+      [
+        1550,
+        400,
+        100,
+        140
+      ],
+      [
+        900,
+        150,
+        300,
+        50
+      ],
+      [
+        900,
+        800,
+        300,
+        45
+      ]
+    ],
+    "geometry_selection": "Fixed interior patch and four non-flashing LCD reference rectangles selected geometrically from early frames, before computing new receiver results."
+  },
+  {
+    "id": "clean_manunited",
+    "cohort": "development",
+    "video": "recordings/pilot_2026-10-24/clean/MANUNITED.MOV",
+    "sha256": "5d8f608dde84379d1a2cb7d1d7ef3771d639ee426d59efe5f65ee43a1a9f4667",
+    "original_roi": [
+      950,
+      400,
+      200,
+      200
+    ],
+    "trace": "analysis/pilot_2026-10-24/traces/clean_manunited.csv",
+    "trace_format": "csv",
+    "packets": [
+      {
+        "id": "clean_manunited",
+        "tx": "analysis/pilot_2026-10-24/transmissions/clean_manunited.json",
+        "window": null,
+        "expected": {
+          "trial_id": "clean_manunited",
+          "condition": "clean",
+          "message": "MANUNITED",
+          "received_text": "MANUNITED",
+          "codec": "none",
+          "body_channel_bit_errors": 0,
+          "body_channel_bits": 88,
+          "body_channel_ber": 0.0,
+          "payload_bit_errors": 0,
+          "payload_bits": 72,
+          "payload_ber": 0.0,
+          "crc_ok": true,
+          "packet_failed": false,
+          "exact_payload_match": true,
+          "channel_seconds_including_overhead": 36.8,
+          "crc_valid_payload_goodput_bps": 1.956521739130435,
+          "evidence_cohort": "earlier_development",
+          "batch": "pilot",
+          "status": "crc_pass",
+          "correct_payload_goodput_bps": 1.956521739130435,
+          "correct_delivered_bits": 72,
+          "offered_payload_rate_bps": 1.956521739130435,
+          "source_metrics": "analysis/pilot_2026-10-24/summary.json"
+        }
+      }
+    ],
+    "study_roi": [
+      750,
+      285,
+      540,
+      330
+    ],
+    "reference_rois": [
+      [
+        570,
+        390,
+        90,
+        140
+      ],
+      [
+        1410,
+        390,
+        90,
+        140
+      ],
+      [
+        850,
+        180,
+        300,
+        40
+      ],
+      [
+        850,
+        700,
+        300,
+        40
+      ]
+    ],
+    "geometry_selection": "Fixed interior patch and four non-flashing LCD reference rectangles selected geometrically from early frames, before computing new receiver results."
+  },
+  {
+    "id": "noisy_manunited",
+    "cohort": "development",
+    "video": "recordings/pilot_2026-10-24/noisy/MANUNITED_NOISE.MOV",
+    "sha256": "cf5a74930ff1dbfa36e37f5f6d8db1219f97ea8e353d2ae39a922a4858660175",
+    "original_roi": [
+      950,
+      400,
+      200,
+      200
+    ],
+    "trace": "analysis/pilot_2026-10-24/traces/noisy_manunited.csv",
+    "trace_format": "csv",
+    "packets": [
+      {
+        "id": "noisy_manunited",
+        "tx": "analysis/pilot_2026-10-24/transmissions/noisy_manunited.json",
+        "window": null,
+        "expected": {
+          "trial_id": "noisy_manunited",
+          "condition": "noisy",
+          "message": "MANUNITED",
+          "received_text": "M\ufffd^]N\ufffdTED",
+          "codec": "none",
+          "body_channel_bit_errors": 4,
+          "body_channel_bits": 88,
+          "body_channel_ber": 0.045454545454545456,
+          "payload_bit_errors": 4,
+          "payload_bits": 72,
+          "payload_ber": 0.05555555555555555,
+          "crc_ok": false,
+          "packet_failed": true,
+          "exact_payload_match": false,
+          "channel_seconds_including_overhead": 36.8,
+          "crc_valid_payload_goodput_bps": 0.0,
+          "evidence_cohort": "earlier_development",
+          "batch": "pilot",
+          "status": "crc_fail",
+          "correct_payload_goodput_bps": 0.0,
+          "correct_delivered_bits": 0,
+          "offered_payload_rate_bps": 1.956521739130435,
+          "source_metrics": "analysis/pilot_2026-10-24/summary.json"
+        }
+      }
+    ],
+    "study_roi": [
+      780,
+      285,
+      690,
+      420
+    ],
+    "reference_rois": [
+      [
+        600,
+        430,
+        90,
+        140
+      ],
+      [
+        1620,
+        430,
+        90,
+        140
+      ],
+      [
+        900,
+        165,
+        300,
+        40
+      ],
+      [
+        900,
+        800,
+        300,
+        40
+      ]
+    ],
+    "geometry_selection": "Fixed interior patch and four non-flashing LCD reference rectangles selected geometrically from early frames, before computing new receiver results."
+  },
+  {
+    "id": "noisy_adrian",
+    "cohort": "development",
+    "video": "recordings/pilot_2026-10-24/noisy/ADRIAN_NOISE.MOV",
+    "sha256": "ff9602d9b1c5f0cfcdb83101889994ddccfe678420f20730cd90b93691bda2fc",
+    "original_roi": [
+      1050,
+      300,
+      150,
+      150
+    ],
+    "trace": "analysis/pilot_2026-10-24/traces/noisy_adrian.csv",
+    "trace_format": "csv",
+    "packets": [
+      {
+        "id": "noisy_adrian",
+        "tx": "analysis/pilot_2026-10-24/transmissions/noisy_adrian.json",
+        "window": null,
+        "expected": {
+          "trial_id": "noisy_adrian",
+          "condition": "noisy",
+          "message": "ADRIAN",
+          "received_text": "ADR\ufffdA^",
+          "codec": "none",
+          "body_channel_bit_errors": 2,
+          "body_channel_bits": 64,
+          "body_channel_ber": 0.03125,
+          "payload_bit_errors": 2,
+          "payload_bits": 48,
+          "payload_ber": 0.041666666666666664,
+          "crc_ok": false,
+          "packet_failed": true,
+          "exact_payload_match": false,
+          "channel_seconds_including_overhead": 32.0,
+          "crc_valid_payload_goodput_bps": 0.0,
+          "evidence_cohort": "earlier_development",
+          "batch": "pilot",
+          "status": "crc_fail",
+          "correct_payload_goodput_bps": 0.0,
+          "correct_delivered_bits": 0,
+          "offered_payload_rate_bps": 1.5,
+          "source_metrics": "analysis/pilot_2026-10-24/summary.json"
+        }
+      }
+    ],
+    "study_roi": [
+      1000,
+      260,
+      340,
+      210
+    ],
+    "reference_rois": [
+      [
+        850,
+        300,
+        90,
+        130
+      ],
+      [
+        1430,
+        300,
+        80,
+        130
+      ],
+      [
+        1080,
+        150,
+        220,
+        40
+      ],
+      [
+        1080,
+        530,
+        220,
+        30
+      ]
+    ],
+    "geometry_selection": "Fixed interior patch and four non-flashing LCD reference rectangles selected geometrically from early frames, before computing new receiver results."
+  },
+  {
+    "id": "noisy_omar",
+    "cohort": "development",
+    "video": "recordings/pilot_2026-10-24/noisy/OMAR_NOISE.MOV",
+    "sha256": "4f3b455e1c3f9d338b48b0b9c7c35f6e8433d8579c21dacb0d90326626adc03c",
+    "original_roi": [
+      1050,
+      300,
+      150,
+      150
+    ],
+    "trace": "analysis/pilot_2026-10-24/traces/noisy_omar.csv",
+    "trace_format": "csv",
+    "packets": [
+      {
+        "id": "noisy_omar",
+        "tx": "analysis/pilot_2026-10-24/transmissions/noisy_omar.json",
+        "window": null,
+        "expected": {
+          "trial_id": "noisy_omar",
+          "condition": "noisy",
+          "message": "OMAR",
+          "received_text": "OMAZ",
+          "codec": "none",
+          "body_channel_bit_errors": 1,
+          "body_channel_bits": 48,
+          "body_channel_ber": 0.020833333333333332,
+          "payload_bit_errors": 1,
+          "payload_bits": 32,
+          "payload_ber": 0.03125,
+          "crc_ok": false,
+          "packet_failed": true,
+          "exact_payload_match": false,
+          "channel_seconds_including_overhead": 28.8,
+          "crc_valid_payload_goodput_bps": 0.0,
+          "evidence_cohort": "earlier_development",
+          "batch": "pilot",
+          "status": "crc_fail",
+          "correct_payload_goodput_bps": 0.0,
+          "correct_delivered_bits": 0,
+          "offered_payload_rate_bps": 1.1111111111111112,
+          "source_metrics": "analysis/pilot_2026-10-24/summary.json"
+        }
+      }
+    ],
+    "study_roi": [
+      1000,
+      260,
+      340,
+      210
+    ],
+    "reference_rois": [
+      [
+        850,
+        300,
+        90,
+        130
+      ],
+      [
+        1430,
+        300,
+        80,
+        130
+      ],
+      [
+        1080,
+        150,
+        220,
+        40
+      ],
+      [
+        1080,
+        530,
+        220,
+        30
+      ]
+    ],
+    "geometry_selection": "Fixed interior patch and four non-flashing LCD reference rectangles selected geometrically from early frames, before computing new receiver results."
+  },
+  {
+    "id": "T01",
+    "cohort": "development",
+    "video": "experiments/repetition_comparison/attempts/T01_20261024T182809_576921Z_5cefe1/recording.mov",
+    "sha256": "ed9d2dbb0107d65a4b86b4ac5d8a9983a1dee38f473b3a767dfeaa142412ddbc",
+    "original_roi": [
+      1050,
+      300,
+      150,
+      150
+    ],
+    "trace": "experiments/repetition_comparison/attempts/T01_20261024T182809_576921Z_5cefe1/evaluations/20261024T183228_875249Z_e38188/brightness.csv",
+    "trace_format": "csv",
+    "packets": [
+      {
+        "id": "T01",
+        "tx": "experiments/repetition_comparison/attempts/T01_20261024T182809_576921Z_5cefe1/tx.json",
+        "window": null,
+        "expected": {
+          "status": "crc_pass",
+          "packet_failed": false,
+          "received_text": "MANUNITED",
+          "crc_ok": true,
+          "exact_payload_match": true,
+          "body_channel_bit_errors": 0,
+          "body_channel_bits_measured": 264,
+          "body_channel_ber": 0.0,
+          "payload_bit_errors": 0,
+          "payload_bits_measured": 72,
+          "payload_ber": 0.0,
+          "channel_seconds_including_overhead": 72.0,
+          "correct_delivered_bits": 72,
+          "crc_valid_delivered_bits": 72,
+          "correct_payload_goodput_bps": 1.0,
+          "attempt_id": "T01_20261024T182809_576921Z_5cefe1",
+          "trial_id": "T01",
+          "codec": "repeat3",
+          "condition": "clean",
+          "roi_xywh": [
+            1050,
+            300,
+            150,
+            150
+          ],
+          "operator_observations": "",
+          "evidence_cohort": "earlier_development",
+          "batch": "repetition_comparison",
+          "message": "MANUNITED",
+          "body_channel_bits": 264,
+          "payload_bits": 72,
+          "offered_payload_rate_bps": 1.0,
+          "source_metrics": "experiments/repetition_comparison/attempts/T01_20261024T182809_576921Z_5cefe1/evaluations/20261024T183228_875249Z_e38188/metrics.json"
+        }
+      }
+    ],
+    "study_roi": [
+      1050,
+      255,
+      345,
+      210
+    ],
+    "reference_rois": [
+      [
+        900,
+        300,
+        80,
+        130
+      ],
+      [
+        1480,
+        300,
+        80,
+        130
+      ],
+      [
+        1120,
+        145,
+        220,
+        35
+      ],
+      [
+        1120,
+        535,
+        220,
+        30
+      ]
+    ],
+    "geometry_selection": "Fixed interior patch and four non-flashing LCD reference rectangles selected geometrically from early frames, before computing new receiver results."
+  },
+  {
+    "id": "T02",
+    "cohort": "development",
+    "video": "experiments/repetition_comparison/attempts/T02_20261024T183755_777698Z_bded65/recording.mov",
+    "sha256": "41fab1dc6bb5765062532bab36b7903bc216fbee78d6d25654b03994b229da98",
+    "original_roi": [
+      1200,
+      300,
+      150,
+      150
+    ],
+    "trace": "experiments/repetition_comparison/attempts/T02_20261024T183755_777698Z_bded65/evaluations/20261024T184024_900304Z_7665cd/brightness.csv",
+    "trace_format": "csv",
+    "packets": [
+      {
+        "id": "T02",
+        "tx": "experiments/repetition_comparison/attempts/T02_20261024T183755_777698Z_bded65/tx.json",
+        "window": null,
+        "expected": {
+          "status": "crc_fail",
+          "packet_failed": true,
+          "received_text": "M\ufffdOUNITED",
+          "crc_ok": false,
+          "exact_payload_match": false,
+          "body_channel_bit_errors": 6,
+          "body_channel_bits_measured": 264,
+          "body_channel_ber": 0.022727272727272728,
+          "payload_bit_errors": 2,
+          "payload_bits_measured": 72,
+          "payload_ber": 0.027777777777777776,
+          "channel_seconds_including_overhead": 72.0,
+          "correct_delivered_bits": 0,
+          "crc_valid_delivered_bits": 0,
+          "correct_payload_goodput_bps": 0.0,
+          "attempt_id": "T02_20261024T183755_777698Z_bded65",
+          "trial_id": "T02",
+          "codec": "repeat3",
+          "condition": "noisy",
+          "roi_xywh": [
+            1200,
+            300,
+            150,
+            150
+          ],
+          "operator_observations": "",
+          "evidence_cohort": "earlier_development",
+          "batch": "repetition_comparison",
+          "message": "MANUNITED",
+          "body_channel_bits": 264,
+          "payload_bits": 72,
+          "offered_payload_rate_bps": 1.0,
+          "source_metrics": "experiments/repetition_comparison/attempts/T02_20261024T183755_777698Z_bded65/evaluations/20261024T184024_900304Z_7665cd/metrics.json"
+        }
+      }
+    ],
+    "study_roi": [
+      1100,
+      240,
+      340,
+      225
+    ],
+    "reference_rois": [
+      [
+        940,
+        285,
+        80,
+        140
+      ],
+      [
+        1530,
+        285,
+        80,
+        140
+      ],
+      [
+        1180,
+        130,
+        200,
+        35
+      ],
+      [
+        1180,
+        520,
+        200,
+        30
+      ]
+    ],
+    "geometry_selection": "Fixed interior patch and four non-flashing LCD reference rectangles selected geometrically from early frames, before computing new receiver results."
+  },
+  {
+    "id": "B01",
+    "cohort": "earlier_batch_evaluation",
+    "video": "experiments/final_capture_v1/batches/B01_20261024T194943_932683Z_e83519/recording.mov",
+    "sha256": "cf3a6308d1f4d39c79f2d10373e402acf3b0ab23a3232b0c43c7c3172134e12c",
+    "original_roi": [
+      950,
+      240,
+      150,
+      120
+    ],
+    "trace": "analysis/baseline_2026-10-24/traces/B01_trace.npz",
+    "trace_format": "npz",
+    "packets": [
+      {
+        "id": "R01",
+        "tx": "experiments/final_capture_v1/batches/B01_20261024T194943_932683Z_e83519/R01/tx.json",
+        "window": [
+          1.358673422969618,
+          110.5579303187023
+        ],
+        "expected": {
+          "codec": "repeat5",
+          "message": "MANUNITED",
+          "sequence": 67,
+          "status": "crc_fail",
+          "packet_failed": true,
+          "failure_stage": null,
+          "reason": null,
+          "body_channel_bit_errors": 11,
+          "body_channel_bits": 440,
+          "body_channel_ber": 0.025,
+          "payload_bit_errors": 2,
+          "payload_bits": 72,
+          "payload_ber": 0.027777777777777776,
+          "received_text": "M\ufffdNUNITED",
+          "crc_ok": false,
+          "exact_payload_match": false,
+          "channel_seconds_including_overhead": 107.2,
+          "offered_payload_rate_bps": 0.6716417910447761,
+          "correct_delivered_bits": 0,
+          "correct_payload_goodput_bps": 0.0,
+          "body_error_indices": [
+            41,
+            42,
+            43,
+            44,
+            61,
+            62,
+            63,
+            213,
+            214,
+            215,
+            216
+          ],
+          "consecutive_error_runs": [
+            {
+              "start": 41,
+              "length": 4
+            },
+            {
+              "start": 61,
+              "length": 3
+            },
+            {
+              "start": 213,
+              "length": 4
+            }
+          ],
+          "max_consecutive_errors": 4,
+          "zero_to_one_errors": 11,
+          "one_to_zero_errors": 0,
+          "errors_per_code_block": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            4,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "damaged_code_blocks": 4,
+          "blocks_exceeding_guaranteed_correction": 2,
+          "min_samples_per_body_bit": 3,
+          "max_samples_per_body_bit": 3,
+          "trial_id": "R01",
+          "batch": "B01",
+          "condition": "noisy",
+          "evidence_cohort": "new_batch_baseline",
+          "roi_xywh": [
+            950,
+            240,
+            150,
+            120
+          ],
+          "evaluation_window_seconds": [
+            1.358673422969618,
+            110.5579303187023
+          ],
+          "video_sha256": "cf3a6308d1f4d39c79f2d10373e402acf3b0ab23a3232b0c43c7c3172134e12c",
+          "tx_log": "experiments/final_capture_v1/batches/B01_20261024T194943_932683Z_e83519/R01/tx.json"
+        }
+      },
+      {
+        "id": "R02",
+        "tx": "experiments/final_capture_v1/batches/B01_20261024T194943_932683Z_e83519/R02/tx.json",
+        "window": [
+          116.89822952340111,
+          168.91756696568217
+        ],
+        "expected": {
+          "codec": "hamming74",
+          "message": "MANUNITED",
+          "sequence": 68,
+          "status": "crc_fail",
+          "packet_failed": true,
+          "failure_stage": null,
+          "reason": null,
+          "body_channel_bit_errors": 7,
+          "body_channel_bits": 154,
+          "body_channel_ber": 0.045454545454545456,
+          "payload_bit_errors": 6,
+          "payload_bits": 72,
+          "payload_ber": 0.08333333333333333,
+          "received_text": "MAN\\\ufffdITE\ufffd",
+          "crc_ok": false,
+          "exact_payload_match": false,
+          "channel_seconds_including_overhead": 50.0,
+          "offered_payload_rate_bps": 1.44,
+          "correct_delivered_bits": 0,
+          "correct_payload_goodput_bps": 0.0,
+          "body_error_indices": [
+            51,
+            52,
+            57,
+            58,
+            113,
+            114,
+            117
+          ],
+          "consecutive_error_runs": [
+            {
+              "start": 51,
+              "length": 2
+            },
+            {
+              "start": 57,
+              "length": 2
+            },
+            {
+              "start": 113,
+              "length": 2
+            },
+            {
+              "start": 117,
+              "length": 1
+            }
+          ],
+          "max_consecutive_errors": 2,
+          "zero_to_one_errors": 7,
+          "one_to_zero_errors": 0,
+          "errors_per_code_block": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "damaged_code_blocks": 3,
+          "blocks_exceeding_guaranteed_correction": 3,
+          "systematic_payload_errors_before_correction": 4,
+          "min_samples_per_body_bit": 3,
+          "max_samples_per_body_bit": 3,
+          "trial_id": "R02",
+          "batch": "B01",
+          "condition": "noisy",
+          "evidence_cohort": "new_batch_baseline",
+          "roi_xywh": [
+            950,
+            240,
+            150,
+            120
+          ],
+          "evaluation_window_seconds": [
+            116.89822952340111,
+            168.91756696568217
+          ],
+          "video_sha256": "cf3a6308d1f4d39c79f2d10373e402acf3b0ab23a3232b0c43c7c3172134e12c",
+          "tx_log": "experiments/final_capture_v1/batches/B01_20261024T194943_932683Z_e83519/R02/tx.json"
+        }
+      },
+      {
+        "id": "R03",
+        "tx": "experiments/final_capture_v1/batches/B01_20261024T194943_932683Z_e83519/R03/tx.json",
+        "window": [
+          175.22386952325346,
+          220.44030741141603
+        ],
+        "expected": {
+          "codec": "rs4",
+          "message": "MANUNITED",
+          "sequence": 69,
+          "status": "decode_failed",
+          "packet_failed": true,
+          "failure_stage": "fec",
+          "reason": "Reed-Solomon could not correct this codeword.",
+          "body_channel_bit_errors": 6,
+          "body_channel_bits": 120,
+          "body_channel_ber": 0.05,
+          "payload_bit_errors": null,
+          "payload_bits": 72,
+          "payload_ber": null,
+          "received_text": null,
+          "crc_ok": null,
+          "exact_payload_match": null,
+          "channel_seconds_including_overhead": 43.2,
+          "offered_payload_rate_bps": 1.6666666666666665,
+          "correct_delivered_bits": 0,
+          "correct_payload_goodput_bps": 0.0,
+          "body_error_indices": [
+            42,
+            43,
+            45,
+            46,
+            62,
+            64
+          ],
+          "consecutive_error_runs": [
+            {
+              "start": 42,
+              "length": 2
+            },
+            {
+              "start": 45,
+              "length": 2
+            },
+            {
+              "start": 62,
+              "length": 1
+            },
+            {
+              "start": 64,
+              "length": 1
+            }
+          ],
+          "max_consecutive_errors": 2,
+          "zero_to_one_errors": 6,
+          "one_to_zero_errors": 0,
+          "errors_per_code_block": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            4,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "damaged_code_blocks": 3,
+          "damaged_rs_bytes": 3,
+          "systematic_payload_errors_before_correction": 6,
+          "min_samples_per_body_bit": 3,
+          "max_samples_per_body_bit": 3,
+          "trial_id": "R03",
+          "batch": "B01",
+          "condition": "noisy",
+          "evidence_cohort": "new_batch_baseline",
+          "roi_xywh": [
+            950,
+            240,
+            150,
+            120
+          ],
+          "evaluation_window_seconds": [
+            175.22386952325346,
+            220.44030741141603
+          ],
+          "video_sha256": "cf3a6308d1f4d39c79f2d10373e402acf3b0ab23a3232b0c43c7c3172134e12c",
+          "tx_log": "experiments/final_capture_v1/batches/B01_20261024T194943_932683Z_e83519/R03/tx.json"
+        }
+      }
+    ],
+    "study_roi": [
+      870,
+      185,
+      345,
+      210
+    ],
+    "reference_rois": [
+      [
+        735,
+        225,
+        70,
+        120
+      ],
+      [
+        1300,
+        225,
+        70,
+        120
+      ],
+      [
+        950,
+        105,
+        220,
+        30
+      ],
+      [
+        950,
+        445,
+        220,
+        30
+      ]
+    ],
+    "geometry_selection": "Fixed interior patch and four non-flashing LCD reference rectangles selected geometrically from early frames, before computing new receiver results."
+  },
+  {
+    "id": "B02",
+    "cohort": "earlier_batch_evaluation",
+    "video": "experiments/final_capture_v1/batches/B02_20261024T195436_512439Z_1b7971/recording.mov",
+    "sha256": "9bc65461760310a132fd114638ebd693e984ab49e238c81352c378c41db805be",
+    "original_roi": [
+      950,
+      240,
+      150,
+      120
+    ],
+    "trace": "analysis/baseline_2026-10-24/traces/B02_trace.npz",
+    "trace_format": "npz",
+    "packets": [
+      {
+        "id": "R04",
+        "tx": "experiments/final_capture_v1/batches/B02_20261024T195436_512439Z_1b7971/R04/tx.json",
+        "window": [
+          2.361895832872447,
+          42.75054244090314
+        ],
+        "expected": {
+          "codec": "rs4",
+          "message": "ADRIAN",
+          "sequence": 70,
+          "status": "decode_failed",
+          "packet_failed": true,
+          "failure_stage": "fec",
+          "reason": "Reed-Solomon could not correct this codeword.",
+          "body_channel_bit_errors": 5,
+          "body_channel_bits": 96,
+          "body_channel_ber": 0.052083333333333336,
+          "payload_bit_errors": null,
+          "payload_bits": 48,
+          "payload_ber": null,
+          "received_text": null,
+          "crc_ok": null,
+          "exact_payload_match": null,
+          "channel_seconds_including_overhead": 38.4,
+          "offered_payload_rate_bps": 1.25,
+          "correct_delivered_bits": 0,
+          "correct_payload_goodput_bps": 0.0,
+          "body_error_indices": [
+            52,
+            54,
+            58,
+            60,
+            65
+          ],
+          "consecutive_error_runs": [
+            {
+              "start": 52,
+              "length": 1
+            },
+            {
+              "start": 54,
+              "length": 1
+            },
+            {
+              "start": 58,
+              "length": 1
+            },
+            {
+              "start": 60,
+              "length": 1
+            },
+            {
+              "start": 65,
+              "length": 1
+            }
+          ],
+          "max_consecutive_errors": 1,
+          "zero_to_one_errors": 5,
+          "one_to_zero_errors": 0,
+          "errors_per_code_block": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            2,
+            1,
+            0,
+            0,
+            0
+          ],
+          "damaged_code_blocks": 3,
+          "damaged_rs_bytes": 3,
+          "systematic_payload_errors_before_correction": 0,
+          "min_samples_per_body_bit": 2,
+          "max_samples_per_body_bit": 3,
+          "trial_id": "R04",
+          "batch": "B02",
+          "condition": "noisy",
+          "evidence_cohort": "new_batch_baseline",
+          "roi_xywh": [
+            950,
+            240,
+            150,
+            120
+          ],
+          "evaluation_window_seconds": [
+            2.361895832872447,
+            42.75054244090314
+          ],
+          "video_sha256": "9bc65461760310a132fd114638ebd693e984ab49e238c81352c378c41db805be",
+          "tx_log": "experiments/final_capture_v1/batches/B02_20261024T195436_512439Z_1b7971/R04/tx.json"
+        }
+      },
+      {
+        "id": "R05",
+        "tx": "experiments/final_capture_v1/batches/B02_20261024T195436_512439Z_1b7971/R05/tx.json",
+        "window": [
+          49.10217017973073,
+          108.73006080329546
+        ],
+        "expected": {
+          "codec": "repeat3",
+          "message": "ADRIAN",
+          "sequence": 71,
+          "status": "crc_fail",
+          "packet_failed": true,
+          "failure_stage": null,
+          "reason": null,
+          "body_channel_bit_errors": 14,
+          "body_channel_bits": 192,
+          "body_channel_ber": 0.07291666666666667,
+          "payload_bit_errors": 4,
+          "payload_bits": 48,
+          "payload_ber": 0.08333333333333333,
+          "received_text": "AO\ufffdIAN",
+          "crc_ok": false,
+          "exact_payload_match": false,
+          "channel_seconds_including_overhead": 57.6,
+          "offered_payload_rate_bps": 0.8333333333333333,
+          "correct_delivered_bits": 0,
+          "correct_payload_goodput_bps": 0.0,
+          "body_error_indices": [
+            36,
+            37,
+            38,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            159,
+            160,
+            161
+          ],
+          "consecutive_error_runs": [
+            {
+              "start": 36,
+              "length": 3
+            },
+            {
+              "start": 43,
+              "length": 8
+            },
+            {
+              "start": 159,
+              "length": 3
+            }
+          ],
+          "max_consecutive_errors": 8,
+          "zero_to_one_errors": 14,
+          "one_to_zero_errors": 0,
+          "errors_per_code_block": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            3,
+            0,
+            2,
+            3,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "damaged_code_blocks": 5,
+          "blocks_exceeding_guaranteed_correction": 5,
+          "min_samples_per_body_bit": 3,
+          "max_samples_per_body_bit": 3,
+          "trial_id": "R05",
+          "batch": "B02",
+          "condition": "noisy",
+          "evidence_cohort": "new_batch_baseline",
+          "roi_xywh": [
+            950,
+            240,
+            150,
+            120
+          ],
+          "evaluation_window_seconds": [
+            49.10217017973073,
+            108.73006080329546
+          ],
+          "video_sha256": "9bc65461760310a132fd114638ebd693e984ab49e238c81352c378c41db805be",
+          "tx_log": "experiments/final_capture_v1/batches/B02_20261024T195436_512439Z_1b7971/R05/tx.json"
+        }
+      },
+      {
+        "id": "R06",
+        "tx": "experiments/final_capture_v1/batches/B02_20261024T195436_512439Z_1b7971/R06/tx.json",
+        "window": [
+          115.02457276192959,
+          158.62758902291503
+        ],
+        "expected": {
+          "codec": "hamming74",
+          "message": "ADRIAN",
+          "sequence": 72,
+          "status": "crc_fail",
+          "packet_failed": true,
+          "failure_stage": null,
+          "reason": null,
+          "body_channel_bit_errors": 7,
+          "body_channel_bits": 112,
+          "body_channel_ber": 0.0625,
+          "payload_bit_errors": 4,
+          "payload_bits": 48,
+          "payload_ber": 0.08333333333333333,
+          "received_text": "AD_\ufffdAN",
+          "crc_ok": false,
+          "exact_payload_match": false,
+          "channel_seconds_including_overhead": 41.6,
+          "offered_payload_rate_bps": 1.1538461538461537,
+          "correct_delivered_bits": 0,
+          "correct_payload_goodput_bps": 0.0,
+          "body_error_indices": [
+            33,
+            35,
+            37,
+            39,
+            41,
+            43,
+            44
+          ],
+          "consecutive_error_runs": [
+            {
+              "start": 33,
+              "length": 1
+            },
+            {
+              "start": 35,
+              "length": 1
+            },
+            {
+              "start": 37,
+              "length": 1
+            },
+            {
+              "start": 39,
+              "length": 1
+            },
+            {
+              "start": 41,
+              "length": 1
+            },
+            {
+              "start": 43,
+              "length": 2
+            }
+          ],
+          "max_consecutive_errors": 2,
+          "zero_to_one_errors": 7,
+          "one_to_zero_errors": 0,
+          "errors_per_code_block": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            4,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "damaged_code_blocks": 3,
+          "blocks_exceeding_guaranteed_correction": 2,
+          "systematic_payload_errors_before_correction": 5,
+          "min_samples_per_body_bit": 3,
+          "max_samples_per_body_bit": 3,
+          "trial_id": "R06",
+          "batch": "B02",
+          "condition": "noisy",
+          "evidence_cohort": "new_batch_baseline",
+          "roi_xywh": [
+            950,
+            240,
+            150,
+            120
+          ],
+          "evaluation_window_seconds": [
+            115.02457276192959,
+            158.62758902291503
+          ],
+          "video_sha256": "9bc65461760310a132fd114638ebd693e984ab49e238c81352c378c41db805be",
+          "tx_log": "experiments/final_capture_v1/batches/B02_20261024T195436_512439Z_1b7971/R06/tx.json"
+        }
+      },
+      {
+        "id": "R07",
+        "tx": "experiments/final_capture_v1/batches/B02_20261024T195436_512439Z_1b7971/R07/tx.json",
+        "window": [
+          164.99100759291673,
+          250.1423056473635
+        ],
+        "expected": {
+          "codec": "repeat5",
+          "message": "ADRIAN",
+          "sequence": 73,
+          "status": "crc_fail",
+          "packet_failed": true,
+          "failure_stage": null,
+          "reason": null,
+          "body_channel_bit_errors": 24,
+          "body_channel_bits": 320,
+          "body_channel_ber": 0.075,
+          "payload_bit_errors": 5,
+          "payload_bits": 48,
+          "payload_ber": 0.10416666666666667,
+          "received_text": "A\ufffdRI]N",
+          "crc_ok": false,
+          "exact_payload_match": false,
+          "channel_seconds_including_overhead": 83.2,
+          "offered_payload_rate_bps": 0.5769230769230769,
+          "correct_delivered_bits": 0,
+          "correct_payload_goodput_bps": 0.0,
+          "body_error_indices": [
+            40,
+            41,
+            42,
+            43,
+            50,
+            51,
+            52,
+            176,
+            177,
+            178,
+            179,
+            180,
+            181,
+            182,
+            186,
+            187,
+            188,
+            251,
+            252,
+            253,
+            254,
+            255,
+            256,
+            257
+          ],
+          "consecutive_error_runs": [
+            {
+              "start": 40,
+              "length": 4
+            },
+            {
+              "start": 50,
+              "length": 3
+            },
+            {
+              "start": 176,
+              "length": 7
+            },
+            {
+              "start": 186,
+              "length": 3
+            },
+            {
+              "start": 251,
+              "length": 7
+            }
+          ],
+          "max_consecutive_errors": 7,
+          "zero_to_one_errors": 24,
+          "one_to_zero_errors": 0,
+          "errors_per_code_block": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            4,
+            0,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            4,
+            3,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            4,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "damaged_code_blocks": 7,
+          "blocks_exceeding_guaranteed_correction": 7,
+          "min_samples_per_body_bit": 3,
+          "max_samples_per_body_bit": 3,
+          "trial_id": "R07",
+          "batch": "B02",
+          "condition": "noisy",
+          "evidence_cohort": "new_batch_baseline",
+          "roi_xywh": [
+            950,
+            240,
+            150,
+            120
+          ],
+          "evaluation_window_seconds": [
+            164.99100759291673,
+            250.1423056473635
+          ],
+          "video_sha256": "9bc65461760310a132fd114638ebd693e984ab49e238c81352c378c41db805be",
+          "tx_log": "experiments/final_capture_v1/batches/B02_20261024T195436_512439Z_1b7971/R07/tx.json"
+        }
+      }
+    ],
+    "study_roi": [
+      850,
+      190,
+      345,
+      210
+    ],
+    "reference_rois": [
+      [
+        710,
+        230,
+        70,
+        120
+      ],
+      [
+        1280,
+        230,
+        70,
+        120
+      ],
+      [
+        930,
+        110,
+        220,
+        30
+      ],
+      [
+        930,
+        450,
+        220,
+        30
+      ]
+    ],
+    "geometry_selection": "Fixed interior patch and four non-flashing LCD reference rectangles selected geometrically from early frames, before computing new receiver results."
+  },
+  {
+    "id": "B03",
+    "cohort": "earlier_batch_evaluation",
+    "video": "experiments/final_capture_v1/batches/B03_20261024T200103_976319Z_a81915/recording.mov",
+    "sha256": "4004780fac4d8ff06df00fa89c9770d4a02587cb706a8594b27821d6c8720faf",
+    "original_roi": [
+      850,
+      250,
+      160,
+      120
+    ],
+    "trace": "analysis/baseline_2026-10-24/traces/B03_trace.npz",
+    "trace_format": "npz",
+    "packets": [
+      {
+        "id": "R08",
+        "tx": "experiments/final_capture_v1/batches/B03_20261024T200103_976319Z_a81915/R08/tx.json",
+        "window": [
+          1.5862448830066969,
+          39.58661625489057
+        ],
+        "expected": {
+          "codec": "hamming74",
+          "message": "OMAR",
+          "sequence": 74,
+          "status": "crc_fail",
+          "packet_failed": true,
+          "failure_stage": null,
+          "reason": null,
+          "body_channel_bit_errors": 8,
+          "body_channel_bits": 84,
+          "body_channel_ber": 0.09523809523809523,
+          "payload_bit_errors": 7,
+          "payload_bits": 32,
+          "payload_ber": 0.21875,
+          "received_text": "OM\u007f\ufffd",
+          "crc_ok": false,
+          "exact_payload_match": false,
+          "channel_seconds_including_overhead": 36.0,
+          "offered_payload_rate_bps": 0.8888888888888888,
+          "correct_delivered_bits": 0,
+          "correct_payload_goodput_bps": 0.0,
+          "body_error_indices": [
+            33,
+            34,
+            37,
+            39,
+            40,
+            42,
+            45,
+            47
+          ],
+          "consecutive_error_runs": [
+            {
+              "start": 33,
+              "length": 2
+            },
+            {
+              "start": 37,
+              "length": 1
+            },
+            {
+              "start": 39,
+              "length": 2
+            },
+            {
+              "start": 42,
+              "length": 1
+            },
+            {
+              "start": 45,
+              "length": 1
+            },
+            {
+              "start": 47,
+              "length": 1
+            }
+          ],
+          "max_consecutive_errors": 2,
+          "zero_to_one_errors": 8,
+          "one_to_zero_errors": 0,
+          "errors_per_code_block": [
+            0,
+            0,
+            0,
+            0,
+            2,
+            3,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "damaged_code_blocks": 3,
+          "blocks_exceeding_guaranteed_correction": 3,
+          "systematic_payload_errors_before_correction": 6,
+          "min_samples_per_body_bit": 3,
+          "max_samples_per_body_bit": 3,
+          "trial_id": "R08",
+          "batch": "B03",
+          "condition": "noisy",
+          "evidence_cohort": "new_batch_baseline",
+          "roi_xywh": [
+            850,
+            250,
+            160,
+            120
+          ],
+          "evaluation_window_seconds": [
+            1.5862448830066969,
+            39.58661625489057
+          ],
+          "video_sha256": "4004780fac4d8ff06df00fa89c9770d4a02587cb706a8594b27821d6c8720faf",
+          "tx_log": "experiments/final_capture_v1/batches/B03_20261024T200103_976319Z_a81915/R08/tx.json"
+        }
+      },
+      {
+        "id": "R09",
+        "tx": "experiments/final_capture_v1/batches/B03_20261024T200103_976319Z_a81915/R09/tx.json",
+        "window": [
+          45.95470311703678,
+          115.1293775266663
+        ],
+        "expected": {
+          "codec": "repeat5",
+          "message": "OMAR",
+          "sequence": 75,
+          "status": "crc_fail",
+          "packet_failed": true,
+          "failure_stage": null,
+          "reason": null,
+          "body_channel_bit_errors": 6,
+          "body_channel_bits": 240,
+          "body_channel_ber": 0.025,
+          "payload_bit_errors": 1,
+          "payload_bits": 32,
+          "payload_ber": 0.03125,
+          "received_text": "O\ufffdAR",
+          "crc_ok": false,
+          "exact_payload_match": false,
+          "channel_seconds_including_overhead": 67.2,
+          "offered_payload_rate_bps": 0.47619047619047616,
+          "correct_delivered_bits": 0,
+          "correct_payload_goodput_bps": 0.0,
+          "body_error_indices": [
+            41,
+            42,
+            43,
+            44,
+            50,
+            51
+          ],
+          "consecutive_error_runs": [
+            {
+              "start": 41,
+              "length": 4
+            },
+            {
+              "start": 50,
+              "length": 2
+            }
+          ],
+          "max_consecutive_errors": 4,
+          "zero_to_one_errors": 6,
+          "one_to_zero_errors": 0,
+          "errors_per_code_block": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            4,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "damaged_code_blocks": 2,
+          "blocks_exceeding_guaranteed_correction": 1,
+          "min_samples_per_body_bit": 3,
+          "max_samples_per_body_bit": 3,
+          "trial_id": "R09",
+          "batch": "B03",
+          "condition": "noisy",
+          "evidence_cohort": "new_batch_baseline",
+          "roi_xywh": [
+            850,
+            250,
+            160,
+            120
+          ],
+          "evaluation_window_seconds": [
+            45.95470311703678,
+            115.1293775266663
+          ],
+          "video_sha256": "4004780fac4d8ff06df00fa89c9770d4a02587cb706a8594b27821d6c8720faf",
+          "tx_log": "experiments/final_capture_v1/batches/B03_20261024T200103_976319Z_a81915/R09/tx.json"
+        }
+      },
+      {
+        "id": "R10",
+        "tx": "experiments/final_capture_v1/batches/B03_20261024T200103_976319Z_a81915/R10/tx.json",
+        "window": [
+          121.4824785804134,
+          158.70717024890598
+        ],
+        "expected": {
+          "codec": "rs4",
+          "message": "OMAR",
+          "sequence": 76,
+          "status": "crc_pass",
+          "packet_failed": false,
+          "failure_stage": null,
+          "reason": null,
+          "body_channel_bit_errors": 8,
+          "body_channel_bits": 80,
+          "body_channel_ber": 0.1,
+          "payload_bit_errors": 0,
+          "payload_bits": 32,
+          "payload_ber": 0.0,
+          "received_text": "OMAR",
+          "crc_ok": true,
+          "exact_payload_match": true,
+          "channel_seconds_including_overhead": 35.2,
+          "offered_payload_rate_bps": 0.9090909090909091,
+          "correct_delivered_bits": 32,
+          "correct_payload_goodput_bps": 0.9090909090909091,
+          "body_error_indices": [
+            33,
+            34,
+            35,
+            37,
+            39,
+            42,
+            43,
+            46
+          ],
+          "consecutive_error_runs": [
+            {
+              "start": 33,
+              "length": 3
+            },
+            {
+              "start": 37,
+              "length": 1
+            },
+            {
+              "start": 39,
+              "length": 1
+            },
+            {
+              "start": 42,
+              "length": 2
+            },
+            {
+              "start": 46,
+              "length": 1
+            }
+          ],
+          "max_consecutive_errors": 3,
+          "zero_to_one_errors": 8,
+          "one_to_zero_errors": 0,
+          "errors_per_code_block": [
+            0,
+            0,
+            0,
+            0,
+            5,
+            3,
+            0,
+            0,
+            0,
+            0
+          ],
+          "damaged_code_blocks": 2,
+          "damaged_rs_bytes": 2,
+          "systematic_payload_errors_before_correction": 0,
+          "min_samples_per_body_bit": 3,
+          "max_samples_per_body_bit": 3,
+          "trial_id": "R10",
+          "batch": "B03",
+          "condition": "noisy",
+          "evidence_cohort": "new_batch_baseline",
+          "roi_xywh": [
+            850,
+            250,
+            160,
+            120
+          ],
+          "evaluation_window_seconds": [
+            121.4824785804134,
+            158.70717024890598
+          ],
+          "video_sha256": "4004780fac4d8ff06df00fa89c9770d4a02587cb706a8594b27821d6c8720faf",
+          "tx_log": "experiments/final_capture_v1/batches/B03_20261024T200103_976319Z_a81915/R10/tx.json"
+        }
+      },
+      {
+        "id": "R11",
+        "tx": "experiments/final_capture_v1/batches/B03_20261024T200103_976319Z_a81915/R11/tx.json",
+        "window": [
+          165.03061560396645,
+          215.02594704257444
+        ],
+        "expected": {
+          "codec": "repeat3",
+          "message": "OMAR",
+          "sequence": 77,
+          "status": "crc_fail",
+          "packet_failed": true,
+          "failure_stage": null,
+          "reason": null,
+          "body_channel_bit_errors": 9,
+          "body_channel_bits": 144,
+          "body_channel_ber": 0.0625,
+          "payload_bit_errors": 3,
+          "payload_bits": 32,
+          "payload_ber": 0.09375,
+          "received_text": "OO\ufffdR",
+          "crc_ok": false,
+          "exact_payload_match": false,
+          "channel_seconds_including_overhead": 48.0,
+          "offered_payload_rate_bps": 0.6666666666666666,
+          "correct_delivered_bits": 0,
+          "correct_payload_goodput_bps": 0.0,
+          "body_error_indices": [
+            42,
+            44,
+            48,
+            49,
+            54,
+            55,
+            56,
+            59,
+            60
+          ],
+          "consecutive_error_runs": [
+            {
+              "start": 42,
+              "length": 1
+            },
+            {
+              "start": 44,
+              "length": 1
+            },
+            {
+              "start": 48,
+              "length": 2
+            },
+            {
+              "start": 54,
+              "length": 3
+            },
+            {
+              "start": 59,
+              "length": 2
+            }
+          ],
+          "max_consecutive_errors": 3,
+          "zero_to_one_errors": 9,
+          "one_to_zero_errors": 0,
+          "errors_per_code_block": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            2,
+            0,
+            3,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "damaged_code_blocks": 5,
+          "blocks_exceeding_guaranteed_correction": 3,
+          "min_samples_per_body_bit": 3,
+          "max_samples_per_body_bit": 3,
+          "trial_id": "R11",
+          "batch": "B03",
+          "condition": "noisy",
+          "evidence_cohort": "new_batch_baseline",
+          "roi_xywh": [
+            850,
+            250,
+            160,
+            120
+          ],
+          "evaluation_window_seconds": [
+            165.03061560396645,
+            215.02594704257444
+          ],
+          "video_sha256": "4004780fac4d8ff06df00fa89c9770d4a02587cb706a8594b27821d6c8720faf",
+          "tx_log": "experiments/final_capture_v1/batches/B03_20261024T200103_976319Z_a81915/R11/tx.json"
+        }
+      }
+    ],
+    "study_roi": [
+      770,
+      200,
+      345,
+      210
+    ],
+    "reference_rois": [
+      [
+        640,
+        240,
+        70,
+        120
+      ],
+      [
+        1190,
+        240,
+        70,
+        120
+      ],
+      [
+        850,
+        120,
+        220,
+        30
+      ],
+      [
+        850,
+        460,
+        220,
+        30
+      ]
+    ],
+    "geometry_selection": "Fixed interior patch and four non-flashing LCD reference rectangles selected geometrically from early frames, before computing new receiver results."
+  },
+  {
+    "id": "G01",
+    "cohort": "guided_batch_evaluation",
+    "video": "experiments/final_capture_v1/batches/G01_20261024T202951_074917Z_b8e93e/recording.mov",
+    "sha256": "69e19a772d72faf1901b3761abd276ce86350b5c7cde498d1e6836012211b52f",
+    "original_roi": [
+      1080,
+      280,
+      160,
+      120
+    ],
+    "trace": "analysis/guided_retakes_2026-10-24/G01_trace.npz",
+    "trace_format": "npz",
+    "packets": [
+      {
+        "id": "G01_1",
+        "tx": "experiments/final_capture_v1/batches/G01_20261024T202951_074917Z_b8e93e/G01_1/tx.json",
+        "window": [
+          2.474421493374174,
+          111.75174518400846
+        ],
+        "expected": {
+          "codec": "repeat5",
+          "message": "MANUNITED",
+          "sequence": 78,
+          "status": "crc_fail",
+          "packet_failed": true,
+          "failure_stage": null,
+          "reason": null,
+          "body_channel_bit_errors": 7,
+          "body_channel_bits": 440,
+          "body_channel_ber": 0.015909090909090907,
+          "payload_bit_errors": 1,
+          "payload_bits": 72,
+          "payload_ber": 0.013888888888888888,
+          "received_text": "M\ufffdNUNITED",
+          "crc_ok": false,
+          "exact_payload_match": false,
+          "channel_seconds_including_overhead": 107.2,
+          "offered_payload_rate_bps": 0.6716417910447761,
+          "correct_delivered_bits": 0,
+          "correct_payload_goodput_bps": 0.0,
+          "body_error_indices": [
+            40,
+            41,
+            42,
+            43,
+            415,
+            416,
+            417
+          ],
+          "consecutive_error_runs": [
+            {
+              "start": 40,
+              "length": 4
+            },
+            {
+              "start": 415,
+              "length": 3
+            }
+          ],
+          "max_consecutive_errors": 4,
+          "zero_to_one_errors": 7,
+          "one_to_zero_errors": 0,
+          "errors_per_code_block": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            4,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            0,
+            0
+          ],
+          "damaged_code_blocks": 2,
+          "blocks_exceeding_guaranteed_correction": 2,
+          "min_samples_per_body_bit": 3,
+          "max_samples_per_body_bit": 4,
+          "trial_id": "G01_1",
+          "batch": "G01",
+          "header_verified": true,
+          "packet_window_video_seconds": [
+            3.474421493374174,
+            110.75174518400846
+          ],
+          "recording_covers_packet": true,
+          "source_name": "B01_NEW.MOV",
+          "roi_xywh": [
+            1080,
+            280,
+            160,
+            120
+          ],
+          "tx_log": "experiments/final_capture_v1/batches/G01_20261024T202951_074917Z_b8e93e/G01_1/tx.json",
+          "planned_sweep_video_seconds": 25.07042646408081
+        }
+      },
+      {
+        "id": "G01_2",
+        "tx": "experiments/final_capture_v1/batches/G01_20261024T202951_074917Z_b8e93e/G01_2/tx.json",
+        "window": [
+          118.01953425463574,
+          170.03718061882176
+        ],
+        "expected": {
+          "codec": "hamming74",
+          "message": "MANUNITED",
+          "sequence": 79,
+          "status": "crc_fail",
+          "packet_failed": true,
+          "failure_stage": null,
+          "reason": null,
+          "body_channel_bit_errors": 4,
+          "body_channel_bits": 154,
+          "body_channel_ber": 0.025974025974025976,
+          "payload_bit_errors": 1,
+          "payload_bits": 72,
+          "payload_ber": 0.013888888888888888,
+          "received_text": "MAOUNITED",
+          "crc_ok": false,
+          "exact_payload_match": false,
+          "channel_seconds_including_overhead": 50.0,
+          "offered_payload_rate_bps": 1.44,
+          "correct_delivered_bits": 0,
+          "correct_payload_goodput_bps": 0.0,
+          "body_error_indices": [
+            34,
+            35,
+            36,
+            38
+          ],
+          "consecutive_error_runs": [
+            {
+              "start": 34,
+              "length": 3
+            },
+            {
+              "start": 38,
+              "length": 1
+            }
+          ],
+          "max_consecutive_errors": 3,
+          "zero_to_one_errors": 4,
+          "one_to_zero_errors": 0,
+          "errors_per_code_block": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "damaged_code_blocks": 2,
+          "blocks_exceeding_guaranteed_correction": 1,
+          "systematic_payload_errors_before_correction": 1,
+          "min_samples_per_body_bit": 3,
+          "max_samples_per_body_bit": 3,
+          "trial_id": "G01_2",
+          "batch": "G01",
+          "header_verified": true,
+          "packet_window_video_seconds": [
+            119.01953425463574,
+            169.03718061882176
+          ],
+          "recording_covers_packet": true,
+          "source_name": "B01_NEW.MOV",
+          "roi_xywh": [
+            1080,
+            280,
+            160,
+            120
+          ],
+          "tx_log": "experiments/final_capture_v1/batches/G01_20261024T202951_074917Z_b8e93e/G01_2/tx.json",
+          "planned_sweep_video_seconds": 140.61401867866516
+        }
+      },
+      {
+        "id": "G01_3",
+        "tx": "experiments/final_capture_v1/batches/G01_20261024T202951_074917Z_b8e93e/G01_3/tx.json",
+        "window": [
+          176.34117827573832,
+          221.5038526097498
+        ],
+        "expected": {
+          "codec": "rs4",
+          "message": "MANUNITED",
+          "sequence": 80,
+          "status": "crc_pass",
+          "packet_failed": false,
+          "failure_stage": null,
+          "reason": null,
+          "body_channel_bit_errors": 4,
+          "body_channel_bits": 120,
+          "body_channel_ber": 0.03333333333333333,
+          "payload_bit_errors": 0,
+          "payload_bits": 72,
+          "payload_ber": 0.0,
+          "received_text": "MANUNITED",
+          "crc_ok": true,
+          "exact_payload_match": true,
+          "channel_seconds_including_overhead": 43.2,
+          "offered_payload_rate_bps": 1.6666666666666665,
+          "correct_delivered_bits": 72,
+          "correct_payload_goodput_bps": 1.6666666666666665,
+          "body_error_indices": [
+            23,
+            24,
+            26,
+            28
+          ],
+          "consecutive_error_runs": [
+            {
+              "start": 23,
+              "length": 2
+            },
+            {
+              "start": 26,
+              "length": 1
+            },
+            {
+              "start": 28,
+              "length": 1
+            }
+          ],
+          "max_consecutive_errors": 2,
+          "zero_to_one_errors": 4,
+          "one_to_zero_errors": 0,
+          "errors_per_code_block": [
+            0,
+            0,
+            1,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "damaged_code_blocks": 2,
+          "damaged_rs_bytes": 2,
+          "systematic_payload_errors_before_correction": 4,
+          "min_samples_per_body_bit": 3,
+          "max_samples_per_body_bit": 3,
+          "trial_id": "G01_3",
+          "batch": "G01",
+          "header_verified": true,
+          "packet_window_video_seconds": [
+            177.34117827573832,
+            220.5038526097498
+          ],
+          "recording_covers_packet": true,
+          "source_name": "B01_NEW.MOV",
+          "roi_xywh": [
+            1080,
+            280,
+            160,
+            120
+          ],
+          "tx_log": "experiments/final_capture_v1/batches/G01_20261024T202951_074917Z_b8e93e/G01_3/tx.json",
+          "planned_sweep_video_seconds": 198.937575340271
+        }
+      }
+    ],
+    "study_roi": [
+      990,
+      245,
+      315,
+      180
+    ],
+    "reference_rois": [
+      [
+        855,
+        290,
+        70,
+        120
+      ],
+      [
+        1390,
+        290,
+        70,
+        120
+      ],
+      [
+        1070,
+        150,
+        200,
+        35
+      ],
+      [
+        1070,
+        500,
+        200,
+        30
+      ]
+    ],
+    "geometry_selection": "Fixed interior patch and four non-flashing LCD reference rectangles selected geometrically from early frames, before computing new receiver results."
+  },
+  {
+    "id": "G02",
+    "cohort": "guided_batch_evaluation",
+    "video": "experiments/final_capture_v1/batches/G02_20261024T203515_765883Z_6dda6d/recording.mov",
+    "sha256": "0349f0b9b25aad269190de48629f677956df443a907adac1ce5b78ad9985bae5",
+    "original_roi": [
+      900,
+      260,
+      160,
+      120
+    ],
+    "trace": "analysis/guided_retakes_2026-10-24/G02_trace.npz",
+    "trace_format": "npz",
+    "packets": [
+      {
+        "id": "G02_1",
+        "tx": "experiments/final_capture_v1/batches/G02_20261024T203515_765883Z_6dda6d/G02_1/tx.json",
+        "window": [
+          1.879876208846039,
+          42.288965512070696
+        ],
+        "expected": {
+          "codec": "rs4",
+          "message": "ADRIAN",
+          "sequence": 81,
+          "status": "crc_pass",
+          "packet_failed": false,
+          "failure_stage": null,
+          "reason": null,
+          "body_channel_bit_errors": 6,
+          "body_channel_bits": 96,
+          "body_channel_ber": 0.0625,
+          "payload_bit_errors": 0,
+          "payload_bits": 48,
+          "payload_ber": 0.0,
+          "received_text": "ADRIAN",
+          "crc_ok": true,
+          "exact_payload_match": true,
+          "channel_seconds_including_overhead": 38.4,
+          "offered_payload_rate_bps": 1.25,
+          "correct_delivered_bits": 48,
+          "correct_payload_goodput_bps": 1.25,
+          "body_error_indices": [
+            36,
+            37,
+            38,
+            40,
+            42,
+            43
+          ],
+          "consecutive_error_runs": [
+            {
+              "start": 36,
+              "length": 3
+            },
+            {
+              "start": 40,
+              "length": 1
+            },
+            {
+              "start": 42,
+              "length": 2
+            }
+          ],
+          "max_consecutive_errors": 3,
+          "zero_to_one_errors": 6,
+          "one_to_zero_errors": 0,
+          "errors_per_code_block": [
+            0,
+            0,
+            0,
+            0,
+            3,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "damaged_code_blocks": 2,
+          "damaged_rs_bytes": 2,
+          "systematic_payload_errors_before_correction": 6,
+          "min_samples_per_body_bit": 3,
+          "max_samples_per_body_bit": 3,
+          "trial_id": "G02_1",
+          "batch": "G02",
+          "header_verified": true,
+          "packet_window_video_seconds": [
+            2.879876208846039,
+            41.288965512070696
+          ],
+          "recording_covers_packet": true,
+          "source_name": "B02_NEW.MOV",
+          "roi_xywh": [
+            900,
+            260,
+            160,
+            120
+          ],
+          "tx_log": "experiments/final_capture_v1/batches/G02_20261024T203515_765883Z_6dda6d/G02_1/tx.json",
+          "planned_sweep_video_seconds": 24.69876265525818
+        }
+      },
+      {
+        "id": "G02_2",
+        "tx": "experiments/final_capture_v1/batches/G02_20261024T203515_765883Z_6dda6d/G02_2/tx.json",
+        "window": [
+          48.621375890657205,
+          108.22021399158845
+        ],
+        "expected": {
+          "codec": "repeat3",
+          "message": "ADRIAN",
+          "sequence": 82,
+          "status": "crc_fail",
+          "packet_failed": true,
+          "failure_stage": null,
+          "reason": null,
+          "body_channel_bit_errors": 7,
+          "body_channel_bits": 192,
+          "body_channel_ber": 0.036458333333333336,
+          "payload_bit_errors": 2,
+          "payload_bits": 48,
+          "payload_ber": 0.041666666666666664,
+          "received_text": "AtRIAN",
+          "crc_ok": false,
+          "exact_payload_match": false,
+          "channel_seconds_including_overhead": 57.6,
+          "offered_payload_rate_bps": 0.8333333333333333,
+          "correct_delivered_bits": 0,
+          "correct_payload_goodput_bps": 0.0,
+          "body_error_indices": [
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36
+          ],
+          "consecutive_error_runs": [
+            {
+              "start": 30,
+              "length": 7
+            }
+          ],
+          "max_consecutive_errors": 7,
+          "zero_to_one_errors": 7,
+          "one_to_zero_errors": 0,
+          "errors_per_code_block": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            3,
+            3,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "damaged_code_blocks": 3,
+          "blocks_exceeding_guaranteed_correction": 2,
+          "min_samples_per_body_bit": 3,
+          "max_samples_per_body_bit": 3,
+          "trial_id": "G02_2",
+          "batch": "G02",
+          "header_verified": true,
+          "packet_window_video_seconds": [
+            49.621375890657205,
+            107.22021399158845
+          ],
+          "recording_covers_packet": true,
+          "source_name": "B02_NEW.MOV",
+          "roi_xywh": [
+            900,
+            260,
+            160,
+            120
+          ],
+          "tx_log": "experiments/final_capture_v1/batches/G02_20261024T203515_765883Z_6dda6d/G02_2/tx.json",
+          "planned_sweep_video_seconds": 71.44218277931213
+        }
+      },
+      {
+        "id": "G02_3",
+        "tx": "experiments/final_capture_v1/batches/G02_20261024T203515_765883Z_6dda6d/G02_3/tx.json",
+        "window": [
+          114.55370665701095,
+          158.1660468557171
+        ],
+        "expected": {
+          "codec": "hamming74",
+          "message": "ADRIAN",
+          "sequence": 83,
+          "status": "crc_fail",
+          "packet_failed": true,
+          "failure_stage": null,
+          "reason": null,
+          "body_channel_bit_errors": 4,
+          "body_channel_bits": 112,
+          "body_channel_ber": 0.03571428571428571,
+          "payload_bit_errors": 3,
+          "payload_bits": 48,
+          "payload_ber": 0.0625,
+          "received_text": "AD_IAN",
+          "crc_ok": false,
+          "exact_payload_match": false,
+          "channel_seconds_including_overhead": 41.6,
+          "offered_payload_rate_bps": 1.1538461538461537,
+          "correct_delivered_bits": 0,
+          "correct_payload_goodput_bps": 0.0,
+          "body_error_indices": [
+            35,
+            37,
+            39,
+            41
+          ],
+          "consecutive_error_runs": [
+            {
+              "start": 35,
+              "length": 1
+            },
+            {
+              "start": 37,
+              "length": 1
+            },
+            {
+              "start": 39,
+              "length": 1
+            },
+            {
+              "start": 41,
+              "length": 1
+            }
+          ],
+          "max_consecutive_errors": 1,
+          "zero_to_one_errors": 4,
+          "one_to_zero_errors": 0,
+          "errors_per_code_block": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            4,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "damaged_code_blocks": 1,
+          "blocks_exceeding_guaranteed_correction": 1,
+          "systematic_payload_errors_before_correction": 3,
+          "min_samples_per_body_bit": 3,
+          "max_samples_per_body_bit": 3,
+          "trial_id": "G02_3",
+          "batch": "G02",
+          "header_verified": true,
+          "packet_window_video_seconds": [
+            115.55370665701095,
+            157.1660468557171
+          ],
+          "recording_covers_packet": true,
+          "source_name": "B02_NEW.MOV",
+          "roi_xywh": [
+            900,
+            260,
+            160,
+            120
+          ],
+          "tx_log": "experiments/final_capture_v1/batches/G02_20261024T203515_765883Z_6dda6d/G02_3/tx.json",
+          "planned_sweep_video_seconds": 137.37263870239258
+        }
+      },
+      {
+        "id": "G02_4",
+        "tx": "experiments/final_capture_v1/batches/G02_20261024T203515_765883Z_6dda6d/G02_4/tx.json",
+        "window": [
+          164.5130058310174,
+          249.67884979577877
+        ],
+        "expected": {
+          "codec": "repeat5",
+          "message": "ADRIAN",
+          "sequence": 84,
+          "status": "crc_fail",
+          "packet_failed": true,
+          "failure_stage": null,
+          "reason": null,
+          "body_channel_bit_errors": 12,
+          "body_channel_bits": 320,
+          "body_channel_ber": 0.0375,
+          "payload_bit_errors": 2,
+          "payload_bits": 48,
+          "payload_ber": 0.041666666666666664,
+          "received_text": "C\ufffdRIAN",
+          "crc_ok": false,
+          "exact_payload_match": false,
+          "channel_seconds_including_overhead": 83.2,
+          "offered_payload_rate_bps": 0.5769230769230769,
+          "correct_delivered_bits": 0,
+          "correct_payload_goodput_bps": 0.0,
+          "body_error_indices": [
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            40,
+            41,
+            42,
+            43,
+            44
+          ],
+          "consecutive_error_runs": [
+            {
+              "start": 28,
+              "length": 7
+            },
+            {
+              "start": 40,
+              "length": 5
+            }
+          ],
+          "max_consecutive_errors": 7,
+          "zero_to_one_errors": 12,
+          "one_to_zero_errors": 0,
+          "errors_per_code_block": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            5,
+            0,
+            5,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "damaged_code_blocks": 3,
+          "blocks_exceeding_guaranteed_correction": 2,
+          "min_samples_per_body_bit": 3,
+          "max_samples_per_body_bit": 3,
+          "trial_id": "G02_4",
+          "batch": "G02",
+          "header_verified": true,
+          "packet_window_video_seconds": [
+            165.5130058310174,
+            248.67884979577877
+          ],
+          "recording_covers_packet": true,
+          "source_name": "B02_NEW.MOV",
+          "roi_xywh": [
+            900,
+            260,
+            160,
+            120
+          ],
+          "tx_log": "experiments/final_capture_v1/batches/G02_20261024T203515_765883Z_6dda6d/G02_4/tx.json",
+          "planned_sweep_video_seconds": 187.3319263458252
+        }
+      }
+    ],
+    "study_roi": [
+      820,
+      210,
+      330,
+      195
+    ],
+    "reference_rois": [
+      [
+        680,
+        260,
+        70,
+        120
+      ],
+      [
+        1230,
+        260,
+        70,
+        120
+      ],
+      [
+        900,
+        130,
+        200,
+        30
+      ],
+      [
+        900,
+        465,
+        200,
+        30
+      ]
+    ],
+    "geometry_selection": "Fixed interior patch and four non-flashing LCD reference rectangles selected geometrically from early frames, before computing new receiver results."
+  },
+  {
+    "id": "G03",
+    "cohort": "guided_batch_evaluation",
+    "video": "experiments/final_capture_v1/batches/G03_20261024T204130_219077Z_29f775/recording.mov",
+    "sha256": "a2996cf42eda02a9f1ff6c3eaccd1aa4d6bfc64e33932071ee2955cc8c2c6c39",
+    "original_roi": [
+      900,
+      260,
+      160,
+      120
+    ],
+    "trace": "analysis/guided_retakes_2026-10-24/G03_trace.npz",
+    "trace_format": "npz",
+    "packets": [
+      {
+        "id": "G03_1",
+        "tx": "experiments/final_capture_v1/batches/G03_20261024T204130_219077Z_29f775/G03_1/tx.json",
+        "window": [
+          1.7276939738292354,
+          39.75072560035538
+        ],
+        "expected": {
+          "codec": "hamming74",
+          "message": "OMAR",
+          "sequence": 85,
+          "status": "crc_fail",
+          "packet_failed": true,
+          "failure_stage": null,
+          "reason": null,
+          "body_channel_bit_errors": 5,
+          "body_channel_bits": 84,
+          "body_channel_ber": 0.05952380952380952,
+          "payload_bit_errors": 6,
+          "payload_bits": 32,
+          "payload_ber": 0.1875,
+          "received_text": "OM\ufffdR",
+          "crc_ok": false,
+          "exact_payload_match": false,
+          "channel_seconds_including_overhead": 36.0,
+          "offered_payload_rate_bps": 0.8888888888888888,
+          "correct_delivered_bits": 0,
+          "correct_payload_goodput_bps": 0.0,
+          "body_error_indices": [
+            30,
+            33,
+            34,
+            37,
+            40
+          ],
+          "consecutive_error_runs": [
+            {
+              "start": 30,
+              "length": 1
+            },
+            {
+              "start": 33,
+              "length": 2
+            },
+            {
+              "start": 37,
+              "length": 1
+            },
+            {
+              "start": 40,
+              "length": 1
+            }
+          ],
+          "max_consecutive_errors": 2,
+          "zero_to_one_errors": 5,
+          "one_to_zero_errors": 0,
+          "errors_per_code_block": [
+            0,
+            0,
+            0,
+            0,
+            3,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "damaged_code_blocks": 2,
+          "blocks_exceeding_guaranteed_correction": 2,
+          "systematic_payload_errors_before_correction": 5,
+          "min_samples_per_body_bit": 3,
+          "max_samples_per_body_bit": 3,
+          "trial_id": "G03_1",
+          "batch": "G03",
+          "header_verified": true,
+          "packet_window_video_seconds": [
+            2.7276939738292354,
+            38.75072560035538
+          ],
+          "recording_covers_packet": true,
+          "source_name": "B03_NEW.MOV",
+          "roi_xywh": [
+            900,
+            260,
+            160,
+            120
+          ],
+          "tx_log": "experiments/final_capture_v1/batches/G03_20261024T204130_219077Z_29f775/G03_1/tx.json",
+          "planned_sweep_video_seconds": 24.137685775756836
+        }
+      },
+      {
+        "id": "G03_2",
+        "tx": "experiments/final_capture_v1/batches/G03_20261024T204130_219077Z_29f775/G03_2/tx.json",
+        "window": [
+          46.08532282193539,
+          115.24736762947052
+        ],
+        "expected": {
+          "codec": "repeat5",
+          "message": "OMAR",
+          "sequence": 86,
+          "status": "crc_fail",
+          "packet_failed": true,
+          "failure_stage": null,
+          "reason": null,
+          "body_channel_bit_errors": 4,
+          "body_channel_bits": 240,
+          "body_channel_ber": 0.016666666666666666,
+          "payload_bit_errors": 1,
+          "payload_bits": 32,
+          "payload_ber": 0.03125,
+          "received_text": "O\ufffdAR",
+          "crc_ok": false,
+          "exact_payload_match": false,
+          "channel_seconds_including_overhead": 67.2,
+          "offered_payload_rate_bps": 0.47619047619047616,
+          "correct_delivered_bits": 0,
+          "correct_payload_goodput_bps": 0.0,
+          "body_error_indices": [
+            40,
+            41,
+            42,
+            43
+          ],
+          "consecutive_error_runs": [
+            {
+              "start": 40,
+              "length": 4
+            }
+          ],
+          "max_consecutive_errors": 4,
+          "zero_to_one_errors": 4,
+          "one_to_zero_errors": 0,
+          "errors_per_code_block": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            4,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "damaged_code_blocks": 1,
+          "blocks_exceeding_guaranteed_correction": 1,
+          "min_samples_per_body_bit": 2,
+          "max_samples_per_body_bit": 3,
+          "trial_id": "G03_2",
+          "batch": "G03",
+          "header_verified": true,
+          "packet_window_video_seconds": [
+            47.08532282193539,
+            114.24736762947052
+          ],
+          "recording_covers_packet": true,
+          "source_name": "B03_NEW.MOV",
+          "roi_xywh": [
+            900,
+            260,
+            160,
+            120
+          ],
+          "tx_log": "experiments/final_capture_v1/batches/G03_20261024T204130_219077Z_29f775/G03_2/tx.json",
+          "planned_sweep_video_seconds": 68.48386454582214
+        }
+      },
+      {
+        "id": "G03_3",
+        "tx": "experiments/final_capture_v1/batches/G03_20261024T204130_219077Z_29f775/G03_3/tx.json",
+        "window": [
+          121.5904084077954,
+          158.78554700644742
+        ],
+        "expected": {
+          "codec": "rs4",
+          "message": "OMAR",
+          "sequence": 87,
+          "status": "crc_pass",
+          "packet_failed": false,
+          "failure_stage": null,
+          "reason": null,
+          "body_channel_bit_errors": 6,
+          "body_channel_bits": 80,
+          "body_channel_ber": 0.075,
+          "payload_bit_errors": 0,
+          "payload_bits": 32,
+          "payload_ber": 0.0,
+          "received_text": "OMAR",
+          "crc_ok": true,
+          "exact_payload_match": true,
+          "channel_seconds_including_overhead": 35.2,
+          "offered_payload_rate_bps": 0.9090909090909091,
+          "correct_delivered_bits": 32,
+          "correct_payload_goodput_bps": 0.9090909090909091,
+          "body_error_indices": [
+            24,
+            26,
+            28,
+            29,
+            31,
+            32
+          ],
+          "consecutive_error_runs": [
+            {
+              "start": 24,
+              "length": 1
+            },
+            {
+              "start": 26,
+              "length": 1
+            },
+            {
+              "start": 28,
+              "length": 2
+            },
+            {
+              "start": 31,
+              "length": 2
+            }
+          ],
+          "max_consecutive_errors": 2,
+          "zero_to_one_errors": 6,
+          "one_to_zero_errors": 0,
+          "errors_per_code_block": [
+            0,
+            0,
+            0,
+            5,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "damaged_code_blocks": 2,
+          "damaged_rs_bytes": 2,
+          "systematic_payload_errors_before_correction": 5,
+          "min_samples_per_body_bit": 3,
+          "max_samples_per_body_bit": 3,
+          "trial_id": "G03_3",
+          "batch": "G03",
+          "header_verified": true,
+          "packet_window_video_seconds": [
+            122.5904084077954,
+            157.78554700644742
+          ],
+          "recording_covers_packet": true,
+          "source_name": "B03_NEW.MOV",
+          "roi_xywh": [
+            900,
+            260,
+            160,
+            120
+          ],
+          "tx_log": "experiments/final_capture_v1/batches/G03_20261024T204130_219077Z_29f775/G03_3/tx.json",
+          "planned_sweep_video_seconds": 143.99458074569702
+        }
+      },
+      {
+        "id": "G03_4",
+        "tx": "experiments/final_capture_v1/batches/G03_20261024T204130_219077Z_29f775/G03_4/tx.json",
+        "window": [
+          165.1196534884389,
+          215.10592754797554
+        ],
+        "expected": {
+          "codec": "repeat3",
+          "message": "OMAR",
+          "sequence": 88,
+          "status": "crc_fail",
+          "packet_failed": true,
+          "failure_stage": null,
+          "reason": null,
+          "body_channel_bit_errors": 3,
+          "body_channel_bits": 144,
+          "body_channel_ber": 0.020833333333333332,
+          "payload_bit_errors": 1,
+          "payload_bits": 32,
+          "payload_ber": 0.03125,
+          "received_text": "O\ufffdAR",
+          "crc_ok": false,
+          "exact_payload_match": false,
+          "channel_seconds_including_overhead": 48.0,
+          "offered_payload_rate_bps": 0.6666666666666666,
+          "correct_delivered_bits": 0,
+          "correct_payload_goodput_bps": 0.0,
+          "body_error_indices": [
+            24,
+            25,
+            26
+          ],
+          "consecutive_error_runs": [
+            {
+              "start": 24,
+              "length": 3
+            }
+          ],
+          "max_consecutive_errors": 3,
+          "zero_to_one_errors": 3,
+          "one_to_zero_errors": 0,
+          "errors_per_code_block": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "damaged_code_blocks": 1,
+          "blocks_exceeding_guaranteed_correction": 1,
+          "min_samples_per_body_bit": 3,
+          "max_samples_per_body_bit": 3,
+          "trial_id": "G03_4",
+          "batch": "G03",
+          "header_verified": true,
+          "packet_window_video_seconds": [
+            166.1196534884389,
+            214.10592754797554
+          ],
+          "recording_covers_packet": true,
+          "source_name": "B03_NEW.MOV",
+          "roi_xywh": [
+            900,
+            260,
+            160,
+            120
+          ],
+          "tx_log": "experiments/final_capture_v1/batches/G03_20261024T204130_219077Z_29f775/G03_4/tx.json",
+          "planned_sweep_video_seconds": 187.52171349525452
+        }
+      }
+    ],
+    "study_roi": [
+      820,
+      210,
+      330,
+      195
+    ],
+    "reference_rois": [
+      [
+        680,
+        260,
+        70,
+        120
+      ],
+      [
+        1230,
+        260,
+        70,
+        120
+      ],
+      [
+        900,
+        130,
+        200,
+        30
+      ],
+      [
+        900,
+        465,
+        200,
+        30
+      ]
+    ],
+    "geometry_selection": "Fixed interior patch and four non-flashing LCD reference rectangles selected geometrically from early frames, before computing new receiver results."
+  }
+]

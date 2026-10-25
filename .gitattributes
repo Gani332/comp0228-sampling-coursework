@@ -1,0 +1,4 @@
+# Frozen hashes must remain valid on every checkout, including Windows.
+# Keep original CSV line endings and protocol/source bytes exactly as stored.
+data/** -text
+code/optical_link/** -text

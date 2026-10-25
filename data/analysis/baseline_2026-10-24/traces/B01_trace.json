@@ -1,0 +1,18 @@
+{
+  "video": "experiments/final_capture_v1/batches/B01_20261024T194943_932683Z_e83519/recording.mov",
+  "video_sha256": "cf3a6308d1f4d39c79f2d10373e402acf3b0ab23a3232b0c43c7c3172134e12c",
+  "roi_xywh": [
+    950,
+    240,
+    150,
+    120
+  ],
+  "frames": 6663,
+  "duration_seconds": 222.078333,
+  "median_frame_interval_seconds": 0.03333299999999895,
+  "max_frame_gap_seconds": 0.03500000000002501,
+  "rotation": "stored pixels, autorotation disabled",
+  "data_kind": "physical_video",
+  "roi_selection": "Unchanged geometric ROI selected before payload evaluation in the header import audit.",
+  "trace_sha256": "bc5fe7bd3c5e91d9b93adb4bd9d0cc5bfeefb72894574d31109bda06b59a1221"
+}

@@ -1,0 +1,43 @@
+[
+  {
+    "batch": "G01",
+    "original_name": "B01_NEW.MOV",
+    "archived_video": "experiments/final_capture_v1/batches/G01_20261024T202951_074917Z_b8e93e/recording.mov",
+    "video_sha256": "69e19a772d72faf1901b3761abd276ce86350b5c7cde498d1e6836012211b52f",
+    "matched_sequences": [
+      78,
+      79,
+      80
+    ],
+    "successful_packets": 1,
+    "packets": 3
+  },
+  {
+    "batch": "G02",
+    "original_name": "B02_NEW.MOV",
+    "archived_video": "experiments/final_capture_v1/batches/G02_20261024T203515_765883Z_6dda6d/recording.mov",
+    "video_sha256": "0349f0b9b25aad269190de48629f677956df443a907adac1ce5b78ad9985bae5",
+    "matched_sequences": [
+      81,
+      82,
+      83,
+      84
+    ],
+    "successful_packets": 1,
+    "packets": 4
+  },
+  {
+    "batch": "G03",
+    "original_name": "B03_NEW.MOV",
+    "archived_video": "experiments/final_capture_v1/batches/G03_20261024T204130_219077Z_29f775/recording.mov",
+    "video_sha256": "a2996cf42eda02a9f1ff6c3eaccd1aa4d6bfc64e33932071ee2955cc8c2c6c39",
+    "matched_sequences": [
+      85,
+      86,
+      87,
+      88
+    ],
+    "successful_packets": 1,
+    "packets": 4
+  }
+]

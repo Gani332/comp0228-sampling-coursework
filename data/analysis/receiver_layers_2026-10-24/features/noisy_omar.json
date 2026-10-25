@@ -1,0 +1,52 @@
+{
+  "video_id": "noisy_omar",
+  "video_sha256": "4f3b455e1c3f9d338b48b0b9c7c35f6e8433d8579c21dacb0d90326626adc03c",
+  "frames": 993,
+  "feature_sha256": "0c4f93d1df97c18b66b933a2001163553ea0811fa8c71e8ac9d56e510c313bbd",
+  "original_roi": [
+    1050,
+    300,
+    150,
+    150
+  ],
+  "study_roi": [
+    1000,
+    260,
+    340,
+    210
+  ],
+  "reference_rois": [
+    [
+      850,
+      300,
+      90,
+      130
+    ],
+    [
+      1430,
+      300,
+      80,
+      130
+    ],
+    [
+      1080,
+      150,
+      220,
+      40
+    ],
+    [
+      1080,
+      530,
+      220,
+      30
+    ]
+  ],
+  "grid": [
+    5,
+    5
+  ],
+  "anchor": "archived original-ROI brightness and real frame timestamps",
+  "extraction": "OpenCV BGR2GRAY, stored pixel orientation, fixed rectangles; one decode pass per video",
+  "max_original_trace_difference": 0.0,
+  "maximum_frame_gap_seconds": 0.03500000000000192
+}

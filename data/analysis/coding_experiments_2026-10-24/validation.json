@@ -1,0 +1,32 @@
+{
+  "trial_records": 480000,
+  "replayed_decodes": 720,
+  "summary_recomputed": true,
+  "source_and_data_hashes_verified": true,
+  "simulation_only": true,
+  "hardware_transmissions": 0,
+  "publication": "Published with data-v1.0.0; raw videos distributed as optional release assets.",
+  "software_tests_passed": 72,
+  "notebook_execution": {
+    "status": "passed",
+    "executed_code_cells": 10,
+    "errors": 0,
+    "elapsed_seconds": 3.0,
+    "executed_utc": "2026-10-24T22:25:43.635463+00:00",
+    "python": "PROJECT_ROOT/.venv/bin/python"
+  },
+  "independent_audit": {
+    "trial_records": 480000,
+    "replayed_decodes": 720,
+    "summary_recomputed": true,
+    "source_and_data_hashes_verified": true,
+    "complete_condition_counts": true,
+    "duplicate_trials": 0,
+    "identical_symmetric_noise_per_pair": true,
+    "glare_direction_checked": true,
+    "clean_control_conditions": 30,
+    "analytic_iid_conditions_checked": 60,
+    "noise_occupancy_checked_with_trial_level_variance": true,
+    "crc_valid_wrong_payload_events_replayed": 1
+  }
+}

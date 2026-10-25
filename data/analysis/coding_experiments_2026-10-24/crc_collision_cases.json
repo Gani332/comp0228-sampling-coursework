@@ -1,0 +1,16 @@
+[
+  {
+    "scenario_id": 16,
+    "trial": 1305,
+    "model": "glare_burst",
+    "rate": 0.1,
+    "codec": "repeat5",
+    "depth": 1,
+    "original_payload_hex": "677823b39c9c038386",
+    "decoded_payload_hex": "7f7ffbb39f9c03838e",
+    "received_crc_hex": "0663",
+    "recomputed_crc_hex": "0663",
+    "payload_bit_errors": 12,
+    "counted_as_success": false
+  }
+]

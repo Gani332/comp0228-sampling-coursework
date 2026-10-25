@@ -1,0 +1,38 @@
+{
+  "1": {
+    "body_bits": 154,
+    "active_noise_slots": 8,
+    "channel_errors": 8,
+    "zero_to_one": 4,
+    "one_to_zero": 4,
+    "payload_bits": 72,
+    "payload_errors": 4,
+    "decoder_rejected": 0,
+    "crc_ok": 0,
+    "exact_payload": 0,
+    "success": 0,
+    "undetected_wrong_payload": 0,
+    "airtime_seconds": 50.0,
+    "delivered_bits": 0,
+    "buffer_bits": 0,
+    "buffer_span_seconds": 0
+  },
+  "8": {
+    "body_bits": 154,
+    "active_noise_slots": 8,
+    "channel_errors": 8,
+    "zero_to_one": 3,
+    "one_to_zero": 5,
+    "payload_bits": 72,
+    "payload_errors": 0,
+    "decoder_rejected": 0,
+    "crc_ok": 1,
+    "exact_payload": 1,
+    "success": 1,
+    "undetected_wrong_payload": 0,
+    "airtime_seconds": 50.0,
+    "delivered_bits": 72,
+    "buffer_bits": 154,
+    "buffer_span_seconds": 30.8
+  }
+}

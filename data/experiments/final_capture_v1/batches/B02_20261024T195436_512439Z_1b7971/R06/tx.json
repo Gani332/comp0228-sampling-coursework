@@ -1,0 +1,17 @@
+{
+  "port": "/dev/cu.usbmodem101",
+  "identity": "OPTICAL:1 board=ESP32-S3 display=ST7796S busy=0 max_bits=4096 min_bit_ms=200",
+  "bit_ms": 200,
+  "payload_hex": "41445249414e",
+  "codec": "hamming74",
+  "sequence": 72,
+  "transmitted_bits": "0000000010101010101010101101001110010001000000010000001100000110010010001100100001001110100110011010011001100100110001001010101010100110000110011001100110100110011000010110010010111001101111111100110000000000",
+  "scheduled_channel_seconds": 41.6,
+  "host_started_unix": 1792871790.0525372,
+  "status": "controller_completed",
+  "serial_responses": [
+    "START bits=208 bit_ms=200",
+    "DONE bits=208 elapsed_us=41600568 max_late_us=567 max_draw_us=31337"
+  ],
+  "host_elapsed_seconds": 41.87403633352369
+}

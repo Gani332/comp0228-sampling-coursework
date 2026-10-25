@@ -1,0 +1,62 @@
+[
+  {
+    "codec": "none",
+    "cases": 3,
+    "successful_packets": 0,
+    "total_airtime_seconds": 97.6,
+    "aggregate_goodput_bps": 0.0,
+    "payload_outputs": 3,
+    "payload_errors_with_output": 7,
+    "payload_bits_with_output": 152,
+    "body_channel_bit_errors": 7,
+    "body_channel_bits_measured": 200
+  },
+  {
+    "codec": "repeat3",
+    "cases": 3,
+    "successful_packets": 0,
+    "total_airtime_seconds": 177.6,
+    "aggregate_goodput_bps": 0.0,
+    "payload_outputs": 3,
+    "payload_errors_with_output": 9,
+    "payload_bits_with_output": 152,
+    "body_channel_bit_errors": 29,
+    "body_channel_bits_measured": 600
+  },
+  {
+    "codec": "repeat5",
+    "cases": 3,
+    "successful_packets": 0,
+    "total_airtime_seconds": 257.6,
+    "aggregate_goodput_bps": 0.0,
+    "payload_outputs": 3,
+    "payload_errors_with_output": 8,
+    "payload_bits_with_output": 152,
+    "body_channel_bit_errors": 41,
+    "body_channel_bits_measured": 1000
+  },
+  {
+    "codec": "hamming74",
+    "cases": 3,
+    "successful_packets": 0,
+    "total_airtime_seconds": 127.6,
+    "aggregate_goodput_bps": 0.0,
+    "payload_outputs": 3,
+    "payload_errors_with_output": 17,
+    "payload_bits_with_output": 152,
+    "body_channel_bit_errors": 22,
+    "body_channel_bits_measured": 350
+  },
+  {
+    "codec": "rs4",
+    "cases": 3,
+    "successful_packets": 1,
+    "total_airtime_seconds": 116.80000000000001,
+    "aggregate_goodput_bps": 0.273972602739726,
+    "payload_outputs": 1,
+    "payload_errors_with_output": 0,
+    "payload_bits_with_output": 32,
+    "body_channel_bit_errors": 19,
+    "body_channel_bits_measured": 296
+  }
+]

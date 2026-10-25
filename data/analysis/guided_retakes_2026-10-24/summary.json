@@ -1,0 +1,29 @@
+[
+  {
+    "batch": "G01",
+    "source_name": "B01_NEW.MOV",
+    "packets": 3,
+    "crc_valid_exact_recoveries": 1,
+    "body_channel_errors": 15,
+    "all_headers_match": true,
+    "all_packets_covered": true
+  },
+  {
+    "batch": "G02",
+    "source_name": "B02_NEW.MOV",
+    "packets": 4,
+    "crc_valid_exact_recoveries": 1,
+    "body_channel_errors": 29,
+    "all_headers_match": true,
+    "all_packets_covered": true
+  },
+  {
+    "batch": "G03",
+    "source_name": "B03_NEW.MOV",
+    "packets": 4,
+    "crc_valid_exact_recoveries": 1,
+    "body_channel_errors": 18,
+    "all_headers_match": true,
+    "all_packets_covered": true
+  }
+]

@@ -1,0 +1,24 @@
+{
+  "video": "/Users/riyaa/Downloads/ADRIAN_NOISE.MOV",
+  "video_sha256": "ff9602d9b1c5f0cfcdb83101889994ddccfe678420f20730cd90b93691bda2fc",
+  "roi_xywh": [
+    1050,
+    300,
+    150,
+    150
+  ],
+  "frames": 1154,
+  "duration_seconds": 38.435,
+  "median_frame_interval_seconds": 0.03333300000000072,
+  "max_frame_gap_seconds": 0.03500000000000014,
+  "rotation": "stored pixels, autorotation disabled",
+  "data_kind": "physical_video",
+  "conditions": {
+    "distance_cm": null,
+    "phone_model": "",
+    "camera_mode": "",
+    "lighting": "",
+    "interference": "none",
+    "notes": ""
+  }
+}

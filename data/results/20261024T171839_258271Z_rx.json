@@ -1,0 +1,7 @@
+{
+  "status": "decode_failed",
+  "reason": "Header CRC failed; length and coding cannot be trusted.",
+  "data_kind": "physical_video",
+  "video_sha256": "1c2b36d21ae8773c0c2fce52ca7717cb49a3a36ac9d805f527c7bbf029dc0b73",
+  "trace_file": "/Users/riyaa/Desktop/UCL_Year4/Sampling, Compression and Data Analysis/Coursework/optical_link/results/20261024T171839_146745Z_brightness.csv"
+}

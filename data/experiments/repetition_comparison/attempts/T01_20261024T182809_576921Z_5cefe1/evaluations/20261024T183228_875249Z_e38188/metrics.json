@@ -1,0 +1,28 @@
+{
+  "status": "crc_pass",
+  "packet_failed": false,
+  "received_text": "MANUNITED",
+  "crc_ok": true,
+  "exact_payload_match": true,
+  "body_channel_bit_errors": 0,
+  "body_channel_bits_measured": 264,
+  "body_channel_ber": 0.0,
+  "payload_bit_errors": 0,
+  "payload_bits_measured": 72,
+  "payload_ber": 0.0,
+  "channel_seconds_including_overhead": 72.0,
+  "correct_delivered_bits": 72,
+  "crc_valid_delivered_bits": 72,
+  "correct_payload_goodput_bps": 1.0,
+  "attempt_id": "T01_20261024T182809_576921Z_5cefe1",
+  "trial_id": "T01",
+  "codec": "repeat3",
+  "condition": "clean",
+  "roi_xywh": [
+    1050,
+    300,
+    150,
+    150
+  ],
+  "operator_observations": ""
+}

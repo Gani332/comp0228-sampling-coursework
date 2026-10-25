@@ -1,0 +1,83 @@
+{
+  "codec": "rs4",
+  "message": "ADRIAN",
+  "sequence": 81,
+  "status": "crc_pass",
+  "packet_failed": false,
+  "failure_stage": null,
+  "reason": null,
+  "body_channel_bit_errors": 6,
+  "body_channel_bits": 96,
+  "body_channel_ber": 0.0625,
+  "payload_bit_errors": 0,
+  "payload_bits": 48,
+  "payload_ber": 0.0,
+  "received_text": "ADRIAN",
+  "crc_ok": true,
+  "exact_payload_match": true,
+  "channel_seconds_including_overhead": 38.4,
+  "offered_payload_rate_bps": 1.25,
+  "correct_delivered_bits": 48,
+  "correct_payload_goodput_bps": 1.25,
+  "body_error_indices": [
+    36,
+    37,
+    38,
+    40,
+    42,
+    43
+  ],
+  "consecutive_error_runs": [
+    {
+      "start": 36,
+      "length": 3
+    },
+    {
+      "start": 40,
+      "length": 1
+    },
+    {
+      "start": 42,
+      "length": 2
+    }
+  ],
+  "max_consecutive_errors": 3,
+  "zero_to_one_errors": 6,
+  "one_to_zero_errors": 0,
+  "errors_per_code_block": [
+    0,
+    0,
+    0,
+    0,
+    3,
+    3,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "damaged_code_blocks": 2,
+  "damaged_rs_bytes": 2,
+  "systematic_payload_errors_before_correction": 6,
+  "min_samples_per_body_bit": 3,
+  "max_samples_per_body_bit": 3,
+  "trial_id": "G02_1",
+  "batch": "G02",
+  "header_verified": true,
+  "packet_window_video_seconds": [
+    2.879876208846039,
+    41.288965512070696
+  ],
+  "recording_covers_packet": true,
+  "source_name": "B02_NEW.MOV",
+  "roi_xywh": [
+    900,
+    260,
+    160,
+    120
+  ],
+  "tx_log": "experiments/final_capture_v1/batches/G02_20261024T203515_765883Z_6dda6d/G02_1/tx.json",
+  "planned_sweep_video_seconds": 24.69876265525818
+}

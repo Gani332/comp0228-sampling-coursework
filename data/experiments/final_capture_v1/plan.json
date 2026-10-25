@@ -1,0 +1,113 @@
+{
+  "version": 1,
+  "group_size": 4,
+  "batches": [
+    {
+      "batch_id": "B01",
+      "message": "MANUNITED",
+      "packets": [
+        {
+          "trial_id": "R01",
+          "message": "MANUNITED",
+          "codec": "repeat5",
+          "bit_ms": 200,
+          "channel_seconds": 107.2
+        },
+        {
+          "trial_id": "R02",
+          "message": "MANUNITED",
+          "codec": "hamming74",
+          "bit_ms": 200,
+          "channel_seconds": 50.0
+        },
+        {
+          "trial_id": "R03",
+          "message": "MANUNITED",
+          "codec": "rs4",
+          "bit_ms": 200,
+          "channel_seconds": 43.2
+        }
+      ],
+      "video_name": "B01_MANUNITED_NOISY.MOV",
+      "channel_seconds": 200.4,
+      "approx_capture_seconds": 225
+    },
+    {
+      "batch_id": "B02",
+      "message": "ADRIAN",
+      "packets": [
+        {
+          "trial_id": "R04",
+          "message": "ADRIAN",
+          "codec": "rs4",
+          "bit_ms": 200,
+          "channel_seconds": 38.400000000000006
+        },
+        {
+          "trial_id": "R05",
+          "message": "ADRIAN",
+          "codec": "repeat3",
+          "bit_ms": 200,
+          "channel_seconds": 57.6
+        },
+        {
+          "trial_id": "R06",
+          "message": "ADRIAN",
+          "codec": "hamming74",
+          "bit_ms": 200,
+          "channel_seconds": 41.6
+        },
+        {
+          "trial_id": "R07",
+          "message": "ADRIAN",
+          "codec": "repeat5",
+          "bit_ms": 200,
+          "channel_seconds": 83.2
+        }
+      ],
+      "video_name": "B02_ADRIAN_NOISY.MOV",
+      "channel_seconds": 220.8,
+      "approx_capture_seconds": 253
+    },
+    {
+      "batch_id": "B03",
+      "message": "OMAR",
+      "packets": [
+        {
+          "trial_id": "R08",
+          "message": "OMAR",
+          "codec": "hamming74",
+          "bit_ms": 200,
+          "channel_seconds": 36.0
+        },
+        {
+          "trial_id": "R09",
+          "message": "OMAR",
+          "codec": "repeat5",
+          "bit_ms": 200,
+          "channel_seconds": 67.2
+        },
+        {
+          "trial_id": "R10",
+          "message": "OMAR",
+          "codec": "rs4",
+          "bit_ms": 200,
+          "channel_seconds": 35.2
+        },
+        {
+          "trial_id": "R11",
+          "message": "OMAR",
+          "codec": "repeat3",
+          "bit_ms": 200,
+          "channel_seconds": 48.0
+        }
+      ],
+      "video_name": "B03_OMAR_NOISY.MOV",
+      "channel_seconds": 186.4,
+      "approx_capture_seconds": 219
+    }
+  ],
+  "condition": "Physical disturbance during each message body; onset is flexible.",
+  "scope": "Same-message/noise-category comparison; historical conditions are not proved identical.",
+  "receiver_evaluation": "Use previous videos for development; keep these new videos for frozen-receiver evaluation."
+}

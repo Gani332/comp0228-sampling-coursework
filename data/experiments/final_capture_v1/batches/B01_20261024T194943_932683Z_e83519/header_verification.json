@@ -1,0 +1,68 @@
+{
+  "batch_id": "B01",
+  "attempt_dir": "/Users/riyaa/Desktop/UCL_Year4/Sampling, Compression and Data Analysis/Coursework/optical_link/experiments/final_capture_v1/batches/B01_20261024T194943_932683Z_e83519",
+  "source_video": "/Users/riyaa/Downloads/B01_MANUNITED_3MIN.MOV",
+  "video_duration_seconds": 222.111667,
+  "container_frame_count": 6663,
+  "header_roi_xywh": [
+    950,
+    240,
+    150,
+    120
+  ],
+  "roi_selection": "Selected geometrically inside patch from the 6-second preview before examining decoded headers. This is an identification ROI, not a tuned evaluation ROI.",
+  "scope": "Header-only acquisition check. Payload bits, CRC outcomes and error rates were not decoded or scored.",
+  "export_note": "Recovered from the successful per-packet console diagnostics after the first export encountered a NumPy boolean serialization error. The reproducible check_headers.py script has been corrected.",
+  "packets": [
+    {
+      "trial_id": "R01",
+      "expected_sequence": 67,
+      "expected_codec": "repeat5",
+      "header_crc_valid": true,
+      "decoded_sequence": 67,
+      "decoded_codec": "repeat5",
+      "decoded_payload_bytes": 9,
+      "preamble_video_seconds": 3.958662331861151,
+      "period_seconds": 0.19999861361144158,
+      "preamble_bit_errors": 0,
+      "matches_log": true,
+      "packet_start_video_seconds": 2.358673422969618,
+      "packet_end_video_seconds": 109.5579303187023,
+      "recording_covers_packet_time": true
+    },
+    {
+      "trial_id": "R02",
+      "expected_sequence": 68,
+      "expected_codec": "hamming74",
+      "header_crc_valid": true,
+      "decoded_sequence": 68,
+      "decoded_codec": "hamming74",
+      "decoded_payload_bytes": 9,
+      "preamble_video_seconds": 119.4988483215541,
+      "period_seconds": 0.2000773497691242,
+      "preamble_bit_errors": 0,
+      "matches_log": true,
+      "packet_start_video_seconds": 117.89822952340111,
+      "packet_end_video_seconds": 167.91756696568217,
+      "recording_covers_packet_time": true
+    },
+    {
+      "trial_id": "R03",
+      "expected_sequence": 69,
+      "expected_codec": "rs4",
+      "header_crc_valid": true,
+      "decoded_sequence": 69,
+      "decoded_codec": "rs4",
+      "decoded_payload_bytes": 9,
+      "preamble_video_seconds": 177.82447833392615,
+      "period_seconds": 0.2000761013340859,
+      "preamble_bit_errors": 0,
+      "matches_log": true,
+      "packet_start_video_seconds": 176.22386952325346,
+      "packet_end_video_seconds": 219.44030741141603,
+      "recording_covers_packet_time": true
+    }
+  ],
+  "all_headers_match": true,
+  "all_packet_time_ranges_covered": true
+}

@@ -1,0 +1,97 @@
+{
+  "codec": "hamming74",
+  "message": "MANUNITED",
+  "sequence": 68,
+  "status": "crc_fail",
+  "packet_failed": true,
+  "failure_stage": null,
+  "reason": null,
+  "body_channel_bit_errors": 7,
+  "body_channel_bits": 154,
+  "body_channel_ber": 0.045454545454545456,
+  "payload_bit_errors": 6,
+  "payload_bits": 72,
+  "payload_ber": 0.08333333333333333,
+  "received_text": "MAN\\\ufffdITE\ufffd",
+  "crc_ok": false,
+  "exact_payload_match": false,
+  "channel_seconds_including_overhead": 50.0,
+  "offered_payload_rate_bps": 1.44,
+  "correct_delivered_bits": 0,
+  "correct_payload_goodput_bps": 0.0,
+  "body_error_indices": [
+    51,
+    52,
+    57,
+    58,
+    113,
+    114,
+    117
+  ],
+  "consecutive_error_runs": [
+    {
+      "start": 51,
+      "length": 2
+    },
+    {
+      "start": 57,
+      "length": 2
+    },
+    {
+      "start": 113,
+      "length": 2
+    },
+    {
+      "start": 117,
+      "length": 1
+    }
+  ],
+  "max_consecutive_errors": 2,
+  "zero_to_one_errors": 7,
+  "one_to_zero_errors": 0,
+  "errors_per_code_block": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    3,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "damaged_code_blocks": 3,
+  "blocks_exceeding_guaranteed_correction": 3,
+  "systematic_payload_errors_before_correction": 4,
+  "min_samples_per_body_bit": 3,
+  "max_samples_per_body_bit": 3,
+  "trial_id": "R02",
+  "batch": "B01",
+  "condition": "noisy",
+  "evidence_cohort": "new_batch_baseline",
+  "roi_xywh": [
+    950,
+    240,
+    150,
+    120
+  ],
+  "evaluation_window_seconds": [
+    116.89822952340111,
+    168.91756696568217
+  ],
+  "video_sha256": "cf3a6308d1f4d39c79f2d10373e402acf3b0ab23a3232b0c43c7c3172134e12c",
+  "tx_log": "experiments/final_capture_v1/batches/B01_20261024T194943_932683Z_e83519/R02/tx.json"
+}

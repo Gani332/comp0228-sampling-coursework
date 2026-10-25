@@ -1,0 +1,19 @@
+{
+  "crc_ok": true,
+  "codec": "none",
+  "sequence": 1,
+  "start_seconds": 4.469894478187539,
+  "period_seconds": 0.1999367427042049,
+  "threshold": 139.555925,
+  "dark_level": 43.588425,
+  "bright_level": 235.52342499999997,
+  "preamble_bit_errors": 0,
+  "edge_residual_rms_seconds": 0.01433156870882583,
+  "low_confidence_body_bits": 0,
+  "text": "MANUNITED",
+  "payload_hex": "4d414e554e49544544",
+  "data_kind": "physical_video",
+  "video_sha256": "5d8f608dde84379d1a2cb7d1d7ef3771d639ee426d59efe5f65ee43a1a9f4667",
+  "trace_file": "/Users/riyaa/Desktop/UCL_Year4/Sampling, Compression and Data Analysis/Coursework/optical_link/results/20261024T161731_476700Z_brightness.csv",
+  "status": "crc_pass"
+}

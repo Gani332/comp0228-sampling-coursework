@@ -1,0 +1,66 @@
+{
+  "imported_utc": "2026-10-24T20:09:06.178555+00:00",
+  "scope": "Original-video preservation, optical header association and time-range checks only. No payload results evaluated.",
+  "original_downloads": "Kept unchanged.",
+  "batches": [
+    {
+      "batch": "B01",
+      "message": "MANUNITED",
+      "source_filename": "B01_MANUNITED_3MIN.MOV",
+      "saved_video": "experiments/final_capture_v1/batches/B01_20261024T194943_932683Z_e83519/recording.mov",
+      "attempt_dir": "experiments/final_capture_v1/batches/B01_20261024T194943_932683Z_e83519",
+      "video_sha256": "cf3a6308d1f4d39c79f2d10373e402acf3b0ab23a3232b0c43c7c3172134e12c",
+      "bytes": 280861117,
+      "duration_seconds": 222.111667,
+      "packet_count": 3,
+      "sequences": [
+        67,
+        68,
+        69
+      ],
+      "all_headers_match": true,
+      "all_packet_time_ranges_covered": true,
+      "payload_evaluation_status": "not_run"
+    },
+    {
+      "batch": "B02",
+      "message": "ADRIAN",
+      "source_filename": "B02_ADRIAN_3MIN.MOV",
+      "saved_video": "experiments/final_capture_v1/batches/B02_20261024T195436_512439Z_1b7971/recording.mov",
+      "attempt_dir": "experiments/final_capture_v1/batches/B02_20261024T195436_512439Z_1b7971",
+      "video_sha256": "9bc65461760310a132fd114638ebd693e984ab49e238c81352c378c41db805be",
+      "bytes": 367855973,
+      "duration_seconds": 251.945,
+      "packet_count": 4,
+      "sequences": [
+        70,
+        71,
+        72,
+        73
+      ],
+      "all_headers_match": true,
+      "all_packet_time_ranges_covered": true,
+      "payload_evaluation_status": "not_run"
+    },
+    {
+      "batch": "B03",
+      "message": "OMAR",
+      "source_filename": "B03_OMAR_3MIN.MOV",
+      "saved_video": "experiments/final_capture_v1/batches/B03_20261024T200103_976319Z_a81915/recording.mov",
+      "attempt_dir": "experiments/final_capture_v1/batches/B03_20261024T200103_976319Z_a81915",
+      "video_sha256": "4004780fac4d8ff06df00fa89c9770d4a02587cb706a8594b27821d6c8720faf",
+      "bytes": 316923173,
+      "duration_seconds": 216.845,
+      "packet_count": 4,
+      "sequences": [
+        74,
+        75,
+        76,
+        77
+      ],
+      "all_headers_match": true,
+      "all_packet_time_ranges_covered": true,
+      "payload_evaluation_status": "not_run"
+    }
+  ]
+}

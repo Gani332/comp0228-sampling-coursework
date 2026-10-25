@@ -1,0 +1,24 @@
+{
+  "video": "/Users/riyaa/Downloads/MANUNITED_NOISE.MOV",
+  "video_sha256": "cf5a74930ff1dbfa36e37f5f6d8db1219f97ea8e353d2ae39a922a4858660175",
+  "roi_xywh": [
+    950,
+    400,
+    200,
+    200
+  ],
+  "frames": 1224,
+  "duration_seconds": 40.775,
+  "median_frame_interval_seconds": 0.03333300000000072,
+  "max_frame_gap_seconds": 0.03500000000000014,
+  "rotation": "stored pixels, autorotation disabled",
+  "data_kind": "physical_video",
+  "conditions": {
+    "distance_cm": null,
+    "phone_model": "",
+    "camera_mode": "",
+    "lighting": "",
+    "interference": "none",
+    "notes": ""
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "video": "/Users/riyaa/Downloads/IMG_5415.MOV",
+  "video_sha256": "c52b36728e3a00fc80edf81229342a88111eca83fc54c34d19721bac54a43c83",
+  "roi_xywh": [
+    950,
+    400,
+    200,
+    200
+  ],
+  "frames": 1066,
+  "duration_seconds": 35.506667,
+  "median_frame_interval_seconds": 0.03333300000000072,
+  "max_frame_gap_seconds": 0.03500000000000014,
+  "rotation": "stored pixels, autorotation disabled",
+  "data_kind": "physical_video",
+  "conditions": {
+    "distance_cm": null,
+    "phone_model": "",
+    "camera_mode": "",
+    "lighting": "",
+    "interference": "none",
+    "notes": ""
+  }
+}

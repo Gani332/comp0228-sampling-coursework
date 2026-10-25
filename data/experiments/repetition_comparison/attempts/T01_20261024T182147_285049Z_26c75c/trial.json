@@ -1,0 +1,43 @@
+{
+  "trial_id": "T01",
+  "repeat": 1,
+  "codec": "repeat3",
+  "condition": "clean",
+  "message": "MANUNITED",
+  "bit_ms": 200,
+  "sequence": 53,
+  "channel_seconds": 72.0,
+  "attempt_id": "T01_20261024T182147_285049Z_26c75c",
+  "retake": true,
+  "created_utc": "2026-10-24T18:21:47.285265+00:00",
+  "status": "controller_completed",
+  "setup": {
+    "phone_model": "",
+    "distance_cm": null,
+    "camera_mode": "Record the actual resolution/fps and focus/exposure setting",
+    "room_lighting": "",
+    "lamp_setting_and_marked_sweep_positions": "",
+    "notes": ""
+  },
+  "planned_interference": "none",
+  "operator_observations": "",
+  "cue_events": [
+    {
+      "phase": "steady",
+      "host_seconds_after_start_ack": 0.0,
+      "host_time_unix": 1792866108.292913
+    },
+    {
+      "phase": "complete",
+      "host_seconds_after_start_ack": 72.217,
+      "host_time_unix": 1792866180.508378
+    }
+  ],
+  "cue_schedule": {
+    "basis": "Host receipt of firmware START acknowledgment",
+    "start_seconds": null,
+    "stop_seconds": null,
+    "note": "Operator guidance only; actual light onset/duration must be checked in the video."
+  },
+  "cue_window_displayed": null
+}

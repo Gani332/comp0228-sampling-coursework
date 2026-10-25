@@ -1,0 +1,32 @@
+{
+  "software_tests_passed": 59,
+  "receiver_layer_tests": 10,
+  "baseline_packets_reproduced": 30,
+  "feature_original_trace_max_difference": 0.0,
+  "runtime": {
+    "python": "3.12.2",
+    "numpy": "1.26.4",
+    "opencv": "4.8.1",
+    "pandas": "2.2.3",
+    "nbformat": "5.9.2"
+  },
+  "hardware_transmissions": 0,
+  "publication": "Published with data-v1.0.0; raw videos distributed as optional release assets.",
+  "notebook_execution": {
+    "status": "passed",
+    "executed_code_cells": 9,
+    "errors": 0,
+    "elapsed_seconds": 5.45,
+    "executed_utc": "2026-10-24T21:32:21.733559+00:00",
+    "python": "PROJECT_ROOT/.venv/bin/python"
+  },
+  "installed_replay": {
+    "status": "passed",
+    "identical_json_files": 159,
+    "identical_csv": true,
+    "method_packet_rows": 150
+  },
+  "feature_caches_verified": 14,
+  "report_local_links_verified": 10,
+  "checked_utc": "2026-10-24T21:32:59.157883+00:00"
+}

@@ -1,0 +1,198 @@
+{
+  "batch_id": "B03",
+  "message": "OMAR",
+  "packets": [
+    {
+      "trial_id": "R08",
+      "message": "OMAR",
+      "codec": "hamming74",
+      "bit_ms": 200,
+      "channel_seconds": 36.0,
+      "sequence": 74,
+      "status": "controller_completed",
+      "tx_log": "R08/tx.json",
+      "start_ack_unix": 1792872064.8988936,
+      "cue_events": [
+        {
+          "phase": "header",
+          "seconds_after_start_ack": 0.0
+        },
+        {
+          "phase": "body",
+          "seconds_after_start_ack": 18.3772
+        },
+        {
+          "phase": "ending",
+          "seconds_after_start_ack": 34.665
+        },
+        {
+          "phase": "packet_done",
+          "seconds_after_start_ack": 36.2169
+        }
+      ],
+      "host_finished_unix": 1792872101.1193569,
+      "video_window_seconds": [
+        2.586244883006697,
+        38.58661625489057
+      ],
+      "optical_header_verified": true
+    },
+    {
+      "trial_id": "R09",
+      "message": "OMAR",
+      "codec": "repeat5",
+      "bit_ms": 200,
+      "channel_seconds": 67.2,
+      "sequence": 75,
+      "status": "controller_completed",
+      "tx_log": "R09/tx.json",
+      "start_ack_unix": 1792872109.2618213,
+      "cue_events": [
+        {
+          "phase": "header",
+          "seconds_after_start_ack": 0.0
+        },
+        {
+          "phase": "body",
+          "seconds_after_start_ack": 18.393
+        },
+        {
+          "phase": "ending",
+          "seconds_after_start_ack": 65.818
+        },
+        {
+          "phase": "packet_done",
+          "seconds_after_start_ack": 67.4171
+        }
+      ],
+      "host_finished_unix": 1792872176.683362,
+      "video_window_seconds": [
+        46.95470311703678,
+        114.1293775266663
+      ],
+      "optical_header_verified": true
+    },
+    {
+      "trial_id": "R10",
+      "message": "OMAR",
+      "codec": "rs4",
+      "bit_ms": 200,
+      "channel_seconds": 35.2,
+      "sequence": 76,
+      "status": "controller_completed",
+      "tx_log": "R10/tx.json",
+      "start_ack_unix": 1792872184.7933056,
+      "cue_events": [
+        {
+          "phase": "header",
+          "seconds_after_start_ack": 0.0
+        },
+        {
+          "phase": "body",
+          "seconds_after_start_ack": 18.3169
+        },
+        {
+          "phase": "ending",
+          "seconds_after_start_ack": 33.8706
+        },
+        {
+          "phase": "packet_done",
+          "seconds_after_start_ack": 35.4222
+        }
+      ],
+      "host_finished_unix": 1792872220.218976,
+      "video_window_seconds": [
+        122.4824785804134,
+        157.70717024890598
+      ],
+      "optical_header_verified": true
+    },
+    {
+      "trial_id": "R11",
+      "message": "OMAR",
+      "codec": "repeat3",
+      "bit_ms": 200,
+      "channel_seconds": 48.0,
+      "sequence": 77,
+      "status": "controller_completed",
+      "tx_log": "R11/tx.json",
+      "start_ack_unix": 1792872228.3454506,
+      "cue_events": [
+        {
+          "phase": "header",
+          "seconds_after_start_ack": 0.0
+        },
+        {
+          "phase": "body",
+          "seconds_after_start_ack": 18.3065
+        },
+        {
+          "phase": "ending",
+          "seconds_after_start_ack": 46.634
+        },
+        {
+          "phase": "packet_done",
+          "seconds_after_start_ack": 48.217
+        }
+      ],
+      "host_finished_unix": 1792872276.5753589,
+      "video_window_seconds": [
+        166.03061560396645,
+        214.02594704257444
+      ],
+      "optical_header_verified": true
+    }
+  ],
+  "video_name": "B03_OMAR_NOISY.MOV",
+  "channel_seconds": 186.4,
+  "approx_capture_seconds": 219,
+  "setup": {
+    "phone_model": "iPhone — exact model unreported",
+    "distance_cm": null,
+    "camera_mode_fps_and_exposure_lock": "",
+    "room_lighting": "",
+    "lamp_setting_and_movement": "",
+    "notes": ""
+  },
+  "attempt_id": "B03_20261024T200103_976319Z_a81915",
+  "status": "controller_completed",
+  "retake": false,
+  "events": [],
+  "condition": "noisy",
+  "actual_observations": "User reported all three batch videos recorded. Actual interference details remain to be assessed from the videos.",
+  "association_status": "all optical packet headers CRC-valid and IDs/codecs/lengths matched",
+  "created_unix": 1792872063.9764612,
+  "identity": "OPTICAL:1 board=ESP32-S3 display=ST7796S busy=0 max_bits=4096 min_bit_ms=200",
+  "host_finished_unix": 1792872276.579149,
+  "video": "recording.mov",
+  "video_sha256": "4004780fac4d8ff06df00fa89c9770d4a02587cb706a8594b27821d6c8720faf",
+  "source_video_name": "B03_OMAR_3MIN.MOV",
+  "video_metadata": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "avg_frame_rate": "1301000/43369"
+      }
+    ],
+    "format": {
+      "duration": "216.845000"
+    }
+  },
+  "capture_duration_warning": false,
+  "observation_history": [
+    {
+      "saved_unix": 1792872476.882625,
+      "text": "User reported all three batch videos recorded. Actual interference details remain to be assessed from the videos."
+    },
+    {
+      "saved_unix": 1792872547.920343,
+      "text": "User reported all three batch videos recorded. Actual interference details remain to be assessed from the videos."
+    }
+  ],
+  "capture_review_status": "all scheduled packet time ranges present; payload evaluation pending",
+  "header_verification": "header_verification.json",
+  "payload_evaluation_status": "not_run"
+}

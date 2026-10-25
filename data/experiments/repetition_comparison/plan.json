@@ -1,0 +1,129 @@
+{
+  "version": 1,
+  "description": "Matched MANUNITED none vs repeat3 pilot",
+  "order": "Three randomized blocks; first trial fixed to repeat3/clean as a hardware check.",
+  "noise_protocol": "One gentle light sweep during the two-second visual cue window. Keep the same lamp setting, marked start/end positions, camera, display and room lighting.",
+  "scope": "A controlled single-interference-event-per-packet experiment; not continuous random noise.",
+  "trials": [
+    {
+      "trial_id": "T01",
+      "repeat": 1,
+      "codec": "repeat3",
+      "condition": "clean",
+      "message": "MANUNITED",
+      "bit_ms": 200,
+      "sequence": 40,
+      "channel_seconds": 72.0
+    },
+    {
+      "trial_id": "T02",
+      "repeat": 1,
+      "codec": "repeat3",
+      "condition": "noisy",
+      "message": "MANUNITED",
+      "bit_ms": 200,
+      "sequence": 41,
+      "channel_seconds": 72.0
+    },
+    {
+      "trial_id": "T03",
+      "repeat": 1,
+      "codec": "none",
+      "condition": "clean",
+      "message": "MANUNITED",
+      "bit_ms": 200,
+      "sequence": 42,
+      "channel_seconds": 36.800000000000004
+    },
+    {
+      "trial_id": "T04",
+      "repeat": 1,
+      "codec": "none",
+      "condition": "noisy",
+      "message": "MANUNITED",
+      "bit_ms": 200,
+      "sequence": 43,
+      "channel_seconds": 36.800000000000004
+    },
+    {
+      "trial_id": "T05",
+      "repeat": 2,
+      "codec": "none",
+      "condition": "noisy",
+      "message": "MANUNITED",
+      "bit_ms": 200,
+      "sequence": 44,
+      "channel_seconds": 36.800000000000004
+    },
+    {
+      "trial_id": "T06",
+      "repeat": 2,
+      "codec": "none",
+      "condition": "clean",
+      "message": "MANUNITED",
+      "bit_ms": 200,
+      "sequence": 45,
+      "channel_seconds": 36.800000000000004
+    },
+    {
+      "trial_id": "T07",
+      "repeat": 2,
+      "codec": "repeat3",
+      "condition": "noisy",
+      "message": "MANUNITED",
+      "bit_ms": 200,
+      "sequence": 46,
+      "channel_seconds": 72.0
+    },
+    {
+      "trial_id": "T08",
+      "repeat": 2,
+      "codec": "repeat3",
+      "condition": "clean",
+      "message": "MANUNITED",
+      "bit_ms": 200,
+      "sequence": 47,
+      "channel_seconds": 72.0
+    },
+    {
+      "trial_id": "T09",
+      "repeat": 3,
+      "codec": "repeat3",
+      "condition": "noisy",
+      "message": "MANUNITED",
+      "bit_ms": 200,
+      "sequence": 48,
+      "channel_seconds": 72.0
+    },
+    {
+      "trial_id": "T10",
+      "repeat": 3,
+      "codec": "none",
+      "condition": "clean",
+      "message": "MANUNITED",
+      "bit_ms": 200,
+      "sequence": 49,
+      "channel_seconds": 36.800000000000004
+    },
+    {
+      "trial_id": "T11",
+      "repeat": 3,
+      "codec": "repeat3",
+      "condition": "clean",
+      "message": "MANUNITED",
+      "bit_ms": 200,
+      "sequence": 50,
+      "channel_seconds": 72.0
+    },
+    {
+      "trial_id": "T12",
+      "repeat": 3,
+      "codec": "none",
+      "condition": "noisy",
+      "message": "MANUNITED",
+      "bit_ms": 200,
+      "sequence": 51,
+      "channel_seconds": 36.800000000000004
+    }
+  ]
+}

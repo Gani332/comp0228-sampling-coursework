@@ -14,11 +14,16 @@ __pycache__/
 /code/.arduino-downloads/
 /code/arduino-cli.local.yaml
 
-# Only the previously published pilot dataset is tracked.
-/data/*
-!/data/recordings/
-!/data/analysis/
-/data/recordings/*
-!/data/recordings/pilot_2026-10-24/
-/data/analysis/*
-!/data/analysis/pilot_2026-10-24/
+# Original recordings are optional, hash-verified release downloads.
+*.mov
+*.MOV
+*.mp4
+*.MP4
+/data/**/*.zip
+/data/**/*.lock
+/data/**/*.ipynb
+
+# Preserve the published studies; keep new exploratory runs local by default.
+/data/analysis/coding_rerun_*/
+/data/analysis/coding_new_run/
+/data/analysis/receiver_new_run/

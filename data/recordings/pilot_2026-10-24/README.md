@@ -27,16 +27,16 @@ These are selected pilot examples, not an unbiased estimate of channel performan
 
 The transmitter record for each trial is the latest earlier log with the expected payload. Since all packets reused sequence 1, this identifies matching transmitted bits but cannot independently prove a unique physical send/record pairing. Video-to-trace links are verified by SHA-256.
 
-Reproduce the metrics from saved traces:
+The current `Coursework.ipynb` includes these six pilot packets in the full receiver study. The original movies are optional release downloads: restore them with `python code/tools/get_recordings.py --group pilot` before using `--from-video`. Cached-trace evaluation needs no movies. From the repository root:
 
 ```sh
-python code/tools/evaluate_pilot.py
+.venv/bin/python code/tools/evaluate_pilot.py
 ```
 
 To also verify the original video hashes and re-extract each trace from the movies:
 
 ```sh
-python code/tools/evaluate_pilot.py --from-video
+.venv/bin/python code/tools/evaluate_pilot.py --from-video
 ```
 
 The original movies retain their audio and container data; the optical decoder uses only the first video stream.

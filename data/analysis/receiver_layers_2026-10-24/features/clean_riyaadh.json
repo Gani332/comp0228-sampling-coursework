@@ -1,0 +1,52 @@
+{
+  "video_id": "clean_riyaadh",
+  "video_sha256": "e238d6063487498bcf17c4e4f0211307f448aa2664a7d47ebd651aabe689ce4a",
+  "frames": 1071,
+  "feature_sha256": "e52e96dd247eccebfe74ddd1f9115877e66087ecc040abd6d4963dc3f909607d",
+  "original_roi": [
+    950,
+    400,
+    200,
+    200
+  ],
+  "study_roi": [
+    735,
+    270,
+    690,
+    450
+  ],
+  "reference_rois": [
+    [
+      550,
+      400,
+      100,
+      140
+    ],
+    [
+      1550,
+      400,
+      100,
+      140
+    ],
+    [
+      900,
+      150,
+      300,
+      50
+    ],
+    [
+      900,
+      800,
+      300,
+      45
+    ]
+  ],
+  "grid": [
+    5,
+    5
+  ],
+  "anchor": "archived original-ROI brightness and real frame timestamps",
+  "extraction": "OpenCV BGR2GRAY, stored pixel orientation, fixed rectangles; one decode pass per video",
+  "max_original_trace_difference": 0.0,
+  "maximum_frame_gap_seconds": 0.03500000000000014
+}

@@ -1,0 +1,195 @@
+{
+  "batch_id": "G01",
+  "message": "MANUNITED",
+  "packets": [
+    {
+      "trial_id": "G01_1",
+      "message": "MANUNITED",
+      "codec": "repeat5",
+      "bit_ms": 200,
+      "channel_seconds": 107.2,
+      "sequence": 78,
+      "status": "controller_completed",
+      "planned_sweep_schedule": {
+        "basis": "Seconds after host receipt of START acknowledgment",
+        "start_seconds": 21.0,
+        "end_seconds": 22.0,
+        "sweeps_per_transmission": 1,
+        "note": "Displayed instruction only; actual disturbance must be assessed from video."
+      },
+      "tx_log": "G01_1/tx.json",
+      "start_ack_unix": 1792873792.0704265,
+      "cue_events": [
+        {
+          "phase": "steady",
+          "seconds_after_start_ack": 0.0
+        },
+        {
+          "phase": "countdown",
+          "seconds_after_start_ack": 16.0976
+        },
+        {
+          "phase": "sweep",
+          "seconds_after_start_ack": 21.0044
+        },
+        {
+          "phase": "hold",
+          "seconds_after_start_ack": 22.0395
+        },
+        {
+          "phase": "packet_done",
+          "seconds_after_start_ack": 107.4171
+        }
+      ],
+      "host_finished_unix": 1792873899.4915898,
+      "optical_header_verified": true,
+      "video_window_seconds": [
+        3.474421493374174,
+        110.75174518400846
+      ],
+      "baseline_check_outcome": "crc_fail"
+    },
+    {
+      "trial_id": "G01_2",
+      "message": "MANUNITED",
+      "codec": "hamming74",
+      "bit_ms": 200,
+      "channel_seconds": 50.0,
+      "sequence": 79,
+      "status": "controller_completed",
+      "planned_sweep_schedule": {
+        "basis": "Seconds after host receipt of START acknowledgment",
+        "start_seconds": 21.0,
+        "end_seconds": 22.0,
+        "sweeps_per_transmission": 1,
+        "note": "Displayed instruction only; actual disturbance must be assessed from video."
+      },
+      "tx_log": "G01_2/tx.json",
+      "start_ack_unix": 1792873907.6140187,
+      "cue_events": [
+        {
+          "phase": "steady",
+          "seconds_after_start_ack": 0.0
+        },
+        {
+          "phase": "countdown",
+          "seconds_after_start_ack": 16.0917
+        },
+        {
+          "phase": "sweep",
+          "seconds_after_start_ack": 21.0132
+        },
+        {
+          "phase": "hold",
+          "seconds_after_start_ack": 22.0601
+        },
+        {
+          "phase": "packet_done",
+          "seconds_after_start_ack": 50.2172
+        }
+      ],
+      "host_finished_unix": 1792873957.834015,
+      "optical_header_verified": true,
+      "video_window_seconds": [
+        119.01953425463574,
+        169.03718061882176
+      ],
+      "baseline_check_outcome": "crc_fail"
+    },
+    {
+      "trial_id": "G01_3",
+      "message": "MANUNITED",
+      "codec": "rs4",
+      "bit_ms": 200,
+      "channel_seconds": 43.2,
+      "sequence": 80,
+      "status": "controller_completed",
+      "planned_sweep_schedule": {
+        "basis": "Seconds after host receipt of START acknowledgment",
+        "start_seconds": 21.0,
+        "end_seconds": 22.0,
+        "sweeps_per_transmission": 1,
+        "note": "Displayed instruction only; actual disturbance must be assessed from video."
+      },
+      "tx_log": "G01_3/tx.json",
+      "start_ack_unix": 1792873965.9375753,
+      "cue_events": [
+        {
+          "phase": "steady",
+          "seconds_after_start_ack": 0.0
+        },
+        {
+          "phase": "countdown",
+          "seconds_after_start_ack": 16.0183
+        },
+        {
+          "phase": "sweep",
+          "seconds_after_start_ack": 21.0419
+        },
+        {
+          "phase": "hold",
+          "seconds_after_start_ack": 22.0834
+        },
+        {
+          "phase": "packet_done",
+          "seconds_after_start_ack": 43.4171
+        }
+      ],
+      "host_finished_unix": 1792874009.357674,
+      "optical_header_verified": true,
+      "video_window_seconds": [
+        177.34117827573832,
+        220.5038526097498
+      ],
+      "baseline_check_outcome": "crc_pass"
+    }
+  ],
+  "video_name": "G01_MANUNITED_SINGLE_SWEEP.MOV",
+  "channel_seconds": 200.4,
+  "approx_capture_seconds": 225,
+  "protocol": "guided_retakes_v1",
+  "repeats_original_batch": "B01",
+  "planned_interference": "One approximately one-second light pass at 21 seconds after each START acknowledgment. Same light setting, path and direction. Keep source out of camera view of patch.",
+  "timing_note": "Host cue guidance, not measured physical onset/duration. Retain early, late and missed sweeps and annotate during video review.",
+  "setup": {
+    "phone_model": "iPhone — exact model unreported",
+    "actual_camera_settings": "Not yet verified",
+    "actual_light_strength_distance_path": "Not yet measured; inspect video and operator notes",
+    "operator_instruction": "Fixed camera and exposure if available; same light setting and one-direction pass; avoid occluding patch."
+  },
+  "attempt_id": "G01_20261024T202951_074917Z_b8e93e",
+  "status": "controller_completed",
+  "retake": false,
+  "events": [],
+  "condition": "noisy",
+  "actual_observations": "Patch visible in inspected preamble/sweep frames; side-light reflections produce real interference. Exact duration/intensity not calibrated. Sampled frames are not a continuous occlusion audit. First repetition-5 packet contains at least two glare passes near 29s and 104s; do not label it single-sweep.",
+  "association_status": "All optical headers verified: sequence, codec, payload length; complete packet windows.",
+  "created_unix": 1792873791.074964,
+  "identity": "OPTICAL:1 board=ESP32-S3 display=ST7796S busy=0 max_bits=4096 min_bit_ms=200",
+  "host_finished_unix": 1792874009.3611572,
+  "video": "recording.mov",
+  "video_sha256": "69e19a772d72faf1901b3761abd276ce86350b5c7cde498d1e6836012211b52f",
+  "source_video_name": "B01_NEW.MOV",
+  "video_metadata": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "avg_frame_rate": "1338800/44629"
+      }
+    ],
+    "format": {
+      "duration": "223.145000"
+    }
+  },
+  "capture_duration_warning": false,
+  "observation_history": [
+    {
+      "saved_unix": 1792875422.584219,
+      "text": "Patch visible in inspected preamble/sweep frames; side-light reflections produce real interference. Exact duration/intensity not calibrated. Sampled frames are not a continuous occlusion audit. First repetition-5 packet contains at least two glare passes near 29s and 104s; do not label it single-sweep."
+    }
+  ],
+  "latest_guided_check": "analysis/guided_retakes_2026-10-24"
+}

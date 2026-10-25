@@ -1,0 +1,52 @@
+{
+  "video_id": "noisy_manunited",
+  "video_sha256": "cf5a74930ff1dbfa36e37f5f6d8db1219f97ea8e353d2ae39a922a4858660175",
+  "frames": 1224,
+  "feature_sha256": "f802efdfcefbd36dae7a4a51fe4c4279e5a78e69a7b7632a905b3d97fbd75c0f",
+  "original_roi": [
+    950,
+    400,
+    200,
+    200
+  ],
+  "study_roi": [
+    780,
+    285,
+    690,
+    420
+  ],
+  "reference_rois": [
+    [
+      600,
+      430,
+      90,
+      140
+    ],
+    [
+      1620,
+      430,
+      90,
+      140
+    ],
+    [
+      900,
+      165,
+      300,
+      40
+    ],
+    [
+      900,
+      800,
+      300,
+      40
+    ]
+  ],
+  "grid": [
+    5,
+    5
+  ],
+  "anchor": "archived original-ROI brightness and real frame timestamps",
+  "extraction": "OpenCV BGR2GRAY, stored pixel orientation, fixed rectangles; one decode pass per video",
+  "max_original_trace_difference": 0.0,
+  "maximum_frame_gap_seconds": 0.03500000000000014
+}

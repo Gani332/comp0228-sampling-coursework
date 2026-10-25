@@ -1,0 +1,119 @@
+{
+  "batch_id": "B01",
+  "message": "MANUNITED",
+  "packets": [
+    {
+      "trial_id": "R01",
+      "message": "MANUNITED",
+      "codec": "repeat5",
+      "bit_ms": 200,
+      "channel_seconds": 107.2,
+      "sequence": 64,
+      "status": "controller_completed",
+      "tx_log": "R01/tx.json",
+      "start_ack_unix": 1792870866.9723837,
+      "cue_events": [
+        {
+          "phase": "header",
+          "seconds_after_start_ack": 0.0
+        },
+        {
+          "phase": "body",
+          "seconds_after_start_ack": 18.3986
+        },
+        {
+          "phase": "ending",
+          "seconds_after_start_ack": 105.8977
+        },
+        {
+          "phase": "packet_done",
+          "seconds_after_start_ack": 107.4169
+        }
+      ],
+      "host_finished_unix": 1792870974.392809
+    },
+    {
+      "trial_id": "R02",
+      "message": "MANUNITED",
+      "codec": "hamming74",
+      "bit_ms": 200,
+      "channel_seconds": 50.0,
+      "sequence": 65,
+      "status": "controller_completed",
+      "tx_log": "R02/tx.json",
+      "start_ack_unix": 1792870982.5217326,
+      "cue_events": [
+        {
+          "phase": "header",
+          "seconds_after_start_ack": 0.0
+        },
+        {
+          "phase": "body",
+          "seconds_after_start_ack": 18.3721
+        },
+        {
+          "phase": "ending",
+          "seconds_after_start_ack": 48.6496
+        },
+        {
+          "phase": "packet_done",
+          "seconds_after_start_ack": 50.2168
+        }
+      ],
+      "host_finished_unix": 1792871032.740397
+    },
+    {
+      "trial_id": "R03",
+      "message": "MANUNITED",
+      "codec": "rs4",
+      "bit_ms": 200,
+      "channel_seconds": 43.2,
+      "sequence": 66,
+      "status": "controller_completed",
+      "tx_log": "R03/tx.json",
+      "start_ack_unix": 1792871040.8631654,
+      "cue_events": [
+        {
+          "phase": "header",
+          "seconds_after_start_ack": 0.0
+        },
+        {
+          "phase": "body",
+          "seconds_after_start_ack": 18.3847
+        },
+        {
+          "phase": "ending",
+          "seconds_after_start_ack": 41.8434
+        },
+        {
+          "phase": "packet_done",
+          "seconds_after_start_ack": 43.4171
+        }
+      ],
+      "host_finished_unix": 1792871084.2833002
+    }
+  ],
+  "video_name": "B01_MANUNITED_NOISY.MOV",
+  "channel_seconds": 200.4,
+  "approx_capture_seconds": 225,
+  "setup": {
+    "phone_model": "iPhone — exact model unreported",
+    "distance_cm": null,
+    "camera_mode_fps_and_exposure_lock": "",
+    "room_lighting": "",
+    "lamp_setting_and_movement": "",
+    "notes": ""
+  },
+  "attempt_id": "B01_20261024T194105_976219Z_2f9941",
+  "status": "controller_completed",
+  "retake": false,
+  "events": [],
+  "condition": "noisy",
+  "actual_observations": "",
+  "association_status": "awaiting_video",
+  "created_unix": 1792870865.9763389,
+  "identity": "OPTICAL:1 board=ESP32-S3 display=ST7796S busy=0 max_bits=4096 min_bit_ms=200",
+  "host_finished_unix": 1792871084.2866938,
+  "recording_review_status": "retake_requested",
+  "operator_recording_note": "User reported a recording mistake and requested a B01 retake. Controller transmission completed; this does not assert an optical decoding failure."
+}

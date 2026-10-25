@@ -1,0 +1,33 @@
+{
+  "frozen_utc": "2026-10-24T21:21:19.390619+00:00",
+  "reference_alpha": 1,
+  "spatial_quantile": 0.25,
+  "tile_grid": [
+    5,
+    5
+  ],
+  "minimum_preamble_contrast": 20,
+  "development_video_ids": [
+    "clean_hello",
+    "clean_riyaadh",
+    "clean_manunited",
+    "noisy_manunited",
+    "noisy_adrian",
+    "noisy_omar",
+    "T01",
+    "T02"
+  ],
+  "alpha_candidates": [
+    0.5,
+    1,
+    1.5
+  ],
+  "quantile_candidates": [
+    0.25,
+    0.5
+  ],
+  "selection_rule": "Minimize clean-control failures, then all development packet failures, then missing channel outputs, then aggregate channel BER; ties prefer alpha=1 and quantile=0.5. Combined uses independently selected component settings; no additional combined search.",
+  "evaluation_status": "New front-end outcomes on later B/G batches have not been inspected at freeze time. Their baseline results and videos were previously inspected, so this is not a blind pristine holdout.",
+  "geometry_manifest_sha256": "198bef01b289f773d995175b4eeea69e78ec5dfb190d1d7f39e1c8e59d013fd6",
+  "receiver_source_sha256": "24b0e0ec94f7b3123f00e749553be40e625826a6d8f66ebaa57b9283acfdc3b4"
+}

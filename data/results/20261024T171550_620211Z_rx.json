@@ -1,0 +1,7 @@
+{
+  "status": "decode_failed",
+  "reason": "Unstable preamble timing; check video gaps and exposure.",
+  "data_kind": "physical_video",
+  "video_sha256": "2110a41705bb2584eadeddc8e56ee5874e42fdf90864c08e76e938b37aa21b1c",
+  "trace_file": "/Users/riyaa/Desktop/UCL_Year4/Sampling, Compression and Data Analysis/Coursework/optical_link/results/20261024T171547_012810Z_brightness.csv"
+}

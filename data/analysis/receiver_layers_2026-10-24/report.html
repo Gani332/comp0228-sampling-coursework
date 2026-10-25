@@ -1,0 +1,161 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Receiver layers — physical evaluation</title><style>body{max-width:1150px;margin:42px auto;padding:0 24px;font:16px/1.6 system-ui;color:#1b2b3d}h1,h2{line-height:1.25}table{border-collapse:collapse;width:100%;font-size:13px}td,th{padding:9px;border-bottom:1px solid #ddd;text-align:left}th{background:#eef3f8}img{max-width:100%}.lead{background:#edf6f0;padding:22px;border-left:5px solid #23734b}code{font-size:13px}</style></head><body>
+<h1>Receiver improvement, layer by layer</h1><p>COMP0228 · physical video evidence · local study · 24 October 2026</p>
+<div class="lead"><strong>Exact CRC-valid recoveries: 8/30 → 30/30.</strong> Coded-body errors: 180 → 3. These are results on the retained recordings, not a guarantee of future reliability. Eight packets were used for development; the two later groups contain 22 evaluation packets.</div>
+<h2>1. Original baseline and fair controls</h2><p>All 30 archived baseline packet outcomes were reproduced exactly. Re-extracting the original ROI brightness from all 14 videos also matched every stored value exactly. The original decoder, packet format, CRC and error-correcting codes remain unchanged.</p><p>We retain the original small-ROI baseline and add a common-patch mean control. All three processing variants use the same larger interior patch as that control. This separates the effect of geometry from the effect of illumination compensation or spatial aggregation. Geometry was chosen from early previews before evaluating the new variants.</p>
+<table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Receiver</th>
+      <th>Development (8)</th>
+      <th>Earlier batches (11)</th>
+      <th>Guided retakes (11)</th>
+      <th>Total</th>
+      <th>Channel errors</th>
+      <th>Useful rate (bit/s)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Original ROI baseline</td>
+      <td>4/8</td>
+      <td>1/11</td>
+      <td>3/11</td>
+      <td>8/30</td>
+      <td>180</td>
+      <td>0.272</td>
+    </tr>
+    <tr>
+      <td>Common-patch mean control</td>
+      <td>4/8</td>
+      <td>1/11</td>
+      <td>3/11</td>
+      <td>8/30</td>
+      <td>155</td>
+      <td>0.272</td>
+    </tr>
+    <tr>
+      <td>Illumination compensation</td>
+      <td>5/8</td>
+      <td>10/11</td>
+      <td>3/11</td>
+      <td>18/30</td>
+      <td>58</td>
+      <td>0.596</td>
+    </tr>
+    <tr>
+      <td>Spatial robustness</td>
+      <td>7/8</td>
+      <td>9/11</td>
+      <td>5/11</td>
+      <td>21/30</td>
+      <td>49</td>
+      <td>0.699</td>
+    </tr>
+    <tr>
+      <td>Combined receiver</td>
+      <td>8/8</td>
+      <td>11/11</td>
+      <td>11/11</td>
+      <td>30/30</td>
+      <td>3</td>
+      <td>0.986</td>
+    </tr>
+  </tbody>
+</table><img src="results/recovery_by_layer.png" alt="Exact packet recovery by layer and cohort">
+<h2>2. Illumination compensation</h2><p>Four non-flashing LCD rectangles provide reference brightness. Subtract each reference's public-preamble median from its current value, take the median of those four changes, and subtract 1 times that change from the patch signal. This estimates a shared lighting change. Local glare can affect patch and references differently, so compensation alone need not succeed.</p>
+<h2>3. Spatial robustness</h2><p>Divide the same patch into 5×5 tiles. Calibrate each tile's dark and bright level using only the known public preamble. Aggregate the normalized tile signals with the 25th percentile. This suppresses positive glare outliers; dark occlusion can instead bias it downward. At least half the tiles must have preamble contrast of 20 grayscale levels or more.</p>
+<h2>4. Combination and remaining correction</h2><p>Subtract the reference change from each tile, calibrate from the public preamble, then apply the same spatial quantile. The original ROI provides the shared optical clock for every variant; each variant has its own preamble-derived decision threshold and must independently parse its header and validate the payload CRC. This study isolates front-end processing and does not claim to rescue packets whose original preamble cannot be acquired.</p>
+<p>Three residual channel errors remain in the combined results: G01_1 has two errors within one repetition-5 block, and G01_2 has one error within a Hamming word. Their existing decoders repair these errors. Thus preprocessing and error correction contribute separately to complete recovery.</p>
+<img src="results/errors_goodput.png" alt="Channel errors and aggregate useful rate">
+<h2>5. Development and frozen evaluation</h2><p>The six pilot videos plus the earlier clean/noisy repetition videos form eight development packets. Candidate reference gains were 0.5, 1 and 1.5; candidate spatial quantiles were 0.25 and 0.5. Selection first protects clean controls, then minimizes failed packets, missing channel outputs and channel BER. The combination uses the independently selected component settings without an additional search.</p><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>method</th>
+      <th>gain</th>
+      <th>quantile</th>
+      <th>recoveries</th>
+      <th>clean failures</th>
+      <th>channel errors</th>
+      <th>channel outputs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Original ROI baseline</td>
+      <td>1.0</td>
+      <td>0.50</td>
+      <td>4/8</td>
+      <td>0</td>
+      <td>13</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>Common-patch mean control</td>
+      <td>1.0</td>
+      <td>0.50</td>
+      <td>4/8</td>
+      <td>0</td>
+      <td>10</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>Illumination compensation</td>
+      <td>0.5</td>
+      <td>0.50</td>
+      <td>4/8</td>
+      <td>0</td>
+      <td>8</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>Illumination compensation</td>
+      <td>1.0</td>
+      <td>0.50</td>
+      <td>5/8</td>
+      <td>0</td>
+      <td>5</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>Illumination compensation</td>
+      <td>1.5</td>
+      <td>0.50</td>
+      <td>6/8</td>
+      <td>1</td>
+      <td>3</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>Spatial robustness</td>
+      <td>1.0</td>
+      <td>0.25</td>
+      <td>7/8</td>
+      <td>0</td>
+      <td>3</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>Spatial robustness</td>
+      <td>1.0</td>
+      <td>0.50</td>
+      <td>4/8</td>
+      <td>0</td>
+      <td>10</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>Combined receiver</td>
+      <td>1.0</td>
+      <td>0.25</td>
+      <td>8/8</td>
+      <td>0</td>
+      <td>0</td>
+      <td>8</td>
+    </tr>
+  </tbody>
+</table>
+<p>Gain 1.5 creates a clean-control failure, so it was rejected despite a higher overall development recovery count. Settings were frozen at <code>2026-10-24T21:21:19.390619+00:00</code> before computing new front-end outcomes on either later batch group. Their videos and original baseline results had already been inspected. Describe this as evaluation with frozen settings on previously inspected recordings, not blind validation on an untouched test set.</p>
+<h2>6. Inspect every packet</h2><p>Rows compare receiver variants on the same physical packet. These are paired re-analyses, not additional independent transmissions. A failed or missing output stays in the packet-failure count and contributes zero useful delivered bits. Payload BER is reported only where a payload exists; it does not replace CRC-valid packet success.</p><img src="results/paired_packets.png" alt="Paired results for all 30 packets">
+<h2>7. Explain a physical example</h2><p>G01_1 is the MANUNITED repetition-5 case. It includes the extra glare pass near 104 seconds. Red markers identify wrong channel bits only after decoding, using the saved transmission log. Signal units differ after tile normalization, so compare decisions relative to each threshold rather than absolute plotted amplitudes.</p><img src="results/example_layer_signals.png" alt="Same physical packet through all five front ends">
+<h2>8. What the result supports</h2><p>The common-patch mean control recovers 8/30, so geometry alone does not explain the combined receiver's improvement. The isolated components recover 18/30 and 21/30; combining them recovers 30/30 here. The combined model has zero remaining message-bit errors on this dataset. Current evidence supports complementary benefits from reference compensation and spatial processing.</p><p>Limits: small selected dataset; related packets share videos; manual per-video geometry; varying glare and occasional occlusion; baseline-dependent synchronization; no unseen-scene guarantee. No automatic ROI tracking, real-time camera performance or future success probability was established. Complete saturation or obstruction of all useful pixels can destroy the signal. These paired receiver comparisons do not make the physical coding experiments identical in noise conditions.</p>
+<h2>9. Reproduce and continue</h2><p>Open <code>Receiver_Comparison.ipynb</code> and run top to bottom; it uses cached numeric features and performs no hardware actions. Each replay verifies feature-file hashes, recorded source-video hash consistency, frozen geometry and receiver source. It does not reread and hash the large original videos. Re-extracting pixels is an explicit optional command, not part of Run All.</p><p><a href="results/all_results.csv">150 method/packet result rows</a> · <a href="results/summary.json">Summary metrics</a> · <a href="frozen_config.json">Frozen settings</a> · <a href="validation.json">Validation</a> · <a href="features/development_geometry.jpg">Development geometry</a> · <a href="features/evaluation_geometry.jpg">Evaluation geometry</a></p><p>The next separate coursework task is the controlled coding study: independent versus burst errors and interleaving, clearly labelled as simulation and interpreted alongside these physical results. All current recordings and results remain local.</p></body></html>

@@ -1,0 +1,52 @@
+{
+  "video_id": "clean_manunited",
+  "video_sha256": "5d8f608dde84379d1a2cb7d1d7ef3771d639ee426d59efe5f65ee43a1a9f4667",
+  "frames": 1232,
+  "feature_sha256": "919adba9805bed6885472087166bee68375302060cba9b72b8941665f438d07e",
+  "original_roi": [
+    950,
+    400,
+    200,
+    200
+  ],
+  "study_roi": [
+    750,
+    285,
+    540,
+    330
+  ],
+  "reference_rois": [
+    [
+      570,
+      390,
+      90,
+      140
+    ],
+    [
+      1410,
+      390,
+      90,
+      140
+    ],
+    [
+      850,
+      180,
+      300,
+      40
+    ],
+    [
+      850,
+      700,
+      300,
+      40
+    ]
+  ],
+  "grid": [
+    5,
+    5
+  ],
+  "anchor": "archived original-ROI brightness and real frame timestamps",
+  "extraction": "OpenCV BGR2GRAY, stored pixel orientation, fixed rectangles; one decode pass per video",
+  "max_original_trace_difference": 0.0,
+  "maximum_frame_gap_seconds": 0.03500000000000014
+}

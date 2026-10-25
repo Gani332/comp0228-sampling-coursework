@@ -1,0 +1,163 @@
+{
+  "batch_id": "B01",
+  "message": "MANUNITED",
+  "packets": [
+    {
+      "trial_id": "R01",
+      "message": "MANUNITED",
+      "codec": "repeat5",
+      "bit_ms": 200,
+      "channel_seconds": 107.2,
+      "sequence": 67,
+      "status": "controller_completed",
+      "tx_log": "R01/tx.json",
+      "start_ack_unix": 1792871384.9307616,
+      "cue_events": [
+        {
+          "phase": "header",
+          "seconds_after_start_ack": 0.0
+        },
+        {
+          "phase": "body",
+          "seconds_after_start_ack": 18.3842
+        },
+        {
+          "phase": "ending",
+          "seconds_after_start_ack": 105.861
+        },
+        {
+          "phase": "packet_done",
+          "seconds_after_start_ack": 107.417
+        }
+      ],
+      "host_finished_unix": 1792871492.351895,
+      "video_window_seconds": [
+        2.358673422969618,
+        109.5579303187023
+      ],
+      "optical_header_verified": true
+    },
+    {
+      "trial_id": "R02",
+      "message": "MANUNITED",
+      "codec": "hamming74",
+      "bit_ms": 200,
+      "channel_seconds": 50.0,
+      "sequence": 68,
+      "status": "controller_completed",
+      "tx_log": "R02/tx.json",
+      "start_ack_unix": 1792871500.4723446,
+      "cue_events": [
+        {
+          "phase": "header",
+          "seconds_after_start_ack": 0.0
+        },
+        {
+          "phase": "body",
+          "seconds_after_start_ack": 18.3364
+        },
+        {
+          "phase": "ending",
+          "seconds_after_start_ack": 48.6897
+        },
+        {
+          "phase": "packet_done",
+          "seconds_after_start_ack": 50.2185
+        }
+      ],
+      "host_finished_unix": 1792871550.696196,
+      "video_window_seconds": [
+        117.89822952340111,
+        167.91756696568217
+      ],
+      "optical_header_verified": true
+    },
+    {
+      "trial_id": "R03",
+      "message": "MANUNITED",
+      "codec": "rs4",
+      "bit_ms": 200,
+      "channel_seconds": 43.2,
+      "sequence": 69,
+      "status": "controller_completed",
+      "tx_log": "R03/tx.json",
+      "start_ack_unix": 1792871558.7966838,
+      "cue_events": [
+        {
+          "phase": "header",
+          "seconds_after_start_ack": 0.0
+        },
+        {
+          "phase": "body",
+          "seconds_after_start_ack": 18.3771
+        },
+        {
+          "phase": "ending",
+          "seconds_after_start_ack": 41.8618
+        },
+        {
+          "phase": "packet_done",
+          "seconds_after_start_ack": 43.417
+        }
+      ],
+      "host_finished_unix": 1792871602.2179258,
+      "video_window_seconds": [
+        176.22386952325346,
+        219.44030741141603
+      ],
+      "optical_header_verified": true
+    }
+  ],
+  "video_name": "B01_MANUNITED_NOISY.MOV",
+  "channel_seconds": 200.4,
+  "approx_capture_seconds": 225,
+  "setup": {
+    "phone_model": "iPhone — exact model unreported",
+    "distance_cm": null,
+    "camera_mode_fps_and_exposure_lock": "",
+    "room_lighting": "",
+    "lamp_setting_and_movement": "",
+    "notes": ""
+  },
+  "attempt_id": "B01_20261024T194943_932683Z_e83519",
+  "status": "controller_completed",
+  "retake": true,
+  "events": [],
+  "condition": "noisy",
+  "actual_observations": "User reported all three batch videos recorded. Actual interference details remain to be assessed from the videos.",
+  "association_status": "all optical packet headers CRC-valid and IDs/codecs/lengths matched",
+  "created_unix": 1792871383.9328032,
+  "identity": "OPTICAL:1 board=ESP32-S3 display=ST7796S busy=0 max_bits=4096 min_bit_ms=200",
+  "host_finished_unix": 1792871602.2212741,
+  "video": "recording.mov",
+  "video_sha256": "cf3a6308d1f4d39c79f2d10373e402acf3b0ab23a3232b0c43c7c3172134e12c",
+  "source_video_name": "B01_MANUNITED_3MIN.MOV",
+  "video_metadata": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "avg_frame_rate": "3997800/133267"
+      }
+    ],
+    "format": {
+      "duration": "222.111667"
+    }
+  },
+  "capture_duration_warning": false,
+  "observation_history": [
+    {
+      "saved_unix": 1792872475.278156,
+      "text": "User reported all three batch videos recorded. Actual interference details remain to be assessed from the videos."
+    },
+    {
+      "saved_unix": 1792872546.692147,
+      "text": "User reported all three batch videos recorded. Actual interference details remain to be assessed from the videos."
+    }
+  ],
+  "capture_review_status": "all scheduled packet time ranges present; payload evaluation pending",
+  "header_verification": "header_verification.json",
+  "payload_evaluation_status": "not_run"
+}

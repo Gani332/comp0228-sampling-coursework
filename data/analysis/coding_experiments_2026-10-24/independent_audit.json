@@ -1,0 +1,14 @@
+{
+  "trial_records": 480000,
+  "replayed_decodes": 720,
+  "summary_recomputed": true,
+  "source_and_data_hashes_verified": true,
+  "complete_condition_counts": true,
+  "duplicate_trials": 0,
+  "identical_symmetric_noise_per_pair": true,
+  "glare_direction_checked": true,
+  "clean_control_conditions": 30,
+  "analytic_iid_conditions_checked": 60,
+  "noise_occupancy_checked_with_trial_level_variance": true,
+  "crc_valid_wrong_payload_events_replayed": 1
+}

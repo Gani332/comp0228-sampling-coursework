@@ -1,0 +1,20 @@
+trial_id,evidence_cohort,batch,condition,message,codec,status,received_text,body_channel_bit_errors,body_channel_bits,body_channel_ber,payload_bit_errors,payload_bits,payload_ber,crc_ok,exact_payload_match,packet_failed,channel_seconds_including_overhead,offered_payload_rate_bps,correct_delivered_bits,correct_payload_goodput_bps,max_consecutive_errors,zero_to_one_errors,one_to_zero_errors,damaged_rs_bytes,systematic_payload_errors_before_correction,failure_stage,reason
+R01,new_batch_baseline,B01,noisy,MANUNITED,repeat5,crc_fail,M�NUNITED,11,440,0.025,2,72,0.027777777777777776,False,False,True,107.2,0.6716417910447761,0,0.0,4,11,0,,,,
+R02,new_batch_baseline,B01,noisy,MANUNITED,hamming74,crc_fail,MAN\�ITE�,7,154,0.045454545454545456,6,72,0.08333333333333333,False,False,True,50.0,1.44,0,0.0,2,7,0,,4,,
+R03,new_batch_baseline,B01,noisy,MANUNITED,rs4,decode_failed,,6,120,0.05,,72,,,,True,43.2,1.6666666666666665,0,0.0,2,6,0,3,6,fec,Reed-Solomon could not correct this codeword.
+R04,new_batch_baseline,B02,noisy,ADRIAN,rs4,decode_failed,,5,96,0.052083333333333336,,48,,,,True,38.4,1.25,0,0.0,1,5,0,3,0,fec,Reed-Solomon could not correct this codeword.
+R05,new_batch_baseline,B02,noisy,ADRIAN,repeat3,crc_fail,AO�IAN,14,192,0.07291666666666667,4,48,0.08333333333333333,False,False,True,57.6,0.8333333333333333,0,0.0,8,14,0,,,,
+R06,new_batch_baseline,B02,noisy,ADRIAN,hamming74,crc_fail,AD_�AN,7,112,0.0625,4,48,0.08333333333333333,False,False,True,41.6,1.1538461538461537,0,0.0,2,7,0,,5,,
+R07,new_batch_baseline,B02,noisy,ADRIAN,repeat5,crc_fail,A�RI]N,24,320,0.075,5,48,0.10416666666666667,False,False,True,83.2,0.5769230769230769,0,0.0,7,24,0,,,,
+R08,new_batch_baseline,B03,noisy,OMAR,hamming74,crc_fail,OM�,8,84,0.09523809523809523,7,32,0.21875,False,False,True,36.0,0.8888888888888888,0,0.0,2,8,0,,6,,
+R09,new_batch_baseline,B03,noisy,OMAR,repeat5,crc_fail,O�AR,6,240,0.025,1,32,0.03125,False,False,True,67.2,0.47619047619047616,0,0.0,4,6,0,,,,
+R10,new_batch_baseline,B03,noisy,OMAR,rs4,crc_pass,OMAR,8,80,0.1,0,32,0.0,True,True,False,35.2,0.9090909090909091,32,0.9090909090909091,3,8,0,2,0,,
+R11,new_batch_baseline,B03,noisy,OMAR,repeat3,crc_fail,OO�R,9,144,0.0625,3,32,0.09375,False,False,True,48.0,0.6666666666666666,0,0.0,3,9,0,,,,
+clean_hello,earlier_development,pilot,clean,HELLO,none,crc_pass,HELLO,0,56,0.0,0,40,0.0,True,True,False,30.4,1.3157894736842106,40,1.3157894736842106,,,,,,,
+clean_riyaadh,earlier_development,pilot,clean,RIYAADH,none,crc_pass,RIYAADH,0,72,0.0,0,56,0.0,True,True,False,33.6,1.6666666666666665,56,1.6666666666666665,,,,,,,
+clean_manunited,earlier_development,pilot,clean,MANUNITED,none,crc_pass,MANUNITED,0,88,0.0,0,72,0.0,True,True,False,36.8,1.956521739130435,72,1.956521739130435,,,,,,,
+noisy_manunited,earlier_development,pilot,noisy,MANUNITED,none,crc_fail,M�^]N�TED,4,88,0.045454545454545456,4,72,0.05555555555555555,False,False,True,36.8,1.956521739130435,0,0.0,,,,,,,
+noisy_adrian,earlier_development,pilot,noisy,ADRIAN,none,crc_fail,ADR�A^,2,64,0.03125,2,48,0.041666666666666664,False,False,True,32.0,1.5,0,0.0,,,,,,,
+noisy_omar,earlier_development,pilot,noisy,OMAR,none,crc_fail,OMAZ,1,48,0.020833333333333332,1,32,0.03125,False,False,True,28.8,1.1111111111111112,0,0.0,,,,,,,
+T01,earlier_development,repetition_comparison,clean,MANUNITED,repeat3,crc_pass,MANUNITED,0,264,0.0,0,72,0.0,True,True,False,72.0,1.0,72,1.0,,,,,,,
+T02,earlier_development,repetition_comparison,noisy,MANUNITED,repeat3,crc_fail,M�OUNITED,6,264,0.022727272727272728,2,72,0.027777777777777776,False,False,True,72.0,1.0,0,0.0,,,,,,,

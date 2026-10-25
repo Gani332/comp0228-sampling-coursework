@@ -1,0 +1,52 @@
+{
+  "video_id": "B02",
+  "video_sha256": "9bc65461760310a132fd114638ebd693e984ab49e238c81352c378c41db805be",
+  "frames": 7558,
+  "feature_sha256": "cc7ff98e5d238ecafe36473682b546e68f933d65545c05ff7b75a42ff915904f",
+  "original_roi": [
+    950,
+    240,
+    150,
+    120
+  ],
+  "study_roi": [
+    850,
+    190,
+    345,
+    210
+  ],
+  "reference_rois": [
+    [
+      710,
+      230,
+      70,
+      120
+    ],
+    [
+      1280,
+      230,
+      70,
+      120
+    ],
+    [
+      930,
+      110,
+      220,
+      30
+    ],
+    [
+      930,
+      450,
+      220,
+      30
+    ]
+  ],
+  "grid": [
+    5,
+    5
+  ],
+  "anchor": "archived original-ROI brightness and real frame timestamps",
+  "extraction": "OpenCV BGR2GRAY, stored pixel orientation, fixed rectangles; one decode pass per video",
+  "max_original_trace_difference": 0.0,
+  "maximum_frame_gap_seconds": 0.03500000000002501
+}

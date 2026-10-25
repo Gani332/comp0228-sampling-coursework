@@ -1,0 +1,89 @@
+{
+  "codec": "rs4",
+  "message": "ADRIAN",
+  "sequence": 70,
+  "status": "decode_failed",
+  "packet_failed": true,
+  "failure_stage": "fec",
+  "reason": "Reed-Solomon could not correct this codeword.",
+  "body_channel_bit_errors": 5,
+  "body_channel_bits": 96,
+  "body_channel_ber": 0.052083333333333336,
+  "payload_bit_errors": null,
+  "payload_bits": 48,
+  "payload_ber": null,
+  "received_text": null,
+  "crc_ok": null,
+  "exact_payload_match": null,
+  "channel_seconds_including_overhead": 38.4,
+  "offered_payload_rate_bps": 1.25,
+  "correct_delivered_bits": 0,
+  "correct_payload_goodput_bps": 0.0,
+  "body_error_indices": [
+    52,
+    54,
+    58,
+    60,
+    65
+  ],
+  "consecutive_error_runs": [
+    {
+      "start": 52,
+      "length": 1
+    },
+    {
+      "start": 54,
+      "length": 1
+    },
+    {
+      "start": 58,
+      "length": 1
+    },
+    {
+      "start": 60,
+      "length": 1
+    },
+    {
+      "start": 65,
+      "length": 1
+    }
+  ],
+  "max_consecutive_errors": 1,
+  "zero_to_one_errors": 5,
+  "one_to_zero_errors": 0,
+  "errors_per_code_block": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    2,
+    1,
+    0,
+    0,
+    0
+  ],
+  "damaged_code_blocks": 3,
+  "damaged_rs_bytes": 3,
+  "systematic_payload_errors_before_correction": 0,
+  "min_samples_per_body_bit": 2,
+  "max_samples_per_body_bit": 3,
+  "trial_id": "R04",
+  "batch": "B02",
+  "condition": "noisy",
+  "evidence_cohort": "new_batch_baseline",
+  "roi_xywh": [
+    950,
+    240,
+    150,
+    120
+  ],
+  "evaluation_window_seconds": [
+    2.361895832872447,
+    42.75054244090314
+  ],
+  "video_sha256": "9bc65461760310a132fd114638ebd693e984ab49e238c81352c378c41db805be",
+  "tx_log": "experiments/final_capture_v1/batches/B02_20261024T195436_512439Z_1b7971/R04/tx.json"
+}

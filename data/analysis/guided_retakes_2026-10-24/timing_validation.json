@@ -1,0 +1,14 @@
+{
+  "G01": {
+    "first_20_pts_max_difference_seconds": 3.33333333379926e-07,
+    "full_decoded_frames": 6694
+  },
+  "G02": {
+    "first_20_pts_max_difference_seconds": 3.33333333379926e-07,
+    "full_decoded_frames": 7522
+  },
+  "G03": {
+    "first_20_pts_max_difference_seconds": 3.33333333379926e-07,
+    "full_decoded_frames": 6512
+  }
+}

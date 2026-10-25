@@ -1,0 +1,16 @@
+{
+  "roi_selection": "Geometric selection from early previews before decoding outcomes; fixed across each video.",
+  "source_code_sha256": {
+    "optical_link/receiver.py": "091f6a68e22dc77d4a80f852734c80a49ddcf2ee74a553bc6a3caf946fd921b8",
+    "optical_link/protocol.py": "172f3e2446002920dda59268a1baf4748076451f75a38ac20fdd1b3ca5d44173",
+    "optical_link/baseline_analysis.py": "2d4ee3ea85a3786560b6d23da5f107f46c1cc5e818cf23fdf29a89d89ada7b3b"
+  },
+  "data": "All final brightness measurements use the existing OpenCV grayscale mean. Alternative FFmpeg color conversion was rejected after a pixel comparison; its provisional results are not included.",
+  "timestamps": "FFmpeg decoded frame PTS; all frame counts agree with container metadata. First 20 independently checked with FFprobe; interior OpenCV timestamps checked, with negative first-frame sentinel excluded. No average FPS clock.",
+  "limitations": [
+    "Sampled visual inspection does not prove there was no obstruction at every instant.",
+    "Glare severity and duration differ. First MANUNITED repeat5 has two visible glare passes.",
+    "These repeat eleven coded cases; earlier uncoded cases are not newly matched controls.",
+    "Source videos, earlier attempts and original baseline analysis retained. Results remain local."
+  ]
+}

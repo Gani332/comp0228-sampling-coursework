@@ -1,0 +1,14 @@
+{
+  "started_utc": "2026-10-24T22:18:55.709261+00:00",
+  "source_sha256": {
+    "optical_link/coding_experiments.py": "d4c811c79f263f0ffcd462b99fdea0ed5cb80ea1f02098d5afaa9276a5e3276b",
+    "optical_link/protocol.py": "172f3e2446002920dda59268a1baf4748076451f75a38ac20fdd1b3ca5d44173",
+    "optical_link/_vendor/reedsolo.py": "8cafe0cec313c70801f5086c66c07f760011688b691c5fd732ace03926f8e4e4"
+  },
+  "numpy_version": "1.26.4",
+  "completed_utc": "2026-10-24T22:19:38.643125+00:00",
+  "rows": 480000,
+  "trial_data_sha256": "ae8dd7d346e0e689b96e6382a31c0378e1eeb47e9f06194aa5dad45c188710b0",
+  "config_sha256": "88e2e6905cfec11dfe50630ee48970a601bc315b1773aef8e7905ae77d4fcae6",
+  "scenarios_sha256": "8456e4dfc4ccadd5d8e76e64efb6e3c383ad0b30dcf9018c51d242802474c3ba"
+}

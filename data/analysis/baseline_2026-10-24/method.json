@@ -1,0 +1,19 @@
+{
+  "receiver": "Existing fixed-ROI grayscale mean, preamble-fitted fixed clock, fixed threshold; unchanged.",
+  "roi_selection": "Use earlier geometric header ROIs unchanged. No payload/CRC based ROI search.",
+  "segmentation": "Optically verified packet extent plus one second per side. Decoder reacquires within each window.",
+  "timing": "Actual FFprobe presentation timestamps; no average-FPS substitution.",
+  "goodput": "Correct CRC-valid payload bits / scheduled channel time, including all packet guards/header/FEC/CRC; excludes operator pauses and retakes.",
+  "missing_outputs": "FEC rejection: payload BER missing, packet failed, useful goodput zero. Raw sampled channel bits retained if available.",
+  "limitations": [
+    "Three different message cases per method, not three identical controlled repeats.",
+    "Light disturbance, camera pose and exposure differ between recordings; no causal code ranking.",
+    "Older uncoded and MANUNITED repeat3 results are development data; new results are now inspected baseline evaluation data.",
+    "Later tuning on these results must be reported as exploratory; do not call it untouched held-out validation.",
+    "Consecutive error runs describe threshold decisions, not the exact physical disturbance duration."
+  ],
+  "source_sha256": {
+    "optical_link/receiver.py": "091f6a68e22dc77d4a80f852734c80a49ddcf2ee74a553bc6a3caf946fd921b8",
+    "optical_link/protocol.py": "172f3e2446002920dda59268a1baf4748076451f75a38ac20fdd1b3ca5d44173"
+  }
+}

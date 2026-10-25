@@ -1,0 +1,144 @@
+{
+  "schema": 1,
+  "release": "data-v1.0.0",
+  "release_url": "https://github.com/Gani332/comp0228-sampling-coursework/releases/tag/data-v1.0.0",
+  "description": "Original, unmodified phone recordings. The notebook uses tracked caches; videos are optional.",
+  "physical_videos": 14,
+  "physical_packets": 30,
+  "groups": [
+    {
+      "id": "pilot",
+      "asset": "pilot.zip",
+      "url": "https://github.com/Gani332/comp0228-sampling-coursework/releases/download/data-v1.0.0/pilot.zip",
+      "bytes": 240173925,
+      "sha256": "2a2b0dd05b5fe42302c7ce1f8f8c56e46d842d05a178e22d496ce32508ea47bd",
+      "recordings": [
+        {
+          "id": "clean_hello",
+          "path": "data/recordings/pilot_2026-10-24/clean/HELLO_BIT.MOV",
+          "sha256": "c52b36728e3a00fc80edf81229342a88111eca83fc54c34d19721bac54a43c83",
+          "bytes": 36413195,
+          "packets": 1
+        },
+        {
+          "id": "clean_riyaadh",
+          "path": "data/recordings/pilot_2026-10-24/clean/RIYAADH_BIT.MOV",
+          "sha256": "e238d6063487498bcf17c4e4f0211307f448aa2664a7d47ebd651aabe689ce4a",
+          "bytes": 30139939,
+          "packets": 1
+        },
+        {
+          "id": "clean_manunited",
+          "path": "data/recordings/pilot_2026-10-24/clean/MANUNITED.MOV",
+          "sha256": "5d8f608dde84379d1a2cb7d1d7ef3771d639ee426d59efe5f65ee43a1a9f4667",
+          "bytes": 49874899,
+          "packets": 1
+        },
+        {
+          "id": "noisy_manunited",
+          "path": "data/recordings/pilot_2026-10-24/noisy/MANUNITED_NOISE.MOV",
+          "sha256": "cf5a74930ff1dbfa36e37f5f6d8db1219f97ea8e353d2ae39a922a4858660175",
+          "bytes": 34938001,
+          "packets": 1
+        },
+        {
+          "id": "noisy_adrian",
+          "path": "data/recordings/pilot_2026-10-24/noisy/ADRIAN_NOISE.MOV",
+          "sha256": "ff9602d9b1c5f0cfcdb83101889994ddccfe678420f20730cd90b93691bda2fc",
+          "bytes": 47484713,
+          "packets": 1
+        },
+        {
+          "id": "noisy_omar",
+          "path": "data/recordings/pilot_2026-10-24/noisy/OMAR_NOISE.MOV",
+          "sha256": "4f3b455e1c3f9d338b48b0b9c7c35f6e8433d8579c21dacb0d90326626adc03c",
+          "bytes": 41322052,
+          "packets": 1
+        }
+      ]
+    },
+    {
+      "id": "repetition",
+      "asset": "repetition.zip",
+      "url": "https://github.com/Gani332/comp0228-sampling-coursework/releases/download/data-v1.0.0/repetition.zip",
+      "bytes": 192367311,
+      "sha256": "cd69ff9297e2fce891dd17c66fe65534432a7dbad1a37aad7e223669fe48d682",
+      "recordings": [
+        {
+          "id": "T01",
+          "path": "data/experiments/repetition_comparison/attempts/T01_20261024T182809_576921Z_5cefe1/recording.mov",
+          "sha256": "ed9d2dbb0107d65a4b86b4ac5d8a9983a1dee38f473b3a767dfeaa142412ddbc",
+          "bytes": 100294603,
+          "packets": 1
+        },
+        {
+          "id": "T02",
+          "path": "data/experiments/repetition_comparison/attempts/T02_20261024T183755_777698Z_bded65/recording.mov",
+          "sha256": "41fab1dc6bb5765062532bab36b7903bc216fbee78d6d25654b03994b229da98",
+          "bytes": 92072150,
+          "packets": 1
+        }
+      ]
+    },
+    {
+      "id": "earlier-batches",
+      "asset": "earlier-batches.zip",
+      "url": "https://github.com/Gani332/comp0228-sampling-coursework/releases/download/data-v1.0.0/earlier-batches.zip",
+      "bytes": 965641053,
+      "sha256": "a3740836b579212b54338daa7718bd470f84b976c0105211615dee9ed4c91b24",
+      "recordings": [
+        {
+          "id": "B01",
+          "path": "data/experiments/final_capture_v1/batches/B01_20261024T194943_932683Z_e83519/recording.mov",
+          "sha256": "cf3a6308d1f4d39c79f2d10373e402acf3b0ab23a3232b0c43c7c3172134e12c",
+          "bytes": 280861117,
+          "packets": 3
+        },
+        {
+          "id": "B02",
+          "path": "data/experiments/final_capture_v1/batches/B02_20261024T195436_512439Z_1b7971/recording.mov",
+          "sha256": "9bc65461760310a132fd114638ebd693e984ab49e238c81352c378c41db805be",
+          "bytes": 367855973,
+          "packets": 4
+        },
+        {
+          "id": "B03",
+          "path": "data/experiments/final_capture_v1/batches/B03_20261024T200103_976319Z_a81915/recording.mov",
+          "sha256": "4004780fac4d8ff06df00fa89c9770d4a02587cb706a8594b27821d6c8720faf",
+          "bytes": 316923173,
+          "packets": 4
+        }
+      ]
+    },
+    {
+      "id": "guided-retakes",
+      "asset": "guided-retakes.zip",
+      "url": "https://github.com/Gani332/comp0228-sampling-coursework/releases/download/data-v1.0.0/guided-retakes.zip",
+      "bytes": 1021597121,
+      "sha256": "d51f6625502849a1678e609d9ccacfc2bad4be75147f75a48a1c85f67323ccb4",
+      "recordings": [
+        {
+          "id": "G01",
+          "path": "data/experiments/final_capture_v1/batches/G01_20261024T202951_074917Z_b8e93e/recording.mov",
+          "sha256": "69e19a772d72faf1901b3761abd276ce86350b5c7cde498d1e6836012211b52f",
+          "bytes": 332226270,
+          "packets": 3
+        },
+        {
+          "id": "G02",
+          "path": "data/experiments/final_capture_v1/batches/G02_20261024T203515_765883Z_6dda6d/recording.mov",
+          "sha256": "0349f0b9b25aad269190de48629f677956df443a907adac1ce5b78ad9985bae5",
+          "bytes": 371567068,
+          "packets": 4
+        },
+        {
+          "id": "G03",
+          "path": "data/experiments/final_capture_v1/batches/G03_20261024T204130_219077Z_29f775/recording.mov",
+          "sha256": "a2996cf42eda02a9f1ff6c3eaccd1aa4d6bfc64e33932071ee2955cc8c2c6c39",
+          "bytes": 317802993,
+          "packets": 4
+        }
+      ]
+    }
+  ]
+}
