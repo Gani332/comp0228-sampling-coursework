@@ -1,6 +1,6 @@
 # Selected uncoded optical-link pilot — 24 October 2026
 
-Six original phone recordings: three labelled clean and three with moving-light interference. Videos are copied byte-for-byte from the selected originals; hashes are recorded in manifest.json. The existing receiver was rerun on the saved brightness traces, and all six outcomes matched the saved receiver records. No thresholds were tuned for this export and no expected text was supplied to the decoder.
+Six original phone recordings: three labelled clean and three with moving-light interference. The frozen manifest records original capture hashes. Published movies are silent derivatives with identical encoded video and timestamps; `data/recordings_manifest.json` maps their new file hashes to the original captures. The existing receiver was rerun on the saved brightness traces, and all six outcomes matched the saved receiver records. No thresholds were tuned for this export and no expected text was supplied to the decoder.
 
 | Condition | Message | Received text | Payload errors | Payload BER | CRC | Channel time |
 |---|---|---|---:|---:|---|---:|
@@ -27,16 +27,16 @@ These are selected pilot examples, not an unbiased estimate of channel performan
 
 The transmitter record for each trial is the latest earlier log with the expected payload. Since all packets reused sequence 1, this identifies matching transmitted bits but cannot independently prove a unique physical send/record pairing. Video-to-trace links are verified by SHA-256.
 
-The current `Coursework.ipynb` includes these six pilot packets in the full receiver study. The original movies are optional release downloads: restore them with `python code/tools/get_recordings.py --group pilot` before using `--from-video`. Cached-trace evaluation needs no movies. From the repository root:
+The current `Coursework.ipynb` includes these six pilot packets in the full receiver study. The silent movies are optional release downloads: restore them with `python code/tools/get_recordings.py --group pilot` before using `--from-video`. Cached-trace evaluation needs no movies. From the repository root:
 
 ```sh
 .venv/bin/python code/tools/evaluate_pilot.py
 ```
 
-To also verify the original video hashes and re-extract each trace from the movies:
+To verify the original-or-silent provenance mapping and re-extract each trace from the movies:
 
 ```sh
 .venv/bin/python code/tools/evaluate_pilot.py --from-video
 ```
 
-The original movies retain their audio and container data; the optical decoder uses only the first video stream.
+Published movies have no audio or auxiliary tracks. The optical decoder uses the preserved video stream; original source hashes remain in the frozen manifest.

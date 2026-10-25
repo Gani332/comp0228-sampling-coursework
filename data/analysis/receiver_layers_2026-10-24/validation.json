@@ -11,7 +11,7 @@
     "nbformat": "5.9.2"
   },
   "hardware_transmissions": 0,
-  "publication": "Published with data-v1.0.0; raw videos distributed as optional release assets.",
+  "publication": "Analysis data is included in Git; optional silent recordings are published in data-v1.1.0. Frozen source-container identities and scientific results are unchanged.",
   "notebook_execution": {
     "status": "passed",
     "executed_code_cells": 9,

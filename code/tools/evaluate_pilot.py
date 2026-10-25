@@ -1,7 +1,7 @@
 """Reproduce the selected pilot's metrics without using sent data to decode.
 
 Default: use recorded brightness traces. --from-video additionally verifies
-movie hashes and re-extracts the measurements using each recorded ROI.
+original-or-silent provenance and re-extracts the measurements using each recorded ROI.
 """
 import argparse
 import hashlib
@@ -17,6 +17,7 @@ if str(ROOT) not in sys.path:
 from optical_link.protocol import GUARD_BITS, PREAMBLE, HEADER_BITS, to_bits
 from optical_link.receiver import decode_trace
 from optical_link.video import extract_trace
+from optical_link.recording_provenance import verify_recording
 
 
 def sha(path):
@@ -37,8 +38,7 @@ def main():
             raise ValueError(f"Trace hash differs: {trial['trial_id']}")
         if args.from_video:
             movie=DATA/trial['video']
-            if sha(movie)!=trial['video_sha256']:
-                raise ValueError(f"Movie hash differs: {trial['trial_id']}")
+            verify_recording(DATA,movie,trial['video_sha256'])
             t,y,_=extract_trace(movie,tuple(trial['roi_xywh']))
             stored=np.loadtxt(trace,delimiter=',',skiprows=1)
             np.testing.assert_allclose(t,stored[:,0],atol=1e-6,rtol=0)

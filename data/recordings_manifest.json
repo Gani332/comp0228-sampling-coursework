@@ -1,144 +1,173 @@
 {
   "schema": 1,
-  "release": "data-v1.0.0",
-  "release_url": "https://github.com/Gani332/comp0228-sampling-coursework/releases/tag/data-v1.0.0",
-  "description": "Original, unmodified phone recordings. The notebook uses tracked caches; videos are optional.",
+  "release": "data-v1.1.0",
+  "release_url": "https://github.com/Gani332/comp0228-sampling-coursework/releases/tag/data-v1.1.0",
+  "description": "Silent copies of the 14 phone recordings. Video packets and timestamps are unchanged; audio and auxiliary tracks are removed. Original container hashes remain in the frozen study manifests.",
   "physical_videos": 14,
   "physical_packets": 30,
   "groups": [
     {
       "id": "pilot",
       "asset": "pilot.zip",
-      "url": "https://github.com/Gani332/comp0228-sampling-coursework/releases/download/data-v1.0.0/pilot.zip",
-      "bytes": 240173925,
-      "sha256": "2a2b0dd05b5fe42302c7ce1f8f8c56e46d842d05a178e22d496ce32508ea47bd",
+      "url": "https://github.com/Gani332/comp0228-sampling-coursework/releases/download/data-v1.1.0/pilot.zip",
+      "bytes": 234684416,
+      "sha256": "a82df0abd17e621d8e96a0661b88b34bd3b3a6ae3ea43a889ffa60e9f8bc84a3",
       "recordings": [
         {
           "id": "clean_hello",
           "path": "data/recordings/pilot_2026-10-24/clean/HELLO_BIT.MOV",
-          "sha256": "c52b36728e3a00fc80edf81229342a88111eca83fc54c34d19721bac54a43c83",
-          "bytes": 36413195,
-          "packets": 1
+          "sha256": "2f46b12a170c4696040054fe12b26bfddf24ecd57ebc7a128433e6cbd9ed87f8",
+          "bytes": 35414166,
+          "packets": 1,
+          "original_sha256": "c52b36728e3a00fc80edf81229342a88111eca83fc54c34d19721bac54a43c83",
+          "representation": "silent-video-copy"
         },
         {
           "id": "clean_riyaadh",
           "path": "data/recordings/pilot_2026-10-24/clean/RIYAADH_BIT.MOV",
-          "sha256": "e238d6063487498bcf17c4e4f0211307f448aa2664a7d47ebd651aabe689ce4a",
-          "bytes": 30139939,
-          "packets": 1
+          "sha256": "6bd707dba6af4a5a9b434c4ae580cc6a34dab05540c68a0c04c8c82ffca15b92",
+          "bytes": 29166360,
+          "packets": 1,
+          "original_sha256": "e238d6063487498bcf17c4e4f0211307f448aa2664a7d47ebd651aabe689ce4a",
+          "representation": "silent-video-copy"
         },
         {
           "id": "clean_manunited",
           "path": "data/recordings/pilot_2026-10-24/clean/MANUNITED.MOV",
-          "sha256": "5d8f608dde84379d1a2cb7d1d7ef3771d639ee426d59efe5f65ee43a1a9f4667",
-          "bytes": 49874899,
-          "packets": 1
+          "sha256": "1b57f5c2bb003e96d09392584e21c2490c6abcf1ae76215c2283788d4a184311",
+          "bytes": 48702207,
+          "packets": 1,
+          "original_sha256": "5d8f608dde84379d1a2cb7d1d7ef3771d639ee426d59efe5f65ee43a1a9f4667",
+          "representation": "silent-video-copy"
         },
         {
           "id": "noisy_manunited",
           "path": "data/recordings/pilot_2026-10-24/noisy/MANUNITED_NOISE.MOV",
-          "sha256": "cf5a74930ff1dbfa36e37f5f6d8db1219f97ea8e353d2ae39a922a4858660175",
-          "bytes": 34938001,
-          "packets": 1
+          "sha256": "360782190cbe611199697cb41a89078b94499be89f855e302e04f242ef95caeb",
+          "bytes": 33819353,
+          "packets": 1,
+          "original_sha256": "cf5a74930ff1dbfa36e37f5f6d8db1219f97ea8e353d2ae39a922a4858660175",
+          "representation": "silent-video-copy"
         },
         {
           "id": "noisy_adrian",
           "path": "data/recordings/pilot_2026-10-24/noisy/ADRIAN_NOISE.MOV",
-          "sha256": "ff9602d9b1c5f0cfcdb83101889994ddccfe678420f20730cd90b93691bda2fc",
-          "bytes": 47484713,
-          "packets": 1
+          "sha256": "3623a096620e558bfd52a480d0923437d3167758aaff83e2c83f6af5b9ce6191",
+          "bytes": 46831109,
+          "packets": 1,
+          "original_sha256": "ff9602d9b1c5f0cfcdb83101889994ddccfe678420f20730cd90b93691bda2fc",
+          "representation": "silent-video-copy"
         },
         {
           "id": "noisy_omar",
           "path": "data/recordings/pilot_2026-10-24/noisy/OMAR_NOISE.MOV",
-          "sha256": "4f3b455e1c3f9d338b48b0b9c7c35f6e8433d8579c21dacb0d90326626adc03c",
-          "bytes": 41322052,
-          "packets": 1
+          "sha256": "ae237ef1f40685810ba7953c7a934644d5c32821fc06a489c1deaf79102c995f",
+          "bytes": 40750095,
+          "packets": 1,
+          "original_sha256": "4f3b455e1c3f9d338b48b0b9c7c35f6e8433d8579c21dacb0d90326626adc03c",
+          "representation": "silent-video-copy"
         }
       ]
     },
     {
       "id": "repetition",
       "asset": "repetition.zip",
-      "url": "https://github.com/Gani332/comp0228-sampling-coursework/releases/download/data-v1.0.0/repetition.zip",
-      "bytes": 192367311,
-      "sha256": "cd69ff9297e2fce891dd17c66fe65534432a7dbad1a37aad7e223669fe48d682",
+      "url": "https://github.com/Gani332/comp0228-sampling-coursework/releases/download/data-v1.1.0/repetition.zip",
+      "bytes": 189706112,
+      "sha256": "d166902439bbd121a1a70d1091c7807e67b1b77734547ccd211a5fcec67f2695",
       "recordings": [
         {
           "id": "T01",
           "path": "data/experiments/repetition_comparison/attempts/T01_20261024T182809_576921Z_5cefe1/recording.mov",
-          "sha256": "ed9d2dbb0107d65a4b86b4ac5d8a9983a1dee38f473b3a767dfeaa142412ddbc",
-          "bytes": 100294603,
-          "packets": 1
+          "sha256": "2026169ee212ddb94af768c675b5fb5b26356257b4745b023b9d3cbe1e716a52",
+          "bytes": 98886685,
+          "packets": 1,
+          "original_sha256": "ed9d2dbb0107d65a4b86b4ac5d8a9983a1dee38f473b3a767dfeaa142412ddbc",
+          "representation": "silent-video-copy"
         },
         {
           "id": "T02",
           "path": "data/experiments/repetition_comparison/attempts/T02_20261024T183755_777698Z_bded65/recording.mov",
-          "sha256": "41fab1dc6bb5765062532bab36b7903bc216fbee78d6d25654b03994b229da98",
-          "bytes": 92072150,
-          "packets": 1
+          "sha256": "869314bf46f319bc442684ab01b5399abccb4c6e9cab245293af08f11bd16a94",
+          "bytes": 90818869,
+          "packets": 1,
+          "original_sha256": "41fab1dc6bb5765062532bab36b7903bc216fbee78d6d25654b03994b229da98",
+          "representation": "silent-video-copy"
         }
       ]
     },
     {
       "id": "earlier-batches",
       "asset": "earlier-batches.zip",
-      "url": "https://github.com/Gani332/comp0228-sampling-coursework/releases/download/data-v1.0.0/earlier-batches.zip",
-      "bytes": 965641053,
-      "sha256": "a3740836b579212b54338daa7718bd470f84b976c0105211615dee9ed4c91b24",
+      "url": "https://github.com/Gani332/comp0228-sampling-coursework/releases/download/data-v1.1.0/earlier-batches.zip",
+      "bytes": 953806494,
+      "sha256": "00ecc90ecda9a91af864afcbe20fcf83f744150b48ca7bbb04e1de35b63dc097",
       "recordings": [
         {
           "id": "B01",
           "path": "data/experiments/final_capture_v1/batches/B01_20261024T194943_932683Z_e83519/recording.mov",
-          "sha256": "cf3a6308d1f4d39c79f2d10373e402acf3b0ab23a3232b0c43c7c3172134e12c",
-          "bytes": 280861117,
-          "packets": 3
+          "sha256": "d3a98634ecc7038e41ec5647c3414148f3cb34365362093efb4810d20a5c8db2",
+          "bytes": 277124348,
+          "packets": 3,
+          "original_sha256": "cf3a6308d1f4d39c79f2d10373e402acf3b0ab23a3232b0c43c7c3172134e12c",
+          "representation": "silent-video-copy"
         },
         {
           "id": "B02",
           "path": "data/experiments/final_capture_v1/batches/B02_20261024T195436_512439Z_1b7971/recording.mov",
-          "sha256": "9bc65461760310a132fd114638ebd693e984ab49e238c81352c378c41db805be",
-          "bytes": 367855973,
-          "packets": 4
+          "sha256": "3dded6534fbfb5e3abfd7018d0507c113afc49e77deb01e68be5a49fd2b91c74",
+          "bytes": 363479596,
+          "packets": 4,
+          "original_sha256": "9bc65461760310a132fd114638ebd693e984ab49e238c81352c378c41db805be",
+          "representation": "silent-video-copy"
         },
         {
           "id": "B03",
           "path": "data/experiments/final_capture_v1/batches/B03_20261024T200103_976319Z_a81915/recording.mov",
-          "sha256": "4004780fac4d8ff06df00fa89c9770d4a02587cb706a8594b27821d6c8720faf",
-          "bytes": 316923173,
-          "packets": 4
+          "sha256": "dfebfed75c3647c53ade071d04c786b7ef80fa9decf81aa0ff61535122616633",
+          "bytes": 313201760,
+          "packets": 4,
+          "original_sha256": "4004780fac4d8ff06df00fa89c9770d4a02587cb706a8594b27821d6c8720faf",
+          "representation": "silent-video-copy"
         }
       ]
     },
     {
       "id": "guided-retakes",
       "asset": "guided-retakes.zip",
-      "url": "https://github.com/Gani332/comp0228-sampling-coursework/releases/download/data-v1.0.0/guided-retakes.zip",
-      "bytes": 1021597121,
-      "sha256": "d51f6625502849a1678e609d9ccacfc2bad4be75147f75a48a1c85f67323ccb4",
+      "url": "https://github.com/Gani332/comp0228-sampling-coursework/releases/download/data-v1.1.0/guided-retakes.zip",
+      "bytes": 1009657029,
+      "sha256": "0eb98413e04d360f4bdf9e1855e4d63719c3dcad8d3572ba9d1b2397770abee0",
       "recordings": [
         {
           "id": "G01",
           "path": "data/experiments/final_capture_v1/batches/G01_20261024T202951_074917Z_b8e93e/recording.mov",
-          "sha256": "69e19a772d72faf1901b3761abd276ce86350b5c7cde498d1e6836012211b52f",
-          "bytes": 332226270,
-          "packets": 3
+          "sha256": "1864e6b2be1ed225f0b59e6153ab88e2cc7f2814a2ab5e2c80c17ca623fa59ea",
+          "bytes": 328360421,
+          "packets": 3,
+          "original_sha256": "69e19a772d72faf1901b3761abd276ce86350b5c7cde498d1e6836012211b52f",
+          "representation": "silent-video-copy"
         },
         {
           "id": "G02",
           "path": "data/experiments/final_capture_v1/batches/G02_20261024T203515_765883Z_6dda6d/recording.mov",
-          "sha256": "0349f0b9b25aad269190de48629f677956df443a907adac1ce5b78ad9985bae5",
-          "bytes": 371567068,
-          "packets": 4
+          "sha256": "e4ed2330ae88a70c1b7101e3666a7b0b158d2168d84bf72ef274edbe6a01e3da",
+          "bytes": 367224105,
+          "packets": 4,
+          "original_sha256": "0349f0b9b25aad269190de48629f677956df443a907adac1ce5b78ad9985bae5",
+          "representation": "silent-video-copy"
         },
         {
           "id": "G03",
           "path": "data/experiments/final_capture_v1/batches/G03_20261024T204130_219077Z_29f775/recording.mov",
-          "sha256": "a2996cf42eda02a9f1ff6c3eaccd1aa4d6bfc64e33932071ee2955cc8c2c6c39",
-          "bytes": 317802993,
-          "packets": 4
+          "sha256": "65feedcb8c83ce7faa2e7236e17cec748e469070122e6c07acfbfabc6e4f24c7",
+          "bytes": 314071713,
+          "packets": 4,
+          "original_sha256": "a2996cf42eda02a9f1ff6c3eaccd1aa4d6bfc64e33932071ee2955cc8c2c6c39",
+          "representation": "silent-video-copy"
         }
       ]
     }
-  ]
+  ],
+  "verification": "data/audio_removal_verification.json"
 }

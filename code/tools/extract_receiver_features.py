@@ -7,9 +7,15 @@ import argparse
 import concurrent.futures
 import hashlib
 import json
+import sys
 from pathlib import Path
 import cv2
 import numpy as np
+
+CODE_ROOT = Path(__file__).resolve().parents[1]
+if str(CODE_ROOT) not in sys.path:
+    sys.path.insert(0, str(CODE_ROOT))
+from optical_link.recording_provenance import verify_recording
 
 
 def digest(path):
@@ -27,7 +33,7 @@ def extract(root,study,video):
         print('Verified cache:',video['id'],flush=True);return
     if metadata.exists():raise ValueError('Orphan metadata exists; preserve and investigate.')
     source=root/video['video']
-    if digest(source)!=video['sha256']:raise ValueError('Source video changed: '+video['id'])
+    provenance=verify_recording(root,source,video['sha256'])
     if video['trace_format']=='csv':t,original=np.loadtxt(root/video['trace'],delimiter=',',skiprows=1).T
     else:
         with np.load(root/video['trace']) as z:t,original=z['times'],z['brightness']
@@ -66,6 +72,9 @@ def extract(root,study,video):
           'extraction':'OpenCV BGR2GRAY, stored pixels, fixed geometry, one pass',
           'max_original_trace_difference':float(np.max(abs(np.array(reextracted)-original))),
           'maximum_frame_gap_seconds':float(max(np.diff(t)))}
+    # video_sha256 remains the frozen capture identity; provenance also records
+    # the actual container read (which differs after lossless audio removal).
+    meta.update(provenance)
     metadata.write_text(json.dumps(meta,indent=2)+'\n')
     print('Saved:',video['id'],flush=True)
 

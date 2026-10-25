@@ -1,4 +1,4 @@
-"""Restore optional original videos from the pinned dataset release.
+"""Restore optional silent videos from the pinned dataset release.
 
 The main notebook runs from the tracked feature caches without these videos.
 Only paths and SHA-256 digests listed in data/recordings_manifest.json are used.
@@ -103,7 +103,7 @@ def main():
     parser.add_argument('--list', action='store_true', help='List optional video groups; do not download.')
     parser.add_argument('--group', nargs='+', help='Restore selected group IDs; default: all four groups.')
     parser.add_argument('--from-dir', type=Path, help='Use already downloaded release ZIPs instead of the network.')
-    parser.add_argument('--verify-only', action='store_true', help='Check existing original videos without downloading.')
+    parser.add_argument('--verify-only', action='store_true', help='Check existing silent videos without downloading.')
     args = parser.parse_args()
     manifest = json.loads((ROOT / 'data/recordings_manifest.json').read_text())
     groups = manifest['groups']
@@ -122,7 +122,7 @@ def main():
             continue
         absent = [x for x in group['recordings'] if not verified_existing(ROOT, x)]
         if not absent:
-            print(group['id'] + ': all original videos already match their hashes.')
+            print(group['id'] + ': all silent videos already match their hashes.')
             continue
         if args.verify_only:
             missing.extend(x['path'] for x in absent)
@@ -137,7 +137,7 @@ def main():
                 count = restore_archive(ROOT, archive, group)
         print(f"{group['id']}: {count} restored; SHA-256 checks passed.", flush=True)
     if missing:
-        raise SystemExit('Missing original videos:\n' + '\n'.join(missing))
+        raise SystemExit('Missing silent videos:\n' + '\n'.join(missing))
 
 
 if __name__ == '__main__':

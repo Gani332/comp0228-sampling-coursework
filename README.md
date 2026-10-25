@@ -12,7 +12,7 @@ README.md         Setup and reproduction instructions
 
 ## Start here
 
-Use a shallow clone to avoid downloading the old pilot-video Git history:
+Clone the repository (a shallow clone keeps the download compact):
 
 ```sh
 git clone --depth 1 https://github.com/Gani332/comp0228-sampling-coursework.git
@@ -39,9 +39,9 @@ The [receiver manifest](data/analysis/receiver_layers_2026-10-24/manifest.json) 
 
 **Two historical label exceptions:** the noisy ADRIAN and OMAR pilot logs retain `conditions.interference: "none"` from the original capture form. Their `dataset_condition: "noisy"` and `condition_note` record the correct interpretation. Folder, manifest and analysis labels agree that these are noisy. Pilot sequence numbers were reused, so matching transmitted bits do not independently prove a unique historical send/record pairing. See the [pilot documentation](data/recordings/pilot_2026-10-24/README.md).
 
-## Optional original recordings
+## Optional silent recordings
 
-Original videos are distributed in the [data-v1.0.0 release](https://github.com/Gani332/comp0228-sampling-coursework/releases/tag/data-v1.0.0), **outside Git**. Four ZIPs group the pilot, repetition, earlier-batch and guided-retake footage. Each is below 1 GiB; together they are about 2.3 GiB. Their contents are the unmodified original files, including their original audio and container metadata. No video recompression changes the evidence.
+Silent videos are distributed in the [data-v1.1.0 release](https://github.com/Gani332/comp0228-sampling-coursework/releases/tag/data-v1.1.0), **outside Git**. Four ZIPs group the pilot, repetition, earlier-batch and guided-retake footage. Each is below 1 GiB; together they are about 2.2 GiB. All 14 files contain only the video track. Audio and auxiliary tracks have been removed; encoded video packets, presentation/decode timestamps, and HDR/display parameters are unchanged. No video was re-encoded.
 
 ```sh
 # List optional downloads without fetching anything:
@@ -50,16 +50,20 @@ Original videos are distributed in the [data-v1.0.0 release](https://github.com/
 # Download only the guided retakes, restoring their exact data/ paths:
 .venv/bin/python code/tools/get_recordings.py --group guided-retakes
 
-# Or restore all 14 original videos:
+# Or restore all 14 silent videos:
 .venv/bin/python code/tools/get_recordings.py
 
-# Check restored originals without downloading:
+# Check restored silent videos without downloading:
 .venv/bin/python code/tools/get_recordings.py --verify-only
 ```
 
 The tool verifies both archive and individual-video SHA-256 hashes, skips matching files and refuses to overwrite a different existing recording. Downloads use temporary storage and the ZIP is removed after successful extraction. If you downloaded ZIPs through the browser, add `--from-dir /path/to/downloads` to restore them without another network transfer. Exact sizes and paths are in [recordings_manifest.json](data/recordings_manifest.json); the release includes `SHA256SUMS` for manual checks.
 
-The current Git tree has no videos and approximately 33 MiB of analysis data. Old pilot movies remain in earlier Git commits; history has not been rewritten. The shallow-clone command above avoids those old blobs. Backups, obsolete notebooks, local environments and notebook outputs are excluded.
+The frozen study manifests retain the original capture-container hashes. The download manifest records both `original_sha256` and the silent file's `sha256`; [audio_removal_verification.json](data/audio_removal_verification.json) records the packet/timestamp checks. Raw-video extraction verifies this mapping and records the actual input-container hash. Existing features, receiver settings and numerical results are unchanged.
+
+Git history has been rewritten to remove the six pilot movies from all reachable commits, and the old audio-bearing release was deleted. Anyone with an earlier clone should save their own work separately and make a fresh clone instead of merging the old history. Earlier downloads may still contain audio; discard them and use the new release. The downloader deliberately refuses to overwrite old files with different hashes.
+
+The Git tree has no videos and approximately 33 MiB of analysis data. Backups, obsolete notebooks, local environments and notebook outputs are excluded.
 
 ## Verify and reproduce
 
