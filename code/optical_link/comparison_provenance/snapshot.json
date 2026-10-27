@@ -1,0 +1,5 @@
+{
+  "source": "code/optical_link/receiver_layers.py",
+  "sha256": "24b0e0ec94f7b3123f00e749553be40e625826a6d8f66ebaa57b9283acfdc3b4",
+  "attribution": "Unmodified receiver module preserved before comparison-runner implementation. Historical strict checker remains unchanged."
+}

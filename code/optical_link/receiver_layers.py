@@ -120,3 +120,117 @@ effects; it does not claim to rescue packets whose original preamble is lost.
     except ValueError as exc:
         result['failure_reason'] = str(exc)
     return result
+
+
+# Experimental additions. Historical METHODS and decode_features stay unchanged.
+COMPARISON_METHODS = METHODS + ('ewma', 'kalman')
+FILTER_DEFAULTS = {'tau_seconds': .025, 'q_per_second': 160000., 'measurement_variance': 400.}
+
+
+def _temporal_input(times, brightness):
+    t, y = np.asarray(times, float), np.asarray(brightness, float)
+    if t.ndim != 1 or y.shape != t.shape or not len(t):
+        raise ValueError('Need matching nonempty brightness and time vectors.')
+    if not np.isfinite(t).all() or not np.isfinite(y).all() or np.any(np.diff(t) <= 0):
+        raise ValueError('Finite samples and strictly increasing timestamps required.')
+    return t, y
+
+
+def ewma(times, brightness, *, tau_seconds=.025):
+    """Causal continuous-time EWMA. Smaller tau follows LCD edges faster."""
+    t, y = _temporal_input(times, brightness)
+    if not np.isfinite(tau_seconds) or tau_seconds <= 0:
+        raise ValueError('tau_seconds must be finite and positive.')
+    out = np.empty_like(y)
+    out[0] = y[0]
+    for i in range(1, len(t)):
+        a = -np.expm1(-(t[i]-t[i-1])/tau_seconds)
+        out[i] = a*y[i] + (1-a)*out[i-1]
+    return out
+
+
+def kalman(times, brightness, *, q_per_second=160000., measurement_variance=400., initial_variance=None):
+    """Scalar causal random walk; q is brightness²/s and R brightness²."""
+    t, y = _temporal_input(times, brightness)
+    r = measurement_variance
+    p = r if initial_variance is None else initial_variance
+    if not all(np.isfinite(v) for v in (q_per_second, r, p)) or q_per_second < 0 or r <= 0 or p <= 0:
+        raise ValueError('Require finite q >= 0, R > 0 and P0 > 0.')
+    out = np.empty_like(y)
+    out[0] = y[0]
+    for i in range(1, len(t)):
+        predicted = p + q_per_second*(t[i]-t[i-1])
+        gain = predicted/(predicted+r)
+        out[i] = out[i-1] + gain*(y[i]-out[i-1])
+        p = (1-gain)*predicted
+    return out
+
+
+def comparison_signal(t, features, method, sync, *, filter_parameters=None):
+    if method not in COMPARISON_METHODS:
+        raise ValueError('Unknown comparison method.')
+    if method in METHODS:
+        return processed_signal(t, features, method, sync, quantile=.25)
+    config = dict(FILTER_DEFAULTS, **(filter_parameters or {}))
+    if set(config) != set(FILTER_DEFAULTS):
+        raise ValueError('Unknown temporal filter parameter.')
+    signal = (ewma(t, features['patch_mean'], tau_seconds=config['tau_seconds'])
+              if method == 'ewma' else kalman(t, features['patch_mean'],
+                  q_per_second=config['q_per_second'], measurement_variance=config['measurement_variance']))
+    return signal, {'method': method, 'input_feature': 'patch_mean', 'parameters': config,
+                    'calibration': 'public preamble only', 'timing': 'shared original-ROI optical clock'}
+
+
+def decode_comparison(times, features, method='original', *, bit_ms=200, depth=1, filter_parameters=None, acquisition_end_seconds=None):
+    """Experimental depth-aware decoding; receives no payload or expected bits."""
+    from .coding_experiments import deinterleave
+    if method not in COMPARISON_METHODS or depth not in (1, 8):
+        raise ValueError('Unsupported method or interleaving depth.')
+    # Validate config before channel-failure handling.
+    config = dict(FILTER_DEFAULTS, **(filter_parameters or {}))
+    if set(config) != set(FILTER_DEFAULTS):
+        raise ValueError('Unknown temporal filter parameter.')
+    ewma([0], [0], tau_seconds=config['tau_seconds'])
+    kalman([0], [0], q_per_second=config['q_per_second'], measurement_variance=config['measurement_variance'])
+    if acquisition_end_seconds is not None and not np.isfinite(acquisition_end_seconds):
+        raise ValueError('Acquisition window must be finite.')
+    if method in METHODS and depth == 1 and acquisition_end_seconds is None:
+        return decode_features(times, features, method, bit_ms, quantile=.25)
+    result = {'failure_stage': 'acquisition'}
+    try:
+        t, original = _trace(times, features['original'])
+        search = np.ones(len(t), bool) if acquisition_end_seconds is None else t < acquisition_end_seconds
+        sync = find_preamble(t[search], original[search], bit_ms)
+        result.update(sync)
+        result['failure_stage'] = 'calibration'
+        signal, notes = comparison_signal(t, features, method, sync, filter_parameters=config)
+        samples = preamble_samples(t, signal, sync).ravel()
+        low, high = (float(np.median(samples[PREAMBLE == bit])) for bit in (0, 1))
+        if high-low < 20:
+            raise ValueError('Processed preamble contrast is too low.')
+        threshold = (low+high)/2
+        errors = int(np.count_nonzero((samples > threshold) != PREAMBLE))
+        if errors > 1:
+            raise ValueError('Processed public preamble is damaged.')
+        result.update(threshold=threshold, dark_level=low, bright_level=high,
+                      preamble_bit_errors=errors, frontend=notes)
+        start, period = sync['start_seconds'], sync['period_seconds']
+        result['failure_stage'] = 'header'
+        first = len(PREAMBLE)
+        values, _ = sample_slots(t, signal, start, period, range(first, first+HEADER_BITS))
+        header = parse_header((values > threshold).astype(np.uint8))
+        result.update({k: header[k] for k in ('codec', 'sequence', 'payload_bytes')})
+        result['failure_stage'] = 'body_sampling'
+        first += HEADER_BITS
+        n = body_length(header['payload_bytes'], header['codec'])
+        values, counts = sample_slots(t, signal, start, period, range(first, first+n))
+        wire = (values > threshold).astype(np.uint8)
+        body = deinterleave(wire, depth)
+        result.update(body_bits=body, wire_body_bits=wire, body_sample_values=values,
+                      body_sample_counts=counts, body_sample_times=start+(np.arange(first,first+n)+.5)*period,
+                      failure_stage='fec')
+        result.update(unpack_body(header, body))
+        result.update(failure_stage=None, text=result['payload'].decode('utf8', errors='replace'))
+    except ValueError as exc:
+        result['failure_reason'] = str(exc)
+    return result
