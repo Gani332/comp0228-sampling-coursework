@@ -1,0 +1,223 @@
+{
+  "recording_id": "G02",
+  "safe_recording_slug": "G02",
+  "mode": "both",
+  "seed": 20261027,
+  "trials": 200,
+  "created_utc": "20261027T110143_801008Z",
+  "input_kind": "verified feature cache",
+  "cohort": "guided_batch_evaluation",
+  "evidence": "Retrospective physical replay; modeled runs are in-sample sensitivity analysis.",
+  "filter_parameters": {
+    "tau_seconds": 0.025,
+    "q_per_second": 160000.0,
+    "measurement_variance": 400.0
+  },
+  "temporal_input_feature": "patch_mean",
+  "tuning_source_ids": [],
+  "filter_selection": "Fixed conservative defaults: tau=1/8 slot; q/R=400 per second. No evaluation tuning.",
+  "source_hashes": {
+    "code/optical_link/comparison_runner.py": "01f4a01c2232ed1cfb43c44687626f262b26197c23ba27fdfce0d58647e5aa0a",
+    "code/optical_link/recording_model.py": "212d7282d10cb0bf7269026247abae12d0c0607067cd3f04bf9a022951f57034",
+    "code/optical_link/receiver_layers.py": "a971b7ceb4a379cba437c308e1a66f66d56f70d20c5098579516e6e498d823fd",
+    "code/optical_link/protocol.py": "172f3e2446002920dda59268a1baf4748076451f75a38ac20fdd1b3ca5d44173",
+    "code/optical_link/receiver.py": "091f6a68e22dc77d4a80f852734c80a49ddcf2ee74a553bc6a3caf946fd921b8",
+    "code/optical_link/baseline_analysis.py": "2d4ee3ea85a3786560b6d23da5f107f46c1cc5e818cf23fdf29a89d89ada7b3b",
+    "code/optical_link/coding_experiments.py": "d4c811c79f263f0ffcd462b99fdea0ed5cb80ea1f02098d5afaa9276a5e3276b",
+    "code/tools/run_recording_comparison.py": "c16fcb42a7c81aa8287bce27c2b397756ee85c7142def58bd2487fefffae016d"
+  },
+  "snapshot_sha256": "24b0e0ec94f7b3123f00e749553be40e625826a6d8f66ebaa57b9283acfdc3b4",
+  "front_end_parameters": {
+    "reference_alpha": 1.0,
+    "spatial_quantile": 0.25,
+    "source": "historical frozen_config.json"
+  },
+  "python": "3.9.6 (default, May 22 2026, 11:13:45) \n[Clang 21.0.0 (clang-2100.1.1.101)]",
+  "platform": "macOS-26.6-arm64-arm-64bit",
+  "manifest_sha256": "198bef01b289f773d995175b4eeea69e78ec5dfb190d1d7f39e1c8e59d013fd6",
+  "cache": {
+    "video_id": "G02",
+    "video_sha256": "0349f0b9b25aad269190de48629f677956df443a907adac1ce5b78ad9985bae5",
+    "frames": 7522,
+    "feature_sha256": "52c4de000719e17b2a3de227367d5f4b985c6d7442d31c2ed877ab3eaddf77db",
+    "original_roi": [
+      900,
+      260,
+      160,
+      120
+    ],
+    "study_roi": [
+      820,
+      210,
+      330,
+      195
+    ],
+    "reference_rois": [
+      [
+        680,
+        260,
+        70,
+        120
+      ],
+      [
+        1230,
+        260,
+        70,
+        120
+      ],
+      [
+        900,
+        130,
+        200,
+        30
+      ],
+      [
+        900,
+        465,
+        200,
+        30
+      ]
+    ],
+    "grid": [
+      5,
+      5
+    ],
+    "anchor": "archived original-ROI brightness and real frame timestamps",
+    "extraction": "OpenCV BGR2GRAY, stored pixel orientation, fixed rectangles; one decode pass per video",
+    "max_original_trace_difference": 0.0,
+    "maximum_frame_gap_seconds": 0.0350000000000108
+  },
+  "transmission_log_hashes": {
+    "G02_1": "826a9c69d355e4d256ef4f5b9fecf35407088ccb1e6b8fe58fe7b30e9f315a26",
+    "G02_2": "1272e184bf773590bee7d7f655d01c6ed5b1936663e40611a3c1f21bf7350e55",
+    "G02_3": "f61c1fd1bad64d3131e92fed6f33adfd78af07732e965f48e307fbc871d64fa6",
+    "G02_4": "b3cfa3c90f8ea582581f74f6cf10e6bfe20bfbeb4ab38c13d11dc228ce9963f1"
+  },
+  "frozen_source": "Historical strict source checker remains unchanged and will reject modified receiver_layers.py. Original bytes/hash in code/optical_link/comparison_provenance; use original revision for exact frozen reruns.",
+  "csv_encoding": "UTF-8; empty numeric/boolean cells are null; booleans are True/False.",
+  "packages": {
+    "numpy": "2.0.2",
+    "matplotlib": "3.9.4",
+    "pandas": "2.3.3"
+  },
+  "model": {
+    "model": "empirical joint multichannel moving-block residual replay",
+    "scope": "in-sample sensitivity analysis; not held-out validation",
+    "block_seconds": 1.6,
+    "blocks": 6434,
+    "source_windows": [
+      {
+        "packet_id": "G02_1",
+        "frames_in_window": 1212,
+        "excluded": false,
+        "residual_frames": 1152,
+        "excluded_outside_packet_frames": 60,
+        "blocks": 1105,
+        "recovered_period_seconds": 0.20004670009774178
+      },
+      {
+        "packet_id": "G02_2",
+        "frames_in_window": 1788,
+        "excluded": false,
+        "residual_frames": 1728,
+        "excluded_outside_packet_frames": 60,
+        "blocks": 1681,
+        "recovered_period_seconds": 0.19999597231993435
+      },
+      {
+        "packet_id": "G02_3",
+        "frames_in_window": 1308,
+        "excluded": false,
+        "residual_frames": 1248,
+        "excluded_outside_packet_frames": 60,
+        "blocks": 1201,
+        "recovered_period_seconds": 0.20005923771363437
+      },
+      {
+        "packet_id": "G02_4",
+        "frames_in_window": 2554,
+        "excluded": false,
+        "residual_frames": 2494,
+        "excluded_outside_packet_frames": 60,
+        "blocks": 2447,
+        "recovered_period_seconds": 0.19991781537241035
+      }
+    ],
+    "median_frame_gap_seconds": 0.03333333333333144,
+    "timestamp_policy": "Retain within-block frame gaps; join blocks using median source gap; no interpolation.",
+    "level_fit": "Middle-half public preamble slot medians; constant reference centres.",
+    "prefix": "Clean synthetic guards, preamble and header; optical acquisition search restricted to this public generated prefix; causal filters burn in on prefix.",
+    "sensor_rule": "Synthetic features clipped to [0,255]; measured data unchanged.",
+    "limitations": "Instantaneous ideal LCD edges; residuals retain source transition artifacts. No faithful exposure/rolling-shutter model.",
+    "selection": "Pool all usable packet windows without filtering by decode outcome.",
+    "low_levels": [
+      18.726236979166668,
+      20.83283993783994,
+      11.765345765345765,
+      11.278943278943279,
+      15.599941724941726,
+      23.43502331002331,
+      31.884809634809635,
+      13.85916860916861,
+      12.979020979020978,
+      17.882672882672885,
+      24.81177156177156,
+      33.08993783993784,
+      16.313908313908314,
+      15.238150738150738,
+      19.18385780885781,
+      26.037490287490286,
+      33.79108391608392,
+      16.124125874125873,
+      14.779526029526028,
+      18.097319347319345,
+      25.370920745920746,
+      33.216588966588965,
+      16.437839937839936,
+      15.477369852369852,
+      17.683177933177934,
+      24.421328671328673,
+      32.300407925407924,
+      34.70848214285714,
+      47.79336309523809,
+      25.710208333333334,
+      31.59179166666667
+    ],
+    "high_levels": [
+      202.0545703125,
+      200.37058663558665,
+      206.1594794094794,
+      206.88879176379174,
+      205.0472027972028,
+      201.7454351204351,
+      195.28875291375292,
+      206.2131895881896,
+      206.4017094017094,
+      204.20940170940173,
+      200.4949494949495,
+      193.9560023310023,
+      205.34722222222223,
+      205.00747863247864,
+      202.88432400932402,
+      199.0591491841492,
+      192.09926184926184,
+      203.97727272727272,
+      203.55050505050505,
+      200.93278943278943,
+      196.40044677544677,
+      190.06565656565658,
+      202.52350427350427,
+      201.34129759129758,
+      198.1698717948718,
+      193.56954156954157,
+      187.5812937062937,
+      34.70848214285714,
+      47.79336309523809,
+      25.710208333333334,
+      31.59179166666667
+    ],
+    "fixed_payload_source_packet": "G02_1",
+    "payload_mode": "fixed recorded payload",
+    "sequence": 81
+  }
+}

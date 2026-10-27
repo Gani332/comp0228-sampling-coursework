@@ -32,7 +32,7 @@ def main(argv=None):
         recording = video['id']
         if names.count(folder) > 1:
             folder += '_'+hashlib.sha256(recording.encode()).hexdigest()[:8]
-        output = ROOT/'playground/batch_results'/folder
+        output = ROOT/'data/comparison/batch_results'/folder
         command = ['--recording', recording, '--output', str(output),
                    '--mode', args.mode, '--seed', str(args.seed), '--trials', str(args.trials)]
         if args.random_payload:
@@ -49,7 +49,7 @@ def main(argv=None):
     print(f'Total batch runtime: {perf_counter()-started:.2f} seconds', flush=True)
     if failures:
         parser.exit(1, 'Failed recordings: '+', '.join(failures)+'\n')
-    print(f'Batch complete: {len(recordings)} recordings saved under {ROOT/"playground/batch_results"}', flush=True)
+    print(f'Batch complete: {len(recordings)} recordings saved under {ROOT/"data/comparison/batch_results"}', flush=True)
 
 
 if __name__ == '__main__':

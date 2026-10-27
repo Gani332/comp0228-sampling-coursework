@@ -276,7 +276,7 @@ def run(root, *, recording='G02', mode='both', output=None, seed=20261027, trial
     video, slug = resolve_recording(root, recording)
     windows, cache = load_cache(root, video)
     stamp = datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S_%fZ')
-    base = root/'playground'/'comparison_results'/slug if output is None else root/Path(output)
+    base = root/'data'/'comparison'/'comparison_results'/slug if output is None else root/Path(output)
     out = base/stamp
     out.mkdir(parents=True, exist_ok=False)
     sources = [Path(__file__), Path(__file__).with_name('recording_model.py'),

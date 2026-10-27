@@ -1,0 +1,103 @@
+{
+  "recording_id": "G02",
+  "safe_recording_slug": "G02",
+  "mode": "physical",
+  "seed": 20261027,
+  "trials": 1,
+  "created_utc": "20261027T093649_178739Z",
+  "input_kind": "verified feature cache",
+  "cohort": "guided_batch_evaluation",
+  "evidence": "Retrospective physical replay; modeled runs are in-sample sensitivity analysis.",
+  "filter_parameters": {
+    "tau_seconds": 0.025,
+    "q_per_second": 160000.0,
+    "measurement_variance": 400.0
+  },
+  "temporal_input_feature": "patch_mean",
+  "tuning_source_ids": [],
+  "filter_selection": "Fixed conservative defaults: tau=1/8 slot; q/R=400 per second. No evaluation tuning.",
+  "source_hashes": {
+    "code/optical_link/comparison_runner.py": "01f4a01c2232ed1cfb43c44687626f262b26197c23ba27fdfce0d58647e5aa0a",
+    "code/optical_link/recording_model.py": "212d7282d10cb0bf7269026247abae12d0c0607067cd3f04bf9a022951f57034",
+    "code/optical_link/receiver_layers.py": "a971b7ceb4a379cba437c308e1a66f66d56f70d20c5098579516e6e498d823fd",
+    "code/optical_link/protocol.py": "172f3e2446002920dda59268a1baf4748076451f75a38ac20fdd1b3ca5d44173",
+    "code/optical_link/receiver.py": "091f6a68e22dc77d4a80f852734c80a49ddcf2ee74a553bc6a3caf946fd921b8",
+    "code/optical_link/baseline_analysis.py": "2d4ee3ea85a3786560b6d23da5f107f46c1cc5e818cf23fdf29a89d89ada7b3b",
+    "code/optical_link/coding_experiments.py": "d4c811c79f263f0ffcd462b99fdea0ed5cb80ea1f02098d5afaa9276a5e3276b",
+    "code/tools/run_recording_comparison.py": "eb171417989d610492ae4410b3ff9fa952750517869b28e22c659c01597ce9e2"
+  },
+  "snapshot_sha256": "24b0e0ec94f7b3123f00e749553be40e625826a6d8f66ebaa57b9283acfdc3b4",
+  "front_end_parameters": {
+    "reference_alpha": 1.0,
+    "spatial_quantile": 0.25,
+    "source": "historical frozen_config.json"
+  },
+  "python": "3.9.6 (default, May 22 2026, 11:13:45) \n[Clang 21.0.0 (clang-2100.1.1.101)]",
+  "platform": "macOS-26.6-arm64-arm-64bit",
+  "manifest_sha256": "198bef01b289f773d995175b4eeea69e78ec5dfb190d1d7f39e1c8e59d013fd6",
+  "cache": {
+    "video_id": "G02",
+    "video_sha256": "0349f0b9b25aad269190de48629f677956df443a907adac1ce5b78ad9985bae5",
+    "frames": 7522,
+    "feature_sha256": "52c4de000719e17b2a3de227367d5f4b985c6d7442d31c2ed877ab3eaddf77db",
+    "original_roi": [
+      900,
+      260,
+      160,
+      120
+    ],
+    "study_roi": [
+      820,
+      210,
+      330,
+      195
+    ],
+    "reference_rois": [
+      [
+        680,
+        260,
+        70,
+        120
+      ],
+      [
+        1230,
+        260,
+        70,
+        120
+      ],
+      [
+        900,
+        130,
+        200,
+        30
+      ],
+      [
+        900,
+        465,
+        200,
+        30
+      ]
+    ],
+    "grid": [
+      5,
+      5
+    ],
+    "anchor": "archived original-ROI brightness and real frame timestamps",
+    "extraction": "OpenCV BGR2GRAY, stored pixel orientation, fixed rectangles; one decode pass per video",
+    "max_original_trace_difference": 0.0,
+    "maximum_frame_gap_seconds": 0.0350000000000108
+  },
+  "transmission_log_hashes": {
+    "G02_1": "826a9c69d355e4d256ef4f5b9fecf35407088ccb1e6b8fe58fe7b30e9f315a26",
+    "G02_2": "1272e184bf773590bee7d7f655d01c6ed5b1936663e40611a3c1f21bf7350e55",
+    "G02_3": "f61c1fd1bad64d3131e92fed6f33adfd78af07732e965f48e307fbc871d64fa6",
+    "G02_4": "b3cfa3c90f8ea582581f74f6cf10e6bfe20bfbeb4ab38c13d11dc228ce9963f1"
+  },
+  "frozen_source": "Historical strict source checker remains unchanged and will reject modified receiver_layers.py. Original bytes/hash in code/optical_link/comparison_provenance; use original revision for exact frozen reruns.",
+  "csv_encoding": "UTF-8; empty numeric/boolean cells are null; booleans are True/False.",
+  "packages": {
+    "numpy": "2.0.2",
+    "matplotlib": "3.9.4",
+    "pandas": "2.3.3"
+  }
+}

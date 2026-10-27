@@ -30,7 +30,7 @@ been replaced with its known silent container; no replacement hash is invented.
 `--output` changes the output base; relative paths resolve from the repository
 root. Every run creates a fresh UTC timestamped child directory. Existing
 results are never overwritten. By default the base is
-`playground/comparison_results/G02/`. Filenames identify the recording:
+`data/comparison/comparison_results/G02/`. Filenames identify the recording:
 
 - `G02__physical_results.csv`, `G02__physical_comparison.png`
 - `G02__modeled_trials.csv`, `G02__modeled_summary.csv`, `G02__modeled_comparison.png`
@@ -100,6 +100,7 @@ PYTHONPATH=code .venv/bin/python -m unittest discover -s code/tests -v
 
 Use `--trials 3` for a quick modeled smoke run. All 70 noiseless combinations
 must pass before using modeled results. Generated artifacts live under the
-repository's already ignored `playground/`; source, tests and this guide are
-outside it. On systems without a writable Matplotlib cache, set
+`data/comparison/comparison_results/<recording>/` for single runs and
+`data/comparison/batch_results/<recording>/` for batch runs, each with a new UTC
+run subdirectory. On systems without a writable Matplotlib cache, set
 `MPLCONFIGDIR=/tmp/comp0228-matplotlib`.
