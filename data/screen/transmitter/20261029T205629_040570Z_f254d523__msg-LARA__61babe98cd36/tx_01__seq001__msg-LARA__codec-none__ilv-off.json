@@ -1,0 +1,1399 @@
+{
+  "schema_version": 1,
+  "ordinal": 1,
+  "payload_hex": "4c415241",
+  "payload_utf8": "LARA",
+  "codec": "none",
+  "sequence": 1,
+  "interleaving": false,
+  "depth": 1,
+  "bit_ms": 200,
+  "packet_bits": 144,
+  "body_length": 48,
+  "body_bits": [
+    0,
+    1,
+    0,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0
+  ],
+  "wire_bits": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    1,
+    0,
+    1,
+    0,
+    1,
+    0,
+    1,
+    0,
+    1,
+    0,
+    1,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    1,
+    0,
+    0,
+    1,
+    1,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    1,
+    0,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "expected_airtime_seconds": 28.8,
+  "status": "completed",
+  "slots": [
+    {
+      "index": 0,
+      "bit": 0,
+      "intended_deadline": 660787.9471578,
+      "request": 660787.9471876,
+      "lateness": 2.9799994081258774e-05,
+      "completion": 660787.9493426
+    },
+    {
+      "index": 1,
+      "bit": 0,
+      "intended_deadline": 660788.1471577999,
+      "request": 660788.1478083,
+      "lateness": 0.0006505000637844205,
+      "completion": 660788.1478275
+    },
+    {
+      "index": 2,
+      "bit": 0,
+      "intended_deadline": 660788.3471578,
+      "request": 660788.347879,
+      "lateness": 0.0007212000200524926,
+      "completion": 660788.3478939
+    },
+    {
+      "index": 3,
+      "bit": 0,
+      "intended_deadline": 660788.5471577999,
+      "request": 660788.5474558,
+      "lateness": 0.00029800005722790956,
+      "completion": 660788.547474
+    },
+    {
+      "index": 4,
+      "bit": 0,
+      "intended_deadline": 660788.7471578,
+      "request": 660788.7474604,
+      "lateness": 0.00030259997583925724,
+      "completion": 660788.7474774
+    },
+    {
+      "index": 5,
+      "bit": 0,
+      "intended_deadline": 660788.9471578,
+      "request": 660788.9477072,
+      "lateness": 0.0005493999924510717,
+      "completion": 660788.9477271
+    },
+    {
+      "index": 6,
+      "bit": 0,
+      "intended_deadline": 660789.1471577999,
+      "request": 660789.1476045,
+      "lateness": 0.0004467000253498554,
+      "completion": 660789.1476197
+    },
+    {
+      "index": 7,
+      "bit": 0,
+      "intended_deadline": 660789.3471578,
+      "request": 660789.3477707,
+      "lateness": 0.0006129000103101134,
+      "completion": 660789.347795
+    },
+    {
+      "index": 8,
+      "bit": 1,
+      "intended_deadline": 660789.5471577999,
+      "request": 660789.5475329,
+      "lateness": 0.00037510006222873926,
+      "completion": 660789.5497701
+    },
+    {
+      "index": 9,
+      "bit": 0,
+      "intended_deadline": 660789.7471578,
+      "request": 660789.7473483,
+      "lateness": 0.00019049993716180325,
+      "completion": 660789.7484995
+    },
+    {
+      "index": 10,
+      "bit": 1,
+      "intended_deadline": 660789.9471578,
+      "request": 660789.9475341,
+      "lateness": 0.0003763000713661313,
+      "completion": 660789.9487994
+    },
+    {
+      "index": 11,
+      "bit": 0,
+      "intended_deadline": 660790.1471577999,
+      "request": 660790.1472471,
+      "lateness": 8.930009789764881e-05,
+      "completion": 660790.148525
+    },
+    {
+      "index": 12,
+      "bit": 1,
+      "intended_deadline": 660790.3471578,
+      "request": 660790.3475569,
+      "lateness": 0.0003991000121459365,
+      "completion": 660790.3487148
+    },
+    {
+      "index": 13,
+      "bit": 0,
+      "intended_deadline": 660790.5471577999,
+      "request": 660790.5477071,
+      "lateness": 0.0005493001081049442,
+      "completion": 660790.5489477
+    },
+    {
+      "index": 14,
+      "bit": 1,
+      "intended_deadline": 660790.7471578,
+      "request": 660790.7477289,
+      "lateness": 0.000571100041270256,
+      "completion": 660790.7488437
+    },
+    {
+      "index": 15,
+      "bit": 0,
+      "intended_deadline": 660790.9471578,
+      "request": 660790.947727,
+      "lateness": 0.0005692000268027186,
+      "completion": 660790.9490798
+    },
+    {
+      "index": 16,
+      "bit": 1,
+      "intended_deadline": 660791.1471577999,
+      "request": 660791.1477332,
+      "lateness": 0.0005754000740125775,
+      "completion": 660791.1501751
+    },
+    {
+      "index": 17,
+      "bit": 0,
+      "intended_deadline": 660791.3471578,
+      "request": 660791.3473638,
+      "lateness": 0.00020600005518645048,
+      "completion": 660791.3487425
+    },
+    {
+      "index": 18,
+      "bit": 1,
+      "intended_deadline": 660791.5471577999,
+      "request": 660791.5472201,
+      "lateness": 6.230000872164965e-05,
+      "completion": 660791.5482942
+    },
+    {
+      "index": 19,
+      "bit": 0,
+      "intended_deadline": 660791.7471578,
+      "request": 660791.7472834,
+      "lateness": 0.00012560002505779266,
+      "completion": 660791.7483123
+    },
+    {
+      "index": 20,
+      "bit": 1,
+      "intended_deadline": 660791.9471578,
+      "request": 660791.9473759,
+      "lateness": 0.00021810003090649843,
+      "completion": 660791.9483209
+    },
+    {
+      "index": 21,
+      "bit": 0,
+      "intended_deadline": 660792.1471577999,
+      "request": 660792.1475566,
+      "lateness": 0.0003988001262769103,
+      "completion": 660792.1485854
+    },
+    {
+      "index": 22,
+      "bit": 1,
+      "intended_deadline": 660792.3471578,
+      "request": 660792.3476817,
+      "lateness": 0.0005239000311121345,
+      "completion": 660792.3487297
+    },
+    {
+      "index": 23,
+      "bit": 0,
+      "intended_deadline": 660792.5471577999,
+      "request": 660792.5475684,
+      "lateness": 0.00041060009971261024,
+      "completion": 660792.5486154
+    },
+    {
+      "index": 24,
+      "bit": 1,
+      "intended_deadline": 660792.7471578,
+      "request": 660792.7476715,
+      "lateness": 0.0005136999534443021,
+      "completion": 660792.7486398
+    },
+    {
+      "index": 25,
+      "bit": 1,
+      "intended_deadline": 660792.9471578,
+      "request": 660792.9475374,
+      "lateness": 0.0003795999800786376,
+      "completion": 660792.9475531
+    },
+    {
+      "index": 26,
+      "bit": 0,
+      "intended_deadline": 660793.1471577999,
+      "request": 660793.1477109,
+      "lateness": 0.000553100137040019,
+      "completion": 660793.1487226
+    },
+    {
+      "index": 27,
+      "bit": 1,
+      "intended_deadline": 660793.3471578,
+      "request": 660793.3473713,
+      "lateness": 0.00021349999587982893,
+      "completion": 660793.3484311
+    },
+    {
+      "index": 28,
+      "bit": 0,
+      "intended_deadline": 660793.5471577999,
+      "request": 660793.5476411,
+      "lateness": 0.0004833000712096691,
+      "completion": 660793.548654
+    },
+    {
+      "index": 29,
+      "bit": 0,
+      "intended_deadline": 660793.7471578,
+      "request": 660793.7476391,
+      "lateness": 0.00048129993956536055,
+      "completion": 660793.7476613
+    },
+    {
+      "index": 30,
+      "bit": 1,
+      "intended_deadline": 660793.9471578,
+      "request": 660793.9475073,
+      "lateness": 0.0003494999837130308,
+      "completion": 660793.9484942
+    },
+    {
+      "index": 31,
+      "bit": 1,
+      "intended_deadline": 660794.1471577999,
+      "request": 660794.1475972,
+      "lateness": 0.00043940008617937565,
+      "completion": 660794.1476169
+    },
+    {
+      "index": 32,
+      "bit": 1,
+      "intended_deadline": 660794.3471578,
+      "request": 660794.3475075,
+      "lateness": 0.0003496999852359295,
+      "completion": 660794.347525
+    },
+    {
+      "index": 33,
+      "bit": 0,
+      "intended_deadline": 660794.5471577999,
+      "request": 660794.5474137,
+      "lateness": 0.00025590008590370417,
+      "completion": 660794.5485345
+    },
+    {
+      "index": 34,
+      "bit": 0,
+      "intended_deadline": 660794.7471578,
+      "request": 660794.7475983,
+      "lateness": 0.00044049997813999653,
+      "completion": 660794.7476193
+    },
+    {
+      "index": 35,
+      "bit": 1,
+      "intended_deadline": 660794.9471578,
+      "request": 660794.9475893,
+      "lateness": 0.000431500026024878,
+      "completion": 660794.9485279
+    },
+    {
+      "index": 36,
+      "bit": 0,
+      "intended_deadline": 660795.1471577999,
+      "request": 660795.1475816,
+      "lateness": 0.0004238000838086009,
+      "completion": 660795.148626
+    },
+    {
+      "index": 37,
+      "bit": 0,
+      "intended_deadline": 660795.3471578,
+      "request": 660795.3476143,
+      "lateness": 0.0004564999835565686,
+      "completion": 660795.3476297
+    },
+    {
+      "index": 38,
+      "bit": 0,
+      "intended_deadline": 660795.5471577999,
+      "request": 660795.5475467,
+      "lateness": 0.00038890005089342594,
+      "completion": 660795.5475608
+    },
+    {
+      "index": 39,
+      "bit": 1,
+      "intended_deadline": 660795.7471578,
+      "request": 660795.7475429,
+      "lateness": 0.00038510002195835114,
+      "completion": 660795.7485271
+    },
+    {
+      "index": 40,
+      "bit": 0,
+      "intended_deadline": 660795.9471578,
+      "request": 660795.9474871,
+      "lateness": 0.0003293000627309084,
+      "completion": 660795.9484446
+    },
+    {
+      "index": 41,
+      "bit": 0,
+      "intended_deadline": 660796.1471577999,
+      "request": 660796.1474958,
+      "lateness": 0.0003380001289770007,
+      "completion": 660796.1475141
+    },
+    {
+      "index": 42,
+      "bit": 0,
+      "intended_deadline": 660796.3471578,
+      "request": 660796.3474225,
+      "lateness": 0.000264700036495924,
+      "completion": 660796.3474376
+    },
+    {
+      "index": 43,
+      "bit": 0,
+      "intended_deadline": 660796.5471577999,
+      "request": 660796.5475269,
+      "lateness": 0.00036910001654177904,
+      "completion": 660796.5475431
+    },
+    {
+      "index": 44,
+      "bit": 0,
+      "intended_deadline": 660796.7471578,
+      "request": 660796.7477061,
+      "lateness": 0.000548299984075129,
+      "completion": 660796.7477206
+    },
+    {
+      "index": 45,
+      "bit": 0,
+      "intended_deadline": 660796.9471578,
+      "request": 660796.9473929,
+      "lateness": 0.0002351000439375639,
+      "completion": 660796.9474079
+    },
+    {
+      "index": 46,
+      "bit": 0,
+      "intended_deadline": 660797.1471577999,
+      "request": 660797.1473541,
+      "lateness": 0.00019630009774118662,
+      "completion": 660797.1473765
+    },
+    {
+      "index": 47,
+      "bit": 1,
+      "intended_deadline": 660797.3471578,
+      "request": 660797.3477259,
+      "lateness": 0.0005681000184267759,
+      "completion": 660797.3486858
+    },
+    {
+      "index": 48,
+      "bit": 0,
+      "intended_deadline": 660797.5471577999,
+      "request": 660797.5473524,
+      "lateness": 0.0001946000847965479,
+      "completion": 660797.5484941
+    },
+    {
+      "index": 49,
+      "bit": 0,
+      "intended_deadline": 660797.7471578,
+      "request": 660797.7472587,
+      "lateness": 0.00010089995339512825,
+      "completion": 660797.7472752
+    },
+    {
+      "index": 50,
+      "bit": 0,
+      "intended_deadline": 660797.9471578,
+      "request": 660797.9475291,
+      "lateness": 0.00037130003329366446,
+      "completion": 660797.9476521
+    },
+    {
+      "index": 51,
+      "bit": 0,
+      "intended_deadline": 660798.1471577999,
+      "request": 660798.1474306,
+      "lateness": 0.0002728000981733203,
+      "completion": 660798.1474518
+    },
+    {
+      "index": 52,
+      "bit": 0,
+      "intended_deadline": 660798.3471578,
+      "request": 660798.3476097,
+      "lateness": 0.00045190006494522095,
+      "completion": 660798.3476259
+    },
+    {
+      "index": 53,
+      "bit": 0,
+      "intended_deadline": 660798.5471577999,
+      "request": 660798.5476627,
+      "lateness": 0.0005049000028520823,
+      "completion": 660798.5476784
+    },
+    {
+      "index": 54,
+      "bit": 0,
+      "intended_deadline": 660798.7471578,
+      "request": 660798.7472596,
+      "lateness": 0.00010179996024817228,
+      "completion": 660798.7472815
+    },
+    {
+      "index": 55,
+      "bit": 0,
+      "intended_deadline": 660798.9471578,
+      "request": 660798.9476306,
+      "lateness": 0.00047279999125748873,
+      "completion": 660798.9476464
+    },
+    {
+      "index": 56,
+      "bit": 0,
+      "intended_deadline": 660799.1471577999,
+      "request": 660799.1475934,
+      "lateness": 0.00043560005724430084,
+      "completion": 660799.1476088
+    },
+    {
+      "index": 57,
+      "bit": 0,
+      "intended_deadline": 660799.3471578,
+      "request": 660799.3476914,
+      "lateness": 0.0005335999885573983,
+      "completion": 660799.3477163
+    },
+    {
+      "index": 58,
+      "bit": 0,
+      "intended_deadline": 660799.5471577999,
+      "request": 660799.5473904,
+      "lateness": 0.00023260002490133047,
+      "completion": 660799.5474105
+    },
+    {
+      "index": 59,
+      "bit": 0,
+      "intended_deadline": 660799.7471578,
+      "request": 660799.7475096,
+      "lateness": 0.00035180000122636557,
+      "completion": 660799.7475274
+    },
+    {
+      "index": 60,
+      "bit": 0,
+      "intended_deadline": 660799.9471578,
+      "request": 660799.9473628,
+      "lateness": 0.0002050000475719571,
+      "completion": 660799.9473771
+    },
+    {
+      "index": 61,
+      "bit": 1,
+      "intended_deadline": 660800.1471577999,
+      "request": 660800.1474071,
+      "lateness": 0.0002493000356480479,
+      "completion": 660800.1484343
+    },
+    {
+      "index": 62,
+      "bit": 0,
+      "intended_deadline": 660800.3471578,
+      "request": 660800.3476216,
+      "lateness": 0.0004638000391423702,
+      "completion": 660800.3485568
+    },
+    {
+      "index": 63,
+      "bit": 0,
+      "intended_deadline": 660800.5471577999,
+      "request": 660800.5473889,
+      "lateness": 0.00023110001347959042,
+      "completion": 660800.5474036
+    },
+    {
+      "index": 64,
+      "bit": 0,
+      "intended_deadline": 660800.7471578,
+      "request": 660800.7475415,
+      "lateness": 0.0003837000112980604,
+      "completion": 660800.747562
+    },
+    {
+      "index": 65,
+      "bit": 0,
+      "intended_deadline": 660800.9471578,
+      "request": 660800.9477111,
+      "lateness": 0.0005533000221475959,
+      "completion": 660800.9477264
+    },
+    {
+      "index": 66,
+      "bit": 0,
+      "intended_deadline": 660801.1471577999,
+      "request": 660801.147626,
+      "lateness": 0.00046820007264614105,
+      "completion": 660801.1476429
+    },
+    {
+      "index": 67,
+      "bit": 0,
+      "intended_deadline": 660801.3471578,
+      "request": 660801.3474122,
+      "lateness": 0.0002543999580666423,
+      "completion": 660801.3474346
+    },
+    {
+      "index": 68,
+      "bit": 0,
+      "intended_deadline": 660801.5471577999,
+      "request": 660801.5473258,
+      "lateness": 0.0001680001150816679,
+      "completion": 660801.5473424
+    },
+    {
+      "index": 69,
+      "bit": 0,
+      "intended_deadline": 660801.7471578,
+      "request": 660801.7473343,
+      "lateness": 0.0001764999469742179,
+      "completion": 660801.7473516
+    },
+    {
+      "index": 70,
+      "bit": 0,
+      "intended_deadline": 660801.9471578,
+      "request": 660801.9472472,
+      "lateness": 8.939998224377632e-05,
+      "completion": 660801.9472636
+    },
+    {
+      "index": 71,
+      "bit": 1,
+      "intended_deadline": 660802.1471577999,
+      "request": 660802.1477488,
+      "lateness": 0.0005910000763833523,
+      "completion": 660802.1489216
+    },
+    {
+      "index": 72,
+      "bit": 0,
+      "intended_deadline": 660802.3471578,
+      "request": 660802.3475912,
+      "lateness": 0.00043340004049241543,
+      "completion": 660802.3485548
+    },
+    {
+      "index": 73,
+      "bit": 0,
+      "intended_deadline": 660802.5471577999,
+      "request": 660802.5472459,
+      "lateness": 8.810008876025677e-05,
+      "completion": 660802.5472659
+    },
+    {
+      "index": 74,
+      "bit": 1,
+      "intended_deadline": 660802.7471578,
+      "request": 660802.747595,
+      "lateness": 0.0004371999530121684,
+      "completion": 660802.7486153
+    },
+    {
+      "index": 75,
+      "bit": 0,
+      "intended_deadline": 660802.9471578,
+      "request": 660802.9475137,
+      "lateness": 0.0003559000324457884,
+      "completion": 660802.9485045
+    },
+    {
+      "index": 76,
+      "bit": 1,
+      "intended_deadline": 660803.1471577999,
+      "request": 660803.1476425,
+      "lateness": 0.00048470008186995983,
+      "completion": 660803.1487173
+    },
+    {
+      "index": 77,
+      "bit": 1,
+      "intended_deadline": 660803.3471578,
+      "request": 660803.347449,
+      "lateness": 0.00029120000544935465,
+      "completion": 660803.3474659
+    },
+    {
+      "index": 78,
+      "bit": 1,
+      "intended_deadline": 660803.5471577999,
+      "request": 660803.5475619,
+      "lateness": 0.00040410005021840334,
+      "completion": 660803.547579
+    },
+    {
+      "index": 79,
+      "bit": 0,
+      "intended_deadline": 660803.7471578,
+      "request": 660803.7478995,
+      "lateness": 0.000741699943318963,
+      "completion": 660803.7489503
+    },
+    {
+      "index": 80,
+      "bit": 1,
+      "intended_deadline": 660803.9471578,
+      "request": 660803.9474537,
+      "lateness": 0.0002959000412374735,
+      "completion": 660803.948521
+    },
+    {
+      "index": 81,
+      "bit": 0,
+      "intended_deadline": 660804.1471577999,
+      "request": 660804.1476239,
+      "lateness": 0.000466100056655705,
+      "completion": 660804.1486689
+    },
+    {
+      "index": 82,
+      "bit": 0,
+      "intended_deadline": 660804.3471578,
+      "request": 660804.3475626,
+      "lateness": 0.0004048000555485487,
+      "completion": 660804.3475792
+    },
+    {
+      "index": 83,
+      "bit": 1,
+      "intended_deadline": 660804.5471577999,
+      "request": 660804.5476825,
+      "lateness": 0.0005247000372037292,
+      "completion": 660804.5488102
+    },
+    {
+      "index": 84,
+      "bit": 0,
+      "intended_deadline": 660804.7471578,
+      "request": 660804.7474088,
+      "lateness": 0.0002509999321773648,
+      "completion": 660804.748552
+    },
+    {
+      "index": 85,
+      "bit": 0,
+      "intended_deadline": 660804.9471578,
+      "request": 660804.9475563,
+      "lateness": 0.00039850000757724047,
+      "completion": 660804.9475741
+    },
+    {
+      "index": 86,
+      "bit": 0,
+      "intended_deadline": 660805.1471577999,
+      "request": 660805.1474286,
+      "lateness": 0.00027080008294433355,
+      "completion": 660805.1474425
+    },
+    {
+      "index": 87,
+      "bit": 1,
+      "intended_deadline": 660805.3471578,
+      "request": 660805.3473887,
+      "lateness": 0.00023090001195669174,
+      "completion": 660805.3486897
+    },
+    {
+      "index": 88,
+      "bit": 0,
+      "intended_deadline": 660805.5471577999,
+      "request": 660805.5473921,
+      "lateness": 0.0002343000378459692,
+      "completion": 660805.5485999
+    },
+    {
+      "index": 89,
+      "bit": 1,
+      "intended_deadline": 660805.7471578,
+      "request": 660805.7472749,
+      "lateness": 0.00011709996033459902,
+      "completion": 660805.7484632
+    },
+    {
+      "index": 90,
+      "bit": 0,
+      "intended_deadline": 660805.9471578,
+      "request": 660805.947519,
+      "lateness": 0.00036120007280260324,
+      "completion": 660805.9485807
+    },
+    {
+      "index": 91,
+      "bit": 0,
+      "intended_deadline": 660806.1471577999,
+      "request": 660806.1477871,
+      "lateness": 0.0006293001351878047,
+      "completion": 660806.147804
+    },
+    {
+      "index": 92,
+      "bit": 1,
+      "intended_deadline": 660806.3471578,
+      "request": 660806.3472777,
+      "lateness": 0.00011989998165518045,
+      "completion": 660806.3484391
+    },
+    {
+      "index": 93,
+      "bit": 1,
+      "intended_deadline": 660806.5471577999,
+      "request": 660806.54737,
+      "lateness": 0.00021220010239630938,
+      "completion": 660806.5473842
+    },
+    {
+      "index": 94,
+      "bit": 0,
+      "intended_deadline": 660806.7471578,
+      "request": 660806.7473401,
+      "lateness": 0.00018229999113827944,
+      "completion": 660806.7484416
+    },
+    {
+      "index": 95,
+      "bit": 0,
+      "intended_deadline": 660806.9471578,
+      "request": 660806.9473579,
+      "lateness": 0.0002001000102609396,
+      "completion": 660806.9473808
+    },
+    {
+      "index": 96,
+      "bit": 0,
+      "intended_deadline": 660807.1471577999,
+      "request": 660807.1474806,
+      "lateness": 0.0003228001296520233,
+      "completion": 660807.1474999
+    },
+    {
+      "index": 97,
+      "bit": 1,
+      "intended_deadline": 660807.3471578,
+      "request": 660807.3474744,
+      "lateness": 0.0003165999660268426,
+      "completion": 660807.3486895
+    },
+    {
+      "index": 98,
+      "bit": 0,
+      "intended_deadline": 660807.5471577999,
+      "request": 660807.5477766,
+      "lateness": 0.0006188000552356243,
+      "completion": 660807.5488902
+    },
+    {
+      "index": 99,
+      "bit": 0,
+      "intended_deadline": 660807.7471578,
+      "request": 660807.7476514,
+      "lateness": 0.000493600033223629,
+      "completion": 660807.7476683
+    },
+    {
+      "index": 100,
+      "bit": 0,
+      "intended_deadline": 660807.9471578,
+      "request": 660807.9474918,
+      "lateness": 0.0003339999821037054,
+      "completion": 660807.9475073
+    },
+    {
+      "index": 101,
+      "bit": 0,
+      "intended_deadline": 660808.1471577999,
+      "request": 660808.1475316,
+      "lateness": 0.0003738000523298979,
+      "completion": 660808.1475474
+    },
+    {
+      "index": 102,
+      "bit": 0,
+      "intended_deadline": 660808.3471578,
+      "request": 660808.3475748,
+      "lateness": 0.000417000032030046,
+      "completion": 660808.3475938
+    },
+    {
+      "index": 103,
+      "bit": 1,
+      "intended_deadline": 660808.5471577999,
+      "request": 660808.5474569,
+      "lateness": 0.00029910006560385227,
+      "completion": 660808.5484748
+    },
+    {
+      "index": 104,
+      "bit": 0,
+      "intended_deadline": 660808.7471578,
+      "request": 660808.7478467,
+      "lateness": 0.0006889000069350004,
+      "completion": 660808.7488745
+    },
+    {
+      "index": 105,
+      "bit": 1,
+      "intended_deadline": 660808.9471578,
+      "request": 660808.9475246,
+      "lateness": 0.0003667999990284443,
+      "completion": 660808.9486747
+    },
+    {
+      "index": 106,
+      "bit": 0,
+      "intended_deadline": 660809.1471577999,
+      "request": 660809.1478544,
+      "lateness": 0.0006966000655665994,
+      "completion": 660809.1490036
+    },
+    {
+      "index": 107,
+      "bit": 1,
+      "intended_deadline": 660809.3471578,
+      "request": 660809.3477705,
+      "lateness": 0.0006127000087872148,
+      "completion": 660809.3487591
+    },
+    {
+      "index": 108,
+      "bit": 0,
+      "intended_deadline": 660809.5471577999,
+      "request": 660809.5473894,
+      "lateness": 0.0002316000172868371,
+      "completion": 660809.5495391
+    },
+    {
+      "index": 109,
+      "bit": 0,
+      "intended_deadline": 660809.7471578,
+      "request": 660809.7477334,
+      "lateness": 0.0005755999591201544,
+      "completion": 660809.7477519
+    },
+    {
+      "index": 110,
+      "bit": 1,
+      "intended_deadline": 660809.9471578,
+      "request": 660809.9478137,
+      "lateness": 0.0006558999884873629,
+      "completion": 660809.9488804
+    },
+    {
+      "index": 111,
+      "bit": 0,
+      "intended_deadline": 660810.1471577999,
+      "request": 660810.1473791,
+      "lateness": 0.00022130005527287722,
+      "completion": 660810.1485934
+    },
+    {
+      "index": 112,
+      "bit": 0,
+      "intended_deadline": 660810.3471578,
+      "request": 660810.3473916,
+      "lateness": 0.00023380003403872252,
+      "completion": 660810.347409
+    },
+    {
+      "index": 113,
+      "bit": 1,
+      "intended_deadline": 660810.5471577999,
+      "request": 660810.547688,
+      "lateness": 0.0005302000790834427,
+      "completion": 660810.5490113
+    },
+    {
+      "index": 114,
+      "bit": 0,
+      "intended_deadline": 660810.7471578,
+      "request": 660810.7475848,
+      "lateness": 0.00042699999175965786,
+      "completion": 660810.7489036
+    },
+    {
+      "index": 115,
+      "bit": 0,
+      "intended_deadline": 660810.9471578,
+      "request": 660810.9474632,
+      "lateness": 0.0003053999971598387,
+      "completion": 660810.9474808
+    },
+    {
+      "index": 116,
+      "bit": 0,
+      "intended_deadline": 660811.1471577999,
+      "request": 660811.1475055,
+      "lateness": 0.0003477000864222646,
+      "completion": 660811.1475217
+    },
+    {
+      "index": 117,
+      "bit": 0,
+      "intended_deadline": 660811.3471578,
+      "request": 660811.3475304,
+      "lateness": 0.00037260004319250584,
+      "completion": 660811.3475527
+    },
+    {
+      "index": 118,
+      "bit": 0,
+      "intended_deadline": 660811.5471577999,
+      "request": 660811.5473705,
+      "lateness": 0.00021270010620355606,
+      "completion": 660811.5473887
+    },
+    {
+      "index": 119,
+      "bit": 1,
+      "intended_deadline": 660811.7471578,
+      "request": 660811.7482875,
+      "lateness": 0.001129699987359345,
+      "completion": 660811.7494484
+    },
+    {
+      "index": 120,
+      "bit": 1,
+      "intended_deadline": 660811.9471578,
+      "request": 660811.9475489,
+      "lateness": 0.00039110006764531136,
+      "completion": 660811.9475678
+    },
+    {
+      "index": 121,
+      "bit": 1,
+      "intended_deadline": 660812.1471577999,
+      "request": 660812.1478204,
+      "lateness": 0.0006626000395044684,
+      "completion": 660812.1478352
+    },
+    {
+      "index": 122,
+      "bit": 1,
+      "intended_deadline": 660812.3471578,
+      "request": 660812.3472261,
+      "lateness": 6.830005440860987e-05,
+      "completion": 660812.3472487
+    },
+    {
+      "index": 123,
+      "bit": 0,
+      "intended_deadline": 660812.5471577999,
+      "request": 660812.5474483,
+      "lateness": 0.0002905001165345311,
+      "completion": 660812.5485485
+    },
+    {
+      "index": 124,
+      "bit": 0,
+      "intended_deadline": 660812.7471578,
+      "request": 660812.747377,
+      "lateness": 0.00021920003928244114,
+      "completion": 660812.7473921
+    },
+    {
+      "index": 125,
+      "bit": 0,
+      "intended_deadline": 660812.9471578,
+      "request": 660812.9475705,
+      "lateness": 0.0004126999992877245,
+      "completion": 660812.9475854
+    },
+    {
+      "index": 126,
+      "bit": 0,
+      "intended_deadline": 660813.1471577999,
+      "request": 660813.1474849,
+      "lateness": 0.000327100045979023,
+      "completion": 660813.1474997
+    },
+    {
+      "index": 127,
+      "bit": 1,
+      "intended_deadline": 660813.3471578,
+      "request": 660813.3476542,
+      "lateness": 0.0004964000545442104,
+      "completion": 660813.348642
+    },
+    {
+      "index": 128,
+      "bit": 0,
+      "intended_deadline": 660813.5471577999,
+      "request": 660813.5471916,
+      "lateness": 3.3800024539232254e-05,
+      "completion": 660813.5480939
+    },
+    {
+      "index": 129,
+      "bit": 0,
+      "intended_deadline": 660813.7471578,
+      "request": 660813.7474697,
+      "lateness": 0.0003119000466540456,
+      "completion": 660813.7474849
+    },
+    {
+      "index": 130,
+      "bit": 0,
+      "intended_deadline": 660813.9471578,
+      "request": 660813.9475694,
+      "lateness": 0.0004115999909117818,
+      "completion": 660813.9475861
+    },
+    {
+      "index": 131,
+      "bit": 1,
+      "intended_deadline": 660814.1471577999,
+      "request": 660814.1476591,
+      "lateness": 0.000501300091855228,
+      "completion": 660814.1487117
+    },
+    {
+      "index": 132,
+      "bit": 0,
+      "intended_deadline": 660814.3471578,
+      "request": 660814.3478642,
+      "lateness": 0.0007064000237733126,
+      "completion": 660814.3494358
+    },
+    {
+      "index": 133,
+      "bit": 1,
+      "intended_deadline": 660814.5471577999,
+      "request": 660814.5476537,
+      "lateness": 0.0004959000507369637,
+      "completion": 660814.5486677
+    },
+    {
+      "index": 134,
+      "bit": 1,
+      "intended_deadline": 660814.7471578,
+      "request": 660814.7475526,
+      "lateness": 0.000394799979403615,
+      "completion": 660814.7475669
+    },
+    {
+      "index": 135,
+      "bit": 0,
+      "intended_deadline": 660814.9471578,
+      "request": 660814.9474742,
+      "lateness": 0.00031640008091926575,
+      "completion": 660814.9486539
+    },
+    {
+      "index": 136,
+      "bit": 0,
+      "intended_deadline": 660815.1471577999,
+      "request": 660815.1474764,
+      "lateness": 0.00031860009767115116,
+      "completion": 660815.1474927
+    },
+    {
+      "index": 137,
+      "bit": 0,
+      "intended_deadline": 660815.3471578,
+      "request": 660815.3474838,
+      "lateness": 0.00032600003760308027,
+      "completion": 660815.3475071
+    },
+    {
+      "index": 138,
+      "bit": 0,
+      "intended_deadline": 660815.5471577999,
+      "request": 660815.54736,
+      "lateness": 0.00020220002625137568,
+      "completion": 660815.5473779
+    },
+    {
+      "index": 139,
+      "bit": 0,
+      "intended_deadline": 660815.7471578,
+      "request": 660815.7475903,
+      "lateness": 0.0004325000336393714,
+      "completion": 660815.7476103
+    },
+    {
+      "index": 140,
+      "bit": 0,
+      "intended_deadline": 660815.9471578,
+      "request": 660815.947396,
+      "lateness": 0.00023820006754249334,
+      "completion": 660815.9474132
+    },
+    {
+      "index": 141,
+      "bit": 0,
+      "intended_deadline": 660816.1471577999,
+      "request": 660816.1476661,
+      "lateness": 0.0005083000287413597,
+      "completion": 660816.1476938
+    },
+    {
+      "index": 142,
+      "bit": 0,
+      "intended_deadline": 660816.3471578,
+      "request": 660816.3476822,
+      "lateness": 0.0005244000349193811,
+      "completion": 660816.3476977
+    },
+    {
+      "index": 143,
+      "bit": 0,
+      "intended_deadline": 660816.5471577999,
+      "request": 660816.5473606,
+      "lateness": 0.0002028000308200717,
+      "completion": 660816.5473774
+    }
+  ],
+  "filename": "tx_01__seq001__msg-LARA__codec-none__ilv-off.json",
+  "host_start": 660787.9471578,
+  "host_end": 660816.7475484,
+  "session_id": "20261029T205629_040570Z_f254d523__msg-LARA__61babe98cd36",
+  "rendering": {
+    "backend": "pygame",
+    "resolution": [
+      1000,
+      720
+    ],
+    "patch": [
+      250,
+      180,
+      500,
+      360
+    ],
+    "references": [
+      [
+        62,
+        240,
+        125,
+        240
+      ],
+      [
+        812,
+        240,
+        125,
+        240
+      ]
+    ],
+    "fullscreen": false,
+    "monitor": 0,
+    "pygame_version": "2.6.1"
+  }
+}
