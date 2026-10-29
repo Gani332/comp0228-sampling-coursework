@@ -2,6 +2,7 @@
 import csv
 import io
 import json
+import os
 from pathlib import Path
 import tempfile
 import time
@@ -9,7 +10,7 @@ import unittest
 import numpy as np
 from optical_link.protocol import CODECS, GUARD_BITS, PREAMBLE, HEADER_BITS
 from optical_link.coding_experiments import deinterleave
-from optical_link.screen_capture_packet import prepare, batch_plan, duration, new_session, positive
+from optical_link.screen_capture_packet import prepare, batch_plan, duration, new_session, positive, save_json
 from optical_link.screen_transmitter import transmit, run_session
 from optical_link.capture_start_detector import observe, HeaderObserver, FirstPacketTimer
 from optical_link.receiver import synthetic_trace
@@ -31,6 +32,28 @@ class Renderer:
 
 
 class CaptureTests(unittest.TestCase):
+    def test_json_atomic_replace_beyond_windows_path_limit(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            # Keep the directory below MAX_PATH; the packet sidecar exceeds it.
+            folder = Path(tmp)
+            while len(str(folder)) < 210:
+                folder /= 'nested_capture_folder'
+            folder.mkdir(parents=True)
+            target = folder / ('tx_01__seq001__msg-' + 'A'*24 + '__codec-hamming74__ilv-on-d8.json')
+            self.assertGreater(len(str(target)), 260)
+            readable = target
+            if os.name == 'nt':
+                readable = Path('\\\\?\\' + str(target.resolve()))
+            try:
+                for data in ({'status': 'planned'}, {'status': 'completed'}):
+                    with self.subTest(data=data):
+                        save_json(target, data)
+                        self.assertEqual(json.loads(readable.read_text(encoding='utf-8')), data)
+                self.assertFalse(any(p.name.endswith('.tmp') for p in folder.iterdir()))
+            finally:
+                # tempfile cleanup also needs a short/extended path on Windows.
+                readable.unlink(missing_ok=True)
+
     def test_plan_and_permutation(self):
         plan=batch_plan('HELLO')
         self.assertEqual([(p.packet.codec,p.depth) for p in plan],[(c,d) for c in CODECS for d in (1,8)])

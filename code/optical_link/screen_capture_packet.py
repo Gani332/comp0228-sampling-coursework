@@ -5,6 +5,7 @@ from datetime import datetime, timezone
 import hashlib
 import json
 import math
+import os
 import re
 import uuid
 from .protocol import CODECS, GUARD_BITS, HEADER_BITS, PREAMBLE, make_packet
@@ -38,6 +39,14 @@ def slug(message):
 
 def save_json(path, data):
     path = Path(path)
+    if os.name == 'nt':
+        # Atomic sidecars can exceed MAX_PATH in deeply nested checkouts.
+        # Extended paths must be absolute; UNC shares use a separate prefix.
+        absolute = str(path.resolve())
+        if not absolute.startswith('\\\\?\\'):
+            absolute = ('\\\\?\\UNC\\' + absolute[2:] if absolute.startswith('\\\\')
+                        else '\\\\?\\' + absolute)
+        path = Path(absolute)
     temporary = path.with_suffix(path.suffix + '.tmp')
     temporary.write_text(json.dumps(data, indent=2, allow_nan=False) + '\n', encoding='utf-8')
     temporary.replace(path)
