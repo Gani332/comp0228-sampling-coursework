@@ -19,6 +19,8 @@ __pycache__/
 *.MOV
 *.mp4
 *.MP4
+*.avi
+*.AVI
 /data/**/*.zip
 /data/**/*.lock
 /data/**/*.ipynb

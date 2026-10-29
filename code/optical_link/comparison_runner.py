@@ -224,22 +224,30 @@ def plot_physical(path, rows):
     matplotlib.use('Agg')
     import matplotlib.pyplot as plt
     from matplotlib.colors import ListedColormap
-    ids = list(dict.fromkeys(r['packet_id'] for r in rows))
-    values = np.full((7, len(ids)), np.nan)
-    labels = np.full(values.shape, '', dtype=object)
-    for r in rows:
-        i, j = COMPARISON_METHODS.index(r['camera_method']), ids.index(r['packet_id'])
-        values[i,j] = 2 if r['status']=='association_error' else int(r['packet_success'])
-        labels[i,j] = 'unavailable' if values[i,j]==2 else ('pass' if r['packet_success'] else 'fail')
-    fig, ax = plt.subplots(figsize=(max(7, len(ids)*1.7), 5), layout='constrained')
-    ax.imshow(values, cmap=ListedColormap(['#eaa39d', '#8dc9a0', '#bbbbbb']), vmin=0, vmax=2, aspect='auto')
-    ax.set_yticks(range(7), COMPARISON_METHODS)
-    codecs = {r['packet_id']: r['actual_codec'] for r in rows}
-    ax.set_xticks(range(len(ids)), [p+'\n'+codecs[p] for p in ids])
-    for i, j in np.ndindex(values.shape):
-        ax.text(j, i, labels[i,j], ha='center', va='center')
-    ax.set_title(rows[0]['recording_id']+' — physical replay (retrospective)\nActual transmitted codecs; interleaving off\nSuccess requires valid CRC + exact payload', fontsize=11)
-    fig.savefig(path, dpi=220); plt.close(fig)
+    depths = sorted({int(r['interleave_depth']) for r in rows})
+    groups = [[r for r in rows if int(r['interleave_depth']) == depth] for depth in depths]
+    width = max(len({r['packet_id'] for r in group}) for group in groups)
+    fig, axes = plt.subplots(len(groups), 1, figsize=(max(7, width*1.7), 4*len(groups)),
+                             layout='constrained', squeeze=False)
+    for ax, depth, group in zip(axes[:, 0], depths, groups):
+        ids = list(dict.fromkeys(r['packet_id'] for r in group))
+        values = np.full((len(COMPARISON_METHODS), len(ids)), np.nan)
+        labels = np.full(values.shape, '', dtype=object)
+        for r in group:
+            i, j = COMPARISON_METHODS.index(r['camera_method']), ids.index(r['packet_id'])
+            values[i,j] = 2 if r['status']=='association_error' else int(r['packet_success'])
+            labels[i,j] = 'unavailable' if values[i,j]==2 else ('pass' if r['packet_success'] else 'fail')
+        ax.imshow(values, cmap=ListedColormap(['#eaa39d', '#8dc9a0', '#bbbbbb']),
+                  vmin=0, vmax=2, aspect='auto')
+        ax.set_yticks(range(len(COMPARISON_METHODS)), COMPARISON_METHODS)
+        codecs = {r['packet_id']: r['actual_codec'] for r in group}
+        ax.set_xticks(range(len(ids)), [p+'\n'+codecs[p] for p in ids])
+        for i, j in np.ndindex(values.shape):
+            ax.text(j, i, labels[i,j], ha='center', va='center')
+        ax.set_title('Interleaving '+('off' if depth == 1 else f'on (depth {depth})'))
+    fig.suptitle(rows[0]['recording_id']+' — physical replay (retrospective)\nSuccess requires valid CRC + exact payload', fontsize=11)
+    fig.savefig(path, dpi=220)
+    plt.close(fig)
 
 
 def plot_modeled(path, summary):
@@ -269,10 +277,19 @@ def plot_modeled(path, summary):
     fig.savefig(path, dpi=220); plt.close(fig)
 
 
-def run(root, *, recording='G02', mode='both', output=None, seed=20261027, trials=200, random_payload=False):
+def run(root, *, recording='G02', mode='both', output=None, seed=20261027, trials=200, random_payload=False, simulation='residual'):
     root = Path(root).resolve()
     if mode not in ('physical', 'modeled', 'both') or trials < 1 or seed < 0:
         raise ValueError('Require a valid mode, positive trials and nonnegative seed.')
+    if simulation not in ('controlled','residual'):
+        raise ValueError('Unknown simulation backend.')
+    if simulation == 'controlled' and mode in ('modeled','both'):
+        from .controlled_comparison import run_for_recording
+        return run_for_recording(root, recording, mode, output, seed, trials, random_payload)
+    from .screen_recording_comparison import resolve as resolve_screen, run as run_screen
+    screen = resolve_screen(root, recording)
+    if screen is not None:
+        return run_screen(root, screen, mode, output, seed, trials, random_payload)
     video, slug = resolve_recording(root, recording)
     windows, cache = load_cache(root, video)
     stamp = datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S_%fZ')
@@ -285,6 +302,7 @@ def run(root, *, recording='G02', mode='both', output=None, seed=20261027, trial
                Path(__file__).with_name('coding_experiments.py'), root/'code/tools/run_recording_comparison.py']
     hashes = {str(p.relative_to(root)): digest(p) for p in sources}
     metadata = dict(recording_id=video['id'], safe_recording_slug=slug, mode=mode, seed=seed,
+                    simulation='residual' if mode in ('modeled','both') else None,
                     trials=trials, created_utc=stamp, input_kind='verified feature cache',
                     cohort=video['cohort'], evidence='Retrospective physical replay; modeled runs are in-sample sensitivity analysis.',
                     filter_parameters=FILTER_DEFAULTS, temporal_input_feature='patch_mean', tuning_source_ids=[],

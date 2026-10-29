@@ -1,49 +1,66 @@
 # Recording comparison runner
 
-Use Python 3.11+ for the full repository test suite, with dependencies from
-`code/requirements.txt` in a local environment. The comparison runner itself also
-works with Python 3.9. Run from the repository root:
+Use Python 3.11+ for the complete repository test suite, with dependencies from
+`code/requirements.txt`. Run from the repository root:
 
 ```sh
-.venv/bin/python code/tools/run_recording_comparison.py --recording G02 --mode both --trials 200 --seed 20261027
+python3 code/tools/run_batch_comparison.py --source screen --mode both
 ```
 
-The script can also be invoked by absolute path from any working directory.
+**The CLI default simulation is the original controlled coding study**, delegated
+unchanged to `coding_experiments.run_study`. It uses seed 20261024, 2,000 uniform
+random nine-byte payloads per condition, five codes and depths 1/8. The 24 settings
+cover independent flips, stationary two-state Markov burst flips and force-to-one
+glare bursts. Rates are 0, .01, .025, .05, .10, .20; mean burst length is 8, with
+2/4/8/16 sensitivity at occupancy .05. There are 480,000 code/depth evaluations.
+Acquisition and headers are assumed correct, but framing airtime is charged.
+This is a controlled code experiment, independent of recording noise, payload and
+camera filters. It produces no seven-filter counterfactual results.
 
-The default recording is **G02** (four retrospective packets). Physical mode
-exports seven receiver-processing outcomes per packet, using the actual
-transmitted codec and no interleaving. Modeled mode exports 70 configurations
-per trial: five codecs, seven processors and depths 1/8. These counterfactual
-results are an **in-sample sensitivity analysis**, not 70 real transmissions or
-held-out camera validation. CRC is always present and success requires both
-valid CRC and an exact payload match.
+`--mode physical` replays actual recordings with seven processing methods.
+`--mode modeled` runs only the selected simulation. `--mode both` (default) does
+both. In batch, the controlled simulation runs **once**, not once per recording;
+its seed and payloads do not depend on the recording list. Outputs are under
+`controlled_simulation/<unique-run>/` within the batch output root, alongside
+per-recording physical folders. A single-recording run stores its controlled study
+in `<unique-run>/controlled_simulation/`. Files include `config.json`,
+`scenarios.json`, `trials.csv.gz`, `summary.csv`, `summary.json`,
+`paired_outcomes.json`, `provenance.json`, and `comparison_context.json`.
+Single-run `simulation_selection.json` identifies the selected backend separately
+from any physical replay metadata.
 
-Only registered recordings with verified feature caches, archived timestamps,
-ROI metadata and transmitter logs are supported. No movies, network downloads
-or hardware are needed. `--recording` accepts a manifest ID or an exact unique
-known basename; generic `recording.mov` is ambiguous. New movies require their
-own manifest entry, windows, geometry, matching ground-truth logs and cache.
-Original manifest video hashes are retained even where the archived movie has
-been replaced with its known silent container; no replacement hash is invented.
+Override `--trials` or `--seed` for exploratory runs. Exact report defaults are
+2,000 and 20261024. A one-trial software smoke check:
 
-`--mode physical`, `--mode modeled`, or `--mode both` (default) selects outputs.
-`--output` changes the output base; relative paths resolve from the repository
-root. Every run creates a fresh UTC timestamped child directory. Existing
-results are never overwritten. By default the base is
-`data/comparison/comparison_results/G02/`. Filenames identify the recording:
+```sh
+python3 code/tools/run_batch_comparison.py --source screen --mode modeled --trials 1
+```
 
-- `G02__physical_results.csv`, `G02__physical_comparison.png`
-- `G02__modeled_trials.csv`, `G02__modeled_summary.csv`, `G02__modeled_comparison.png`
-- `G02__run_metadata.json`
+The later recording-calibrated residual simulation remains an explicit option:
 
-CSV uses UTF-8, `True`/`False` booleans and empty cells for unknown values.
-Returned payload hex is retained alongside replacement-decoded UTF-8 text.
-Unknown BER is empty; failed receptions contribute airtime and zero delivered
-bits. Airtime includes guards, preamble, header, CRC and code redundancy.
-Processing runtime is separate. Summary rows contain Wilson intervals and
-paired bootstrap success differences against `patch_mean` for matching trials,
-code and depth. These intervals describe model randomness, not physical
-recording independence. A small trial count is a software smoke test only.
+```sh
+python3 code/tools/run_recording_comparison.py --recording G02 --mode both --simulation residual --trials 200 --seed 20261027
+python3 code/tools/run_batch_comparison.py --source screen --mode both --simulation residual
+```
+
+Residual mode defaults to 200 trials and seed 20261027, and evaluates five codes,
+seven processors and depths 1/8 per trial. It is an in-sample sensitivity analysis,
+not controlled Markov noise or held-out physical evidence. `--random-payload`
+belongs only to residual simulation, where it uses the recording's payload length.
+The controlled engine always uses its original random nine-byte payload design.
+The Python `comparison_runner.run` API retains its legacy residual default for
+existing callers; pass `simulation='controlled'` explicitly there. Both CLIs select
+controlled by default.
+
+Historical inputs retain their frozen registry. Screen inputs require preparation;
+see [screen_camera_capture.md](screen_camera_capture.md). Batch `--source` accepts
+`historical` (default), `screen`, or `all`. Outputs stay under
+`data/comparison/` for historical inputs and `data/screen/` for screen inputs;
+`--output` overrides the base. Every run creates a fresh directory. Existing
+results and historical source hashes are not rewritten.
+
+The following sections describe **explicit residual replay** and physical scoring.
+They do not describe the original controlled simulation.
 
 ## Fixed settings and model assumptions
 

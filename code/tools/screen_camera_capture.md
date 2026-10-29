@@ -147,3 +147,106 @@ real capture, perform and retain results for:
 
 Hardware operations must be performed separately on the actual Windows transmitter
 and Mac receiver; no network start or shared wall clock is needed.
+
+## Compare a saved screen recording
+
+Both comparison runners support the new capture structure through a separate
+prepared registry. Historical manifests, caches and frozen results remain intact.
+Use Python 3.11+ for the complete repository test suite. No camera or screen is
+opened during comparison. Preparation opens a saved video image only when you
+have not supplied reference coordinates.
+
+First copy the **matching** Windows transmitter session to
+`data/screen/transmitter/`. Choose the session from the successful run; sequence
+IDs and the same message alone cannot identify a session globally. The preparation
+command never guesses which session you meant. It verifies sequence/codec/length
+against observed headers; interleaving depth still comes solely from the selected
+transmitter manifest, not optical evidence. Session association is user-supplied.
+
+Prepare once, substituting your actual folder names:
+
+```sh
+python3 code/tools/prepare_screen_recording.py \
+  --capture data/screen/receiver/<capture-folder> \
+  --transmitter data/screen/transmitter/<matching-session-folder> \
+  --recording-id screen-lara-01
+```
+
+Select two static reference rectangles outside the central flashing patch in the
+saved image. ENTER confirms each rectangle. Select the black and white reference
+areas if visible, with margins inside their edges. These coordinates are in the
+Mac video, not Windows screen pixels. Rectangles must be independent and must
+not overlap the selected measurement patch. If neither reference area is visible,
+do not substitute flashing pixels or invent reference data: a new recording or
+an explicit reduced-method workflow is needed.
+
+For unattended preparation, replace interactive selection with two options:
+
+```text
+--reference-roi X1 Y1 W1 H1 --reference-roi X2 Y2 W2 H2
+```
+
+Preparation verifies input hashes and frame/sidecar alignment, extracts grayscale
+patch, 25 spatial tiles and references, and saves `recording.json` and
+`features.npz` under `data/screen/prepared/<recording-id>/`. Uneven patch sizes
+use `array_split` so no pixels are discarded. Raw captures remain unchanged.
+Existing prepared IDs are never overwritten. All planned transmitter entries
+must be completed and have one unambiguous observed header with complete footage;
+missing/ambiguous observations currently require explicit review rather than
+silently omitting packets or guessing equal-duration clips. Put all input folders
+inside the repository; run commands from the repository root.
+
+Run physical comparison for one prepared recording:
+
+```sh
+python3 code/tools/run_recording_comparison.py --recording screen-lara-01 --mode physical
+```
+
+You can also pass the path to its `recording.json` or prepared directory.
+Ten packets generate 70 rows: seven methods for each actual transmitted setting.
+Each packet uses its logged depth and configured bit duration. Payload truth is
+used for scoring after decoding; optical header acquisition receives no expected
+payload. Body BER compares the recovered body after inverse permutation with the
+original encoded body. This has the same mismatch count as comparing both sides
+in wire order. Physical outputs default to
+`data/screen/comparison_results/<recording-id>/<unique-run>/`.
+
+Run all prepared screen captures:
+
+```sh
+python3 code/tools/run_batch_comparison.py --source screen --mode physical
+```
+
+Batch outputs default to `data/screen/batch_results/<recording-id>/<unique-run>/`.
+`--source historical` (the default) preserves the previous batch input set;
+`--source all` includes both registries. Both runners accept `--output` overrides.
+Every comparison creates a fresh run directory. Raw, unprepared screen captures
+are not automatically included in batch comparisons.
+
+The default simulation is now the **original controlled coding study** described
+in the report: independent flips, Markov burst flips and glare bursts. It uses
+random nine-byte payloads, 24 noise settings, five codes, depths 1/8, seed 20261024
+and 2,000 trials per condition. It is independent of this recording and does not
+simulate the seven camera filters. Physical replay still evaluates those filters.
+
+```sh
+python3 code/tools/run_recording_comparison.py --recording screen-lara-01 --mode both
+python3 code/tools/run_batch_comparison.py --source screen --mode both
+```
+
+Batch runs this controlled study once for the entire batch. Its outputs live under
+`controlled_simulation/`, explicitly separate from physical result CSVs. Use
+`--mode modeled --trials 1` for a small smoke run, not report-quality evidence.
+
+For the later recording-residual sensitivity model, explicitly opt in:
+
+```sh
+python3 code/tools/run_recording_comparison.py --recording screen-lara-01 --mode both --simulation residual --trials 200
+python3 code/tools/run_batch_comparison.py --source screen --mode both --simulation residual --trials 200
+```
+
+Residual calibration subtracts the actual interleaved wire signal. Generated
+trials are scored after deinterleaving. Residual replay currently requires 200 ms
+captures. The original controlled simulation keeps its original 200 ms airtime
+setting regardless of the recording's physical bit duration. Neither simulation
+creates additional physical evidence. See [recording_comparison.md](recording_comparison.md).

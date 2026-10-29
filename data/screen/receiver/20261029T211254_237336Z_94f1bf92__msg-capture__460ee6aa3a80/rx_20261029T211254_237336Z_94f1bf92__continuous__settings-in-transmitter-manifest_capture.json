@@ -1,0 +1,174 @@
+{
+  "schema_version": 1,
+  "capture_id": "20261029T211254_237336Z_94f1bf92__msg-capture__460ee6aa3a80",
+  "session_label": "lara-01",
+  "input_kind": "physical_webcam",
+  "status": "stopped",
+  "camera_index": 0,
+  "bit_ms": 200,
+  "timeout_after_first_seconds": 700.0,
+  "timing_note": "Sidecar read-return monotonic times are authoritative; not sensor exposure times. AVI is constant-FPS.",
+  "timeout_note": "Armed once at header validation completion, delayed by preamble/header acquisition; no waiting timeout.",
+  "source_sha256": {
+    "camera_recorder.py": "0ac156ad3e5169aa966b9e9dabcc733494367ede4392559ceaabb4e30c1b441e",
+    "capture_start_detector.py": "85604daaea6d577238be2c4e98afe76c58083951ba21adb20da21501642da528"
+  },
+  "audio": false,
+  "software": {
+    "python": "3.9.6",
+    "opencv": "4.14.0"
+  },
+  "camera_backend": "AVFOUNDATION",
+  "camera_settings": {
+    "width": {
+      "requested": 1280,
+      "accepted": true,
+      "readback": 1920.0
+    },
+    "height": {
+      "requested": 720,
+      "accepted": true,
+      "readback": 720.0
+    },
+    "fps": {
+      "requested": 30,
+      "accepted": true,
+      "readback": 30.0
+    }
+  },
+  "roi": [
+    576,
+    418,
+    137,
+    91
+  ],
+  "reference_rois": [],
+  "video_codec": "MJPG",
+  "video_dimensions": [
+    1280,
+    720
+  ],
+  "nominal_writer_fps": 30,
+  "host_capture_start_monotonic": 12.918530291,
+  "successful_reads": 18902,
+  "written_frames": 18902,
+  "failed_reads": 0,
+  "backlog_stops": 0,
+  "write_errors": 0,
+  "discontinuities": 0,
+  "observations": [
+    {
+      "estimated_preamble_start": 12.076561227056533,
+      "codec": "none",
+      "sequence": 1,
+      "payload_bytes": 4,
+      "validation_completed_seconds": 28.51714675,
+      "analysis_latency_seconds": 0.005590040999997825
+    },
+    {
+      "estimated_preamble_start": 48.94288801906263,
+      "codec": "none",
+      "sequence": 2,
+      "payload_bytes": 4,
+      "validation_completed_seconds": 65.121214084,
+      "analysis_latency_seconds": 0.005308541999994532
+    },
+    {
+      "estimated_preamble_start": 85.82435961093651,
+      "codec": "repeat3",
+      "sequence": 3,
+      "payload_bytes": 4,
+      "validation_completed_seconds": 101.832678875,
+      "analysis_latency_seconds": 0.005427624999995828
+    },
+    {
+      "estimated_preamble_start": 141.89421498525377,
+      "codec": "repeat3",
+      "sequence": 4,
+      "payload_bytes": 4,
+      "validation_completed_seconds": 158.727648459,
+      "analysis_latency_seconds": 0.005460291999980882
+    },
+    {
+      "estimated_preamble_start": 198.01860812952071,
+      "codec": "repeat5",
+      "sequence": 5,
+      "payload_bytes": 4,
+      "validation_completed_seconds": 214.714281,
+      "analysis_latency_seconds": 0.0057539579999854595
+    },
+    {
+      "estimated_preamble_start": 273.3214688525913,
+      "codec": "repeat5",
+      "sequence": 6,
+      "payload_bytes": 4,
+      "validation_completed_seconds": 290.07666745899996,
+      "analysis_latency_seconds": 0.005171749999988151
+    },
+    {
+      "estimated_preamble_start": 348.67274668160115,
+      "codec": "hamming74",
+      "sequence": 7,
+      "payload_bytes": 4,
+      "validation_completed_seconds": 364.60997875,
+      "analysis_latency_seconds": 0.005602791000001162
+    },
+    {
+      "estimated_preamble_start": 392.817194524847,
+      "codec": "hamming74",
+      "sequence": 8,
+      "payload_bytes": 4,
+      "validation_completed_seconds": 409.459857334,
+      "analysis_latency_seconds": 0.005806167000002915
+    },
+    {
+      "estimated_preamble_start": 436.9812076242496,
+      "codec": "rs4",
+      "sequence": 9,
+      "payload_bytes": 4,
+      "validation_completed_seconds": 453.36160454199995,
+      "analysis_latency_seconds": 0.005130416999975296
+    },
+    {
+      "estimated_preamble_start": 480.35674695423796,
+      "codec": "rs4",
+      "sequence": 10,
+      "payload_bytes": 4,
+      "validation_completed_seconds": 496.23924174999996,
+      "analysis_latency_seconds": 0.005804291000004014
+    }
+  ],
+  "stop_reason": "manual_stop",
+  "capture_thread_stopped": true,
+  "unwritten_reads": 0,
+  "elapsed_seconds": 630.122041042,
+  "detector_dropped_jobs": 2,
+  "timeout_arming": {
+    "budget": 700.0,
+    "armed": 28.51714675,
+    "deadline": 728.51714675,
+    "source": "optical_header",
+    "observation": {
+      "estimated_preamble_start": 12.076561227056533,
+      "codec": "none",
+      "sequence": 1,
+      "payload_bytes": 4,
+      "validation_completed_seconds": 28.51714675,
+      "analysis_latency_seconds": 0.005590040999997825
+    }
+  },
+  "validation": {
+    "method": "Sequential decode of every saved frame (not nominal frame-count property)",
+    "decoded_frames": 18902,
+    "expected_frames": 18902,
+    "count_matches": true,
+    "first_readable": true,
+    "last_readable": true,
+    "nonzero": true
+  },
+  "checksums": {
+    "rx_20261029T211254_237336Z_94f1bf92__continuous__settings-in-transmitter-manifest_frames.csv": "2365457606aeca693dffd5d0c8658272b4b0c66b4106e5059dfed5bc0b8e37cb",
+    "rx_20261029T211254_237336Z_94f1bf92__continuous__settings-in-transmitter-manifest_header_observations.csv": "80b0157178d9d1156bc53fc5e65d12b12833679dc28904ff1895e766efe31cf8",
+    "rx_20261029T211254_237336Z_94f1bf92__continuous__settings-in-transmitter-manifest.avi": "a7060d7a192055ac4e4ca3d178d37959c78e8962e5cf6a8ee3e952d6627709fc"
+  }
+}

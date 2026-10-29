@@ -1,0 +1,170 @@
+[
+  {
+    "scenario_id": 0,
+    "model": "iid_flip",
+    "rate": 0,
+    "mean_burst_slots": 8,
+    "sweep": "rate"
+  },
+  {
+    "scenario_id": 1,
+    "model": "iid_flip",
+    "rate": 0.01,
+    "mean_burst_slots": 8,
+    "sweep": "rate"
+  },
+  {
+    "scenario_id": 2,
+    "model": "iid_flip",
+    "rate": 0.025,
+    "mean_burst_slots": 8,
+    "sweep": "rate"
+  },
+  {
+    "scenario_id": 3,
+    "model": "iid_flip",
+    "rate": 0.05,
+    "mean_burst_slots": 8,
+    "sweep": "rate"
+  },
+  {
+    "scenario_id": 4,
+    "model": "iid_flip",
+    "rate": 0.1,
+    "mean_burst_slots": 8,
+    "sweep": "rate"
+  },
+  {
+    "scenario_id": 5,
+    "model": "iid_flip",
+    "rate": 0.2,
+    "mean_burst_slots": 8,
+    "sweep": "rate"
+  },
+  {
+    "scenario_id": 6,
+    "model": "burst_flip",
+    "rate": 0,
+    "mean_burst_slots": 8,
+    "sweep": "rate"
+  },
+  {
+    "scenario_id": 7,
+    "model": "burst_flip",
+    "rate": 0.01,
+    "mean_burst_slots": 8,
+    "sweep": "rate"
+  },
+  {
+    "scenario_id": 8,
+    "model": "burst_flip",
+    "rate": 0.025,
+    "mean_burst_slots": 8,
+    "sweep": "rate"
+  },
+  {
+    "scenario_id": 9,
+    "model": "burst_flip",
+    "rate": 0.05,
+    "mean_burst_slots": 8,
+    "sweep": "rate"
+  },
+  {
+    "scenario_id": 10,
+    "model": "burst_flip",
+    "rate": 0.1,
+    "mean_burst_slots": 8,
+    "sweep": "rate"
+  },
+  {
+    "scenario_id": 11,
+    "model": "burst_flip",
+    "rate": 0.2,
+    "mean_burst_slots": 8,
+    "sweep": "rate"
+  },
+  {
+    "scenario_id": 12,
+    "model": "glare_burst",
+    "rate": 0,
+    "mean_burst_slots": 8,
+    "sweep": "rate"
+  },
+  {
+    "scenario_id": 13,
+    "model": "glare_burst",
+    "rate": 0.01,
+    "mean_burst_slots": 8,
+    "sweep": "rate"
+  },
+  {
+    "scenario_id": 14,
+    "model": "glare_burst",
+    "rate": 0.025,
+    "mean_burst_slots": 8,
+    "sweep": "rate"
+  },
+  {
+    "scenario_id": 15,
+    "model": "glare_burst",
+    "rate": 0.05,
+    "mean_burst_slots": 8,
+    "sweep": "rate"
+  },
+  {
+    "scenario_id": 16,
+    "model": "glare_burst",
+    "rate": 0.1,
+    "mean_burst_slots": 8,
+    "sweep": "rate"
+  },
+  {
+    "scenario_id": 17,
+    "model": "glare_burst",
+    "rate": 0.2,
+    "mean_burst_slots": 8,
+    "sweep": "rate"
+  },
+  {
+    "scenario_id": 18,
+    "model": "burst_flip",
+    "rate": 0.05,
+    "mean_burst_slots": 2,
+    "sweep": "duration"
+  },
+  {
+    "scenario_id": 19,
+    "model": "burst_flip",
+    "rate": 0.05,
+    "mean_burst_slots": 4,
+    "sweep": "duration"
+  },
+  {
+    "scenario_id": 20,
+    "model": "burst_flip",
+    "rate": 0.05,
+    "mean_burst_slots": 16,
+    "sweep": "duration"
+  },
+  {
+    "scenario_id": 21,
+    "model": "glare_burst",
+    "rate": 0.05,
+    "mean_burst_slots": 2,
+    "sweep": "duration"
+  },
+  {
+    "scenario_id": 22,
+    "model": "glare_burst",
+    "rate": 0.05,
+    "mean_burst_slots": 4,
+    "sweep": "duration"
+  },
+  {
+    "scenario_id": 23,
+    "model": "glare_burst",
+    "rate": 0.05,
+    "mean_burst_slots": 16,
+    "sweep": "duration"
+  }
+]
