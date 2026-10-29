@@ -1,0 +1,2 @@
+# Install code/requirements.txt first; only the screen renderer is additional.
+pygame>=2.5,<3
