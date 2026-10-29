@@ -92,7 +92,7 @@ python code/tools/run_screen_transmitter.py --message HELLO --codec hamming74 --
 
 ## Data and limits
 
-Default output is `playground/screen_camera_captures/{transmitter,receiver}/...`.
+Default output is `data/screen/{transmitter,receiver}/...`.
 The Windows manifest is saved before any display opens and retains all planned
 entries, including interrupted/not_sent entries. Per-packet JSON identifies codec,
 sequence, exact UTF-8 bytes, depth, original body, actual wire bits and per-slot

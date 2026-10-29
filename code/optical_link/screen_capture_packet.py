@@ -12,7 +12,7 @@ from .protocol import CODECS, GUARD_BITS, HEADER_BITS, PREAMBLE, make_packet
 from .coding_experiments import interleave
 
 ROOT = Path(__file__).resolve().parents[2]
-DEFAULT_OUTPUT = ROOT / 'playground/screen_camera_captures'
+DEFAULT_OUTPUT = ROOT / 'data/screen'
 
 
 def positive(value):
