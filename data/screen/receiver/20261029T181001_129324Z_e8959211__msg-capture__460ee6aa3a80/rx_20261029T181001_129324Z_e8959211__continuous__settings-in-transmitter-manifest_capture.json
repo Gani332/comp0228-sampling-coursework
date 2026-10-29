@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "capture_id": "20261029T181001_129324Z_e8959211__msg-capture__460ee6aa3a80",
+  "session_label": "lara-01",
+  "input_kind": "physical_webcam",
+  "status": "failed",
+  "camera_index": 0,
+  "bit_ms": 200,
+  "timeout_after_first_seconds": 700.0,
+  "timing_note": "Sidecar read-return monotonic times are authoritative; not sensor exposure times. AVI is constant-FPS.",
+  "timeout_note": "Armed once at header validation completion, delayed by preamble/header acquisition; no waiting timeout.",
+  "source_sha256": {
+    "camera_recorder.py": "0ac156ad3e5169aa966b9e9dabcc733494367ede4392559ceaabb4e30c1b441e",
+    "capture_start_detector.py": "85604daaea6d577238be2c4e98afe76c58083951ba21adb20da21501642da528"
+  },
+  "audio": false,
+  "software": {
+    "python": "3.9.6",
+    "opencv": "4.14.0"
+  },
+  "error": "Camera unavailable. On macOS allow Camera access for Terminal/VS Code in System Settings > Privacy & Security > Camera; check device index."
+}
