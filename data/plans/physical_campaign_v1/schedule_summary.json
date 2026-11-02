@@ -1,0 +1,30 @@
+{
+  "pilot": {
+    "packets": 16,
+    "sessions": 4,
+    "estimated_recording_hours": 0.38
+  },
+  "calibration": {
+    "packets": 6,
+    "sessions": 3,
+    "estimated_recording_hours": 0.07
+  },
+  "main": {
+    "packets": 54,
+    "sessions": 12,
+    "estimated_recording_hours": 0.83
+  },
+  "holdout": {
+    "packets": 6,
+    "sessions": 2,
+    "estimated_recording_hours": 0.1
+  },
+  "schedule_seed": 20261101,
+  "sequence_balance_seed": 20261102,
+  "hardware": "Original ESP32-S3/ST7796S LCD to phone",
+  "main_payload_policy": "Six natural messages; matched within blocks. Content and length are not separately estimated.",
+  "sequence_policy": "Rotating IDs across six blocks, unique within video. Not a fully balanced seven-block design; CRCs differ between paired packets.",
+  "readiness": "Pilot first, then calibration. Main/holdout require documented timing/noise review and frozen settings.",
+  "noise_policy": "Provisional fixed 1.2-second body occlusion/glare; verify feasibility during calibration before freezing. Changes require a versioned continuation plan once recording starts.",
+  "timing_note": "Includes nominal firmware lead, gaps, video lead/tail. Excludes setup, transfer, operator pauses and retakes."
+}
