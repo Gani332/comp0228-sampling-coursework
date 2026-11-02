@@ -1,0 +1,1202 @@
+[
+  {
+    "scenario_id": 0,
+    "codec": "hamming74",
+    "pairs": 2000,
+    "both_success": 2000,
+    "both_fail": 0,
+    "interleaving_rescues": 0,
+    "interleaving_harms": 0,
+    "success_change_percentage_points": 0.0
+  },
+  {
+    "scenario_id": 0,
+    "codec": "none",
+    "pairs": 2000,
+    "both_success": 2000,
+    "both_fail": 0,
+    "interleaving_rescues": 0,
+    "interleaving_harms": 0,
+    "success_change_percentage_points": 0.0
+  },
+  {
+    "scenario_id": 0,
+    "codec": "repeat3",
+    "pairs": 2000,
+    "both_success": 2000,
+    "both_fail": 0,
+    "interleaving_rescues": 0,
+    "interleaving_harms": 0,
+    "success_change_percentage_points": 0.0
+  },
+  {
+    "scenario_id": 0,
+    "codec": "repeat5",
+    "pairs": 2000,
+    "both_success": 2000,
+    "both_fail": 0,
+    "interleaving_rescues": 0,
+    "interleaving_harms": 0,
+    "success_change_percentage_points": 0.0
+  },
+  {
+    "scenario_id": 0,
+    "codec": "rs4",
+    "pairs": 2000,
+    "both_success": 2000,
+    "both_fail": 0,
+    "interleaving_rescues": 0,
+    "interleaving_harms": 0,
+    "success_change_percentage_points": 0.0
+  },
+  {
+    "scenario_id": 1,
+    "codec": "hamming74",
+    "pairs": 2000,
+    "both_success": 1843,
+    "both_fail": 13,
+    "interleaving_rescues": 70,
+    "interleaving_harms": 74,
+    "success_change_percentage_points": -0.2
+  },
+  {
+    "scenario_id": 1,
+    "codec": "none",
+    "pairs": 2000,
+    "both_success": 815,
+    "both_fail": 1185,
+    "interleaving_rescues": 0,
+    "interleaving_harms": 0,
+    "success_change_percentage_points": 0.0
+  },
+  {
+    "scenario_id": 1,
+    "codec": "repeat3",
+    "pairs": 2000,
+    "both_success": 1898,
+    "both_fail": 6,
+    "interleaving_rescues": 49,
+    "interleaving_harms": 47,
+    "success_change_percentage_points": 0.1
+  },
+  {
+    "scenario_id": 1,
+    "codec": "repeat5",
+    "pairs": 2000,
+    "both_success": 1999,
+    "both_fail": 0,
+    "interleaving_rescues": 0,
+    "interleaving_harms": 1,
+    "success_change_percentage_points": -0.05
+  },
+  {
+    "scenario_id": 1,
+    "codec": "rs4",
+    "pairs": 2000,
+    "both_success": 1770,
+    "both_fail": 173,
+    "interleaving_rescues": 20,
+    "interleaving_harms": 37,
+    "success_change_percentage_points": -0.8500000000000001
+  },
+  {
+    "scenario_id": 2,
+    "codec": "hamming74",
+    "pairs": 2000,
+    "both_success": 1282,
+    "both_fail": 167,
+    "interleaving_rescues": 259,
+    "interleaving_harms": 292,
+    "success_change_percentage_points": -1.6500000000000001
+  },
+  {
+    "scenario_id": 2,
+    "codec": "none",
+    "pairs": 2000,
+    "both_success": 238,
+    "both_fail": 1762,
+    "interleaving_rescues": 0,
+    "interleaving_harms": 0,
+    "success_change_percentage_points": 0.0
+  },
+  {
+    "scenario_id": 2,
+    "codec": "repeat3",
+    "pairs": 2000,
+    "both_success": 1507,
+    "both_fail": 58,
+    "interleaving_rescues": 211,
+    "interleaving_harms": 224,
+    "success_change_percentage_points": -0.65
+  },
+  {
+    "scenario_id": 2,
+    "codec": "repeat5",
+    "pairs": 2000,
+    "both_success": 1949,
+    "both_fail": 1,
+    "interleaving_rescues": 32,
+    "interleaving_harms": 18,
+    "success_change_percentage_points": 0.7000000000000001
+  },
+  {
+    "scenario_id": 2,
+    "codec": "rs4",
+    "pairs": 2000,
+    "both_success": 899,
+    "both_fail": 951,
+    "interleaving_rescues": 84,
+    "interleaving_harms": 66,
+    "success_change_percentage_points": 0.8999999999999999
+  },
+  {
+    "scenario_id": 3,
+    "codec": "hamming74",
+    "pairs": 2000,
+    "both_success": 378,
+    "both_fail": 886,
+    "interleaving_rescues": 358,
+    "interleaving_harms": 378,
+    "success_change_percentage_points": -1.0
+  },
+  {
+    "scenario_id": 3,
+    "codec": "none",
+    "pairs": 2000,
+    "both_success": 27,
+    "both_fail": 1973,
+    "interleaving_rescues": 0,
+    "interleaving_harms": 0,
+    "success_change_percentage_points": 0.0
+  },
+  {
+    "scenario_id": 3,
+    "codec": "repeat3",
+    "pairs": 2000,
+    "both_success": 606,
+    "both_fail": 530,
+    "interleaving_rescues": 406,
+    "interleaving_harms": 458,
+    "success_change_percentage_points": -2.6
+  },
+  {
+    "scenario_id": 3,
+    "codec": "repeat5",
+    "pairs": 2000,
+    "both_success": 1641,
+    "both_fail": 17,
+    "interleaving_rescues": 153,
+    "interleaving_harms": 189,
+    "success_change_percentage_points": -1.7999999999999998
+  },
+  {
+    "scenario_id": 3,
+    "codec": "rs4",
+    "pairs": 2000,
+    "both_success": 141,
+    "both_fail": 1801,
+    "interleaving_rescues": 38,
+    "interleaving_harms": 20,
+    "success_change_percentage_points": 0.8999999999999999
+  },
+  {
+    "scenario_id": 4,
+    "codec": "hamming74",
+    "pairs": 2000,
+    "both_success": 15,
+    "both_fail": 1901,
+    "interleaving_rescues": 43,
+    "interleaving_harms": 41,
+    "success_change_percentage_points": 0.1
+  },
+  {
+    "scenario_id": 4,
+    "codec": "none",
+    "pairs": 2000,
+    "both_success": 0,
+    "both_fail": 2000,
+    "interleaving_rescues": 0,
+    "interleaving_harms": 0,
+    "success_change_percentage_points": 0.0
+  },
+  {
+    "scenario_id": 4,
+    "codec": "repeat3",
+    "pairs": 2000,
+    "both_success": 30,
+    "both_fail": 1717,
+    "interleaving_rescues": 126,
+    "interleaving_harms": 127,
+    "success_change_percentage_points": -0.05
+  },
+  {
+    "scenario_id": 4,
+    "codec": "repeat5",
+    "pairs": 2000,
+    "both_success": 486,
+    "both_fail": 604,
+    "interleaving_rescues": 450,
+    "interleaving_harms": 460,
+    "success_change_percentage_points": -0.5
+  },
+  {
+    "scenario_id": 4,
+    "codec": "rs4",
+    "pairs": 2000,
+    "both_success": 1,
+    "both_fail": 1998,
+    "interleaving_rescues": 1,
+    "interleaving_harms": 0,
+    "success_change_percentage_points": 0.05
+  },
+  {
+    "scenario_id": 5,
+    "codec": "hamming74",
+    "pairs": 2000,
+    "both_success": 0,
+    "both_fail": 2000,
+    "interleaving_rescues": 0,
+    "interleaving_harms": 0,
+    "success_change_percentage_points": 0.0
+  },
+  {
+    "scenario_id": 5,
+    "codec": "none",
+    "pairs": 2000,
+    "both_success": 0,
+    "both_fail": 2000,
+    "interleaving_rescues": 0,
+    "interleaving_harms": 0,
+    "success_change_percentage_points": 0.0
+  },
+  {
+    "scenario_id": 5,
+    "codec": "repeat3",
+    "pairs": 2000,
+    "both_success": 0,
+    "both_fail": 2000,
+    "interleaving_rescues": 0,
+    "interleaving_harms": 0,
+    "success_change_percentage_points": 0.0
+  },
+  {
+    "scenario_id": 5,
+    "codec": "repeat5",
+    "pairs": 2000,
+    "both_success": 0,
+    "both_fail": 1974,
+    "interleaving_rescues": 12,
+    "interleaving_harms": 14,
+    "success_change_percentage_points": -0.1
+  },
+  {
+    "scenario_id": 5,
+    "codec": "rs4",
+    "pairs": 2000,
+    "both_success": 0,
+    "both_fail": 2000,
+    "interleaving_rescues": 0,
+    "interleaving_harms": 0,
+    "success_change_percentage_points": 0.0
+  },
+  {
+    "scenario_id": 6,
+    "codec": "hamming74",
+    "pairs": 2000,
+    "both_success": 2000,
+    "both_fail": 0,
+    "interleaving_rescues": 0,
+    "interleaving_harms": 0,
+    "success_change_percentage_points": 0.0
+  },
+  {
+    "scenario_id": 6,
+    "codec": "none",
+    "pairs": 2000,
+    "both_success": 2000,
+    "both_fail": 0,
+    "interleaving_rescues": 0,
+    "interleaving_harms": 0,
+    "success_change_percentage_points": 0.0
+  },
+  {
+    "scenario_id": 6,
+    "codec": "repeat3",
+    "pairs": 2000,
+    "both_success": 2000,
+    "both_fail": 0,
+    "interleaving_rescues": 0,
+    "interleaving_harms": 0,
+    "success_change_percentage_points": 0.0
+  },
+  {
+    "scenario_id": 6,
+    "codec": "repeat5",
+    "pairs": 2000,
+    "both_success": 2000,
+    "both_fail": 0,
+    "interleaving_rescues": 0,
+    "interleaving_harms": 0,
+    "success_change_percentage_points": 0.0
+  },
+  {
+    "scenario_id": 6,
+    "codec": "rs4",
+    "pairs": 2000,
+    "both_success": 2000,
+    "both_fail": 0,
+    "interleaving_rescues": 0,
+    "interleaving_harms": 0,
+    "success_change_percentage_points": 0.0
+  },
+  {
+    "scenario_id": 7,
+    "codec": "hamming74",
+    "pairs": 2000,
+    "both_success": 1695,
+    "both_fail": 142,
+    "interleaving_rescues": 163,
+    "interleaving_harms": 0,
+    "success_change_percentage_points": 8.15
+  },
+  {
+    "scenario_id": 7,
+    "codec": "none",
+    "pairs": 2000,
+    "both_success": 1805,
+    "both_fail": 195,
+    "interleaving_rescues": 0,
+    "interleaving_harms": 0,
+    "success_change_percentage_points": 0.0
+  },
+  {
+    "scenario_id": 7,
+    "codec": "repeat3",
+    "pairs": 2000,
+    "both_success": 1497,
+    "both_fail": 190,
+    "interleaving_rescues": 313,
+    "interleaving_harms": 0,
+    "success_change_percentage_points": 15.65
+  },
+  {
+    "scenario_id": 7,
+    "codec": "repeat5",
+    "pairs": 2000,
+    "both_success": 1336,
+    "both_fail": 93,
+    "interleaving_rescues": 571,
+    "interleaving_harms": 0,
+    "success_change_percentage_points": 28.549999999999997
+  },
+  {
+    "scenario_id": 7,
+    "codec": "rs4",
+    "pairs": 2000,
+    "both_success": 1795,
+    "both_fail": 51,
+    "interleaving_rescues": 0,
+    "interleaving_harms": 154,
+    "success_change_percentage_points": -7.7
+  },
+  {
+    "scenario_id": 8,
+    "codec": "hamming74",
+    "pairs": 2000,
+    "both_success": 1299,
+    "both_fail": 297,
+    "interleaving_rescues": 404,
+    "interleaving_harms": 0,
+    "success_change_percentage_points": 20.200000000000003
+  },
+  {
+    "scenario_id": 8,
+    "codec": "none",
+    "pairs": 2000,
+    "both_success": 1492,
+    "both_fail": 508,
+    "interleaving_rescues": 0,
+    "interleaving_harms": 0,
+    "success_change_percentage_points": 0.0
+  },
+  {
+    "scenario_id": 8,
+    "codec": "repeat3",
+    "pairs": 2000,
+    "both_success": 944,
+    "both_fail": 432,
+    "interleaving_rescues": 624,
+    "interleaving_harms": 0,
+    "success_change_percentage_points": 31.2
+  },
+  {
+    "scenario_id": 8,
+    "codec": "repeat5",
+    "pairs": 2000,
+    "both_success": 707,
+    "both_fail": 276,
+    "interleaving_rescues": 1017,
+    "interleaving_harms": 0,
+    "success_change_percentage_points": 50.849999999999994
+  },
+  {
+    "scenario_id": 8,
+    "codec": "rs4",
+    "pairs": 2000,
+    "both_success": 1495,
+    "both_fail": 170,
+    "interleaving_rescues": 0,
+    "interleaving_harms": 335,
+    "success_change_percentage_points": -16.75
+  },
+  {
+    "scenario_id": 9,
+    "codec": "hamming74",
+    "pairs": 2000,
+    "both_success": 805,
+    "both_fail": 666,
+    "interleaving_rescues": 529,
+    "interleaving_harms": 0,
+    "success_change_percentage_points": 26.450000000000003
+  },
+  {
+    "scenario_id": 9,
+    "codec": "none",
+    "pairs": 2000,
+    "both_success": 1112,
+    "both_fail": 888,
+    "interleaving_rescues": 0,
+    "interleaving_harms": 0,
+    "success_change_percentage_points": 0.0
+  },
+  {
+    "scenario_id": 9,
+    "codec": "repeat3",
+    "pairs": 2000,
+    "both_success": 446,
+    "both_fail": 826,
+    "interleaving_rescues": 728,
+    "interleaving_harms": 0,
+    "success_change_percentage_points": 36.4
+  },
+  {
+    "scenario_id": 9,
+    "codec": "repeat5",
+    "pairs": 2000,
+    "both_success": 225,
+    "both_fail": 542,
+    "interleaving_rescues": 1233,
+    "interleaving_harms": 0,
+    "success_change_percentage_points": 61.650000000000006
+  },
+  {
+    "scenario_id": 9,
+    "codec": "rs4",
+    "pairs": 2000,
+    "both_success": 1078,
+    "both_fail": 439,
+    "interleaving_rescues": 0,
+    "interleaving_harms": 483,
+    "success_change_percentage_points": -24.15
+  },
+  {
+    "scenario_id": 10,
+    "codec": "hamming74",
+    "pairs": 2000,
+    "both_success": 310,
+    "both_fail": 1206,
+    "interleaving_rescues": 484,
+    "interleaving_harms": 0,
+    "success_change_percentage_points": 24.2
+  },
+  {
+    "scenario_id": 10,
+    "codec": "none",
+    "pairs": 2000,
+    "both_success": 531,
+    "both_fail": 1469,
+    "interleaving_rescues": 0,
+    "interleaving_harms": 0,
+    "success_change_percentage_points": 0.0
+  },
+  {
+    "scenario_id": 10,
+    "codec": "repeat3",
+    "pairs": 2000,
+    "both_success": 83,
+    "both_fail": 1407,
+    "interleaving_rescues": 510,
+    "interleaving_harms": 0,
+    "success_change_percentage_points": 25.5
+  },
+  {
+    "scenario_id": 10,
+    "codec": "repeat5",
+    "pairs": 2000,
+    "both_success": 26,
+    "both_fail": 1081,
+    "interleaving_rescues": 893,
+    "interleaving_harms": 0,
+    "success_change_percentage_points": 44.65
+  },
+  {
+    "scenario_id": 10,
+    "codec": "rs4",
+    "pairs": 2000,
+    "both_success": 518,
+    "both_fail": 951,
+    "interleaving_rescues": 0,
+    "interleaving_harms": 531,
+    "success_change_percentage_points": -26.55
+  },
+  {
+    "scenario_id": 11,
+    "codec": "hamming74",
+    "pairs": 2000,
+    "both_success": 33,
+    "both_fail": 1833,
+    "interleaving_rescues": 134,
+    "interleaving_harms": 0,
+    "success_change_percentage_points": 6.7
+  },
+  {
+    "scenario_id": 11,
+    "codec": "none",
+    "pairs": 2000,
+    "both_success": 93,
+    "both_fail": 1907,
+    "interleaving_rescues": 0,
+    "interleaving_harms": 0,
+    "success_change_percentage_points": 0.0
+  },
+  {
+    "scenario_id": 11,
+    "codec": "repeat3",
+    "pairs": 2000,
+    "both_success": 0,
+    "both_fail": 1914,
+    "interleaving_rescues": 86,
+    "interleaving_harms": 0,
+    "success_change_percentage_points": 4.3
+  },
+  {
+    "scenario_id": 11,
+    "codec": "repeat5",
+    "pairs": 2000,
+    "both_success": 0,
+    "both_fail": 1810,
+    "interleaving_rescues": 190,
+    "interleaving_harms": 0,
+    "success_change_percentage_points": 9.5
+  },
+  {
+    "scenario_id": 11,
+    "codec": "rs4",
+    "pairs": 2000,
+    "both_success": 72,
+    "both_fail": 1740,
+    "interleaving_rescues": 0,
+    "interleaving_harms": 188,
+    "success_change_percentage_points": -9.4
+  },
+  {
+    "scenario_id": 12,
+    "codec": "hamming74",
+    "pairs": 2000,
+    "both_success": 2000,
+    "both_fail": 0,
+    "interleaving_rescues": 0,
+    "interleaving_harms": 0,
+    "success_change_percentage_points": 0.0
+  },
+  {
+    "scenario_id": 12,
+    "codec": "none",
+    "pairs": 2000,
+    "both_success": 2000,
+    "both_fail": 0,
+    "interleaving_rescues": 0,
+    "interleaving_harms": 0,
+    "success_change_percentage_points": 0.0
+  },
+  {
+    "scenario_id": 12,
+    "codec": "repeat3",
+    "pairs": 2000,
+    "both_success": 2000,
+    "both_fail": 0,
+    "interleaving_rescues": 0,
+    "interleaving_harms": 0,
+    "success_change_percentage_points": 0.0
+  },
+  {
+    "scenario_id": 12,
+    "codec": "repeat5",
+    "pairs": 2000,
+    "both_success": 2000,
+    "both_fail": 0,
+    "interleaving_rescues": 0,
+    "interleaving_harms": 0,
+    "success_change_percentage_points": 0.0
+  },
+  {
+    "scenario_id": 12,
+    "codec": "rs4",
+    "pairs": 2000,
+    "both_success": 2000,
+    "both_fail": 0,
+    "interleaving_rescues": 0,
+    "interleaving_harms": 0,
+    "success_change_percentage_points": 0.0
+  },
+  {
+    "scenario_id": 13,
+    "codec": "hamming74",
+    "pairs": 2000,
+    "both_success": 1774,
+    "both_fail": 83,
+    "interleaving_rescues": 143,
+    "interleaving_harms": 0,
+    "success_change_percentage_points": 7.1499999999999995
+  },
+  {
+    "scenario_id": 13,
+    "codec": "none",
+    "pairs": 2000,
+    "both_success": 1796,
+    "both_fail": 168,
+    "interleaving_rescues": 19,
+    "interleaving_harms": 17,
+    "success_change_percentage_points": 0.1
+  },
+  {
+    "scenario_id": 13,
+    "codec": "repeat3",
+    "pairs": 2000,
+    "both_success": 1617,
+    "both_fail": 149,
+    "interleaving_rescues": 228,
+    "interleaving_harms": 6,
+    "success_change_percentage_points": 11.1
+  },
+  {
+    "scenario_id": 13,
+    "codec": "repeat5",
+    "pairs": 2000,
+    "both_success": 1505,
+    "both_fail": 77,
+    "interleaving_rescues": 417,
+    "interleaving_harms": 1,
+    "success_change_percentage_points": 20.8
+  },
+  {
+    "scenario_id": 13,
+    "codec": "rs4",
+    "pairs": 2000,
+    "both_success": 1847,
+    "both_fail": 40,
+    "interleaving_rescues": 1,
+    "interleaving_harms": 112,
+    "success_change_percentage_points": -5.55
+  },
+  {
+    "scenario_id": 14,
+    "codec": "hamming74",
+    "pairs": 2000,
+    "both_success": 1432,
+    "both_fail": 222,
+    "interleaving_rescues": 343,
+    "interleaving_harms": 3,
+    "success_change_percentage_points": 17.0
+  },
+  {
+    "scenario_id": 14,
+    "codec": "none",
+    "pairs": 2000,
+    "both_success": 1502,
+    "both_fail": 427,
+    "interleaving_rescues": 35,
+    "interleaving_harms": 36,
+    "success_change_percentage_points": -0.05
+  },
+  {
+    "scenario_id": 14,
+    "codec": "repeat3",
+    "pairs": 2000,
+    "both_success": 1161,
+    "both_fail": 404,
+    "interleaving_rescues": 421,
+    "interleaving_harms": 14,
+    "success_change_percentage_points": 20.349999999999998
+  },
+  {
+    "scenario_id": 14,
+    "codec": "repeat5",
+    "pairs": 2000,
+    "both_success": 994,
+    "both_fail": 224,
+    "interleaving_rescues": 776,
+    "interleaving_harms": 6,
+    "success_change_percentage_points": 38.5
+  },
+  {
+    "scenario_id": 14,
+    "codec": "rs4",
+    "pairs": 2000,
+    "both_success": 1612,
+    "both_fail": 121,
+    "interleaving_rescues": 4,
+    "interleaving_harms": 263,
+    "success_change_percentage_points": -12.950000000000001
+  },
+  {
+    "scenario_id": 15,
+    "codec": "hamming74",
+    "pairs": 2000,
+    "both_success": 990,
+    "both_fail": 499,
+    "interleaving_rescues": 502,
+    "interleaving_harms": 9,
+    "success_change_percentage_points": 24.65
+  },
+  {
+    "scenario_id": 15,
+    "codec": "none",
+    "pairs": 2000,
+    "both_success": 1116,
+    "both_fail": 784,
+    "interleaving_rescues": 53,
+    "interleaving_harms": 47,
+    "success_change_percentage_points": 0.3
+  },
+  {
+    "scenario_id": 15,
+    "codec": "repeat3",
+    "pairs": 2000,
+    "both_success": 610,
+    "both_fail": 762,
+    "interleaving_rescues": 621,
+    "interleaving_harms": 7,
+    "success_change_percentage_points": 30.7
+  },
+  {
+    "scenario_id": 15,
+    "codec": "repeat5",
+    "pairs": 2000,
+    "both_success": 483,
+    "both_fail": 497,
+    "interleaving_rescues": 1011,
+    "interleaving_harms": 9,
+    "success_change_percentage_points": 50.1
+  },
+  {
+    "scenario_id": 15,
+    "codec": "rs4",
+    "pairs": 2000,
+    "both_success": 1277,
+    "both_fail": 333,
+    "interleaving_rescues": 3,
+    "interleaving_harms": 387,
+    "success_change_percentage_points": -19.2
+  },
+  {
+    "scenario_id": 16,
+    "codec": "hamming74",
+    "pairs": 2000,
+    "both_success": 444,
+    "both_fail": 960,
+    "interleaving_rescues": 591,
+    "interleaving_harms": 5,
+    "success_change_percentage_points": 29.299999999999997
+  },
+  {
+    "scenario_id": 16,
+    "codec": "none",
+    "pairs": 2000,
+    "both_success": 551,
+    "both_fail": 1344,
+    "interleaving_rescues": 59,
+    "interleaving_harms": 46,
+    "success_change_percentage_points": 0.65
+  },
+  {
+    "scenario_id": 16,
+    "codec": "repeat3",
+    "pairs": 2000,
+    "both_success": 169,
+    "both_fail": 1277,
+    "interleaving_rescues": 542,
+    "interleaving_harms": 12,
+    "success_change_percentage_points": 26.5
+  },
+  {
+    "scenario_id": 16,
+    "codec": "repeat5",
+    "pairs": 2000,
+    "both_success": 96,
+    "both_fail": 953,
+    "interleaving_rescues": 944,
+    "interleaving_harms": 7,
+    "success_change_percentage_points": 46.85
+  },
+  {
+    "scenario_id": 16,
+    "codec": "rs4",
+    "pairs": 2000,
+    "both_success": 686,
+    "both_fail": 837,
+    "interleaving_rescues": 9,
+    "interleaving_harms": 468,
+    "success_change_percentage_points": -22.95
+  },
+  {
+    "scenario_id": 17,
+    "codec": "hamming74",
+    "pairs": 2000,
+    "both_success": 70,
+    "both_fail": 1607,
+    "interleaving_rescues": 319,
+    "interleaving_harms": 4,
+    "success_change_percentage_points": 15.75
+  },
+  {
+    "scenario_id": 17,
+    "codec": "none",
+    "pairs": 2000,
+    "both_success": 118,
+    "both_fail": 1812,
+    "interleaving_rescues": 31,
+    "interleaving_harms": 39,
+    "success_change_percentage_points": -0.4
+  },
+  {
+    "scenario_id": 17,
+    "codec": "repeat3",
+    "pairs": 2000,
+    "both_success": 7,
+    "both_fail": 1817,
+    "interleaving_rescues": 174,
+    "interleaving_harms": 2,
+    "success_change_percentage_points": 8.6
+  },
+  {
+    "scenario_id": 17,
+    "codec": "repeat5",
+    "pairs": 2000,
+    "both_success": 2,
+    "both_fail": 1681,
+    "interleaving_rescues": 317,
+    "interleaving_harms": 0,
+    "success_change_percentage_points": 15.85
+  },
+  {
+    "scenario_id": 17,
+    "codec": "rs4",
+    "pairs": 2000,
+    "both_success": 171,
+    "both_fail": 1580,
+    "interleaving_rescues": 12,
+    "interleaving_harms": 237,
+    "success_change_percentage_points": -11.25
+  },
+  {
+    "scenario_id": 18,
+    "codec": "hamming74",
+    "pairs": 2000,
+    "both_success": 253,
+    "both_fail": 980,
+    "interleaving_rescues": 748,
+    "interleaving_harms": 19,
+    "success_change_percentage_points": 36.449999999999996
+  },
+  {
+    "scenario_id": 18,
+    "codec": "none",
+    "pairs": 2000,
+    "both_success": 177,
+    "both_fail": 1823,
+    "interleaving_rescues": 0,
+    "interleaving_harms": 0,
+    "success_change_percentage_points": 0.0
+  },
+  {
+    "scenario_id": 18,
+    "codec": "repeat3",
+    "pairs": 2000,
+    "both_success": 99,
+    "both_fail": 729,
+    "interleaving_rescues": 1160,
+    "interleaving_harms": 12,
+    "success_change_percentage_points": 57.4
+  },
+  {
+    "scenario_id": 18,
+    "codec": "repeat5",
+    "pairs": 2000,
+    "both_success": 200,
+    "both_fail": 158,
+    "interleaving_rescues": 1639,
+    "interleaving_harms": 3,
+    "success_change_percentage_points": 81.8
+  },
+  {
+    "scenario_id": 18,
+    "codec": "rs4",
+    "pairs": 2000,
+    "both_success": 398,
+    "both_fail": 1242,
+    "interleaving_rescues": 7,
+    "interleaving_harms": 353,
+    "success_change_percentage_points": -17.299999999999997
+  },
+  {
+    "scenario_id": 19,
+    "codec": "hamming74",
+    "pairs": 2000,
+    "both_success": 455,
+    "both_fail": 759,
+    "interleaving_rescues": 783,
+    "interleaving_harms": 3,
+    "success_change_percentage_points": 39.0
+  },
+  {
+    "scenario_id": 19,
+    "codec": "none",
+    "pairs": 2000,
+    "both_success": 611,
+    "both_fail": 1389,
+    "interleaving_rescues": 0,
+    "interleaving_harms": 0,
+    "success_change_percentage_points": 0.0
+  },
+  {
+    "scenario_id": 19,
+    "codec": "repeat3",
+    "pairs": 2000,
+    "both_success": 181,
+    "both_fail": 700,
+    "interleaving_rescues": 1119,
+    "interleaving_harms": 0,
+    "success_change_percentage_points": 55.95
+  },
+  {
+    "scenario_id": 19,
+    "codec": "repeat5",
+    "pairs": 2000,
+    "both_success": 116,
+    "both_fail": 252,
+    "interleaving_rescues": 1632,
+    "interleaving_harms": 0,
+    "success_change_percentage_points": 81.6
+  },
+  {
+    "scenario_id": 19,
+    "codec": "rs4",
+    "pairs": 2000,
+    "both_success": 730,
+    "both_fail": 653,
+    "interleaving_rescues": 1,
+    "interleaving_harms": 616,
+    "success_change_percentage_points": -30.75
+  },
+  {
+    "scenario_id": 20,
+    "codec": "hamming74",
+    "pairs": 2000,
+    "both_success": 1209,
+    "both_fail": 557,
+    "interleaving_rescues": 234,
+    "interleaving_harms": 0,
+    "success_change_percentage_points": 11.700000000000001
+  },
+  {
+    "scenario_id": 20,
+    "codec": "none",
+    "pairs": 2000,
+    "both_success": 1436,
+    "both_fail": 564,
+    "interleaving_rescues": 0,
+    "interleaving_harms": 0,
+    "success_change_percentage_points": 0.0
+  },
+  {
+    "scenario_id": 20,
+    "codec": "repeat3",
+    "pairs": 2000,
+    "both_success": 879,
+    "both_fail": 793,
+    "interleaving_rescues": 328,
+    "interleaving_harms": 0,
+    "success_change_percentage_points": 16.400000000000002
+  },
+  {
+    "scenario_id": 20,
+    "codec": "repeat5",
+    "pairs": 2000,
+    "both_success": 571,
+    "both_fail": 745,
+    "interleaving_rescues": 684,
+    "interleaving_harms": 0,
+    "success_change_percentage_points": 34.2
+  },
+  {
+    "scenario_id": 20,
+    "codec": "rs4",
+    "pairs": 2000,
+    "both_success": 1374,
+    "both_fail": 349,
+    "interleaving_rescues": 0,
+    "interleaving_harms": 277,
+    "success_change_percentage_points": -13.850000000000001
+  },
+  {
+    "scenario_id": 21,
+    "codec": "hamming74",
+    "pairs": 2000,
+    "both_success": 753,
+    "both_fail": 338,
+    "interleaving_rescues": 822,
+    "interleaving_harms": 87,
+    "success_change_percentage_points": 36.75
+  },
+  {
+    "scenario_id": 21,
+    "codec": "none",
+    "pairs": 2000,
+    "both_success": 279,
+    "both_fail": 1425,
+    "interleaving_rescues": 152,
+    "interleaving_harms": 144,
+    "success_change_percentage_points": 0.4
+  },
+  {
+    "scenario_id": 21,
+    "codec": "repeat3",
+    "pairs": 2000,
+    "both_success": 381,
+    "both_fail": 462,
+    "interleaving_rescues": 1111,
+    "interleaving_harms": 46,
+    "success_change_percentage_points": 53.25
+  },
+  {
+    "scenario_id": 21,
+    "codec": "repeat5",
+    "pairs": 2000,
+    "both_success": 640,
+    "both_fail": 87,
+    "interleaving_rescues": 1256,
+    "interleaving_harms": 17,
+    "success_change_percentage_points": 61.95
+  },
+  {
+    "scenario_id": 21,
+    "codec": "rs4",
+    "pairs": 2000,
+    "both_success": 903,
+    "both_fail": 553,
+    "interleaving_rescues": 131,
+    "interleaving_harms": 413,
+    "success_change_percentage_points": -14.099999999999998
+  },
+  {
+    "scenario_id": 22,
+    "codec": "hamming74",
+    "pairs": 2000,
+    "both_success": 792,
+    "both_fail": 392,
+    "interleaving_rescues": 800,
+    "interleaving_harms": 16,
+    "success_change_percentage_points": 39.2
+  },
+  {
+    "scenario_id": 22,
+    "codec": "none",
+    "pairs": 2000,
+    "both_success": 710,
+    "both_fail": 1077,
+    "interleaving_rescues": 105,
+    "interleaving_harms": 108,
+    "success_change_percentage_points": -0.15
+  },
+  {
+    "scenario_id": 22,
+    "codec": "repeat3",
+    "pairs": 2000,
+    "both_success": 402,
+    "both_fail": 531,
+    "interleaving_rescues": 1047,
+    "interleaving_harms": 20,
+    "success_change_percentage_points": 51.349999999999994
+  },
+  {
+    "scenario_id": 22,
+    "codec": "repeat5",
+    "pairs": 2000,
+    "both_success": 433,
+    "both_fail": 213,
+    "interleaving_rescues": 1351,
+    "interleaving_harms": 3,
+    "success_change_percentage_points": 67.4
+  },
+  {
+    "scenario_id": 22,
+    "codec": "rs4",
+    "pairs": 2000,
+    "both_success": 1120,
+    "both_fail": 382,
+    "interleaving_rescues": 25,
+    "interleaving_harms": 473,
+    "success_change_percentage_points": -22.400000000000002
+  },
+  {
+    "scenario_id": 23,
+    "codec": "hamming74",
+    "pairs": 2000,
+    "both_success": 1296,
+    "both_fail": 470,
+    "interleaving_rescues": 233,
+    "interleaving_harms": 1,
+    "success_change_percentage_points": 11.600000000000001
+  },
+  {
+    "scenario_id": 23,
+    "codec": "none",
+    "pairs": 2000,
+    "both_success": 1428,
+    "both_fail": 538,
+    "interleaving_rescues": 17,
+    "interleaving_harms": 17,
+    "success_change_percentage_points": 0.0
+  },
+  {
+    "scenario_id": 23,
+    "codec": "repeat3",
+    "pairs": 2000,
+    "both_success": 980,
+    "both_fail": 710,
+    "interleaving_rescues": 292,
+    "interleaving_harms": 18,
+    "success_change_percentage_points": 13.700000000000001
+  },
+  {
+    "scenario_id": 23,
+    "codec": "repeat5",
+    "pairs": 2000,
+    "both_success": 740,
+    "both_fail": 645,
+    "interleaving_rescues": 609,
+    "interleaving_harms": 6,
+    "success_change_percentage_points": 30.15
+  },
+  {
+    "scenario_id": 23,
+    "codec": "rs4",
+    "pairs": 2000,
+    "both_success": 1446,
+    "both_fail": 311,
+    "interleaving_rescues": 0,
+    "interleaving_harms": 243,
+    "success_change_percentage_points": -12.15
+  }
+]

@@ -121,3 +121,19 @@ must pass before using modeled results. Generated artifacts live under the
 `data/comparison/batch_results/<recording>/` for batch runs, each with a new UTC
 run subdirectory. On systems without a writable Matplotlib cache, set
 `MPLCONFIGDIR=/tmp/comp0228-matplotlib`.
+
+Controlled comparison runs also save `success_vs_noise`, `goodput_vs_noise`, and
+`burst_length_sensitivity` graphs in PNG and SVG formats beside `summary.json`.
+Rate plots show 95% Wilson intervals. Burst sensitivity includes the L=8 reference
+from the rate sweep. Noise occupancy for glare is not its actual bit error rate.
+To verify an existing study and add graphs without rerunning the simulation:
+
+```sh
+python3 code/tools/plot_controlled_study.py --study data/screen/batch_results/controlled_simulation/<run>
+```
+
+For mathematical checks, trial integrity and CRC collision diagnostics:
+
+```sh
+python3 code/tools/audit_coding_study.py --root code --study data/screen/batch_results/controlled_simulation/<run>
+```

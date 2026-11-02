@@ -1,0 +1,45 @@
+{
+  "schema": 1,
+  "seed": 20261024,
+  "trials_per_condition": 2000,
+  "payload_bytes": 9,
+  "bit_seconds": 0.2,
+  "codecs": [
+    "none",
+    "repeat3",
+    "repeat5",
+    "hamming74",
+    "rs4"
+  ],
+  "interleaver_depths": [
+    1,
+    8
+  ],
+  "models": [
+    "iid_flip",
+    "burst_flip",
+    "glare_burst"
+  ],
+  "rates": [
+    0,
+    0.01,
+    0.025,
+    0.05,
+    0.1,
+    0.2
+  ],
+  "mean_burst_slots": 8,
+  "length_sweep_rate": 0.05,
+  "length_sweep_slots": [
+    2,
+    4,
+    8,
+    16
+  ],
+  "scope": "Body only; ideal synchronization/header; actual framing airtime included.",
+  "payload_design": "Uniform random 9-byte payloads, shared across all conditions; sequence = trial modulo 256.",
+  "pairing": "Same payload and common prefix of the same wire-slot noise process for all codes/depths in a trial.",
+  "rate_definition": "Flip models: stationary bit-error probability. Glare: bad-state occupancy, NOT BER.",
+  "interleaver": "Write bits row-wise into an 8-row ragged matrix, read column-wise; no padding or extra symbols.",
+  "selection": "Depth 8 and all parameter ranges specified before the main simulation; no winner-based tuning."
+}

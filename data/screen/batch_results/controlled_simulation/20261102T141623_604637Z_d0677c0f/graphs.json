@@ -1,0 +1,12 @@
+{
+  "files": [
+    "success_vs_noise.png",
+    "success_vs_noise.svg",
+    "goodput_vs_noise.png",
+    "goodput_vs_noise.svg",
+    "burst_length_sensitivity.png",
+    "burst_length_sensitivity.svg"
+  ],
+  "source": "summary.json",
+  "interpretation": "Synthetic coding evidence, not camera/filter performance. Glare occupancy is not BER. Payload success requires exact recovery and CRC. Goodput includes framing and coding overhead. Rate and burst-length sweeps are plotted separately."
+}

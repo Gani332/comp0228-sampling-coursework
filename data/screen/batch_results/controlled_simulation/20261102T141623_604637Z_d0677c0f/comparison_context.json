@@ -1,0 +1,9 @@
+{
+  "adapter_sha256": "bdab3c919267fb648ef95a0a5701c828fc60f6707e63abcd6c1d41e8ebc520f5",
+  "simulation": "controlled",
+  "engine": "optical_link.coding_experiments.run_study",
+  "evidence_kind": "controlled_synthetic_coding",
+  "recording_calibration": false,
+  "camera_filters_evaluated": false,
+  "note": "Independent of recording, ROI and payload. Actual framing airtime is charged. Original settings unless explicit seed/trials overrides were supplied."
+}

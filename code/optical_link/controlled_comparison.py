@@ -14,6 +14,8 @@ def run_controlled(root, output, *, seed=20261024, trials=2000):
           f'{trials} random nine-byte payloads per condition; seed={seed}. '
           'Perfect acquisition/header assumed; no camera-filter simulation.', flush=True)
     run_study(root/'code', output, config)
+    from .controlled_plots import plot_study
+    plot_study(output)
     save_json(output/'comparison_context.json',dict(
         adapter_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
         simulation='controlled',engine='optical_link.coding_experiments.run_study',
