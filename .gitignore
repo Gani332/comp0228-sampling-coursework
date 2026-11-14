@@ -1,31 +1,25 @@
+# Local runtime and editor files
+.venv/
 __pycache__/
 *.py[cod]
 .ipynb_checkpoints/
-.venv/
 .DS_Store
-.env
-.env.*
-!.env.example
-/.archive/
-/archive/
+.archive/
+
+# Evidence is distributed separately; retain only the fixed recording plan.
+/data/*
+!/data/plans/
 /code/build/
 /code/cache/
-/code/firmware/prebuilt/
-/code/.arduino-downloads/
-/code/arduino-cli.local.yaml
 
-# Original recordings are optional, hash-verified release downloads.
-*.mov
-*.MOV
-*.mp4
-*.MP4
-/data/**/*.zip
-/data/**/*.lock
-/data/**/*.ipynb
+# TeX build intermediates (the final report PDF is deliberately retained)
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
 
-# Preserve the published studies; keep new exploratory runs local by default.
-/data/analysis/coding_rerun_*/
-/data/analysis/coding_new_run/
-/data/analysis/receiver_new_run/
-
-/playground/
+# Local submission archives
+COMP0228_Code_Submission.zip

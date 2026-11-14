@@ -1,4 +1,4 @@
-# Legacy one-shot recording cell; executed only by its regression test.
+# Historical recording cell: regression fixture, never run against hardware.
 attempt_dir = None
 if RUN_TRANSMISSION:
     RUN_TRANSMISSION = False  # One-shot: consciously re-enable for another send.

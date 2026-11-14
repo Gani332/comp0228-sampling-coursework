@@ -1,0 +1,48 @@
+{
+  "pilot": {
+    "packets": 16,
+    "sessions": 4,
+    "estimated_recording_hours": 0.34
+  },
+  "calibration": {
+    "packets": 6,
+    "sessions": 3,
+    "estimated_recording_hours": 0.08
+  },
+  "main": {
+    "packets": 54,
+    "sessions": 12,
+    "estimated_recording_hours": 0.89
+  },
+  "holdout": {
+    "packets": 6,
+    "sessions": 2,
+    "estimated_recording_hours": 0.1
+  },
+  "schedule_seed": 20261101,
+  "sequence_balance_seed": 20261102,
+  "hardware": "Mac display to phone",
+  "payloads": [
+    "A7k2",
+    "A7k2M9q4",
+    "A7k2M9q4R6v8"
+  ],
+  "main_round_order": [
+    [
+      "A7k2M9q4R6v8",
+      "A7k2M9q4",
+      "A7k2"
+    ],
+    [
+      "A7k2",
+      "A7k2M9q4R6v8",
+      "A7k2M9q4"
+    ]
+  ],
+  "round_order_seed": 20261107,
+  "main_payload_policy": "Three fixed ASCII payloads (4/8/12 bytes), each repeated once in each of two rounds. Comparisons matched within each length/round block; length and content are not separately estimated.",
+  "sequence_policy": "Rotating IDs across six blocks, unique within video. Not a fully balanced seven-block design; CRCs differ between paired packets.",
+  "readiness": "Pilot first, then calibration. Main/holdout require documented timing/noise review and frozen settings.",
+  "noise_policy": "Provisional fixed 1.2-second body occlusion/glare; verify feasibility during calibration before freezing. Changes require a versioned continuation plan once recording starts.",
+  "timing_note": "Includes nominal screen pre-packet black lead, gaps, video lead/tail. Excludes setup, transfer, operator pauses and retakes."
+}

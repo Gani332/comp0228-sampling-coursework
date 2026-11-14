@@ -1,4 +1,12 @@
-# Frozen hashes must remain valid on every checkout, including Windows.
-# Keep original CSV line endings and protocol/source bytes exactly as stored.
-data/** -text
-code/optical_link/** -text
+* text=auto
+*.py text eol=lf
+*.md text eol=lf
+*.tex text eol=lf
+*.csv text eol=lf
+*.ipynb text eol=lf
+*.pdf binary
+*.png binary
+*.zip binary
+# Preserve upstream library bytes and their recorded hashes.
+code/optical_link/_vendor/** -whitespace
+legacy/comparison_study/code/optical_link/_vendor/** -whitespace

@@ -1,100 +1,84 @@
-# COMP0228 — Optical communication coursework
+# COMP0228: screen-to-camera optical communication
 
-Open **[Coursework.ipynb](Coursework.ipynb)** and run from top to bottom. The full analysis runs from the included measurements: **no video download or hardware connection is needed**.
+Text is encoded into black/white flashes on a Mac display. A phone records the flashes; the receiver locates each packet, reads its bits, reverses any interleaving and applies error correction. The final study investigates glare, blockage, receiver processing and coding trade-offs.
 
-```text
-Coursework.ipynb   One main notebook: system, physical results and simulations
-code/             Implementation, firmware, tests and tools
-data/             Logs, cached measurements, analysis results and video index
-report.tex        Working IEEE report draft with embedded figures/references
-README.md         Setup and reproduction instructions
-```
+## 1. Choose your starting point
 
-## Start here
+| Goal | Start here | Requires recorded data? |
+|---|---|---|
+| Read the final findings | [report.pdf](report.pdf) | No |
+| Understand and exercise the implementation | [Coursework.ipynb](Coursework.ipynb) | No; synthetic examples are explicitly labelled |
+| Record a new physical experiment | [Record_Physical_Trials.ipynb](Record_Physical_Trials.ipynb), then [recording guide](docs/RECORDING_GUIDE.md) | No existing recordings; Mac display and phone required |
+| Understand the code | [architecture and reading order](docs/ARCHITECTURE.md) | No |
+| Run software checks | Commands below | No recordings or historical archive |
+| Reproduce the reported results | [reproduction guide](docs/REPRODUCING_RESULTS.md) | Yes: separately supplied evidence |
+| Edit the report | [report.tex](report.tex) and [report_figures/](report_figures/) | No, unless regenerating figures |
 
-Clone the repository (a shallow clone keeps the download compact):
+## 2. Install and verify
+
+Use Python 3.11 or later. Run commands from this directory:
 
 ```sh
-git clone --depth 1 https://github.com/Gani332/comp0228-sampling-coursework.git
-cd comp0228-sampling-coursework
 python3 -m venv .venv
 .venv/bin/python -m pip install -r code/requirements.txt
+PYTHONPATH=code .venv/bin/python -m unittest discover -s code/tests -v
 .venv/bin/python -m jupyterlab Coursework.ipynb
 ```
 
-Python 3.11+ is required. FFmpeg/FFprobe is needed for raw-video extraction and the generated-video test; normal notebook execution uses the included caches. The notebook is committed without outputs to keep changes small. Running it regenerates tables and displays the included plots. It verifies the stored simulation and replays a deterministic subset; the full 480,000-decoding rerun is optional.
-
-## Evidence and labels
-
-| Evidence | Location under `data/` | Scope |
-|---|---|---|
-| Pilot | `recordings/pilot_2026-10-24/`, `analysis/pilot_2026-10-24/` | Six packets/videos: three clean, three noisy |
-| Repetition trials T01/T02 | `experiments/repetition_comparison/` | Two selected packets/videos: one clean, one noisy |
-| Earlier batches B01–B03 | `experiments/final_capture_v1/batches/B*/` | 11 noisy packets in three videos |
-| Guided retakes G01–G03 | `experiments/final_capture_v1/batches/G*/` | 11 noisy packets in three videos |
-| Receiver comparison | `analysis/receiver_layers_2026-10-24/` | Five receiver variants on the same 30 physical packets |
-| Coding/interleaving study | `analysis/coding_experiments_2026-10-24/` | 480,000 synthetic decoding evaluations; not physical recordings |
-
-The [receiver manifest](data/analysis/receiver_layers_2026-10-24/manifest.json) selects the 14 videos and 30 packets used in the report, with exact paths, hashes, transmission logs, regions and time windows. Earlier attempt records are retained for provenance but are not silently added to the selected dataset. Historical logs can contain capture-machine paths; the active notebook uses relative paths and the manifest.
-
-**Two historical label exceptions:** the noisy ADRIAN and OMAR pilot logs retain `conditions.interference: "none"` from the original capture form. Their `dataset_condition: "noisy"` and `condition_note` record the correct interpretation. Folder, manifest and analysis labels agree that these are noisy. Pilot sequence numbers were reused, so matching transmitted bits do not independently prove a unique historical send/record pairing. See the [pilot documentation](data/recordings/pilot_2026-10-24/README.md).
-
-## Optional silent recordings
-
-Silent videos are distributed in the [data-v1.1.0 release](https://github.com/Gani332/comp0228-sampling-coursework/releases/tag/data-v1.1.0), **outside Git**. Four ZIPs group the pilot, repetition, earlier-batch and guided-retake footage. Each is below 1 GiB; together they are about 2.2 GiB. All 14 files contain only the video track. Audio and auxiliary tracks have been removed; encoded video packets, presentation/decode timestamps, and HDR/display parameters are unchanged. No video was re-encoded.
+FFmpeg and FFprobe must be on PATH for raw-video extraction and the generated-video regression test. The other tests use synthetic traces, temporary files and mocked devices. No test starts a real transmitter. The recording workflow additionally needs:
 
 ```sh
-# List optional downloads without fetching anything:
-.venv/bin/python code/tools/get_recordings.py --list
-
-# Download only the guided retakes, restoring their exact data/ paths:
-.venv/bin/python code/tools/get_recordings.py --group guided-retakes
-
-# Or restore all 14 silent videos:
-.venv/bin/python code/tools/get_recordings.py
-
-# Check restored silent videos without downloading:
-.venv/bin/python code/tools/get_recordings.py --verify-only
+.venv/bin/python -m pip install -r code/requirements-screen-camera.txt
+.venv/bin/python -m jupyterlab Record_Physical_Trials.ipynb
 ```
 
-The tool verifies both archive and individual-video SHA-256 hashes, skips matching files and refuses to overwrite a different existing recording. Downloads use temporary storage and the ZIP is removed after successful extraction. If you downloaded ZIPs through the browser, add `--from-dir /path/to/downloads` to restore them without another network transfer. Exact sizes and paths are in [recordings_manifest.json](data/recordings_manifest.json); the release includes `SHA256SUMS` for manual checks.
+On a Mac, `Record_Physical_Trials.command` performs dependency setup and opens the recording notebook. Follow its cells individually; do **not** Run All in a recording notebook.
 
-The frozen study manifests retain the original capture-container hashes. The download manifest records both `original_sha256` and the silent file's `sha256`; [audio_removal_verification.json](data/audio_removal_verification.json) records the packet/timestamp checks. Raw-video extraction verifies this mapping and records the actual input-container hash. Existing features, receiver settings and numerical results are unchanged.
+## 3. Project layout
 
-Git history has been rewritten to remove the six pilot movies from all reachable commits, and the old audio-bearing release was deleted. Anyone with an earlier clone should save their own work separately and make a fresh clone instead of merging the old history. Earlier downloads may still contain audio; discard them and use the new release. The downloader deliberately refuses to overwrite old files with different hashes.
-
-The Git tree has no videos and approximately 33 MiB of analysis data. Backups, obsolete notebooks, local environments and notebook outputs are excluded.
-
-## Verify and reproduce
-
-```sh
-# Run all software tests, from the repository root:
-cd code
-../.venv/bin/python -m unittest discover -s tests -v
-cd ..
-
-# Reproduce the six pilot outcomes from cached traces:
-.venv/bin/python code/tools/evaluate_pilot.py
-
-# Verify the saved controlled simulation without repeating the full experiment:
-.venv/bin/python code/tools/audit_coding_study.py --root code --study data/analysis/coding_experiments_2026-10-24
+```text
+README.md                       Start here
+Coursework.ipynb                 Offline explanation and synthetic examples
+Record_Physical_Trials.ipynb     Fresh, numbered physical recording workflow
+Record_Physical_Trials.command   Mac launcher
+code/
+  optical_link/                 Packet format, codecs, transmitter and receivers
+  tests/                        Offline tests and explicit test fixtures
+  tools/                        Recording-plan and simulation command-line tools
+  *_campaign*.py                November evidence extraction/analysis/report tools
+  firmware/, vendor/            Optional earlier ESP32/LCD implementation and licences
+data/plans/                     Small, fixed experimental configuration only
+  physical_campaign_v1/         21 sessions / 82 planned transmissions
+report.tex, report.pdf           Final report source and rendered PDF
+report_figures/                  Required report figures and numerical table inputs
+docs/                           Architecture, recording and reproduction guides
+legacy/comparison_study/         Preserved collaborator comparison implementation
+COMP0228_Report_Overleaf.zip     Complete report-source upload bundle
 ```
 
-Fresh studies use new output directories:
+Recorded datasets, generated analysis, notebook outputs, environments, caches and historical backups are excluded from Git and the submission ZIP. The small schedule in `data/plans/` is **configuration**, not measured results; it is required by the recorder and tests. Nothing in the clean project silently downloads recordings.
 
-```sh
-.venv/bin/python code/tools/run_receiver_study.py --root code --data-root data --study data/analysis/receiver_layers_2026-10-24 --output data/analysis/receiver_new_run
-.venv/bin/python code/tools/run_coding_experiments.py --root code --output data/analysis/coding_new_run
-```
+## 4. How the final evidence is organised
 
-Receiver re-evaluation uses the tracked feature caches. To re-extract measurements from raw videos, first restore the appropriate recordings; see `code/tools/extract_receiver_features.py --help`. The saved inputs and algorithms are frozen: preserve the original study and use a new run when changing them.
+The report uses the **November campaign**, not the older 30-packet October study:
 
-The [receiver report](data/analysis/receiver_layers_2026-10-24/report.html) and [coding/interleaving report](data/analysis/coding_experiments_2026-10-24/report.html) provide detailed outputs. Download/open HTML reports locally to view them. For Overleaf, copy `report.tex` into `main.tex` and select pdfLaTeX; no external figure or bibliography files are needed. The report is a draft with author placeholders.
+| Stage | Physical transmissions | Purpose |
+|---|---:|---|
+| Clean pilot | 16 | Establish timing and clean decoding |
+| Disturbance calibration | 6 | Develop the disturbance and receiver settings |
+| Main blockage | 42 | Five codes plus two interleaved configurations, three lengths, two rounds |
+| Main body glare | 12 | Uncoded/Hamming, three lengths, two rounds |
+| Early-glare acquisition challenge | 6 | Retain failures before body correction |
+| **Total across 21 videos** | **82** | Reprocessing does not add independent transmissions |
 
-## Interpretation and attribution
+The separate controlled study contains 480,000 simulated decodes. They test mechanisms under declared noise models; they are not extra physical observations. Receiver methods use identical recorded frames. Physical transmissions under different codes experienced different manual disturbances, so they do not establish a controlled causal ranking.
 
-The implementation includes uncoded transmission, repetition ×3/×5, Hamming (7,4), Reed–Solomon with four parity bytes, reference compensation, spatial processing and bit interleaving. The transmitter uses an ESP32-S3 and LAFVIN ST7796S display; the receiver uses phone-video timestamps and brightness at a baseline of 200 ms/bit.
+## 5. Report, evidence and attribution
 
-The 30 physical packets are selected recordings from one setup. Eight informed receiver settings, and the later recordings were previously inspected. The 30/30 combined-receiver outcome is retrospective recovery of this dataset, not proof of universal reliability. Physical disturbances are not matched across codes. Simulations use declared noise models and ideal acquisition/header reception, while charging framing airtime. Failed packets remain failures; success requires an exact message and a valid CRC, and payload BER is conditional on a returned payload.
+The PDF is six pages including references. Upload `COMP0228_Report_Overleaf.zip` to Overleaf, or compile `report.tex` using Tectonic or pdfLaTeX (twice). Keep `report_figures/` beside the source. The report and interpretive discussion are edited by hand; numerical builders do not regenerate the prose.
 
-Repetition/Hamming follow the labs. The display setup was adapted from the author's earlier robot-face firmware. LovyanGFX 1.2.32 and `reedsolo` 1.7.0 retain their licences and provenance; the Reed–Solomon algorithm is credited library code. AI assistance supported implementation and drafting. Every group member must understand and justify the submitted work. Private device-restoration material is excluded; flashing helpers require the original local backup and device checks. Presentation, live demonstration and contribution forms remain separate assessment deliverables.
+Read [reproduction instructions](docs/REPRODUCING_RESULTS.md) before running analysis: the source-only repository cannot reproduce empirical results without the evidence package. A new recording run must not overwrite the frozen study.
+
+Repetition and Hamming follow the module's coding conventions. Reed–Solomon uses the credited, vendored `reedsolo` 1.7.0 implementation; see its [provenance and licence](code/optical_link/_vendor/README.txt). The optional LCD firmware uses [LovyanGFX](code/vendor/LovyanGFX/license.txt). Retain third-party copyright notices. AI assistance is acknowledged in the report.
+
+The [historical comparison snapshot](legacy/comparison_study/README.md) preserves collaborators' earlier work separately, including its original receiver variant. It is not the implementation used to produce the final November report. The presentation, brief live demonstration, code submission and individual contribution forms remain separate deliverables.

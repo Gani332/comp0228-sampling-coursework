@@ -1,0 +1,31 @@
+Enlarging the measured region raises body-glare recovery from 8/12 to
+12/12 and removes all 18 raw errors (Table~\ref{tab:frontends}). Every
+additional method also reaches 12/12. The improvement is therefore already
+explained by measuring a larger area; these recordings show no further
+benefit from filtering or reference compensation. In calibration, spatial
+and combined processing recovered 2/2 glare packets where the larger mean
+recovered 0/2. That motivated testing, but its advantage did not carry over
+to the main glare comparison.
+
+Under blockage, the larger mean raises recovery from 27/42 to 29/42,
+rescuing three messages while losing one previously recovered. EWMA gives
+30/42 and Kalman 29/42. Reference and combined processing reach 33/42,
+each rescuing six messages without losing any baseline successes.
+However, some blockages cover the reference regions, so these improvements
+do not establish that compensation correctly estimated illumination changes.
+EWMA has the fewest raw errors (71), yet recovers fewer messages than the
+reference method (72 errors). A lower error count therefore does not
+guarantee better recovery: correction also depends on how errors are grouped.
+
+The benefit also depends on the code. Combined processing raises uncoded
+blockage recovery from 1/6 to 2/6 and non-interleaved Hamming from 4/6 to
+5/6. Enlarging the region alone instead lowers Hamming to 3/6 despite
+improving the overall total. Interleaved Hamming and non-interleaved
+Reed--Solomon remain at 6/6 throughout. A receiver improvement in aggregate
+therefore need not improve every coding configuration.
+
+These results favour measuring a sufficiently broad screen area before
+adding more processing. Temporal filtering offers little additional benefit
+here, while reference compensation depends on suitable reference signals.
+All seven methods retain the six early-glare failures because they share
+packet detection; this experiment cannot establish improved acquisition.

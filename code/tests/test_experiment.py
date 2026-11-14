@@ -20,7 +20,8 @@ def tx_record(packet):
 
 class ExperimentTests(unittest.TestCase):
     def test_rerunning_transmit_cell_does_not_send_twice(self):
-        source=(Path(__file__).resolve().parent/'fixtures/repetition_transmit_cell.py').read_text()
+        # Keep the historical one-shot cell as a small, explicit test fixture.
+        source=(Path(__file__).parent/'fixtures/repetition_transmit_cell.py').read_text()
         sends=[]
         class Handle:
             def update(self,*args):pass
