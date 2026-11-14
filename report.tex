@@ -194,8 +194,8 @@ order and timing. Receiver settings remain fixed during main analysis,
 and all seven processing methods use the same 42 blockage and 12 glare
 packets. Each method therefore encounters identical recorded interference.
 
-Physical interventions target 1.2 s, but manual duration, coverage and
-intensity vary. Comparisons between separately disturbed coded packets
+Single-pulse interventions target 1.2 s; split-block calibration uses three
+0.4 s blocks. Manual duration, coverage and intensity vary. Comparisons between separately disturbed coded packets
 therefore describe performance under the recorded conditions; receiver
 comparisons on the same videos provide stronger control. Failures and
 packets with no observed errors remain in the analysis.
@@ -304,8 +304,9 @@ across the whole transmitting patch, but local glare can dominate a small
 central region of interest (ROI). A larger-patch mean averages brightness
 over a wider area, allowing unaffected pixels to dilute that glare
 (Fig.~\ref{fig:setup}). It cannot remove glare covering the entire region.
-We use the inner 80\% of the patch's width and height, or a fourfold
-enlargement of the central box where full bounds are unavailable.
+We use the inner 80\% of the patch's width and height. Where full bounds
+are unavailable, we use four times the central box's width and height
+(approximately sixteen times its area).
 
 Reference compensation addresses lighting changes shared across the image.
 Because the reference strips do not carry the changing message, their
@@ -447,8 +448,9 @@ CRC; it remains a failure because success requires actual message recovery.
 \section{Validation, Limitations and Conclusions}
 \label{sec:conclusions}
 \subsection{Verification and Experimental Limits}
-Saved logs, brightness traces and simulation seeds make the outcomes
-reproducible. Tests check coding, correction limits, interleaving reversal,
+The accompanying evidence archive supplies logs, brightness features and
+simulation trials. Its verifier checks hashes, replays receiver outputs
+and recomputes summaries and paired intervals without the raw videos. Tests check coding, correction limits, interleaving reversal,
 and detection and sampling failures. Clean synthetic tests cover every
 code, depth and receiver combination without supplying expected messages
 to the decoder.
@@ -488,9 +490,9 @@ that reliable communication depends on where errors arise and how they
 are grouped, as well as how many occur.
 
 Measuring a larger screen area raised glare recovery from 8/12 to 12/12
-without additional filtering. Interleaving helped Hamming by distributing
-errors across independently correctable words, but harmed the tested
-Reed--Solomon configuration by spreading damage across too many bytes.
+without additional filtering. Controlled simulations showed that
+interleaving helped Hamming by spreading errors across correctable words,
+but harmed the tested Reed--Solomon configuration by damaging too many bytes.
 These findings show why a more elaborate receiver or additional protection
 is not automatically better: each change must address the observed failure
 mechanism and justify its transmission cost.

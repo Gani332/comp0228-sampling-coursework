@@ -4,6 +4,7 @@ Read [the architecture guide](../docs/ARCHITECTURE.md) for the ordered transmitt
 
 - **Current implementation:** `optical_link/`; current camera receiver is `physical_campaign_receiver.py`, processing variants are `campaign_frontends.py`.
 - **Current physical collection:** run the root `Record_Physical_Trials.ipynb`, backed by `physical_campaign.py`, `mac_campaign.py` and `physical_campaign_ui.py`.
+- **Verify companion evidence:** `tools/verify_submission_evidence.py --help`; checks hashes, receiver replay and simulation statistics without raw videos.
 - **Current evidence pipeline:** the root-level Python files in this directory; see [reproduction requirements and order](../docs/REPRODUCING_RESULTS.md).
 - **Tests:** `tests/`, including local fixtures. Run from the project root with `PYTHONPATH=code .venv/bin/python -m unittest discover -s code/tests -v`.
 - **New controlled simulation:** `tools/run_coding_experiments.py --help`.

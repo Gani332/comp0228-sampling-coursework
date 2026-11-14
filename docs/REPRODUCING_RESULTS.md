@@ -1,32 +1,54 @@
 # Reproducing the final report
 
-## 1. What the clean source package can do by itself
+## 1. Use the code and companion evidence together
 
-The tests, main notebook's synthetic demonstrations, experiment schedule, fresh recording workflow and report compilation work without the original experimental dataset. The package intentionally excludes recordings, feature arrays, transmitter logs and saved simulation trials.
+The submission separates source code from experimental evidence:
 
-The report's retained figures and tables are presentation artifacts. They are not a replacement for the raw and intermediate evidence needed to regenerate them.
+- `COMP0228_Code.zip`: implementation, tests, notebooks, report source and figure/table inputs.
+- `COMP0228_Evidence.zip`: recorded brightness caches, packet outcomes, transmitter logs, simulation trials/seeds, provenance and two supporting exposure-review snapshots.
+- `COMP0228_Report.pdf`: the six-page report.
 
-## 2. Where the original evidence is preserved
+Raw videos are excluded from both ZIPs. They are not needed for cached receiver replay or verification of the saved simulation. They are required to independently re-extract the original brightness measurements and assess the physical disturbances.
 
-In the group's local coursework directory, cleanup moved the original `optical_link/data/` to `../supporting_evidence/data/`. Historical backups and the old Git checkout are under `../supporting_evidence/workspace_archive/`. The original November videos remain in `../Data/`, and the collection reviews remain in `../reviews/`.
+## 2. Verify without changing the evidence
 
-These are local paths, not files available from a Git clone. Anyone reproducing empirical results needs a separately transferred evidence package from the group. Do not claim that cloning this repository supplies those results.
+Extract the ZIPs into sibling directories:
 
-| Input under the restored `data/` | Use |
-|---|---|
-| `plans/physical_campaign_v1/` | Frozen schedule; already included with source |
-| `physical_campaign_mac_v1/` | Setup, attempts, transmitted bits and analysis freeze |
-| `imports/omar_2026-11-08/` | Reconciled remote transmitter logs |
-| `analysis/physical_campaign_2026-11-08/` | Selected packet outcomes, caches, traces, diagnostics and provenance |
-| `analysis/coding_experiments_2026-10-24/` | Saved 480,000-trial controlled simulation and seeds |
+```text
+workspace/
+  project/         contents of COMP0228_Code.zip
+  evidence/        contents of COMP0228_Evidence.zip, including MANIFEST.json
+```
 
-Keep the preserved evidence unchanged. For replay, make a separate working copy of this project and copy the corresponding evidence directories into its `data/` folder. Preserve the dataset's original relative paths and hashes. If starting from the local preserved full dataset, copy its contents into that working copy; this also includes older evidence and may take several gigabytes.
-
-## 3. Replay from cached measurements
-
-From the working copy's project root, after restoring the data and installing requirements:
+From `project/`:
 
 ```sh
+python3 -m venv .venv
+.venv/bin/python -m pip install -r code/requirements.txt
+.venv/bin/python code/tools/verify_submission_evidence.py --evidence ../evidence --output ../verification
+```
+
+Use a new output directory each time. The verifier reads the evidence without writing into it and:
+
+1. Checks every packaged evidence file and the relevant scientific sources against SHA-256 hashes.
+2. Recalculates physical packet totals, coding goodput and error-run counts.
+3. Replays **392 receiver decodes**: seven methods on the 54 acquired main packets and two development-glare packets. It compares recovery and raw bit errors with the saved results.
+4. Retains the six acquisition/header failures across the seven methods, without claiming to re-detect them or count them as independent attempts.
+5. Checks all **480,000 simulation records**, rebuilds summaries and replays **720 simulated decodes**.
+6. Recomputes **40 paired bootstrap intervals**, using the saved seeds and 20,000 resamples per interval.
+
+The new output directory contains `verification.json` and regenerated physical, receiver, noise and interval summaries. The command exits with an error if a checked hash or outcome differs. Original source hashes and historical verification logs remain unchanged; they describe the frozen study rather than a new run.
+
+The 16 clean pilot outcomes and corresponding trace hashes are checked, but the verifier does not replay pilot acquisition. Cached receiver replay uses the published baseline acquisition windows. This checks the analysis conditional on those measurements and windows; it is not an independent audit of extraction geometry, camera exposure or physical disturbance timing.
+
+## 3. Regenerate the report's figures and tables
+
+Use a disposable working copy. From `project/`, restore the companion data and the two review inputs at the paths used by the historical builders:
+
+```sh
+cp -R ../evidence/data/. data/
+mkdir -p ../reviews
+cp -R ../evidence/review_inputs/. ../reviews/
 .venv/bin/python code/evaluate_campaign_frontends.py development
 .venv/bin/python code/evaluate_campaign_frontends.py main
 .venv/bin/python code/strengthen_campaign_analysis.py
@@ -35,33 +57,25 @@ From the working copy's project root, after restoring the data and installing re
 .venv/bin/python code/build_campaign_report.py
 ```
 
-Run the patch-mean figure builder **after** `strengthen_campaign_analysis.py`, which otherwise writes the earlier setup figure. The figure builders write into `report_figures/`. Prose in `report.tex` and `campaign_frontends_discussion.tex` is maintained separately and must be reviewed if numerical inputs change.
+These scripts write outputs into the working copy. Run `build_patch_mean_figure.py` after `strengthen_campaign_analysis.py`, which writes the earlier setup illustration. `report.tex` and `report_figures/campaign_frontends_discussion.tex` are editorially maintained; their interpretation must be reviewed if the dataset changes.
 
-To verify the saved controlled simulation without rerunning all trials:
+The two supplied review inputs support the exposure annotations. They do not replace the complete original video audit. Compiling the supplied report without regenerating figures needs no empirical dataset:
 
 ```sh
-PYTHONPATH=code .venv/bin/python -c "from pathlib import Path; from optical_link.coding_experiments import load_verified; print(load_verified(Path('code'), Path('data/analysis/coding_experiments_2026-10-24'))[2])"
+tectonic report.tex
+# Alternatively, run pdfLaTeX twice:
+pdflatex -interaction=nonstopmode -halt-on-error report.tex
+pdflatex -interaction=nonstopmode -halt-on-error report.tex
 ```
 
-## 4. Re-extract from recordings or run a new simulation
+## 4. Re-extraction and new experiments
 
-Fresh video extraction additionally needs FFmpeg/FFprobe, the original `../Data/` videos and the corresponding `../reviews/` audits at their original relative locations. See the preserved dataset's `analysis/physical_campaign_2026-11-08/REPRODUCE.txt` for reconciliation and extraction order. This path-dependent historical reconstruction is distinct from cached replay.
+Full video re-extraction additionally requires FFmpeg/FFprobe, the original `../Data/` videos and complete corresponding `../reviews/` audits. The evidence's historical `data/analysis/physical_campaign_2026-11-08/REPRODUCE.txt` describes that original reconstruction. Those originals are preserved locally outside the clean project in `Data/`, `reviews/` and `supporting_evidence/`; they are not part of a Git clone.
 
-A new synthetic study does not require recordings. It must use a new output directory:
+A new synthetic study needs no recordings and must use a new output directory:
 
 ```sh
 .venv/bin/python code/tools/run_coding_experiments.py --root code --output data/analysis/new_simulation --trials 2000
 ```
 
-The default produces 240 conditions × 2,000 trials. A smaller trial count is useful for checking execution, but its results are not the reported experiment. Never overwrite the frozen trial records or describe synthetic trials as new physical data.
-
-## 5. Build the report
-
-```sh
-tectonic report.tex
-# Alternatively, with a LaTeX installation:
-pdflatex -interaction=nonstopmode -halt-on-error report.tex
-pdflatex -interaction=nonstopmode -halt-on-error report.tex
-```
-
-The supplied PDF and Overleaf bundle were checked as six pages. No empirical data is needed for compilation because all required figure/table inputs are included.
+The default produces 240 conditions × 2,000 trials. A smaller trial count checks execution but does not reproduce the reported experiment. More simulated trials are not more physical observations. New physical collection should use a fresh project/data directory so historical attempt logs cannot be mistaken for new transmissions.

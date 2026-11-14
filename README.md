@@ -11,7 +11,7 @@ Text is encoded into black/white flashes on a Mac display. A phone records the f
 | Record a new physical experiment | [Record_Physical_Trials.ipynb](Record_Physical_Trials.ipynb), then [recording guide](docs/RECORDING_GUIDE.md) | No existing recordings; Mac display and phone required |
 | Understand the code | [architecture and reading order](docs/ARCHITECTURE.md) | No |
 | Run software checks | Commands below | No recordings or historical archive |
-| Reproduce the reported results | [reproduction guide](docs/REPRODUCING_RESULTS.md) | Yes: separately supplied evidence |
+| Reproduce the reported results | [reproduction guide](docs/REPRODUCING_RESULTS.md) | Yes: companion `COMP0228_Evidence.zip` |
 | Edit the report | [report.tex](report.tex) and [report_figures/](report_figures/) | No, unless regenerating figures |
 
 ## 2. Install and verify
@@ -77,7 +77,7 @@ The separate controlled study contains 480,000 simulated decodes. They test mech
 
 The PDF is six pages including references. Upload `COMP0228_Report_Overleaf.zip` to Overleaf, or compile `report.tex` using Tectonic or pdfLaTeX (twice). Keep `report_figures/` beside the source. The report and interpretive discussion are edited by hand; numerical builders do not regenerate the prose.
 
-Read [reproduction instructions](docs/REPRODUCING_RESULTS.md) before running analysis: the source-only repository cannot reproduce empirical results without the evidence package. A new recording run must not overwrite the frozen study.
+The submission includes a separate `COMP0228_Evidence.zip`. Its cached measurements, logs and simulation trials allow the [verification command](docs/REPRODUCING_RESULTS.md) to replay receiver outcomes and recompute results without raw videos. The repository remains source-only; extract the companion evidence separately. A new recording run must not overwrite the frozen study.
 
 Repetition and Hamming follow the module's coding conventions. Reed–Solomon uses the credited, vendored `reedsolo` 1.7.0 implementation; see its [provenance and licence](code/optical_link/_vendor/README.txt). The optional LCD firmware uses [LovyanGFX](code/vendor/LovyanGFX/license.txt). Retain third-party copyright notices. AI assistance is acknowledged in the report.
 

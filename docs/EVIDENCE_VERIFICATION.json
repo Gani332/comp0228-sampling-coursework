@@ -1,0 +1,25 @@
+{
+  "evidence_files_verified": 347,
+  "physical_transmissions": 82,
+  "main_recovered": 35,
+  "main_packets": 54,
+  "receiver_decodes_replayed": 392,
+  "shared_acquisition_failure_rows_retained": 42,
+  "pilot_scope": "Saved pilot summary and trace hashes checked; pilot acquisition not replayed.",
+  "acquisition_scope": "Six original acquisition/header failures retained across seven methods; not independent detections.",
+  "paired_intervals_recomputed": 40,
+  "simulation": {
+    "trial_records": 480000,
+    "replayed_decodes": 720,
+    "summary_recomputed": true,
+    "source_and_data_hashes_verified": true
+  },
+  "raw_video_scope": "Raw video extraction and physical intervention measurements are not revalidated by cached replay.",
+  "evidence_archive": "COMP0228_Evidence.zip",
+  "evidence_archive_sha256": "1eaa7a5e9be2a80a1b6d030032e42fc630a4f602ef2df3817d5f0fba9163a0bd",
+  "isolated_cached_pipeline_passed": true,
+  "generated_numeric_tables_identical": true,
+  "generated_receiver_results_identical": true,
+  "verifier_boundary_checks_passed": 4,
+  "software_tests": 124
+}

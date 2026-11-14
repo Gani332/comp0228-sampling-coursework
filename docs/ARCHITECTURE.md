@@ -44,7 +44,7 @@ Read these files in order. Each module begins with its purpose; comments near th
 | `build_campaign_report.py` | Verified results -> numerical tables and plots, with headline-count assertions |
 | `build_campaign_review.py` | Evidence -> supporting HTML review; not the final report |
 
-The reproduction guide specifies the order and external inputs. Several historical analysis scripts use fixed study paths and can write generated outputs; run them on a working copy of the evidence, not the sole preserved archive.
+The reproduction guide specifies the order and companion inputs. `tools/verify_submission_evidence.py` provides a portable, read-only replay check against the separately extracted evidence archive. Several historical analysis scripts use fixed study paths and can write generated outputs; run them on a working copy of the evidence, not the sole preserved archive.
 
 ## 4. Optional and historical components
 
