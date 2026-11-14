@@ -70,7 +70,7 @@ pdflatex -interaction=nonstopmode -halt-on-error report.tex
 
 ## 4. Re-extraction and new experiments
 
-Full video re-extraction additionally requires FFmpeg/FFprobe, the original `../Data/` videos and complete corresponding `../reviews/` audits. The evidence's historical `data/analysis/physical_campaign_2026-11-08/REPRODUCE.txt` describes that original reconstruction. Those originals are preserved locally outside the clean project in `Data/`, `reviews/` and `supporting_evidence/`; they are not part of a Git clone.
+Full video re-extraction additionally requires FFmpeg/FFprobe, the original `../Data/` videos and complete corresponding `../reviews/` audits. The evidence's historical `data/analysis/physical_campaign_2026-11-08/REPRODUCE.txt` describes that original reconstruction. The local recordings in `Data/` are now silent derivatives. Audio removal preserves every encoded video packet and timestamp but changes the container SHA-256. [SILENT_RECORDINGS.json](SILENT_RECORDINGS.json) maps the original capture hashes to the silent files and records the preservation checks. Frozen raw-extraction scripts still check the original container hashes; those checks require an explicit derivative-mapping update before raw re-extraction. Cached replay above is unaffected. Review records and supporting evidence remain outside the clean project; raw videos are not part of a Git clone.
 
 A new synthetic study needs no recordings and must use a new output directory:
 

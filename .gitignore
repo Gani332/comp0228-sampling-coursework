@@ -26,3 +26,25 @@ COMP0228_Code_Submission.zip
 
 # Companion empirical archive is submitted separately from source.
 COMP0228_Evidence.zip
+
+# Raw recordings and audio must never enter the source submission.
+*.[mM][oO][vV]
+*.[mM][pP]4
+*.[mM]4[vV]
+*.[aA][vV][iI]
+*.[mM][kK][vV]
+*.[wW][eE][bB][mM]
+*.[mM][pP][eE][gG]
+*.[mM][pP][gG]
+*.3[gG][pP]
+*.[wW][aA][vV]
+*.[mM][pP]3
+*.[mM]4[aA]
+*.[aA][aA][cC]
+*.[aA][iI][fF]
+*.[aA][iI][fF][fF]
+*.[cC][aA][fF]
+*.[fF][lL][aA][cC]
+*.[oO][gG][gG]
+*.[oO][pP][uU][sS]
+*.[wW][mM][aA]

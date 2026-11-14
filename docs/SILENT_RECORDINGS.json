@@ -1,0 +1,259 @@
+{
+  "date": "2026-11-14",
+  "method": "Copied only original QuickTime video chunks and video-track tables; removed audio and auxiliary chunks. Verified all video packet hashes, timestamps and codec/side-data fields before replacement. No video re-encoding.",
+  "recordings": [
+    {
+      "path": "Data/Video5.MOV",
+      "original_sha256": "4bfc05762d21b5b74db4ae2b8fb82ff296aae02bf33feb288a8c02374479fb35",
+      "sha256": "5b7b967aa6b728c0c166d7ac00c4422e5332c7e4316f75fc1af824c8958b80a3",
+      "bytes_before": 186420478,
+      "bytes_after": 183486843,
+      "audio_streams_before": 1,
+      "audio_streams_after": 0,
+      "video_packets_and_timestamps_identical": true,
+      "video_codec_and_side_data_identical": true
+    },
+    {
+      "path": "Data/Video4.MOV",
+      "original_sha256": "1bc6208a97c7a42508b024c9686b802bd94cd37d64b3fd167c9a5462df4c23af",
+      "sha256": "e83ef6517b4bf4eb8454ea9a0a82e7bf6a39a4fd5f9f30fdd7b3a3d05e536aee",
+      "bytes_before": 418411866,
+      "bytes_after": 407634670,
+      "audio_streams_before": 1,
+      "audio_streams_after": 0,
+      "video_packets_and_timestamps_identical": true,
+      "video_codec_and_side_data_identical": true
+    },
+    {
+      "path": "Data/Video6.mov",
+      "original_sha256": "60b86ccbddd718bc08fd74a46246c8b0c22eea3122c4bde8ec2443aac7fe0965",
+      "sha256": "2c2f1af82b8b70dbba21008524c7cdbe1fc8654af60b03640f4a90b4067ad20c",
+      "bytes_before": 182810769,
+      "bytes_after": 180495949,
+      "audio_streams_before": 1,
+      "audio_streams_after": 0,
+      "video_packets_and_timestamps_identical": true,
+      "video_codec_and_side_data_identical": true
+    },
+    {
+      "path": "Data/Video7.mov",
+      "original_sha256": "2b4328426c0623b4c2cd7da085a0b2543338ad63d46505352604a11da883f997",
+      "sha256": "1e91e46d6ffc3f4807b4a516f0dfa938d01bd2925de73ea94e376d1bafa8c220",
+      "bytes_before": 110329300,
+      "bytes_after": 108018529,
+      "audio_streams_before": 1,
+      "audio_streams_after": 0,
+      "video_packets_and_timestamps_identical": true,
+      "video_codec_and_side_data_identical": true
+    },
+    {
+      "path": "Data/Video3.mov",
+      "original_sha256": "69268c76977989619d7432f9c198678332e262fd127f5e7c98630d0994d22a4e",
+      "sha256": "ac24cd75c57ec8b2fc8583cb031d8b90f98992594c72d492d58908a21c0b6014",
+      "bytes_before": 243989967,
+      "bytes_after": 239123195,
+      "audio_streams_before": 1,
+      "audio_streams_after": 0,
+      "video_packets_and_timestamps_identical": true,
+      "video_codec_and_side_data_identical": true
+    },
+    {
+      "path": "Data/Video2.MOV",
+      "original_sha256": "fd45c347527c95afdce27a6a21f9f8d065428a9c724c2354619ccdb7d9ee9f6b",
+      "sha256": "b2726c4c36cd9bfe18a9d02fc5e6e56885039d55737552bc5b417a5e228d9c73",
+      "bytes_before": 418997741,
+      "bytes_after": 408435883,
+      "audio_streams_before": 1,
+      "audio_streams_after": 0,
+      "video_packets_and_timestamps_identical": true,
+      "video_codec_and_side_data_identical": true
+    },
+    {
+      "path": "Data/Video1.mov",
+      "original_sha256": "f1e8c5c91e68ceacbceeefe58cb99f70de91553ffb47fa53907c11ad5c86ebf4",
+      "sha256": "b5a0cbc08027805bc3cc706cf6d42aefe6a5b5a7d2b6456963a172d32059c750",
+      "bytes_before": 245260253,
+      "bytes_after": 240233676,
+      "audio_streams_before": 1,
+      "audio_streams_after": 0,
+      "video_packets_and_timestamps_identical": true,
+      "video_codec_and_side_data_identical": true
+    },
+    {
+      "path": "Data/Video11.mov",
+      "original_sha256": "f0f8440f55bb47b2a22748bc94034887b648f4c4da9892e03a596d24110392a3",
+      "sha256": "3be33638d231224e9264d817761631b070396f3e65c9852c00c2d571d492a123",
+      "bytes_before": 474016724,
+      "bytes_after": 465355417,
+      "audio_streams_before": 1,
+      "audio_streams_after": 0,
+      "video_packets_and_timestamps_identical": true,
+      "video_codec_and_side_data_identical": true
+    },
+    {
+      "path": "Data/Video10.mov",
+      "original_sha256": "47d3e6c56e82697a52acfa64a53acf52b2ee9e55dfbf38dc7f40ca607a5bdefb",
+      "sha256": "f67833ce761cd2b8b80ab1b41916e06bdf131481da8002e4928ff29333e1a7a8",
+      "bytes_before": 106920587,
+      "bytes_after": 104699172,
+      "audio_streams_before": 1,
+      "audio_streams_after": 0,
+      "video_packets_and_timestamps_identical": true,
+      "video_codec_and_side_data_identical": true
+    },
+    {
+      "path": "Data/Video12.mov",
+      "original_sha256": "7e6ab6e504163d2ff8e9ac027f80099dce9a075feed59969d22474c63680cbeb",
+      "sha256": "28dccdefe681661a13d99bd80f3863b97ebed3468006b3edb803d14437e72db6",
+      "bytes_before": 373287566,
+      "bytes_after": 366370977,
+      "audio_streams_before": 1,
+      "audio_streams_after": 0,
+      "video_packets_and_timestamps_identical": true,
+      "video_codec_and_side_data_identical": true
+    },
+    {
+      "path": "Data/Video13.MOV",
+      "original_sha256": "33f45830973d6f17ee1de676aff22398bbe9677e7473774174d15d082d6f4622",
+      "sha256": "10bc18a9e84d66237b2f07d47b7335588420dfa0e70c90a71726260815ffeebe",
+      "bytes_before": 102494861,
+      "bytes_after": 100250401,
+      "audio_streams_before": 1,
+      "audio_streams_after": 0,
+      "video_packets_and_timestamps_identical": true,
+      "video_codec_and_side_data_identical": true
+    },
+    {
+      "path": "Data/Video17.MOV",
+      "original_sha256": "5b819d0c6f7ca5d10f2b788cd7d5201715f5d13767320b742f41dfcd526fca31",
+      "sha256": "a77d595fedd459308d104fc66056ace0e3d8cfa55fb8ce478eba671d77ddd398",
+      "bytes_before": 584007558,
+      "bytes_after": 568900559,
+      "audio_streams_before": 1,
+      "audio_streams_after": 0,
+      "video_packets_and_timestamps_identical": true,
+      "video_codec_and_side_data_identical": true
+    },
+    {
+      "path": "Data/Video16.MOV",
+      "original_sha256": "8793a11c865e6b564c12d868ee95057830712df64e9d14a1b2fe6f9b673ac035",
+      "sha256": "9a1dd4b907e8736ab8bf0b6d5ac2af2282f537d7cf4dab0a9b0bec3d1f4f5000",
+      "bytes_before": 131186654,
+      "bytes_after": 127635468,
+      "audio_streams_before": 1,
+      "audio_streams_after": 0,
+      "video_packets_and_timestamps_identical": true,
+      "video_codec_and_side_data_identical": true
+    },
+    {
+      "path": "Data/Video14.MOV",
+      "original_sha256": "d41ab260c6f9133bce2a93d848dc3c5a50d6ca90c197b008f77aa667a27a456a",
+      "sha256": "b5e0f17a26829842cae4ca6c83d008a6044ef501e06839905f80018d00031e8a",
+      "bytes_before": 101208839,
+      "bytes_after": 98992776,
+      "audio_streams_before": 1,
+      "audio_streams_after": 0,
+      "video_packets_and_timestamps_identical": true,
+      "video_codec_and_side_data_identical": true
+    },
+    {
+      "path": "Data/Video15.MOV",
+      "original_sha256": "d728403a628628e9f70e8e7d113fbb03937c6e1f0641cadc311459957d72bef8",
+      "sha256": "d1eb63378416315d65433b837c4b4c4e325b92954a01c5ba59e6464dba936bf2",
+      "bytes_before": 376709280,
+      "bytes_after": 366935805,
+      "audio_streams_before": 1,
+      "audio_streams_after": 0,
+      "video_packets_and_timestamps_identical": true,
+      "video_codec_and_side_data_identical": true
+    },
+    {
+      "path": "Data/Video18.MOV",
+      "original_sha256": "d55870b711eeb6925d10a62f0106608fe8f441afb36c44332cf264a1ec897a16",
+      "sha256": "1467cf8ebd0df3cfc6dd6f1329caec67e03346e5de704259d1cfe1af31c93a8e",
+      "bytes_before": 117682010,
+      "bytes_after": 107508750,
+      "audio_streams_before": 1,
+      "audio_streams_after": 0,
+      "video_packets_and_timestamps_identical": true,
+      "video_codec_and_side_data_identical": true
+    },
+    {
+      "path": "Data/Video19.MOV",
+      "original_sha256": "ba142f84dbfb5130f730e7d7aea68c866e84cfde0422b19e6e9ce9e40b7dfe51",
+      "sha256": "bf46708433ba87dd8af986c27667fddc623adfe835a5fce457bd8e5182f24a42",
+      "bytes_before": 478820848,
+      "bytes_after": 467586579,
+      "audio_streams_before": 1,
+      "audio_streams_after": 0,
+      "video_packets_and_timestamps_identical": true,
+      "video_codec_and_side_data_identical": true
+    },
+    {
+      "path": "Data/Video21.MOV",
+      "original_sha256": "ee5fc693a26b94e8a709ecc972e32de8f634973c1fe2ff81e367ade06f46bef6",
+      "sha256": "f34030502705643e49d69d06556381e53a113b3e69c818e8191cce415c628ad9",
+      "bytes_before": 192103112,
+      "bytes_after": 187809815,
+      "audio_streams_before": 1,
+      "audio_streams_after": 0,
+      "video_packets_and_timestamps_identical": true,
+      "video_codec_and_side_data_identical": true
+    },
+    {
+      "path": "Data/Video20.MOV",
+      "original_sha256": "6b0f0df4716b2833ac8133aca90bf9b289da5e6aa97488ecf294de1b00260490",
+      "sha256": "65aaeac9d986c24364b5a55e1f5735914928ecddf028d1ed8c782012be2972fb",
+      "bytes_before": 192477282,
+      "bytes_after": 188207678,
+      "audio_streams_before": 1,
+      "audio_streams_after": 0,
+      "video_packets_and_timestamps_identical": true,
+      "video_codec_and_side_data_identical": true
+    },
+    {
+      "path": "Data/Video9.MOV",
+      "original_sha256": "9466185bc8f615a1af413862ad15104f4598181f4d4395f6a9b53f2bfb2c183d",
+      "sha256": "0f4d16e21e55a38ac3fc4679063e4432df3e07be89b0adfb5e9e9646f3408e86",
+      "bytes_before": 682441268,
+      "bytes_after": 668646789,
+      "audio_streams_before": 1,
+      "audio_streams_after": 0,
+      "video_packets_and_timestamps_identical": true,
+      "video_codec_and_side_data_identical": true
+    },
+    {
+      "path": "Data/Video8.MOV",
+      "original_sha256": "655301136ed8e7d2e382fb6a158017905838a49fd36f13848e70ae9fc8ff6c76",
+      "sha256": "14ebe4c22e41bf5d30366c2e61d54075583147f1b38f7c6e5e9f92ae350d375e",
+      "bytes_before": 130975819,
+      "bytes_after": 127631239,
+      "audio_streams_before": 1,
+      "audio_streams_after": 0,
+      "video_packets_and_timestamps_identical": true,
+      "video_codec_and_side_data_identical": true
+    },
+    {
+      "path": "Data/physical_campaign_mac_v1.zip!/physical_campaign_mac_v1/attempts/MAIN_R2_L4_B04_1_GLARE_BODY__20261107T205510_236629Z_c8a246c2/original.mov",
+      "original_sha256": "d41ab260c6f9133bce2a93d848dc3c5a50d6ca90c197b008f77aa667a27a456a",
+      "sha256": "b5e0f17a26829842cae4ca6c83d008a6044ef501e06839905f80018d00031e8a",
+      "bytes_before": 101208839,
+      "bytes_after": 98992776,
+      "audio_streams_before": 1,
+      "audio_streams_after": 0,
+      "video_packets_and_timestamps_identical": true,
+      "video_codec_and_side_data_identical": true
+    },
+    {
+      "path": "Data/physical_campaign_mac_v1.zip!/physical_campaign_mac_v1/attempts/MAIN_R1_L8_B02_2_OCC_CLUSTER__20261107T201458_919241Z_7a01b0f5/original.mov",
+      "original_sha256": "7e62495d2955f45546d20bac352e64015b773b21adbf2d1dfe4d6ba23e860c03",
+      "sha256": "e3f8760af83c53da1ade399464917b91232402151a8f3a270d91e05b2cfd65f1",
+      "bytes_before": 482439177,
+      "bytes_after": 470818694,
+      "audio_streams_before": 1,
+      "audio_streams_after": 0,
+      "video_packets_and_timestamps_identical": true,
+      "video_codec_and_side_data_identical": true
+    }
+  ]
+}
